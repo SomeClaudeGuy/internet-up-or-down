@@ -33,12 +33,15 @@ const TalentCTA = () => {
           {/* Header */}
           <div className="mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Join Our <span className="text-primary">Talent Network</span>
+              Earn <span className="text-primary">$50K+/Month</span> as Our Partner
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              We work with the biggest influencers and ambassadors worldwide. 
-              Join our elite network and unlock premium partnership opportunities.
+              <strong className="text-foreground">500+ influencers</strong> already earning 6-figures with our exclusive iGaming partnerships. 
+              Join the highest-paid talent network in the industry.
             </p>
+            <div className="mt-4 text-lg font-semibold text-accent">
+              💰 Average Partner Earns $52,000/month • Top 10% Earn $200K+/month
+            </div>
           </div>
 
           {/* Benefits Grid */}
@@ -99,12 +102,12 @@ const TalentCTA = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="group text-lg px-8 py-4">
-              Join Our Elite Network - Apply Now
+            <Button size="lg" className="group text-lg px-10 py-6 bg-gradient-to-r from-accent to-primary shadow-2xl shadow-accent/25">
+              💎 Apply to Elite Network (2 min)
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
-            <Button size="lg" variant="outline" className="text-lg px-8 py-4">
-              See Success Stories
+            <Button size="lg" variant="outline" className="text-lg px-8 py-6 border-2">
+              📊 View Earning Calculator
             </Button>
           </div>
 

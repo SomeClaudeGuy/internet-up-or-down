@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import ClientLogos from "@/components/ClientLogos";
+import SocialProof from "@/components/SocialProof";
 import Services from "@/components/Services";
 import GlobalPresence from "@/components/GlobalPresence";
 import TalentCTA from "@/components/TalentCTA";
@@ -14,6 +15,7 @@ const Index = () => {
       <Header />
       <Hero />
       <ClientLogos />
+      <SocialProof />
       <Services />
       <GlobalPresence />
       <TalentCTA />

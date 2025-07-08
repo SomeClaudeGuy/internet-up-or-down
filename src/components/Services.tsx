@@ -68,11 +68,11 @@ const Services = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Our <span className="text-primary">Services</span>
+            How We <span className="text-primary">10X Your Results</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            With over 5 years in the market, we create integrated marketing campaigns 
-            and solutions that bring creativity to elevate your brand presence in the iGaming industry.
+            Our proven 6-step system has generated <strong className="text-foreground">$50M+</strong> in revenue. 
+            Here's exactly how we'll scale your iGaming business.
           </p>
         </div>
 
@@ -117,16 +117,24 @@ const Services = () => {
           ))}
         </div>
 
-        <div className="text-center mt-16 bg-gradient-to-r from-primary/10 to-accent/10 rounded-2xl p-8 border border-border/50">
-          <h3 className="text-2xl font-bold mb-4">🎯 Guaranteed Results or Money Back</h3>
-          <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-            We're so confident in our ability to deliver results that we offer a performance guarantee. 
-            If we don't hit your targets, you don't pay.
-          </p>
-          <Button size="lg" className="group text-lg px-8 py-4">
-            Get Your Free Strategy Session
-            <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-          </Button>
+        <div className="text-center mt-16 bg-gradient-to-r from-primary/20 to-accent/20 rounded-2xl p-8 border border-primary/30 relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-accent/5"></div>
+          <div className="relative z-10">
+            <h3 className="text-3xl font-bold mb-4">💰 ROI Guarantee: 5X Your Investment or We Work for FREE</h3>
+            <p className="text-lg text-muted-foreground mb-6 max-w-2xl mx-auto">
+              Join 500+ operators who've seen <strong className="text-foreground">300%+ ROI</strong> in 90 days. 
+              If we don't deliver 5X returns, you don't pay a cent.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <Button size="lg" className="group text-lg px-8 py-4 bg-gradient-to-r from-primary to-accent shadow-2xl shadow-primary/25">
+                Claim Your FREE $10K Marketing Plan
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Button>
+              <div className="text-sm text-muted-foreground">
+                ⏰ <strong>Only 7 spots left this month</strong>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

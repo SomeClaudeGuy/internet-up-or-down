@@ -18,55 +18,77 @@ const Hero = () => {
       <div className="relative z-10 container mx-auto px-4 text-center">
         <div className="max-w-4xl mx-auto">
           {/* Badge */}
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-8">
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-8 animate-pulse">
             <span className="text-sm font-medium text-primary">
-              🏆 #1 iGaming Marketing Agency Worldwide
+              ⚡ 500+ Success Stories • $50M+ Revenue Generated
             </span>
           </div>
 
           {/* Main Headline */}
-          <h1 className="text-5xl md:text-7xl font-bold mb-8 leading-tight">
-            Bet on our{" "}
-            <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent animate-glow-pulse">
-              game
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+            Turn Your iGaming Traffic Into{" "}
+            <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+              Pure Profit
             </span>
           </h1>
 
           {/* Subheadline */}
-          <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed">
-            The worldwide leading marketing agency for casino/betting operators, influencers, 
-            and audiovisual content. Connecting brands with players across 4 continents.
+          <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
+            We've generated <strong className="text-foreground">$50M+</strong> for casino operators and 
+            <strong className="text-foreground"> 500+ influencers</strong>. Join the #1 iGaming marketing network.
           </p>
 
+          {/* Social Proof */}
+          <div className="flex items-center justify-center gap-6 mb-8 text-sm text-muted-foreground">
+            <div className="flex items-center gap-2">
+              <div className="flex -space-x-2">
+                {[...Array(5)].map((_, i) => (
+                  <div key={i} className="w-8 h-8 rounded-full bg-gradient-to-r from-primary to-accent border-2 border-background"></div>
+                ))}
+              </div>
+              <span>500+ Talents Trust Us</span>
+            </div>
+            <div className="hidden md:block w-px h-4 bg-border"></div>
+            <div>⭐⭐⭐⭐⭐ 4.9/5 Rating</div>
+          </div>
+
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
-            <Button size="lg" className="group text-lg px-8 py-4">
-              Get Started Now - FREE Consultation
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+            <Button size="lg" className="group text-lg px-10 py-6 bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 shadow-2xl shadow-primary/25">
+              🚀 Get Your FREE $10K Marketing Plan
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
-            <Button size="lg" variant="outline" className="group text-lg px-8 py-4">
+            <Button size="lg" variant="outline" className="group text-lg px-8 py-6 border-2 hover:bg-primary/5">
               <Play className="mr-2 w-5 h-5" />
-              See Our Results
+              Watch $1M Case Study (2 min)
             </Button>
           </div>
 
+          {/* Urgency */}
+          <div className="bg-destructive/10 border border-destructive/20 rounded-lg p-4 mb-12 max-w-2xl mx-auto">
+            <p className="text-sm text-center">
+              <span className="font-semibold text-destructive">⏰ Limited Time:</span> Only taking 10 new clients this month. 
+              <span className="font-semibold">7 spots remaining.</span>
+            </p>
+          </div>
+
           {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-3xl mx-auto">
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-primary mb-2">20K+</div>
-              <div className="text-sm text-muted-foreground">Monthly Registrations</div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+            <div className="text-center p-4 rounded-lg bg-card/20 backdrop-blur-sm border border-border/50">
+              <div className="text-3xl md:text-4xl font-bold text-primary mb-2">$50M+</div>
+              <div className="text-sm text-muted-foreground">Revenue Generated</div>
             </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-primary mb-2">6K+</div>
-              <div className="text-sm text-muted-foreground">Monthly FTDs</div>
+            <div className="text-center p-4 rounded-lg bg-card/20 backdrop-blur-sm border border-border/50">
+              <div className="text-3xl md:text-4xl font-bold text-primary mb-2">500+</div>
+              <div className="text-sm text-muted-foreground">Success Stories</div>
             </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-primary mb-2">45+</div>
-              <div className="text-sm text-muted-foreground">Team Members</div>
+            <div className="text-center p-4 rounded-lg bg-card/20 backdrop-blur-sm border border-border/50">
+              <div className="text-3xl md:text-4xl font-bold text-primary mb-2">98%</div>
+              <div className="text-sm text-muted-foreground">Client Retention</div>
             </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-primary mb-2">5+</div>
-              <div className="text-sm text-muted-foreground">Years Experience</div>
+            <div className="text-center p-4 rounded-lg bg-card/20 backdrop-blur-sm border border-border/50">
+              <div className="text-3xl md:text-4xl font-bold text-primary mb-2">24H</div>
+              <div className="text-sm text-muted-foreground">Average Response</div>
             </div>
           </div>
         </div>
