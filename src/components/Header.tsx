@@ -1,11 +1,32 @@
-
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
+
+  // Scroll to top when route changes
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, [location.pathname]);
+
+  const handleContactClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const handleServicesClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    const servicesSection = document.getElementById('services');
+    if (servicesSection) {
+      servicesSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   return (
     <header className="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-border">
@@ -21,7 +42,7 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
-            <a href="#services" className="text-foreground hover:text-primary transition-colors">
+            <a href="#services" onClick={handleServicesClick} className="text-foreground hover:text-primary transition-colors">
               Services
             </a>
             <Link to="/b-content" className="text-foreground hover:text-primary transition-colors">
@@ -30,7 +51,7 @@ const Header = () => {
             <Link to="/success-stories" className="text-foreground hover:text-primary transition-colors">
               Talents
             </Link>
-            <a href="#contact" className="text-foreground hover:text-primary transition-colors">
+            <a href="#contact" onClick={handleContactClick} className="text-foreground hover:text-primary transition-colors">
               Contact
             </a>
           </nav>
@@ -56,7 +77,7 @@ const Header = () => {
         {isMenuOpen && (
           <div className="md:hidden mt-4 pb-4 border-t border-border pt-4">
             <nav className="flex flex-col space-y-4">
-              <a href="#services" className="text-foreground hover:text-primary transition-colors">
+              <a href="#services" onClick={handleServicesClick} className="text-foreground hover:text-primary transition-colors">
                 Services
               </a>
               <Link to="/b-content" className="text-foreground hover:text-primary transition-colors">
@@ -65,7 +86,7 @@ const Header = () => {
               <Link to="/success-stories" className="text-foreground hover:text-primary transition-colors">
                 Talents
               </Link>
-              <a href="#contact" className="text-foreground hover:text-primary transition-colors">
+              <a href="#contact" onClick={handleContactClick} className="text-foreground hover:text-primary transition-colors">
                 Contact
               </a>
             </nav>
