@@ -27,12 +27,9 @@ const Header = () => {
             <Link to="/b-content" className="text-foreground hover:text-primary transition-colors">
               B.Content
             </Link>
-            <a href="#talents" className="text-foreground hover:text-primary transition-colors">
+            <Link to="/success-stories" className="text-foreground hover:text-primary transition-colors">
               Talents
-            </a>
-            <a href="#about" className="text-foreground hover:text-primary transition-colors">
-              About
-            </a>
+            </Link>
             <a href="#contact" className="text-foreground hover:text-primary transition-colors">
               Contact
             </a>
@@ -40,7 +37,7 @@ const Header = () => {
 
           {/* Desktop CTA */}
           <div className="hidden md:flex space-x-4">
-            <Link to="/work-with-us">
+            <Link to="/talent-intake">
               <Button variant="outline">Join as Talent</Button>
             </Link>
             <Button>Get Started</Button>
@@ -65,18 +62,15 @@ const Header = () => {
               <Link to="/b-content" className="text-foreground hover:text-primary transition-colors">
                 B.Content
               </Link>
-              <a href="#talents" className="text-foreground hover:text-primary transition-colors">
+              <Link to="/success-stories" className="text-foreground hover:text-primary transition-colors">
                 Talents
-              </a>
-              <a href="#about" className="text-foreground hover:text-primary transition-colors">
-                About
-              </a>
+              </Link>
               <a href="#contact" className="text-foreground hover:text-primary transition-colors">
                 Contact
               </a>
             </nav>
             <div className="flex flex-col space-y-2 mt-4">
-              <Link to="/work-with-us">
+              <Link to="/talent-intake">
                 <Button variant="outline" className="w-full">Join as Talent</Button>
               </Link>
               <Button className="w-full">Get Started</Button>
