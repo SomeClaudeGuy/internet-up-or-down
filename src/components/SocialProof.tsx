@@ -4,16 +4,16 @@ import { Star, TrendingUp, DollarSign } from "lucide-react";
 const SocialProof = () => {
   const proofPoints = [
     {
-      metric: "$50M+",
-      description: "Revenue Generated",
+      metric: "5+",
+      description: "Years Experience",
       icon: DollarSign,
-      highlight: "For our clients in 2024"
+      highlight: "Helping clients grow"
     },
     {
-      metric: "500+",
+      metric: "200+",
       description: "Success Stories",
       icon: TrendingUp,
-      highlight: "Average 300% ROI"
+      highlight: "Strong ROI results"
     },
     {
       metric: "4.9★",

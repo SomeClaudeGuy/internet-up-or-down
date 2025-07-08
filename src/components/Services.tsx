@@ -64,7 +64,7 @@ const Services = () => {
             How We <span className="text-primary">10X Your Results</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Our proven 6-step system has generated <strong className="text-foreground">$50M+</strong> in revenue. 
+            Our proven system has helped <strong className="text-foreground">200+ clients</strong> grow their revenue. 
             Here's exactly how we'll scale your iGaming business.
           </p>
         </div>
@@ -113,18 +113,18 @@ const Services = () => {
         <div className="text-center mt-16 bg-gradient-to-r from-primary/20 to-accent/20 rounded-2xl p-8 border border-primary/30 relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-accent/5"></div>
           <div className="relative z-10">
-            <h3 className="text-3xl font-bold mb-4">💰 ROI Guarantee: 5X Your Investment or We Work for FREE</h3>
+            <h3 className="text-3xl font-bold mb-4">💰 Results-Driven Approach</h3>
             <p className="text-lg text-muted-foreground mb-6 max-w-2xl mx-auto">
-              Join 500+ operators who've seen <strong className="text-foreground">300%+ ROI</strong> in 90 days. 
-              If we don't deliver 5X returns, you don't pay a cent.
+              Join <strong className="text-foreground">200+ operators</strong> who've seen strong ROI with our proven strategies. 
+              Performance-based pricing available.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Button size="lg" className="group text-lg px-8 py-4 bg-gradient-to-r from-primary to-accent shadow-2xl shadow-primary/25">
-                Claim Your FREE $10K Marketing Plan
+                Get Your FREE Marketing Consultation
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Button>
               <div className="text-sm text-muted-foreground">
-                ⏰ <strong>Only 7 spots left this month</strong>
+                ⏰ <strong>Schedule your consultation today</strong>
               </div>
             </div>
           </div>

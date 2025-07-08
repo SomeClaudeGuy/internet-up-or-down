@@ -33,14 +33,14 @@ const TalentCTA = () => {
           {/* Header */}
           <div className="mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Earn <span className="text-primary">$50K+/Month</span> as Our Partner
+              Earn <span className="text-primary">Great Income</span> as Our Partner
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              <strong className="text-foreground">500+ influencers</strong> already earning 6-figures with our exclusive iGaming partnerships. 
-              Join the highest-paid talent network in the industry.
+              <strong className="text-foreground">200+ influencers</strong> already earning well with our exclusive iGaming partnerships. 
+              Join our growing talent network.
             </p>
             <div className="mt-4 text-lg font-semibold text-accent">
-              💰 Average Partner Earns $52,000/month • Top 10% Earn $200K+/month
+              💰 Competitive rates and performance bonuses available
             </div>
           </div>
 
@@ -65,7 +65,7 @@ const TalentCTA = () => {
           <div className="bg-card/30 rounded-2xl p-8 border border-border/50 mb-12">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               <div className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-primary mb-2">500+</div>
+                <div className="text-3xl md:text-4xl font-bold text-primary mb-2">200+</div>
                 <div className="text-sm text-muted-foreground">Active Talents</div>
               </div>
               <div className="text-center">

@@ -20,7 +20,7 @@ const Hero = () => {
           {/* Badge */}
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-8 animate-pulse">
             <span className="text-sm font-medium text-primary">
-              ⚡ 500+ Success Stories • $50M+ Revenue Generated
+              ⚡ 200+ Success Stories • Proven Results
             </span>
           </div>
 
@@ -34,8 +34,8 @@ const Hero = () => {
 
           {/* Subheadline */}
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
-            We've generated <strong className="text-foreground">$50M+</strong> for casino operators and 
-            <strong className="text-foreground"> 500+ influencers</strong>. Join the #1 iGaming marketing network.
+            We've helped <strong className="text-foreground">200+ casino operators</strong> and 
+            <strong className="text-foreground">influencers</strong> grow their business. Join our proven iGaming marketing network.
           </p>
 
           {/* Social Proof */}
@@ -46,7 +46,7 @@ const Hero = () => {
                   <div key={i} className="w-8 h-8 rounded-full bg-gradient-to-r from-primary to-accent border-2 border-background"></div>
                 ))}
               </div>
-              <span>500+ Talents Trust Us</span>
+              <span>200+ Talents Trust Us</span>
             </div>
             <div className="hidden md:block w-px h-4 bg-border"></div>
             <div>⭐⭐⭐⭐⭐ 4.9/5 Rating</div>
@@ -55,7 +55,7 @@ const Hero = () => {
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
             <Button size="lg" className="group text-lg px-10 py-6 bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 shadow-2xl shadow-primary/25">
-              🚀 Get Your FREE $10K Marketing Plan
+              🚀 Get Your FREE Marketing Consultation
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
             <Button size="lg" variant="outline" className="group text-lg px-8 py-6 border-2 hover:bg-primary/5">
@@ -65,21 +65,20 @@ const Hero = () => {
           </div>
 
           {/* Urgency */}
-          <div className="bg-destructive/10 border border-destructive/20 rounded-lg p-4 mb-12 max-w-2xl mx-auto">
+          <div className="bg-primary/10 border border-primary/20 rounded-lg p-4 mb-12 max-w-2xl mx-auto">
             <p className="text-sm text-center">
-              <span className="font-semibold text-destructive">⏰ Limited Time:</span> Only taking 10 new clients this month. 
-              <span className="font-semibold">7 spots remaining.</span>
+              <span className="font-semibold text-primary">⏰ Get Started:</span> Free consultation to discuss your goals.
             </p>
           </div>
 
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
             <div className="text-center p-4 rounded-lg bg-card/20 backdrop-blur-sm border border-border/50">
-              <div className="text-3xl md:text-4xl font-bold text-primary mb-2">$50M+</div>
-              <div className="text-sm text-muted-foreground">Revenue Generated</div>
+              <div className="text-3xl md:text-4xl font-bold text-primary mb-2">5+</div>
+              <div className="text-sm text-muted-foreground">Years Experience</div>
             </div>
             <div className="text-center p-4 rounded-lg bg-card/20 backdrop-blur-sm border border-border/50">
-              <div className="text-3xl md:text-4xl font-bold text-primary mb-2">500+</div>
+              <div className="text-3xl md:text-4xl font-bold text-primary mb-2">200+</div>
               <div className="text-sm text-muted-foreground">Success Stories</div>
             </div>
             <div className="text-center p-4 rounded-lg bg-card/20 backdrop-blur-sm border border-border/50">
