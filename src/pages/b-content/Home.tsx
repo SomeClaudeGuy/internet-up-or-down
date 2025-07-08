@@ -1,10 +1,8 @@
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Check, Star, Users, Award, TrendingUp } from "lucide-react";
 
-const BContent = () => {
+const BContentHome = () => {
   const services = [
     {
       title: "Premium PR Services",
@@ -31,9 +29,7 @@ const BContent = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
-      <Header />
-      
+    <>
       {/* Hero Section */}
       <section className="pt-24 pb-16 bg-gradient-to-br from-primary/10 via-background to-accent/10">
         <div className="container mx-auto px-4">
@@ -160,10 +156,8 @@ const BContent = () => {
           </div>
         </div>
       </section>
-
-      <Footer />
-    </div>
+    </>
   );
 };
 
-export default BContent;
+export default BContentHome;

@@ -1,11 +1,9 @@
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { MapPin, Clock, Users, Zap, Heart, Globe } from "lucide-react";
 
-const WorkWithUs = () => {
+const WorkWithUsHome = () => {
   const positions = [
     {
       title: "Senior Performance Marketing Manager",
@@ -58,9 +56,7 @@ const WorkWithUs = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
-      <Header />
-      
+    <>
       {/* Hero Section */}
       <section className="pt-24 pb-16 bg-gradient-to-br from-primary/10 via-background to-accent/10">
         <div className="container mx-auto px-4">
@@ -117,18 +113,18 @@ const WorkWithUs = () => {
         </div>
       </section>
 
-      {/* Open Positions */}
+      {/* Open Positions Preview */}
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-6">Open Positions</h2>
+            <h2 className="text-4xl font-bold mb-6">Featured Open Positions</h2>
             <p className="text-xl text-muted-foreground">
-              Ready to make an impact? Here are our current openings.
+              Ready to make an impact? Here are some of our current openings.
             </p>
           </div>
 
           <div className="space-y-6 max-w-4xl mx-auto">
-            {positions.map((position, index) => (
+            {positions.slice(0, 2).map((position, index) => (
               <Card key={index} className="hover:shadow-lg transition-shadow">
                 <CardHeader>
                   <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
@@ -151,17 +147,15 @@ const WorkWithUs = () => {
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground mb-4">{position.description}</p>
-                  <div>
-                    <h4 className="font-semibold mb-2">Key Requirements:</h4>
-                    <ul className="list-disc list-inside text-muted-foreground space-y-1">
-                      {position.requirements.map((req, reqIndex) => (
-                        <li key={reqIndex}>{req}</li>
-                      ))}
-                    </ul>
-                  </div>
                 </CardContent>
               </Card>
             ))}
+          </div>
+          
+          <div className="text-center mt-8">
+            <Button variant="outline" size="lg">
+              View All Open Positions
+            </Button>
           </div>
         </div>
       </section>
@@ -212,10 +206,8 @@ const WorkWithUs = () => {
           </div>
         </div>
       </section>
-
-      <Footer />
-    </div>
+    </>
   );
 };
 
-export default WorkWithUs;
+export default WorkWithUsHome;
