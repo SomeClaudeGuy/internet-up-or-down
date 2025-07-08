@@ -53,14 +53,7 @@ const Services = () => {
       description: "High-quality audiovisual content and event production services for maximum brand impact.",
       features: ["Video production", "Event management", "Creative content"],
       color: "from-pink-500 to-rose-500"
-    },
-    {
-      icon: Megaphone,
-      title: "B.Content - Premium PR Services",
-      description: "Professional PR and content creation services. Get published on major media outlets or get your money back.",
-      features: ["Media placements", "PR campaigns", "Content creation"],
-      color: "from-violet-500 to-purple-500"
-    },
+    }
   ];
 
   return (
