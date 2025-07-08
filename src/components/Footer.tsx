@@ -74,7 +74,7 @@ const Footer = () => {
                 <span>Global offices</span>
               </div>
             </div>
-            <Button className="w-full">
+            <Button className="w-full" onClick={() => window.location.href = '/work-with-us'}>
               Work With Us
             </Button>
           </div>
