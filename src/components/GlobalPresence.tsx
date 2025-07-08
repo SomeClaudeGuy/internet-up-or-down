@@ -1,7 +1,7 @@
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Globe, MapPin, Clock, Users } from "lucide-react";
-import globalImage from "@/assets/global-network.jpg";
+import { Globe, MapPin, Clock, Users, Building, Zap, Target, Award } from "lucide-react";
 
 const GlobalPresence = () => {
   const regions = [
@@ -9,33 +9,44 @@ const GlobalPresence = () => {
       name: "LATAM",
       description: "Strong presence in Latin America with deep market knowledge",
       emoji: "🌎",
-      color: "from-green-500 to-emerald-500"
+      color: "from-green-500 to-emerald-500",
+      highlights: ["Brazil", "Mexico", "Argentina"]
     },
     {
       name: "North America", 
       description: "Expanding reach across US and Canadian markets",
       emoji: "🇺🇸",
-      color: "from-blue-500 to-cyan-500"
+      color: "from-blue-500 to-cyan-500",
+      highlights: ["USA", "Canada", "Remote"]
     },
     {
       name: "APAC",
       description: "Growing influence in Asia-Pacific and Australia",
       emoji: "🌏",
-      color: "from-purple-500 to-pink-500"
+      color: "from-purple-500 to-pink-500",
+      highlights: ["Australia", "Singapore", "Japan"]
     },
     {
       name: "Europe",
       description: "Established operations across European markets",
       emoji: "🇪🇺", 
-      color: "from-orange-500 to-red-500"
+      color: "from-orange-500 to-red-500",
+      highlights: ["UK", "Germany", "Malta"]
     },
   ];
 
   const stats = [
     { icon: Globe, value: "4", label: "Continents", desc: "Global presence" },
-    { icon: MapPin, value: "3", label: "Offices", desc: "Strategic locations" },
+    { icon: Building, value: "3", label: "Offices", desc: "Strategic locations" },
     { icon: Clock, value: "24/7", label: "Operations", desc: "Round the clock" },
     { icon: Users, value: "45+", label: "Team Members", desc: "Multicultural team" },
+  ];
+
+  const capabilities = [
+    { icon: Target, title: "Market Intelligence", desc: "Real-time insights from global markets" },
+    { icon: Zap, title: "Rapid Deployment", desc: "Quick campaign launches worldwide" },
+    { icon: Award, title: "Local Expertise", desc: "Native understanding of each region" },
+    { icon: Globe, title: "Connected Network", desc: "Seamless collaboration across time zones" },
   ];
 
   return (
@@ -51,27 +62,36 @@ const GlobalPresence = () => {
           </p>
         </div>
 
-        {/* Global Network Image */}
-        <div className="relative mb-16">
-          <div className="rounded-2xl overflow-hidden">
-            <img 
-              src={globalImage} 
-              alt="Global Network" 
-              className="w-full h-[400px] object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
-          </div>
-        </div>
-
         {/* Stats Grid */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
           {stats.map((stat, index) => (
-            <Card key={index} className="text-center bg-card/50 backdrop-blur-sm border-border/50">
+            <Card key={index} className="text-center bg-card/50 backdrop-blur-sm border-border/50 hover:scale-105 transition-transform">
               <CardContent className="pt-6">
                 <stat.icon className="w-8 h-8 mx-auto mb-3 text-primary" />
                 <div className="text-3xl font-bold text-primary mb-1">{stat.value}</div>
                 <div className="font-medium mb-1">{stat.label}</div>
                 <div className="text-sm text-muted-foreground">{stat.desc}</div>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+
+        {/* Capabilities Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+          {capabilities.map((capability, index) => (
+            <Card key={index} className="group hover:scale-105 transition-all duration-300 bg-card/50 backdrop-blur-sm border-border/50 hover:border-primary/50">
+              <CardHeader className="text-center pb-3">
+                <div className="w-12 h-12 mx-auto mb-3 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                  <capability.icon className="w-6 h-6 text-primary" />
+                </div>
+                <CardTitle className="text-lg group-hover:text-primary transition-colors">
+                  {capability.title}
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="text-center pt-0">
+                <p className="text-muted-foreground text-sm">
+                  {capability.desc}
+                </p>
               </CardContent>
             </Card>
           ))}
@@ -95,9 +115,16 @@ const GlobalPresence = () => {
                 </CardTitle>
               </CardHeader>
               <CardContent className="text-center">
-                <p className="text-muted-foreground text-sm">
+                <p className="text-muted-foreground text-sm mb-3">
                   {region.description}
                 </p>
+                <div className="flex flex-wrap gap-1 justify-center">
+                  {region.highlights.map((highlight, i) => (
+                    <span key={i} className="text-xs bg-primary/10 text-primary px-2 py-1 rounded-full">
+                      {highlight}
+                    </span>
+                  ))}
+                </div>
               </CardContent>
             </Card>
           ))}
