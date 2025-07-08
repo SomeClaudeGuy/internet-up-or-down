@@ -22,6 +22,9 @@ const Header = () => {
             <a href="#services" className="text-foreground hover:text-primary transition-colors">
               Services
             </a>
+            <a href="/b-content" className="text-foreground hover:text-primary transition-colors">
+              B.Content
+            </a>
             <a href="#talents" className="text-foreground hover:text-primary transition-colors">
               Talents
             </a>
@@ -54,6 +57,9 @@ const Header = () => {
             <nav className="flex flex-col space-y-4">
               <a href="#services" className="text-foreground hover:text-primary transition-colors">
                 Services
+              </a>
+              <a href="/b-content" className="text-foreground hover:text-primary transition-colors">
+                B.Content
               </a>
               <a href="#talents" className="text-foreground hover:text-primary transition-colors">
                 Talents
