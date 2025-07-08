@@ -102,9 +102,11 @@ const TalentCTA = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="group text-lg px-10 py-6 bg-gradient-to-r from-accent to-primary shadow-2xl shadow-accent/25">
-              💎 Apply to Elite Network (2 min)
-              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            <Button size="lg" asChild className="group text-lg px-10 py-6 bg-gradient-to-r from-accent to-primary shadow-2xl shadow-accent/25">
+              <a href="https://docs.google.com/forms/d/1948-2HcLLEeciF3QQIzeTB-nPmM6-qsD3HopP5-bTyQ/viewform?edit_requested=true#response=ACYDBNgoe9qnpdvzE2IG3-SgO1FgdPRTnh9slrfCToFtyek2Of0Osps9NvqxQ-7epsdcl_0" target="_blank" rel="noopener noreferrer">
+                💎 Apply to Elite Network (2 min)
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </a>
             </Button>
           </div>
 

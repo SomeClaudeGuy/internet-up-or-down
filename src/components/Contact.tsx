@@ -102,8 +102,10 @@ const Contact = () => {
                   />
                 </div>
 
-                <Button type="submit" className="w-full text-lg py-6">
-                  🚀 Get My Free Strategy Session
+                <Button asChild className="w-full text-lg py-6">
+                  <a href="https://docs.google.com/forms/d/1948-2HcLLEeciF3QQIzeTB-nPmM6-qsD3HopP5-bTyQ/viewform?edit_requested=true#response=ACYDBNgoe9qnpdvzE2IG3-SgO1FgdPRTnh9slrfCToFtyek2Of0Osps9NvqxQ-7epsdcl_0" target="_blank" rel="noopener noreferrer">
+                    🚀 Get My Free Strategy Session
+                  </a>
                 </Button>
                 <p className="text-xs text-center text-muted-foreground mt-2">
                   No spam. We'll only send you updates about your campaign.

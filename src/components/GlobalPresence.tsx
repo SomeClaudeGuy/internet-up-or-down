@@ -215,9 +215,11 @@ const GlobalPresence = () => {
             <p className="text-lg text-muted-foreground mb-6 max-w-2xl mx-auto">
               Leverage our worldwide network to expand your reach and tap into new markets with confidence.
             </p>
-            <Button size="lg" className="bg-gradient-to-r from-primary to-accent shadow-xl shadow-primary/25">
-              <Globe className="mr-2 w-5 h-5" />
-              Explore Global Opportunities
+            <Button size="lg" asChild className="bg-gradient-to-r from-primary to-accent shadow-xl shadow-primary/25">
+              <a href="https://docs.google.com/forms/d/1948-2HcLLEeciF3QQIzeTB-nPmM6-qsD3HopP5-bTyQ/viewform?edit_requested=true#response=ACYDBNgoe9qnpdvzE2IG3-SgO1FgdPRTnh9slrfCToFtyek2Of0Osps9NvqxQ-7epsdcl_0" target="_blank" rel="noopener noreferrer">
+                <Globe className="mr-2 w-5 h-5" />
+                Explore Global Opportunities
+              </a>
             </Button>
           </div>
         </div>
