@@ -13,6 +13,7 @@ import {
   Star
 } from "lucide-react";
 import { Link } from "react-router-dom";
+import Header from "@/components/Header";
 
 const Services = () => {
   const services = [
@@ -68,6 +69,7 @@ const Services = () => {
 
   return (
     <>
+      <Header />
       {/* Hero Section */}
       <section className="pt-24 pb-16 bg-gradient-to-br from-primary/10 via-background to-accent/10">
         <div className="container mx-auto px-4">
