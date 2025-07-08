@@ -54,6 +54,13 @@ const Services = () => {
       features: ["Video production", "Event management", "Creative content"],
       color: "from-pink-500 to-rose-500"
     },
+    {
+      icon: Megaphone,
+      title: "B.Content - Premium PR Services",
+      description: "Professional PR and content creation services. Get published on major media outlets or get your money back.",
+      features: ["Media placements", "PR campaigns", "Content creation"],
+      color: "from-violet-500 to-purple-500"
+    },
   ];
 
   return (
@@ -110,10 +117,15 @@ const Services = () => {
           ))}
         </div>
 
-        <div className="text-center mt-12">
-          <Button size="lg" className="group">
-            View All Services
-            <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+        <div className="text-center mt-16 bg-gradient-to-r from-primary/10 to-accent/10 rounded-2xl p-8 border border-border/50">
+          <h3 className="text-2xl font-bold mb-4">🎯 Guaranteed Results or Money Back</h3>
+          <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
+            We're so confident in our ability to deliver results that we offer a performance guarantee. 
+            If we don't hit your targets, you don't pay.
+          </p>
+          <Button size="lg" className="group text-lg px-8 py-4">
+            Get Your Free Strategy Session
+            <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </Button>
         </div>
       </div>

@@ -12,11 +12,19 @@ const Contact = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Let's Start Your <span className="text-primary">Campaign</span>
+            Ready to <span className="text-primary">10X Your Results</span>?
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Ready to elevate your brand in the iGaming industry? Get in touch with our team of experts.
+            Join 50+ industry leaders who trust us with their growth. Free consultation call - guaranteed results or money back.
           </p>
+          <div className="mt-6 flex justify-center items-center gap-4 text-sm">
+            <div className="flex items-center gap-2">
+              <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+              <span className="text-green-400">Available now</span>
+            </div>
+            <span className="text-muted-foreground">•</span>
+            <span className="text-muted-foreground">Response within 2 hours</span>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
@@ -94,9 +102,12 @@ const Contact = () => {
                   />
                 </div>
 
-                <Button type="submit" className="w-full">
-                  Send Message
+                <Button type="submit" className="w-full text-lg py-6">
+                  🚀 Get My Free Strategy Session
                 </Button>
+                <p className="text-xs text-center text-muted-foreground mt-2">
+                  No spam. We'll only send you updates about your campaign.
+                </p>
               </form>
             </CardContent>
           </Card>
@@ -163,14 +174,26 @@ const Contact = () => {
               </CardContent>
             </Card>
 
-            {/* Response Time */}
+            {/* Trust Signals */}
             <Card className="bg-gradient-to-r from-primary/10 to-accent/10 border-primary/20">
               <CardContent className="pt-6">
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-primary mb-2">&lt; 24h</div>
-                  <div className="font-medium mb-2">Average Response Time</div>
-                  <div className="text-sm text-muted-foreground">
-                    Our team responds to all inquiries within 24 hours, typically much faster.
+                <div className="text-center space-y-4">
+                  <div>
+                    <div className="text-2xl font-bold text-primary mb-1">⚡ 2 Hours</div>
+                    <div className="text-sm font-medium">Average Response Time</div>
+                  </div>
+                  <div className="grid grid-cols-2 gap-4 text-center">
+                    <div>
+                      <div className="text-lg font-bold text-primary">50+</div>
+                      <div className="text-xs text-muted-foreground">Happy Clients</div>
+                    </div>
+                    <div>
+                      <div className="text-lg font-bold text-primary">100%</div>
+                      <div className="text-xs text-muted-foreground">Money Back</div>
+                    </div>
+                  </div>
+                  <div className="text-xs text-muted-foreground">
+                    🏆 Award-winning campaigns • 🔒 NDA protected • 📈 Results guaranteed
                   </div>
                 </div>
               </CardContent>
