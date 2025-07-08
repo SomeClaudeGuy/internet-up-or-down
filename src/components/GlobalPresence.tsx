@@ -3,6 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Globe, MapPin, Clock, Users, Building, Zap, Target, Award, Plane, TrendingUp, Calendar, Network } from "lucide-react";
+import globalNetworkImage from "@/assets/global-network.jpg";
 
 const GlobalPresence = () => {
   const regions = [
@@ -66,8 +67,15 @@ const GlobalPresence = () => {
   ];
 
   return (
-    <section id="about" className="py-20 bg-muted/30">
-      <div className="container mx-auto px-4">
+    <section id="about" className="relative py-20 bg-muted/30 overflow-hidden">
+      {/* Background Image */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
+        style={{ backgroundImage: `url(${globalNetworkImage})` }}
+      />
+      <div className="absolute inset-0 bg-gradient-to-br from-background/90 via-background/70 to-primary/20" />
+      
+      <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-20">
           <div className="inline-flex items-center space-x-2 bg-primary/10 px-4 py-2 rounded-full mb-6">
             <Globe className="w-4 h-4 text-primary animate-pulse" />
