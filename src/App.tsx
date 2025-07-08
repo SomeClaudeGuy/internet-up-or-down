@@ -12,6 +12,7 @@ import WorkWithUsLayout from "./pages/work-with-us/Layout";
 import WorkWithUsHome from "./pages/work-with-us/Home";
 import WorkWithUsPositions from "./pages/work-with-us/Positions";
 import WorkWithUsBenefits from "./pages/work-with-us/Benefits";
+import Services from "./pages/Services";
 import SuccessStories from "./pages/SuccessStories";
 import TalentIntake from "./pages/TalentIntake";
 import NotFound from "./pages/NotFound";
@@ -42,6 +43,7 @@ const App = () => (
           </Route>
           
           {/* Standalone pages */}
+          <Route path="/services" element={<Services />} />
           <Route path="/success-stories" element={<SuccessStories />} />
           <Route path="/talent-intake" element={<TalentIntake />} />
           

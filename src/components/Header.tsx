@@ -42,9 +42,9 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
-            <a href="#services" onClick={handleServicesClick} className="text-foreground hover:text-primary transition-colors">
+            <Link to="/services" className="text-foreground hover:text-primary transition-colors">
               Services
-            </a>
+            </Link>
             <Link to="/b-content" className="text-foreground hover:text-primary transition-colors">
               B.Content
             </Link>
@@ -77,9 +77,9 @@ const Header = () => {
         {isMenuOpen && (
           <div className="md:hidden mt-4 pb-4 border-t border-border pt-4">
             <nav className="flex flex-col space-y-4">
-              <a href="#services" onClick={handleServicesClick} className="text-foreground hover:text-primary transition-colors">
+              <Link to="/services" className="text-foreground hover:text-primary transition-colors">
                 Services
-              </a>
+              </Link>
               <Link to="/b-content" className="text-foreground hover:text-primary transition-colors">
                 B.Content
               </Link>
