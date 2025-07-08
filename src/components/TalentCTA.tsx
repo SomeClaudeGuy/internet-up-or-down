@@ -90,11 +90,18 @@ const TalentCTA = () => {
               {["LATAM 🌎", "North America 🇺🇸", "APAC 🌏", "Europe 🇪🇺"].map((region, index) => (
                 <div 
                   key={index}
-                  className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-lg p-6 hover:border-primary/50 transition-all duration-300 hover:scale-105"
+                  className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-lg p-6 hover:border-primary/50 transition-all duration-300 hover:scale-105 relative overflow-hidden"
                 >
-                  <div className="text-2xl mb-2">{region.split(' ')[1]}</div>
-                  <div className="font-semibold text-primary">{region.split(' ')[0]}</div>
-                  <div className="text-sm text-muted-foreground mt-2">Elite talents ready to partner</div>
+                  {index === 1 && (
+                    <div className="absolute inset-0 opacity-20">
+                      <img src="/lovable-uploads/33a61296-3cb1-4d62-9203-6439cc311a8e.png" alt="" className="w-full h-full object-cover" />
+                    </div>
+                  )}
+                  <div className="relative z-10">
+                    <div className="text-2xl mb-2">{region.split(' ')[1]}</div>
+                    <div className="font-semibold text-primary">{region.split(' ')[0]}</div>
+                    <div className="text-sm text-muted-foreground mt-2">Elite talents ready to partner</div>
+                  </div>
                 </div>
               ))}
             </div>

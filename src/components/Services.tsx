@@ -112,6 +112,13 @@ const Services = () => {
 
         <div className="text-center mt-16 bg-gradient-to-r from-primary/20 to-accent/20 rounded-2xl p-8 border border-primary/30 relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-accent/5"></div>
+          {/* Gaming Assets Background */}
+          <div className="absolute right-4 top-4 opacity-20">
+            <img src="/lovable-uploads/99695c86-85b1-4a01-9da6-687e1b326080.png" alt="" className="w-20 h-auto" />
+          </div>
+          <div className="absolute left-4 bottom-4 opacity-20">
+            <img src="/lovable-uploads/9dabbf25-1673-40c5-8a2d-d005b14c0eb9.png" alt="" className="w-16 h-auto" />
+          </div>
           <div className="relative z-10">
             <h3 className="text-3xl font-bold mb-4">💰 Results-Driven Approach</h3>
             <p className="text-lg text-muted-foreground mb-6 max-w-2xl mx-auto">
