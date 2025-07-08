@@ -73,27 +73,10 @@ const SocialProof = () => {
         </div>
 
         {/* Testimonials */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
-          {/* Gaming Environment Background */}
-          <div className="absolute inset-0 opacity-5 pointer-events-none">
-            <img src="/lovable-uploads/6858fb8a-ac49-46f4-8555-aa394a3e77be.png" alt="" className="w-full h-full object-cover rounded-lg" />
-          </div>
-          
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
-            <Card key={index} className="bg-card/50 backdrop-blur-sm border-border/50 hover:border-primary/50 transition-all duration-300 relative">
-              {/* Casino Slots decoration for first testimonial */}
-              {index === 0 && (
-                <div className="absolute top-2 right-2 opacity-20">
-                  <img src="/lovable-uploads/8e8e7311-c87a-4277-9376-95550fa7319c.png" alt="" className="w-12 h-auto" />
-                </div>
-              )}
-              {/* Esports Event decoration for last testimonial */}
-              {index === 2 && (
-                <div className="absolute bottom-2 left-2 opacity-20">
-                  <img src="/lovable-uploads/ff502cf1-1a3f-4b66-9482-06a161db4355.png" alt="" className="w-16 h-auto" />
-                </div>
-              )}
-              <CardContent className="p-6 relative z-10">
+            <Card key={index} className="bg-card/50 backdrop-blur-sm border-border/50 hover:border-primary/50 transition-all duration-300">
+              <CardContent className="p-6">
                 <div className="flex mb-4">
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
