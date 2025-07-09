@@ -1,26 +1,8 @@
-import { useEffect, useState } from "react";
-
 const ScrollingGlobe = () => {
-  const [scrollY, setScrollY] = useState(0);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrollY(window.scrollY);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
   return (
     <div className="absolute inset-0 overflow-hidden pointer-events-none">
       {/* Main Globe Container */}
-      <div 
-        className="absolute left-1/2 top-1/3 -translate-x-1/2 -translate-y-1/2"
-        style={{ 
-          transform: `translate(-50%, -50%) translateY(${scrollY * -0.3}px) scale(${1 + scrollY * 0.0005})`,
-        }}
-      >
+      <div className="absolute left-1/2 top-1/3 -translate-x-1/2 -translate-y-1/2">
         {/* Globe Sphere */}
         <div className="relative w-96 h-96">
           {/* Main globe with gradient background */}
@@ -36,8 +18,7 @@ const ScrollingGlobe = () => {
                 inset -20px -20px 60px hsl(var(--primary)/0.3),
                 inset 20px 20px 60px hsl(var(--accent)/0.2),
                 0 0 100px hsl(var(--primary)/0.4)
-              `,
-              transform: `rotateY(${scrollY * 0.1}deg) rotateX(${Math.sin(scrollY * 0.001) * 10}deg)`
+              `
             }}
           >
             {/* Continents overlay */}
@@ -105,7 +86,7 @@ const ScrollingGlobe = () => {
         </div>
       </div>
 
-      {/* Floating particles with parallax */}
+      {/* Static floating particles */}
       {Array.from({ length: 50 }).map((_, i) => (
         <div
           key={i}
@@ -113,14 +94,13 @@ const ScrollingGlobe = () => {
           style={{
             top: `${Math.random() * 100}%`,
             left: `${Math.random() * 100}%`,
-            transform: `translateY(${scrollY * (0.1 + i * 0.01)}px)`,
             animationDelay: `${i * 0.2}s`,
             animationDuration: `${2 + Math.random() * 3}s`
           }}
         />
       ))}
 
-      {/* Connection lines */}
+      {/* Static connection lines */}
       <svg className="absolute inset-0 w-full h-full opacity-20">
         <defs>
           <linearGradient id="connectionGradient" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -136,21 +116,18 @@ const ScrollingGlobe = () => {
           stroke="url(#connectionGradient)" 
           strokeWidth="1" 
           fill="none"
-          style={{ transform: `translateY(${scrollY * -0.05}px)` }}
         />
         <path 
           d="M 100 200 Q 300 100 500 250" 
           stroke="url(#connectionGradient)" 
           strokeWidth="1" 
           fill="none"
-          style={{ transform: `translateY(${scrollY * -0.08}px)` }}
         />
         <path 
           d="M 50 300 Q 250 200 450 350" 
           stroke="url(#connectionGradient)" 
           strokeWidth="1" 
           fill="none"
-          style={{ transform: `translateY(${scrollY * -0.06}px)` }}
         />
       </svg>
     </div>
