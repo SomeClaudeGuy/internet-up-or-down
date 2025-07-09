@@ -16,7 +16,7 @@ const ScrollingGlobe = () => {
     <div className="absolute inset-0 overflow-hidden pointer-events-none">
       {/* Globe SVG */}
       <div 
-        className="absolute top-1/2 left-1/2 w-96 h-96 lg:w-[600px] lg:h-[600px] transform -translate-x-1/2 -translate-y-1/2 opacity-10"
+        className="absolute top-1/2 left-1/2 w-96 h-96 lg:w-[600px] lg:h-[600px] transform -translate-x-1/2 -translate-y-1/2 opacity-30"
         style={{ 
           transform: `translate(-50%, -50%) rotate(${scrollY * 0.1}deg)`,
           transition: 'none'
