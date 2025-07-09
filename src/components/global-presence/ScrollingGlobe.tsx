@@ -1,111 +1,4 @@
-import { useEffect, useRef, useState } from "react";
-import { Canvas, useFrame } from "@react-three/fiber";
-import { Sphere, Stars, Text, Float } from "@react-three/drei";
-import * as THREE from "three";
-
-// 3D Globe Component
-const Globe = ({ scrollY }: { scrollY: number }) => {
-  const meshRef = useRef<THREE.Mesh>(null);
-  const [texture, setTexture] = useState<THREE.Texture | null>(null);
-
-  // Create earth-like texture
-  useEffect(() => {
-    const canvas = document.createElement('canvas');
-    canvas.width = 512;
-    canvas.height = 512;
-    const ctx = canvas.getContext('2d')!;
-    
-    // Create gradient for earth-like appearance
-    const gradient = ctx.createRadialGradient(256, 256, 0, 256, 256, 256);
-    gradient.addColorStop(0, '#4FC3F7');
-    gradient.addColorStop(0.3, '#29B6F6');
-    gradient.addColorStop(0.6, '#0288D1');
-    gradient.addColorStop(1, '#01579B');
-    
-    ctx.fillStyle = gradient;
-    ctx.fillRect(0, 0, 512, 512);
-    
-    // Add some continent-like shapes
-    ctx.fillStyle = '#2E7D32';
-    ctx.globalAlpha = 0.7;
-    
-    // Draw some abstract continent shapes
-    ctx.fillRect(100, 150, 80, 60);
-    ctx.fillRect(200, 200, 120, 40);
-    ctx.fillRect(350, 100, 90, 80);
-    ctx.fillRect(50, 300, 100, 70);
-    ctx.fillRect(300, 350, 150, 80);
-    
-    const earthTexture = new THREE.CanvasTexture(canvas);
-    setTexture(earthTexture);
-  }, []);
-
-  useFrame(() => {
-    if (meshRef.current) {
-      // Rotate based on scroll with smooth parallax
-      meshRef.current.rotation.y = scrollY * 0.002;
-      meshRef.current.rotation.x = Math.sin(scrollY * 0.001) * 0.1;
-      
-      // Subtle floating animation
-      meshRef.current.position.y = Math.sin(Date.now() * 0.001) * 0.2;
-    }
-  });
-
-  return (
-    <Float speed={1} rotationIntensity={0.1} floatIntensity={0.5}>
-      <Sphere ref={meshRef} args={[2, 64, 64]} position={[0, 0, 0]}>
-        <meshPhongMaterial 
-          map={texture}
-          shininess={100}
-          transparent
-          opacity={0.9}
-        />
-      </Sphere>
-      
-      {/* Atmosphere glow */}
-      <Sphere args={[2.1, 32, 32]} position={[0, 0, 0]}>
-        <meshBasicMaterial 
-          color="#4FC3F7"
-          transparent
-          opacity={0.1}
-          side={THREE.BackSide}
-        />
-      </Sphere>
-    </Float>
-  );
-};
-
-// Floating city markers
-const CityMarkers = ({ scrollY }: { scrollY: number }) => {
-  const cities = [
-    { position: [1.8, 0.5, 0.8], name: "NYC" },
-    { position: [-1.2, 0.8, 1.4], name: "LON" },
-    { position: [0.5, -1.6, 1.2], name: "SYD" },
-    { position: [-0.8, 1.2, -1.6], name: "TOK" },
-    { position: [1.4, -0.6, -1.2], name: "LA" },
-  ];
-
-  return (
-    <>
-      {cities.map((city, index) => (
-        <group key={city.name}>
-          <Sphere 
-            args={[0.03, 8, 8]} 
-            position={city.position as [number, number, number]}
-          >
-            <meshBasicMaterial color="#FFD700" />
-          </Sphere>
-          <pointLight 
-            position={city.position as [number, number, number]}
-            color="#FFD700"
-            intensity={0.5}
-            distance={1}
-          />
-        </group>
-      ))}
-    </>
-  );
-};
+import { useEffect, useState } from "react";
 
 const ScrollingGlobe = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -121,55 +14,145 @@ const ScrollingGlobe = () => {
 
   return (
     <div className="absolute inset-0 overflow-hidden pointer-events-none">
-      {/* 3D Canvas positioned higher on the page */}
+      {/* Main Globe Container */}
       <div 
-        className="absolute w-full h-[120vh] -top-[20vh]"
+        className="absolute left-1/2 top-1/3 -translate-x-1/2 -translate-y-1/2"
         style={{ 
-          transform: `translateY(${scrollY * 0.3}px)`,
+          transform: `translate(-50%, -50%) translateY(${scrollY * -0.3}px) scale(${1 + scrollY * 0.0005})`,
         }}
       >
-        <Canvas
-          camera={{ position: [0, 0, 8], fov: 45 }}
-          style={{ background: 'transparent' }}
-        >
-          {/* Lighting setup */}
-          <ambientLight intensity={0.4} />
-          <directionalLight position={[10, 10, 5]} intensity={0.8} />
-          <pointLight position={[-10, -10, -5]} intensity={0.3} color="#4FC3F7" />
-          
-          {/* Background stars */}
-          <Stars 
-            radius={100} 
-            depth={50} 
-            count={2000} 
-            factor={4} 
-            saturation={0} 
-            fade 
-            speed={0.5}
+        {/* Globe Sphere */}
+        <div className="relative w-96 h-96">
+          {/* Main globe with gradient background */}
+          <div 
+            className="w-full h-full rounded-full relative overflow-hidden"
+            style={{
+              background: `
+                radial-gradient(circle at 30% 30%, hsl(var(--primary)) 0%, hsl(var(--primary)/0.8) 25%, hsl(var(--primary)/0.4) 50%, transparent 70%),
+                radial-gradient(circle at 70% 70%, hsl(var(--accent)) 0%, hsl(var(--accent)/0.6) 30%, transparent 60%),
+                linear-gradient(135deg, hsl(var(--primary)/0.3) 0%, hsl(var(--primary)/0.1) 50%, hsl(var(--accent)/0.2) 100%)
+              `,
+              boxShadow: `
+                inset -20px -20px 60px hsl(var(--primary)/0.3),
+                inset 20px 20px 60px hsl(var(--accent)/0.2),
+                0 0 100px hsl(var(--primary)/0.4)
+              `,
+              transform: `rotateY(${scrollY * 0.1}deg) rotateX(${Math.sin(scrollY * 0.001) * 10}deg)`
+            }}
+          >
+            {/* Continents overlay */}
+            <div 
+              className="absolute inset-0 opacity-40"
+              style={{
+                background: `
+                  radial-gradient(ellipse 40px 20px at 25% 35%, hsl(var(--accent)) 40%, transparent 50%),
+                  radial-gradient(ellipse 60px 30px at 70% 25%, hsl(var(--accent)) 40%, transparent 50%),
+                  radial-gradient(ellipse 35px 25px at 20% 70%, hsl(var(--accent)) 40%, transparent 50%),
+                  radial-gradient(ellipse 50px 20px at 75% 65%, hsl(var(--accent)) 40%, transparent 50%)
+                `
+              }}
+            />
+            
+            {/* Grid lines */}
+            <div className="absolute inset-0">
+              {/* Longitude lines */}
+              {Array.from({ length: 8 }).map((_, i) => (
+                <div
+                  key={`long-${i}`}
+                  className="absolute top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-primary/30 to-transparent"
+                  style={{ left: `${(i + 1) * 12.5}%` }}
+                />
+              ))}
+              {/* Latitude lines */}
+              {Array.from({ length: 6 }).map((_, i) => (
+                <div
+                  key={`lat-${i}`}
+                  className="absolute left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent"
+                  style={{ top: `${(i + 1) * 16.67}%` }}
+                />
+              ))}
+            </div>
+          </div>
+
+          {/* Atmosphere glow */}
+          <div 
+            className="absolute inset-[-20px] rounded-full"
+            style={{
+              background: `radial-gradient(circle, hsl(var(--primary)/0.2) 0%, hsl(var(--primary)/0.1) 30%, transparent 70%)`,
+              filter: 'blur(20px)'
+            }}
           />
-          
-          {/* Main globe */}
-          <Globe scrollY={scrollY} />
-          
+
           {/* City markers */}
-          <CityMarkers scrollY={scrollY} />
-        </Canvas>
+          {[
+            { top: '35%', left: '25%', name: 'NYC' },
+            { top: '25%', left: '70%', name: 'LON' },
+            { top: '70%', left: '20%', name: 'SYD' },
+            { top: '30%', left: '85%', name: 'TOK' },
+            { top: '65%', left: '75%', name: 'LA' },
+          ].map((city, i) => (
+            <div
+              key={city.name}
+              className="absolute w-2 h-2 rounded-full bg-accent animate-pulse"
+              style={{
+                top: city.top,
+                left: city.left,
+                animationDelay: `${i * 0.5}s`,
+                boxShadow: `0 0 10px hsl(var(--accent)), 0 0 20px hsl(var(--accent)/0.5)`
+              }}
+            />
+          ))}
+        </div>
       </div>
 
-      {/* Background particle effects */}
-      {Array.from({ length: 30 }).map((_, i) => (
+      {/* Floating particles with parallax */}
+      {Array.from({ length: 50 }).map((_, i) => (
         <div
           key={i}
-          className="absolute w-1 h-1 bg-primary/20 rounded-full animate-pulse"
+          className="absolute w-1 h-1 bg-primary/30 rounded-full animate-pulse"
           style={{
             top: `${Math.random() * 100}%`,
             left: `${Math.random() * 100}%`,
-            transform: `translateY(${scrollY * (0.05 + i * 0.002)}px)`,
-            animationDelay: `${i * 0.1}s`,
-            animationDuration: `${3 + i * 0.1}s`
+            transform: `translateY(${scrollY * (0.1 + i * 0.01)}px)`,
+            animationDelay: `${i * 0.2}s`,
+            animationDuration: `${2 + Math.random() * 3}s`
           }}
         />
       ))}
+
+      {/* Connection lines */}
+      <svg className="absolute inset-0 w-full h-full opacity-20">
+        <defs>
+          <linearGradient id="connectionGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="hsl(var(--primary))" stopOpacity="0" />
+            <stop offset="50%" stopColor="hsl(var(--primary))" stopOpacity="0.5" />
+            <stop offset="100%" stopColor="hsl(var(--accent))" stopOpacity="0" />
+          </linearGradient>
+        </defs>
+        
+        {/* Curved connection lines */}
+        <path 
+          d="M 20 80 Q 200 20 380 120" 
+          stroke="url(#connectionGradient)" 
+          strokeWidth="1" 
+          fill="none"
+          style={{ transform: `translateY(${scrollY * -0.05}px)` }}
+        />
+        <path 
+          d="M 100 200 Q 300 100 500 250" 
+          stroke="url(#connectionGradient)" 
+          strokeWidth="1" 
+          fill="none"
+          style={{ transform: `translateY(${scrollY * -0.08}px)` }}
+        />
+        <path 
+          d="M 50 300 Q 250 200 450 350" 
+          stroke="url(#connectionGradient)" 
+          strokeWidth="1" 
+          fill="none"
+          style={{ transform: `translateY(${scrollY * -0.06}px)` }}
+        />
+      </svg>
     </div>
   );
 };
