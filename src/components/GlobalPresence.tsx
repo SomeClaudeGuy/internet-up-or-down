@@ -1,22 +1,21 @@
 
 import { Globe } from "lucide-react";
-import globalNetworkImage from "@/assets/global-network.jpg";
+import techWorldMapImage from "@/assets/tech-world-map.jpg";
 import GlobalStats from "@/components/global-presence/GlobalStats";
 import GlobalCapabilities from "@/components/global-presence/GlobalCapabilities";
 import GlobalRegions from "@/components/global-presence/GlobalRegions";
 import GlobalAchievements from "@/components/global-presence/GlobalAchievements";
 import GlobalCTA from "@/components/global-presence/GlobalCTA";
-import ScrollingGlobe from "@/components/global-presence/ScrollingGlobe";
+
 
 const GlobalPresence = () => {
   return (
     <section id="about" className="relative py-24 lg:py-32 overflow-hidden">
       {/* Enhanced Background Layer with Rotating Globe */}
       <div className="absolute inset-0">
-        <ScrollingGlobe />
         <div 
-          className="absolute inset-0 bg-cover bg-center bg-fixed opacity-10"
-          style={{ backgroundImage: `url(${globalNetworkImage})` }}
+          className="absolute inset-0 bg-cover bg-center bg-fixed opacity-15"
+          style={{ backgroundImage: `url(${techWorldMapImage})` }}
         />
         <div className="absolute inset-0 bg-gradient-to-br from-background/80 via-background/60 to-background/70" />
         <div className="absolute inset-0 bg-gradient-to-t from-primary/5 via-transparent to-accent/5" />
