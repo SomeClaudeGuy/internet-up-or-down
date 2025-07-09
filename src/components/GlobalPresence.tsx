@@ -18,7 +18,7 @@ const GlobalPresence = () => {
           className="absolute inset-0 bg-cover bg-center bg-fixed opacity-10"
           style={{ backgroundImage: `url(${globalNetworkImage})` }}
         />
-        <div className="absolute inset-0 bg-gradient-to-br from-background via-background/95 to-background/90" />
+        <div className="absolute inset-0 bg-gradient-to-br from-background/80 via-background/60 to-background/70" />
         <div className="absolute inset-0 bg-gradient-to-t from-primary/5 via-transparent to-accent/5" />
       </div>
       

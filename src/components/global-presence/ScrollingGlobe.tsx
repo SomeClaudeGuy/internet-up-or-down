@@ -13,7 +13,7 @@ const ScrollingGlobe = () => {
   }, []);
 
   return (
-    <div className="absolute inset-0 overflow-hidden pointer-events-none">
+    <div className="absolute inset-0 overflow-hidden pointer-events-none z-10">
       {/* Globe SVG */}
       <div 
         className="absolute top-1/2 left-1/2 w-96 h-96 lg:w-[600px] lg:h-[600px] transform -translate-x-1/2 -translate-y-1/2 opacity-30"
