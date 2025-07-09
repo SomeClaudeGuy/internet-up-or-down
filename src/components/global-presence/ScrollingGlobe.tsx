@@ -1,4 +1,111 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import { Canvas, useFrame } from "@react-three/fiber";
+import { Sphere, Stars, Text, Float } from "@react-three/drei";
+import * as THREE from "three";
+
+// 3D Globe Component
+const Globe = ({ scrollY }: { scrollY: number }) => {
+  const meshRef = useRef<THREE.Mesh>(null);
+  const [texture, setTexture] = useState<THREE.Texture | null>(null);
+
+  // Create earth-like texture
+  useEffect(() => {
+    const canvas = document.createElement('canvas');
+    canvas.width = 512;
+    canvas.height = 512;
+    const ctx = canvas.getContext('2d')!;
+    
+    // Create gradient for earth-like appearance
+    const gradient = ctx.createRadialGradient(256, 256, 0, 256, 256, 256);
+    gradient.addColorStop(0, '#4FC3F7');
+    gradient.addColorStop(0.3, '#29B6F6');
+    gradient.addColorStop(0.6, '#0288D1');
+    gradient.addColorStop(1, '#01579B');
+    
+    ctx.fillStyle = gradient;
+    ctx.fillRect(0, 0, 512, 512);
+    
+    // Add some continent-like shapes
+    ctx.fillStyle = '#2E7D32';
+    ctx.globalAlpha = 0.7;
+    
+    // Draw some abstract continent shapes
+    ctx.fillRect(100, 150, 80, 60);
+    ctx.fillRect(200, 200, 120, 40);
+    ctx.fillRect(350, 100, 90, 80);
+    ctx.fillRect(50, 300, 100, 70);
+    ctx.fillRect(300, 350, 150, 80);
+    
+    const earthTexture = new THREE.CanvasTexture(canvas);
+    setTexture(earthTexture);
+  }, []);
+
+  useFrame(() => {
+    if (meshRef.current) {
+      // Rotate based on scroll with smooth parallax
+      meshRef.current.rotation.y = scrollY * 0.002;
+      meshRef.current.rotation.x = Math.sin(scrollY * 0.001) * 0.1;
+      
+      // Subtle floating animation
+      meshRef.current.position.y = Math.sin(Date.now() * 0.001) * 0.2;
+    }
+  });
+
+  return (
+    <Float speed={1} rotationIntensity={0.1} floatIntensity={0.5}>
+      <Sphere ref={meshRef} args={[2, 64, 64]} position={[0, 0, 0]}>
+        <meshPhongMaterial 
+          map={texture}
+          shininess={100}
+          transparent
+          opacity={0.9}
+        />
+      </Sphere>
+      
+      {/* Atmosphere glow */}
+      <Sphere args={[2.1, 32, 32]} position={[0, 0, 0]}>
+        <meshBasicMaterial 
+          color="#4FC3F7"
+          transparent
+          opacity={0.1}
+          side={THREE.BackSide}
+        />
+      </Sphere>
+    </Float>
+  );
+};
+
+// Floating city markers
+const CityMarkers = ({ scrollY }: { scrollY: number }) => {
+  const cities = [
+    { position: [1.8, 0.5, 0.8], name: "NYC" },
+    { position: [-1.2, 0.8, 1.4], name: "LON" },
+    { position: [0.5, -1.6, 1.2], name: "SYD" },
+    { position: [-0.8, 1.2, -1.6], name: "TOK" },
+    { position: [1.4, -0.6, -1.2], name: "LA" },
+  ];
+
+  return (
+    <>
+      {cities.map((city, index) => (
+        <group key={city.name}>
+          <Sphere 
+            args={[0.03, 8, 8]} 
+            position={city.position as [number, number, number]}
+          >
+            <meshBasicMaterial color="#FFD700" />
+          </Sphere>
+          <pointLight 
+            position={city.position as [number, number, number]}
+            color="#FFD700"
+            intensity={0.5}
+            distance={1}
+          />
+        </group>
+      ))}
+    </>
+  );
+};
 
 const ScrollingGlobe = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -14,84 +121,52 @@ const ScrollingGlobe = () => {
 
   return (
     <div className="absolute inset-0 overflow-hidden pointer-events-none">
-      {/* Main 3D Globe */}
+      {/* 3D Canvas positioned higher on the page */}
       <div 
-        className="absolute top-1/4 left-1/2 w-[400px] h-[400px] lg:w-[600px] lg:h-[600px]"
+        className="absolute w-full h-[120vh] -top-[20vh]"
         style={{ 
-          transform: `translate(-50%, calc(-75% + ${scrollY * 0.15}px)) rotateX(10deg) rotateY(${scrollY * 0.1}deg)`,
-          transition: 'none'
+          transform: `translateY(${scrollY * 0.3}px)`,
         }}
       >
-        {/* Globe sphere */}
-        <div className="relative w-full h-full rounded-full bg-gradient-to-br from-primary/20 via-primary/10 to-transparent border border-primary/30 backdrop-blur-sm shadow-2xl">
-          {/* Globe texture overlay */}
-          <div 
-            className="absolute inset-0 rounded-full opacity-40"
-            style={{
-              background: `
-                radial-gradient(circle at 30% 30%, hsl(var(--primary) / 0.3) 0%, transparent 50%),
-                radial-gradient(circle at 70% 20%, hsl(var(--accent) / 0.2) 0%, transparent 30%),
-                radial-gradient(circle at 20% 70%, hsl(var(--primary) / 0.2) 0%, transparent 40%),
-                radial-gradient(circle at 80% 80%, hsl(var(--accent) / 0.1) 0%, transparent 25%)
-              `
-            }}
+        <Canvas
+          camera={{ position: [0, 0, 8], fov: 45 }}
+          style={{ background: 'transparent' }}
+        >
+          {/* Lighting setup */}
+          <ambientLight intensity={0.4} />
+          <directionalLight position={[10, 10, 5]} intensity={0.8} />
+          <pointLight position={[-10, -10, -5]} intensity={0.3} color="#4FC3F7" />
+          
+          {/* Background stars */}
+          <Stars 
+            radius={100} 
+            depth={50} 
+            count={2000} 
+            factor={4} 
+            saturation={0} 
+            fade 
+            speed={0.5}
           />
           
-          {/* Latitude lines */}
-          {[20, 40, 60, 80].map((offset, i) => (
-            <div
-              key={`lat-${i}`}
-              className="absolute left-0 right-0 border-t border-primary/20"
-              style={{
-                top: `${offset}%`,
-                borderRadius: '50%',
-                transform: `scaleX(${Math.cos((offset - 50) * 0.02)})`,
-              }}
-            />
-          ))}
+          {/* Main globe */}
+          <Globe scrollY={scrollY} />
           
-          {/* Longitude lines */}
-          {[20, 40, 60, 80].map((offset, i) => (
-            <div
-              key={`lon-${i}`}
-              className="absolute top-0 bottom-0 border-l border-primary/20"
-              style={{
-                left: `${offset}%`,
-                borderRadius: '50%',
-                transform: `scaleY(${Math.sin(offset * 0.02) + 0.5})`,
-              }}
-            />
-          ))}
-          
-          {/* Glowing cities/nodes */}
-          <div className="absolute top-[30%] left-[40%] w-2 h-2 bg-primary rounded-full shadow-lg shadow-primary/50 animate-pulse" />
-          <div className="absolute top-[60%] left-[70%] w-1.5 h-1.5 bg-accent rounded-full shadow-lg shadow-accent/50 animate-pulse" style={{ animationDelay: '1s' }} />
-          <div className="absolute top-[45%] left-[20%] w-2.5 h-2.5 bg-primary rounded-full shadow-lg shadow-primary/50 animate-pulse" style={{ animationDelay: '2s' }} />
-          <div className="absolute top-[25%] left-[80%] w-1 h-1 bg-accent rounded-full shadow-lg shadow-accent/50 animate-pulse" style={{ animationDelay: '3s' }} />
-          <div className="absolute top-[75%] left-[50%] w-2 h-2 bg-primary rounded-full shadow-lg shadow-primary/50 animate-pulse" style={{ animationDelay: '4s' }} />
-          
-          {/* Atmosphere glow */}
-          <div className="absolute inset-[-20px] rounded-full bg-gradient-to-r from-primary/10 via-transparent to-accent/10 blur-xl" />
-        </div>
-        
-        {/* Globe shadow */}
-        <div 
-          className="absolute top-[80%] left-[10%] w-[80%] h-[20%] bg-black/20 rounded-full blur-2xl"
-          style={{ transform: 'rotateX(75deg)' }}
-        />
+          {/* City markers */}
+          <CityMarkers scrollY={scrollY} />
+        </Canvas>
       </div>
-      
-      {/* Background stars/particles that move at different speeds */}
-      {Array.from({ length: 20 }).map((_, i) => (
+
+      {/* Background particle effects */}
+      {Array.from({ length: 30 }).map((_, i) => (
         <div
           key={i}
-          className="absolute w-1 h-1 bg-primary/30 rounded-full animate-pulse"
+          className="absolute w-1 h-1 bg-primary/20 rounded-full animate-pulse"
           style={{
             top: `${Math.random() * 100}%`,
             left: `${Math.random() * 100}%`,
-            transform: `translateY(${scrollY * (0.02 + i * 0.001)}px)`,
+            transform: `translateY(${scrollY * (0.05 + i * 0.002)}px)`,
             animationDelay: `${i * 0.1}s`,
-            animationDuration: `${2 + i * 0.1}s`
+            animationDuration: `${3 + i * 0.1}s`
           }}
         />
       ))}
