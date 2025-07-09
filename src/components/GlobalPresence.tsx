@@ -6,14 +6,16 @@ import GlobalCapabilities from "@/components/global-presence/GlobalCapabilities"
 import GlobalRegions from "@/components/global-presence/GlobalRegions";
 import GlobalAchievements from "@/components/global-presence/GlobalAchievements";
 import GlobalCTA from "@/components/global-presence/GlobalCTA";
+import ScrollingGlobe from "@/components/global-presence/ScrollingGlobe";
 
 const GlobalPresence = () => {
   return (
     <section id="about" className="relative py-24 lg:py-32 overflow-hidden">
-      {/* Enhanced Background Layer */}
+      {/* Enhanced Background Layer with Rotating Globe */}
       <div className="absolute inset-0">
+        <ScrollingGlobe />
         <div 
-          className="absolute inset-0 bg-cover bg-center bg-fixed opacity-20"
+          className="absolute inset-0 bg-cover bg-center bg-fixed opacity-10"
           style={{ backgroundImage: `url(${globalNetworkImage})` }}
         />
         <div className="absolute inset-0 bg-gradient-to-br from-background via-background/95 to-background/90" />
