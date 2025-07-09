@@ -16,9 +16,9 @@ const ScrollingGlobe = () => {
     <div className="absolute inset-0 overflow-hidden pointer-events-none z-10">
       {/* Globe SVG */}
       <div 
-        className="absolute top-1/2 left-1/2 w-96 h-96 lg:w-[600px] lg:h-[600px] transform -translate-x-1/2 -translate-y-1/2 opacity-30"
+        className="absolute top-1/2 left-1/2 w-96 h-96 lg:w-[600px] lg:h-[600px] opacity-30"
         style={{ 
-          transform: `translate(-50%, -50%) rotate(${scrollY * 0.1}deg)`,
+          transform: `translate(-50%, calc(-50% + ${scrollY * 0.3}px)) rotate(${scrollY * 0.2}deg) scale(${1 + scrollY * 0.0005})`,
           transition: 'none'
         }}
       >
@@ -75,9 +75,9 @@ const ScrollingGlobe = () => {
       
       {/* Additional floating elements that also rotate */}
       <div 
-        className="absolute top-1/4 right-1/4 w-32 h-32 opacity-5"
+        className="absolute top-1/4 right-1/4 w-32 h-32 opacity-10"
         style={{ 
-          transform: `rotate(${scrollY * -0.05}deg)`,
+          transform: `translate(${scrollY * -0.1}px, ${scrollY * 0.05}px) rotate(${scrollY * -0.15}deg)`,
           transition: 'none'
         }}
       >
