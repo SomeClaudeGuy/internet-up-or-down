@@ -73,8 +73,8 @@ const Testimonials = () => {
         {/* Results Section */}
         <div className="mt-20 bg-gradient-to-r from-primary/10 to-accent/10 rounded-2xl p-8 border border-border/50">
           <div className="text-center mb-8">
-            <h3 className="text-2xl font-bold mb-4">Guaranteed Results</h3>
-            <p className="text-muted-foreground">Track record of success across all campaigns</p>
+            <h3 className="text-2xl font-bold mb-4">{t.testimonialsResultsTitle}</h3>
+            <p className="text-muted-foreground">{t.testimonialsResultsSubtitle}</p>
           </div>
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">

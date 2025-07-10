@@ -246,6 +246,8 @@ export const translations = {
     testimonialsAuthor3: "Alex Thompson",
     testimonialsRole3: "Founder, PokerPro",
     testimonialsResult3: "10M+ Video Views",
+    testimonialsResultsTitle: "Guaranteed Results",
+    testimonialsResultsSubtitle: "Track record of success across all campaigns",
 
     // Not Found
     notFoundTitle: "Page Not Found",
@@ -446,6 +448,8 @@ export const translations = {
     testimonialsAuthor3: "Alex Thompson",
     testimonialsRole3: "Fundador, PokerPro",
     testimonialsResult3: "10M+ Visualizaciones de Video",
+    testimonialsResultsTitle: "Resultados Garantizados",
+    testimonialsResultsSubtitle: "Historial de éxito en todas las campañas",
 
     // Global Presence
     globalPresenceTitle: "Presencia Global",
@@ -700,6 +704,8 @@ export const translations = {
     testimonialsAuthor3: "Alex Thompson",
     testimonialsRole3: "Основатель, PokerPro",
     testimonialsResult3: "10M+ Просмотров Видео",
+    testimonialsResultsTitle: "Гарантированные Результаты", 
+    testimonialsResultsSubtitle: "Послужной список успеха во всех кампаниях",
 
     // Global Presence
     globalPresenceTitle: "Глобальное Присутствие",
@@ -954,6 +960,8 @@ export const translations = {
     testimonialsAuthor3: "Alex Thompson",
     testimonialsRole3: "Засновник, PokerPro",
     testimonialsResult3: "10M+ Переглядів Відео",
+    testimonialsResultsTitle: "Гарантовані Результати",
+    testimonialsResultsSubtitle: "Послужний список успіху в усіх кампаніях",
 
     // Global Presence
     globalPresenceTitle: "Глобальна Присутність",
