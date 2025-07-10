@@ -327,6 +327,26 @@ export const translations = {
     bContentMicroService: "Micro-Influencer Networks",
     bContentMicroPrice: "From $8,000/mo",
 
+    // B-Content Home Services
+    bContentPRTitle: "Premium PR Services",
+    bContentPRDesc: "Strategic media placements that establish authority and drive traffic",
+    bContentPRFeature1: "Tier 1 Media Placements",
+    bContentPRFeature2: "Thought Leadership Articles", 
+    bContentPRFeature3: "Crisis Management",
+    bContentPRFeature4: "Brand Positioning",
+    bContentMarketingTitle: "Content Marketing",
+    bContentMarketingDesc: "High-converting content that educates and converts your audience",
+    bContentMarketingFeature1: "Blog Strategy & Writing",
+    bContentMarketingFeature2: "Video Content Creation",
+    bContentMarketingFeature3: "Social Media Content",
+    bContentMarketingFeature4: "Email Campaigns",
+    bContentInfluencerTitle: "Influencer Partnerships", 
+    bContentInfluencerDesc: "Connect with top-tier influencers in the gaming and betting space",
+    bContentInfluencerFeature1: "Influencer Matching",
+    bContentInfluencerFeature2: "Campaign Management",
+    bContentInfluencerFeature3: "Performance Tracking",
+    bContentInfluencerFeature4: "ROI Optimization",
+
     // B-Content Services
     bContentServicesHeroTitle: "Premium Content & PR Services",
     bContentServicesHeroSubtitle: "Comprehensive content marketing and PR solutions designed specifically for gaming and betting brands that demand results.",
