@@ -378,7 +378,59 @@ export const translations = {
     talentPortfolio: "Portfolio/Channel Links",
     talentGoals: "Partnership Goals", 
     talentSubmit: "🚀 Submit Application",
-    talentReviewNote: "We'll review your application and get back to you within 48 hours."
+    talentReviewNote: "We'll review your application and get back to you within 48 hours.",
+
+    // Talent Intake Form Details
+    talentBenefitsPremium: "Premium Partnerships",
+    talentBenefitsPremiumDesc: "Work with top-tier brands and earn industry-leading rates",
+    talentBenefitsGrowth: "Growth Support", 
+    talentBenefitsGrowthDesc: "Access our marketing expertise to scale your personal brand",
+    talentBenefitsCommunity: "Community Access",
+    talentBenefitsCommunityDesc: "Join an elite network of successful content creators",
+    talentFormFirstNamePlaceholder: "Your first name",
+    talentFormLastNamePlaceholder: "Your last name",
+    talentFormEmailPlaceholder: "your@email.com",
+    talentFormPhonePlaceholder: "+1 (555) 123-4567",
+    talentFormPlatformPlaceholder: "Select your main platform",
+    talentFormFollowersPlaceholder: "Select your follower range",
+    talentFormNichePlaceholder: "Select your content niche",
+    talentFormExperiencePlaceholder: "Select your experience level",
+    talentFormPortfolioPlaceholder: "Share links to your main channels, best content, or media kit...",
+    talentFormGoalsPlaceholder: "What are you looking to achieve through brand partnerships? What makes you unique?",
+    
+    // Platform Options
+    talentPlatformTwitch: "Twitch",
+    talentPlatformYoutube: "YouTube", 
+    talentPlatformInstagram: "Instagram",
+    talentPlatformTiktok: "TikTok",
+    talentPlatformTwitter: "Twitter/X",
+    talentPlatformKick: "Kick",
+    talentPlatformOther: "Other",
+    
+    // Follower Ranges
+    talentFollowers1k: "1K - 10K",
+    talentFollowers10k: "10K - 50K",
+    talentFollowers50k: "50K - 100K", 
+    talentFollowers100k: "100K - 500K",
+    talentFollowers500k: "500K - 1M",
+    talentFollowers1m: "1M+",
+    
+    // Content Niches
+    talentNicheGaming: "Gaming",
+    talentNicheSlots: "Slot Games",
+    talentNicheCasino: "Casino Games",
+    talentNicheSports: "Sports Betting",
+    talentNichePoker: "Poker",
+    talentNicheEntertainment: "Entertainment",
+    talentNicheLifestyle: "Lifestyle",
+    talentNicheOther: "Other",
+    
+    // Experience Levels
+    talentExpNone: "No prior experience",
+    talentExpBeginner: "1-5 partnerships",
+    talentExpIntermediate: "6-20 partnerships", 
+    talentExpExperienced: "20+ partnerships",
+    talentExpProfessional: "Full-time creator",
   },
 
   es: {

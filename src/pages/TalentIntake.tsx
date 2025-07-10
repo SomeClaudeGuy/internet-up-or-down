@@ -34,22 +34,22 @@ const TalentIntake = () => {
             <Card className="text-center">
               <CardContent className="pt-6">
                 <Star className="w-12 h-12 text-primary mx-auto mb-4" />
-                <h3 className="text-xl font-semibold mb-2">Premium Partnerships</h3>
-                <p className="text-muted-foreground">Work with top-tier brands and earn industry-leading rates</p>
+                <h3 className="text-xl font-semibold mb-2">{t.talentPremiumPartnerships}</h3>
+                <p className="text-muted-foreground">{t.talentPremiumDesc}</p>
               </CardContent>
             </Card>
             <Card className="text-center">
               <CardContent className="pt-6">
                 <TrendingUp className="w-12 h-12 text-primary mx-auto mb-4" />
-                <h3 className="text-xl font-semibold mb-2">Growth Support</h3>
-                <p className="text-muted-foreground">Access our marketing expertise to scale your personal brand</p>
+                <h3 className="text-xl font-semibold mb-2">{t.talentGrowthSupport}</h3>
+                <p className="text-muted-foreground">{t.talentGrowthDesc}</p>
               </CardContent>
             </Card>
             <Card className="text-center">
               <CardContent className="pt-6">
                 <Users className="w-12 h-12 text-primary mx-auto mb-4" />
-                <h3 className="text-xl font-semibold mb-2">Community Access</h3>
-                <p className="text-muted-foreground">Join an elite network of successful content creators</p>
+                <h3 className="text-xl font-semibold mb-2">{t.talentCommunityAccess}</h3>
+                <p className="text-muted-foreground">{t.talentCommunityDesc}</p>
               </CardContent>
             </Card>
           </div>
@@ -58,37 +58,37 @@ const TalentIntake = () => {
           <div className="max-w-2xl mx-auto">
             <Card>
               <CardHeader>
-                <CardTitle className="text-2xl text-center">Talent Application</CardTitle>
+                <CardTitle className="text-2xl text-center">{t.talentAppTitle}</CardTitle>
                 <p className="text-center text-muted-foreground">
-                  Tell us about yourself and let's explore partnership opportunities
+                  {t.talentAppSubtitle}
                 </p>
               </CardHeader>
               <CardContent className="space-y-6">
                 <form className="space-y-4">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div className="space-y-2">
-                      <Label htmlFor="firstName">First Name</Label>
-                      <Input id="firstName" placeholder="Your first name" />
+                       <Label htmlFor="firstName">{t.talentFirstName}</Label>
+                       <Input id="firstName" placeholder="Your first name" />
                     </div>
                     <div className="space-y-2">
-                      <Label htmlFor="lastName">Last Name</Label>
-                      <Input id="lastName" placeholder="Your last name" />
+                       <Label htmlFor="lastName">{t.talentLastName}</Label>
+                       <Input id="lastName" placeholder="Your last name" />
                     </div>
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="email">Email Address</Label>
-                    <Input id="email" type="email" placeholder="your@email.com" />
+                     <Label htmlFor="email">{t.talentEmail}</Label>
+                     <Input id="email" type="email" placeholder="your@email.com" />
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="phone">Phone Number</Label>
-                    <Input id="phone" type="tel" placeholder="+1 (555) 123-4567" />
+                     <Label htmlFor="phone">{t.talentPhone}</Label>
+                     <Input id="phone" type="tel" placeholder="+1 (555) 123-4567" />
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="platform">Primary Platform</Label>
-                    <Select>
+                     <Label htmlFor="platform">{t.talentPlatform}</Label>
+                     <Select>
                       <SelectTrigger>
                         <SelectValue placeholder="Select your main platform" />
                       </SelectTrigger>
@@ -105,8 +105,8 @@ const TalentIntake = () => {
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="followers">Follower Count</Label>
-                    <Select>
+                     <Label htmlFor="followers">{t.talentFollowers}</Label>
+                     <Select>
                       <SelectTrigger>
                         <SelectValue placeholder="Select your follower range" />
                       </SelectTrigger>
@@ -122,8 +122,8 @@ const TalentIntake = () => {
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="niche">Content Niche</Label>
-                    <Select>
+                     <Label htmlFor="niche">{t.talentNiche}</Label>
+                     <Select>
                       <SelectTrigger>
                         <SelectValue placeholder="Select your content niche" />
                       </SelectTrigger>
@@ -141,8 +141,8 @@ const TalentIntake = () => {
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="experience">Experience with Brand Partnerships</Label>
-                    <Select>
+                     <Label htmlFor="experience">{t.talentExperience}</Label>
+                     <Select>
                       <SelectTrigger>
                         <SelectValue placeholder="Select your experience level" />
                       </SelectTrigger>
@@ -157,8 +157,8 @@ const TalentIntake = () => {
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="portfolio">Portfolio/Channel Links</Label>
-                    <Textarea 
+                     <Label htmlFor="portfolio">{t.talentPortfolio}</Label>
+                     <Textarea
                       id="portfolio" 
                       placeholder="Share links to your main channels, best content, or media kit..."
                       rows={3}
@@ -166,20 +166,20 @@ const TalentIntake = () => {
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="goals">Partnership Goals</Label>
-                    <Textarea 
+                     <Label htmlFor="goals">{t.talentGoals}</Label>
+                     <Textarea
                       id="goals" 
                       placeholder="What are you looking to achieve through brand partnerships? What makes you unique?"
                       rows={4}
                     />
                   </div>
 
-                  <Button type="submit" className="w-full text-lg py-6">
-                    🚀 Submit Application
-                  </Button>
-                  <p className="text-xs text-center text-muted-foreground mt-2">
-                    We'll review your application and get back to you within 48 hours.
-                  </p>
+                   <Button type="submit" className="w-full text-lg py-6">
+                     {t.talentSubmit}
+                   </Button>
+                   <p className="text-xs text-center text-muted-foreground mt-2">
+                     {t.talentReviewNote}
+                   </p>
                 </form>
               </CardContent>
             </Card>
