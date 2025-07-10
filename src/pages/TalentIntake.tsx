@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
+import { useTranslation } from "@/hooks/useTranslation";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -9,6 +10,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { CheckCircle, Star, TrendingUp, Users } from "lucide-react";
 
 const TalentIntake = () => {
+  const t = useTranslation();
   return (
     <div className="min-h-screen bg-background">
       <Header />
@@ -17,10 +19,10 @@ const TalentIntake = () => {
       <section className="pt-24 pb-16 bg-gradient-to-br from-primary/5 to-accent/5">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            Join Our <span className="text-primary">Elite Talent Network</span>
+            {t.talentHeroTitle}
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Partner with top brands, earn premium rates, and scale your influence with our exclusive talent program.
+            {t.talentHeroSubtitle}
           </p>
         </div>
       </section>

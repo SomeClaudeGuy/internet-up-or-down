@@ -1,8 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Check, Star, Users, Award, TrendingUp } from "lucide-react";
+import { useTranslation } from "@/hooks/useTranslation";
 
 const BContentHome = () => {
+  const t = useTranslation();
   const services = [
     {
       title: "Premium PR Services",
@@ -40,19 +42,18 @@ const BContentHome = () => {
             </div>
             
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              B.Content
+              {t.bContentHeroTitle}
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-              Premium content marketing and PR services that establish authority, 
-              drive qualified traffic, and convert prospects into customers.
+              {t.bContentHeroSubtitle}
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="text-lg px-8 py-6">
-                Get Your Content Strategy
+                {t.bContentGetStrategy}
               </Button>
               <Button variant="outline" size="lg" className="text-lg px-8 py-6">
-                View Case Studies
+                {t.bContentViewCases}
               </Button>
             </div>
           </div>
@@ -63,9 +64,9 @@ const BContentHome = () => {
       <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Results That Speak</h2>
+            <h2 className="text-3xl font-bold mb-4">{t.bContentResultsTitle}</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Our content and PR strategies deliver measurable results for gaming and betting brands.
+              {t.bContentResultsSubtitle}
             </p>
           </div>
           
@@ -84,10 +85,9 @@ const BContentHome = () => {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-6">Our Content & PR Services</h2>
+            <h2 className="text-4xl font-bold mb-6">{t.bContentServicesTitle}</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Comprehensive content marketing and PR solutions designed specifically 
-              for the gaming and betting industry.
+              {t.bContentServicesSubtitle}
             </p>
           </div>
 
@@ -124,11 +124,10 @@ const BContentHome = () => {
                 ))}
               </div>
               <blockquote className="text-2xl font-medium mb-6 italic">
-                "B.Content's PR strategy got us featured in Forbes, TechCrunch, and 15 other major publications. 
-                Our organic traffic increased by 400% in just 3 months."
+                "{t.bContentTestimonialQuote}"
               </blockquote>
-              <div className="text-primary font-semibold">Sarah Chen</div>
-              <div className="text-muted-foreground">CMO, GameTech Pro</div>
+              <div className="text-primary font-semibold">{t.bContentTestimonialAuthor}</div>
+              <div className="text-muted-foreground">{t.bContentTestimonialRole}</div>
             </CardContent>
           </Card>
         </div>
@@ -139,18 +138,18 @@ const BContentHome = () => {
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Ready to Dominate Your Content Strategy?
+              {t.bContentCtaTitle}
             </h2>
             <p className="text-xl text-white/90 mb-8">
-              Join 100+ gaming and betting brands that trust B.Content for their content marketing and PR needs.
+              {t.bContentCtaSubtitle}
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" variant="secondary" className="text-lg px-8 py-6">
-                Get Free Content Audit
+                {t.bContentFreeAudit}
               </Button>
               <Button size="lg" variant="outline" className="text-lg px-8 py-6 border-white text-white hover:bg-white hover:text-primary">
-                Schedule Consultation
+                {t.bContentScheduleConsult}
               </Button>
             </div>
           </div>

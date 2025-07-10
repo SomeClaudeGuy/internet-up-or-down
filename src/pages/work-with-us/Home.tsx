@@ -1,9 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { useTranslation } from "@/hooks/useTranslation";
 import { Badge } from "@/components/ui/badge";
 import { MapPin, Clock, Users, Zap, Heart, Globe } from "lucide-react";
 
 const WorkWithUsHome = () => {
+  const t = useTranslation();
   const positions = [
     {
       title: "Senior Performance Marketing Manager",
@@ -67,11 +69,10 @@ const WorkWithUsHome = () => {
             </div>
             
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              Work With <span className="text-primary">Industry Leaders</span>
+              {t.workWithUsHeroTitle}
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-              Join the team behind $50M+ in client revenue. Work on campaigns that shape 
-              the future of gaming and betting marketing.
+              {t.workWithUsHeroSubtitle}
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
