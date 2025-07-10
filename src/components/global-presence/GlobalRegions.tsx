@@ -1,49 +1,52 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { useTranslation } from "@/hooks/useTranslation";
 
 const GlobalRegions = () => {
+  const translations = useTranslation();
+  
   const regions = [
     {
-      name: "LATAM",
-      description: "The fastest-growing iGaming market with 45% year-over-year growth",
+      name: translations.globalRegionAmericasName,
+      description: translations.globalRegionAmericasDesc,
       emoji: "🌎",
       color: "from-green-500 to-emerald-500",
-      highlights: ["Brazil", "Mexico", "Argentina"],
-      keyStats: "45% YoY Growth",
-      flag: "🇧🇷"
-    },
-    {
-      name: "North America", 
-      description: "Leading the regulated online gaming revolution across states",
-      emoji: "🇺🇸",
-      color: "from-blue-500 to-cyan-500", 
-      highlights: ["USA", "Canada", "Remote"],
-      keyStats: "$7.5B Market Size",
+      highlights: [translations.globalRegionAmericasHighlight1, translations.globalRegionAmericasHighlight2, translations.globalRegionAmericasHighlight3],
+      keyStats: translations.globalRegionAmericasStats,
       flag: "🇺🇸"
     },
     {
-      name: "APAC",
-      description: "Emerging powerhouse with massive untapped potential",
+      name: translations.globalRegionEuropeName,
+      description: translations.globalRegionEuropeDesc,
+      emoji: "🇪🇺",
+      color: "from-blue-500 to-cyan-500", 
+      highlights: [translations.globalRegionEuropeHighlight1, translations.globalRegionEuropeHighlight2, translations.globalRegionEuropeHighlight3],
+      keyStats: translations.globalRegionEuropeStats,
+      flag: "🇪🇺"
+    },
+    {
+      name: translations.globalRegionAsiaPacificName,
+      description: translations.globalRegionAsiaPacificDesc,
       emoji: "🌏",
       color: "from-purple-500 to-pink-500",
-      highlights: ["Australia", "Singapore", "Japan"],
-      keyStats: "2.3B Population",
+      highlights: [translations.globalRegionAsiaPacificHighlight1, translations.globalRegionAsiaPacificHighlight2, translations.globalRegionAsiaPacificHighlight3],
+      keyStats: translations.globalRegionAsiaPacificStats,
       flag: "🇦🇺"
     },
     {
-      name: "Europe",
-      description: "Mature regulated markets with established player bases",
-      emoji: "🇪🇺", 
+      name: translations.globalRegionMenaName,
+      description: translations.globalRegionMenaDesc,
+      emoji: "🌍", 
       color: "from-orange-500 to-red-500",
-      highlights: ["UK", "Germany", "Malta"],
-      keyStats: "€25B Revenue",
-      flag: "🇬🇧"
+      highlights: [translations.globalRegionMenaHighlight1, translations.globalRegionMenaHighlight2, translations.globalRegionMenaHighlight3],
+      keyStats: translations.globalRegionMenaStats,
+      flag: "🇦🇪"
     },
   ];
 
   return (
     <div className="mb-20">
-      <h3 className="text-3xl font-bold text-center mb-12">Where We Operate</h3>
+      <h3 className="text-3xl font-bold text-center mb-12">{translations.globalRegionsTitle}</h3>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {regions.map((region, index) => (
           <Card 

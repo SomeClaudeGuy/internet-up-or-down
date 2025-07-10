@@ -1,6 +1,7 @@
 
 import { Globe } from "lucide-react";
 import techWorldMapImage from "@/assets/tech-world-map.jpg";
+import { useTranslation } from "@/hooks/useTranslation";
 import GlobalStats from "@/components/global-presence/GlobalStats";
 import GlobalCapabilities from "@/components/global-presence/GlobalCapabilities";
 import GlobalRegions from "@/components/global-presence/GlobalRegions";
@@ -9,6 +10,8 @@ import GlobalCTA from "@/components/global-presence/GlobalCTA";
 
 
 const GlobalPresence = () => {
+  const translations = useTranslation();
+
   return (
     <section id="about" className="relative py-24 lg:py-32 overflow-hidden">
       {/* Enhanced Background Layer with Rotating Globe */}
@@ -36,15 +39,14 @@ const GlobalPresence = () => {
         <div className="text-center mb-16 lg:mb-24">
           <div className="inline-flex items-center space-x-2 bg-primary/10 backdrop-blur-md border border-primary/20 px-6 py-3 rounded-full mb-8 shadow-lg">
             <Globe className="w-5 h-5 text-primary animate-pulse" />
-            <span className="text-sm font-semibold text-primary tracking-wide">Worldwide Operations</span>
+            <span className="text-sm font-semibold text-primary tracking-wide">{translations.globalPresenceTitle}</span>
           </div>
           
           <h2 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-8 leading-tight">
-            Global <span className="bg-gradient-to-r from-primary via-primary/80 to-accent bg-clip-text text-transparent">Presence</span>
+            {translations.globalPresenceTitle}
           </h2>
           <p className="text-lg md:text-xl lg:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-            Operating across <strong className="text-foreground font-semibold">4 continents</strong> with multicultural teams working 24/7. 
-            We spot trends and opportunities <strong className="text-foreground font-semibold">before they hit the mainstream</strong>.
+            {translations.globalPresenceSubtitle}
           </p>
         </div>
 

@@ -1,12 +1,15 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Globe, Building, Clock, Users } from "lucide-react";
+import { useTranslation } from "@/hooks/useTranslation";
 
 const GlobalStats = () => {
+  const translations = useTranslation();
+  
   const stats = [
-    { icon: Globe, value: "4", label: "Continents", desc: "Global footprint", pulse: true },
-    { icon: Building, value: "12", label: "Offices", desc: "Strategic locations", pulse: false },
-    { icon: Clock, value: "24/7", label: "Operations", desc: "Round the clock", pulse: true },
-    { icon: Users, value: "85+", label: "Team Members", desc: "Multicultural experts", pulse: false },
+    { icon: Globe, value: "4", label: translations.globalStatsContinents, desc: translations.globalStatsContinentsDesc, pulse: true },
+    { icon: Building, value: "12", label: translations.globalStatsOffices, desc: translations.globalStatsOfficesDesc, pulse: false },
+    { icon: Clock, value: "24/7", label: translations.globalStatsOperations, desc: translations.globalStatsOperationsDesc, pulse: true },
+    { icon: Users, value: "85+", label: translations.globalStatsTeam, desc: translations.globalStatsTeamDesc, pulse: false },
   ];
 
   return (

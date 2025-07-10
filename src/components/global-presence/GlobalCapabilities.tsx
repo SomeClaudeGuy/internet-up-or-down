@@ -1,17 +1,20 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Target, Plane, Award, Network } from "lucide-react";
+import { useTranslation } from "@/hooks/useTranslation";
 
 const GlobalCapabilities = () => {
+  const translations = useTranslation();
+  
   const capabilities = [
-    { icon: Target, title: "Market Intelligence", desc: "Real-time insights from global markets", color: "text-blue-500" },
-    { icon: Plane, title: "Rapid Deployment", desc: "Launch campaigns worldwide in 48 hours", color: "text-green-500" },
-    { icon: Award, title: "Local Expertise", desc: "Native teams in every major market", color: "text-purple-500" },
-    { icon: Network, title: "Connected Network", desc: "Seamless 24/7 collaboration hub", color: "text-orange-500" },
+    { icon: Target, title: translations.globalCapabilityMarketTitle, desc: translations.globalCapabilityMarketDesc, color: "text-blue-500" },
+    { icon: Plane, title: translations.globalCapabilityDeploymentTitle, desc: translations.globalCapabilityDeploymentDesc, color: "text-green-500" },
+    { icon: Award, title: translations.globalCapabilityExpertiseTitle, desc: translations.globalCapabilityExpertiseDesc, color: "text-purple-500" },
+    { icon: Network, title: translations.globalCapabilityNetworkTitle, desc: translations.globalCapabilityNetworkDesc, color: "text-orange-500" },
   ];
 
   return (
     <div className="mb-20">
-      <h3 className="text-3xl font-bold text-center mb-12">Our Global Capabilities</h3>
+      <h3 className="text-3xl font-bold text-center mb-12">{translations.globalCapabilitiesTitle}</h3>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {capabilities.map((capability, index) => (
           <Card key={index} className="group hover:scale-105 transition-all duration-300 bg-card/50 backdrop-blur-sm border-border/50 hover:border-primary/50 overflow-hidden relative">
