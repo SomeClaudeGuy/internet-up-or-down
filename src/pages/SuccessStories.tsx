@@ -79,20 +79,20 @@ const SuccessStories = () => {
                 </div>
               </div>
               <CardContent className="p-6">
-                <h3 className="text-xl font-semibold mb-2">Sarah "GameQueen" Chen</h3>
-                <p className="text-muted-foreground mb-3">Twitch Partner • 850K Followers</p>
+                <h3 className="text-xl font-semibold mb-2">{t.talentSarahName}</h3>
+                <p className="text-muted-foreground mb-3">{t.talentSarahDesc}</p>
                 <div className="space-y-2 text-sm">
                   <div className="flex justify-between">
                     <span>{t.successMetricViewers}</span>
-                    <span className="font-medium">12.5K</span>
+                    <span className="font-medium">{t.talentSarahViewers}</span>
                   </div>
                   <div className="flex justify-between">
-                    <span>Conversion Rate:</span>
-                    <span className="font-medium text-primary">8.2%</span>
+                    <span>{t.successMetricConversion}</span>
+                    <span className="font-medium text-primary">{t.talentSarahConversion}</span>
                   </div>
                   <div className="flex justify-between">
-                    <span>Campaign ROI:</span>
-                    <span className="font-medium text-primary">420%</span>
+                    <span>{t.successMetricROI}</span>
+                    <span className="font-medium text-primary">{t.talentSarahROI}</span>
                   </div>
                 </div>
               </CardContent>
@@ -107,24 +107,24 @@ const SuccessStories = () => {
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                 />
                 <div className="absolute top-4 right-4 bg-primary/90 text-primary-foreground px-3 py-1 rounded-full text-sm font-medium">
-                  Casino
+                  {t.successCategoryCasino}
                 </div>
               </div>
               <CardContent className="p-6">
-                <h3 className="text-xl font-semibold mb-2">Marcus "SlotKing" Rodriguez</h3>
-                <p className="text-muted-foreground mb-3">YouTube Partner • 1.2M Subscribers</p>
+                <h3 className="text-xl font-semibold mb-2">{t.talentMarcusName}</h3>
+                <p className="text-muted-foreground mb-3">{t.talentMarcusDesc}</p>
                 <div className="space-y-2 text-sm">
                   <div className="flex justify-between">
-                    <span>Monthly Views:</span>
-                    <span className="font-medium">2.8M</span>
+                    <span>{t.successMetricMonthlyViews}</span>
+                    <span className="font-medium">{t.talentMarcusViews}</span>
                   </div>
                   <div className="flex justify-between">
-                    <span>Conversion Rate:</span>
-                    <span className="font-medium text-primary">12.1%</span>
+                    <span>{t.successMetricConversion}</span>
+                    <span className="font-medium text-primary">{t.talentMarcusConversion}</span>
                   </div>
                   <div className="flex justify-between">
-                    <span>Campaign ROI:</span>
-                    <span className="font-medium text-primary">680%</span>
+                    <span>{t.successMetricROI}</span>
+                    <span className="font-medium text-primary">{t.talentMarcusROI}</span>
                   </div>
                 </div>
               </CardContent>
@@ -139,24 +139,24 @@ const SuccessStories = () => {
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                 />
                 <div className="absolute top-4 right-4 bg-primary/90 text-primary-foreground px-3 py-1 rounded-full text-sm font-medium">
-                  Sports
+                  {t.successCategorySports}
                 </div>
               </div>
               <CardContent className="p-6">
-                <h3 className="text-xl font-semibold mb-2">Emma "BetSmart" Thompson</h3>
-                <p className="text-muted-foreground mb-3">Multi-Platform • 650K Total Followers</p>
+                <h3 className="text-xl font-semibold mb-2">{t.talentEmmaName}</h3>
+                <p className="text-muted-foreground mb-3">{t.talentEmmaDesc}</p>
                 <div className="space-y-2 text-sm">
                   <div className="flex justify-between">
-                    <span>Engagement Rate:</span>
-                    <span className="font-medium">15.3%</span>
+                    <span>{t.successMetricEngagement}</span>
+                    <span className="font-medium">{t.talentEmmaEngagement}</span>
                   </div>
                   <div className="flex justify-between">
-                    <span>Conversion Rate:</span>
-                    <span className="font-medium text-primary">9.7%</span>
+                    <span>{t.successMetricConversion}</span>
+                    <span className="font-medium text-primary">{t.talentEmmaConversion}</span>
                   </div>
                   <div className="flex justify-between">
-                    <span>Campaign ROI:</span>
-                    <span className="font-medium text-primary">520%</span>
+                    <span>{t.successMetricROI}</span>
+                    <span className="font-medium text-primary">{t.talentEmmaROI}</span>
                   </div>
                 </div>
               </CardContent>
@@ -171,24 +171,24 @@ const SuccessStories = () => {
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                 />
                 <div className="absolute top-4 right-4 bg-primary/90 text-primary-foreground px-3 py-1 rounded-full text-sm font-medium">
-                  Poker
+                  {t.successCategoryPoker}
                 </div>
               </div>
               <CardContent className="p-6">
-                <h3 className="text-xl font-semibold mb-2">Jake "PokerPro" Williams</h3>
-                <p className="text-muted-foreground mb-3">Twitch Partner • 420K Followers</p>
+                <h3 className="text-xl font-semibold mb-2">{t.talentJakeName}</h3>
+                <p className="text-muted-foreground mb-3">{t.talentJakeDesc}</p>
                 <div className="space-y-2 text-sm">
                   <div className="flex justify-between">
-                    <span>Peak Viewers:</span>
-                    <span className="font-medium">18K</span>
+                    <span>{t.successMetricPeakViewers}</span>
+                    <span className="font-medium">{t.talentJakePeak}</span>
                   </div>
                   <div className="flex justify-between">
-                    <span>Conversion Rate:</span>
-                    <span className="font-medium text-primary">11.4%</span>
+                    <span>{t.successMetricConversion}</span>
+                    <span className="font-medium text-primary">{t.talentJakeConversion}</span>
                   </div>
                   <div className="flex justify-between">
-                    <span>Campaign ROI:</span>
-                    <span className="font-medium text-primary">590%</span>
+                    <span>{t.successMetricROI}</span>
+                    <span className="font-medium text-primary">{t.talentJakeROI}</span>
                   </div>
                 </div>
               </CardContent>
@@ -203,24 +203,24 @@ const SuccessStories = () => {
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                 />
                 <div className="absolute top-4 right-4 bg-primary/90 text-primary-foreground px-3 py-1 rounded-full text-sm font-medium">
-                  Tech
+                  {t.successCategoryTech}
                 </div>
               </div>
               <CardContent className="p-6">
-                <h3 className="text-xl font-semibold mb-2">Alex "CryptoGamer" Park</h3>
-                <p className="text-muted-foreground mb-3">YouTube • 980K Subscribers</p>
+                <h3 className="text-xl font-semibold mb-2">{t.talentAlexName}</h3>
+                <p className="text-muted-foreground mb-3">{t.talentAlexDesc}</p>
                 <div className="space-y-2 text-sm">
                   <div className="flex justify-between">
-                    <span>Avg. Views:</span>
-                    <span className="font-medium">125K</span>
+                    <span>{t.successMetricAvgViews}</span>
+                    <span className="font-medium">{t.talentAlexViews}</span>
                   </div>
                   <div className="flex justify-between">
-                    <span>Conversion Rate:</span>
-                    <span className="font-medium text-primary">13.8%</span>
+                    <span>{t.successMetricConversion}</span>
+                    <span className="font-medium text-primary">{t.talentAlexConversion}</span>
                   </div>
                   <div className="flex justify-between">
-                    <span>Campaign ROI:</span>
-                    <span className="font-medium text-primary">750%</span>
+                    <span>{t.successMetricROI}</span>
+                    <span className="font-medium text-primary">{t.talentAlexROI}</span>
                   </div>
                 </div>
               </CardContent>
@@ -235,24 +235,24 @@ const SuccessStories = () => {
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                 />
                 <div className="absolute top-4 right-4 bg-primary/90 text-primary-foreground px-3 py-1 rounded-full text-sm font-medium">
-                  Lifestyle
+                  {t.successCategoryLifestyle}
                 </div>
               </div>
               <CardContent className="p-6">
-                <h3 className="text-xl font-semibold mb-2">Mia "LuxeLife" Johnson</h3>
-                <p className="text-muted-foreground mb-3">Instagram • 1.5M Followers</p>
+                <h3 className="text-xl font-semibold mb-2">{t.talentMiaName}</h3>
+                <p className="text-muted-foreground mb-3">{t.talentMiaDesc}</p>
                 <div className="space-y-2 text-sm">
                   <div className="flex justify-between">
-                    <span>Story Views:</span>
-                    <span className="font-medium">380K</span>
+                    <span>{t.successMetricStoryViews}</span>
+                    <span className="font-medium">{t.talentMiaStory}</span>
                   </div>
                   <div className="flex justify-between">
-                    <span>Conversion Rate:</span>
-                    <span className="font-medium text-primary">10.2%</span>
+                    <span>{t.successMetricConversion}</span>
+                    <span className="font-medium text-primary">{t.talentMiaConversion}</span>
                   </div>
                   <div className="flex justify-between">
-                    <span>Campaign ROI:</span>
-                    <span className="font-medium text-primary">640%</span>
+                    <span>{t.successMetricROI}</span>
+                    <span className="font-medium text-primary">{t.talentMiaROI}</span>
                   </div>
                 </div>
               </CardContent>

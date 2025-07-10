@@ -458,6 +458,49 @@ export const translations = {
     successMetricStoryViews: "Story Views:",
     successMetricConversion: "Conversion Rate:",
     successMetricROI: "Campaign ROI:",
+    
+    // Talent Cards
+    // Talent 1 - Sarah
+    talentSarahName: "Sarah \"GameQueen\" Chen",
+    talentSarahDesc: "Twitch Partner • 850K Followers",
+    talentSarahViewers: "12.5K",
+    talentSarahConversion: "8.2%",
+    talentSarahROI: "420%",
+    
+    // Talent 2 - Marcus
+    talentMarcusName: "Marcus \"SlotKing\" Rodriguez", 
+    talentMarcusDesc: "YouTube Partner • 1.2M Subscribers",
+    talentMarcusViews: "2.8M",
+    talentMarcusConversion: "12.1%",
+    talentMarcusROI: "680%",
+    
+    // Talent 3 - Emma
+    talentEmmaName: "Emma \"BetSmart\" Thompson",
+    talentEmmaDesc: "Multi-Platform • 650K Total Followers",
+    talentEmmaEngagement: "15.3%",
+    talentEmmaConversion: "9.7%",
+    talentEmmaROI: "520%",
+    
+    // Talent 4 - Jake
+    talentJakeName: "Jake \"PokerPro\" Williams",
+    talentJakeDesc: "Twitch Partner • 420K Followers",
+    talentJakePeak: "18K",
+    talentJakeConversion: "11.4%",
+    talentJakeROI: "590%",
+    
+    // Talent 5 - Alex
+    talentAlexName: "Alex \"CryptoGamer\" Park",
+    talentAlexDesc: "YouTube • 980K Subscribers",
+    talentAlexViews: "125K",
+    talentAlexConversion: "13.8%",
+    talentAlexROI: "750%",
+    
+    // Talent 6 - Mia
+    talentMiaName: "Mia \"LuxeLife\" Johnson",
+    talentMiaDesc: "Instagram • 1.5M Followers",
+    talentMiaStory: "380K",
+    talentMiaConversion: "10.2%",
+    talentMiaROI: "640%"
   },
 
   es: {
@@ -865,7 +908,50 @@ export const translations = {
     successMetricAvgViews: "Visualizaciones Promedio:",
     successMetricStoryViews: "Visualizaciones de Historia:",
     successMetricConversion: "Tasa de Conversión:",
-    successMetricROI: "ROI de Campaña:"
+    successMetricROI: "ROI de Campaña:",
+    
+    // Talent Cards
+    // Talent 1 - Sarah
+    talentSarahName: "Sarah \"GameQueen\" Chen",
+    talentSarahDesc: "Socia Twitch • 850K Seguidores",
+    talentSarahViewers: "12.5K",
+    talentSarahConversion: "8.2%",
+    talentSarahROI: "420%",
+    
+    // Talent 2 - Marcus
+    talentMarcusName: "Marcus \"SlotKing\" Rodriguez", 
+    talentMarcusDesc: "Socio YouTube • 1.2M Suscriptores",
+    talentMarcusViews: "2.8M",
+    talentMarcusConversion: "12.1%",
+    talentMarcusROI: "680%",
+    
+    // Talent 3 - Emma
+    talentEmmaName: "Emma \"BetSmart\" Thompson",
+    talentEmmaDesc: "Multi-Plataforma • 650K Seguidores Totales",
+    talentEmmaEngagement: "15.3%",
+    talentEmmaConversion: "9.7%",
+    talentEmmaROI: "520%",
+    
+    // Talent 4 - Jake
+    talentJakeName: "Jake \"PokerPro\" Williams",
+    talentJakeDesc: "Socio Twitch • 420K Seguidores",
+    talentJakePeak: "18K",
+    talentJakeConversion: "11.4%",
+    talentJakeROI: "590%",
+    
+    // Talent 5 - Alex
+    talentAlexName: "Alex \"CryptoGamer\" Park",
+    talentAlexDesc: "YouTube • 980K Suscriptores",
+    talentAlexViews: "125K",
+    talentAlexConversion: "13.8%",
+    talentAlexROI: "750%",
+    
+    // Talent 6 - Mia
+    talentMiaName: "Mia \"LuxeLife\" Johnson",
+    talentMiaDesc: "Instagram • 1.5M Seguidores",
+    talentMiaStory: "380K",
+    talentMiaConversion: "10.2%",
+    talentMiaROI: "640%"
   },
 
   ru: {
@@ -1273,7 +1359,50 @@ export const translations = {
     successMetricAvgViews: "Средние Просмотры:",
     successMetricStoryViews: "Просмотры Историй:",
     successMetricConversion: "Коэффициент Конверсии:",
-    successMetricROI: "ROI Кампании:"
+    successMetricROI: "ROI Кампании:",
+    
+    // Talent Cards
+    // Talent 1 - Sarah
+    talentSarahName: "Sarah \"GameQueen\" Chen",
+    talentSarahDesc: "Партнер Twitch • 850K Подписчиков",
+    talentSarahViewers: "12.5K",
+    talentSarahConversion: "8.2%",
+    talentSarahROI: "420%",
+    
+    // Talent 2 - Marcus
+    talentMarcusName: "Marcus \"SlotKing\" Rodriguez", 
+    talentMarcusDesc: "Партнер YouTube • 1.2M Подписчиков",
+    talentMarcusViews: "2.8M",
+    talentMarcusConversion: "12.1%",
+    talentMarcusROI: "680%",
+    
+    // Talent 3 - Emma
+    talentEmmaName: "Emma \"BetSmart\" Thompson",
+    talentEmmaDesc: "Мульти-Платформа • 650K Всего Подписчиков",
+    talentEmmaEngagement: "15.3%",
+    talentEmmaConversion: "9.7%",
+    talentEmmaROI: "520%",
+    
+    // Talent 4 - Jake
+    talentJakeName: "Jake \"PokerPro\" Williams",
+    talentJakeDesc: "Партнер Twitch • 420K Подписчиков",
+    talentJakePeak: "18K",
+    talentJakeConversion: "11.4%",
+    talentJakeROI: "590%",
+    
+    // Talent 5 - Alex
+    talentAlexName: "Alex \"CryptoGamer\" Park",
+    talentAlexDesc: "YouTube • 980K Подписчиков",
+    talentAlexViews: "125K",
+    talentAlexConversion: "13.8%",
+    talentAlexROI: "750%",
+    
+    // Talent 6 - Mia
+    talentMiaName: "Mia \"LuxeLife\" Johnson",
+    talentMiaDesc: "Instagram • 1.5M Подписчиков",
+    talentMiaStory: "380K",
+    talentMiaConversion: "10.2%",
+    talentMiaROI: "640%"
   },
 
   ua: {
@@ -1681,7 +1810,50 @@ export const translations = {
     successMetricAvgViews: "Середні Перегляди:",
     successMetricStoryViews: "Перегляди Історій:",
     successMetricConversion: "Коефіцієнт Конверсії:",
-    successMetricROI: "ROI Кампанії:"
+    successMetricROI: "ROI Кампанії:",
+    
+    // Talent Cards
+    // Talent 1 - Sarah
+    talentSarahName: "Sarah \"GameQueen\" Chen",
+    talentSarahDesc: "Партнер Twitch • 850K Підписників",
+    talentSarahViewers: "12.5K",
+    talentSarahConversion: "8.2%",
+    talentSarahROI: "420%",
+    
+    // Talent 2 - Marcus
+    talentMarcusName: "Marcus \"SlotKing\" Rodriguez", 
+    talentMarcusDesc: "Партнер YouTube • 1.2M Підписників",
+    talentMarcusViews: "2.8M",
+    talentMarcusConversion: "12.1%",
+    talentMarcusROI: "680%",
+    
+    // Talent 3 - Emma
+    talentEmmaName: "Emma \"BetSmart\" Thompson",
+    talentEmmaDesc: "Мульти-Платформа • 650K Всього Підписників",
+    talentEmmaEngagement: "15.3%",
+    talentEmmaConversion: "9.7%",
+    talentEmmaROI: "520%",
+    
+    // Talent 4 - Jake
+    talentJakeName: "Jake \"PokerPro\" Williams",
+    talentJakeDesc: "Партнер Twitch • 420K Підписників",
+    talentJakePeak: "18K",
+    talentJakeConversion: "11.4%",
+    talentJakeROI: "590%",
+    
+    // Talent 5 - Alex
+    talentAlexName: "Alex \"CryptoGamer\" Park",
+    talentAlexDesc: "YouTube • 980K Підписників",
+    talentAlexViews: "125K",
+    talentAlexConversion: "13.8%",
+    talentAlexROI: "750%",
+    
+    // Talent 6 - Mia
+    talentMiaName: "Mia \"LuxeLife\" Johnson",
+    talentMiaDesc: "Instagram • 1.5M Підписників",
+    talentMiaStory: "380K",
+    talentMiaConversion: "10.2%",
+    talentMiaROI: "640%"
   }
 };
 
