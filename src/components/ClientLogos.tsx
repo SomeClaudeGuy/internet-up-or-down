@@ -21,10 +21,10 @@ const ClientLogos = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-2xl md:text-3xl font-bold mb-4">
-            {t.clientLogos.title}
+            {t.clientLogosTitle}
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            {t.clientLogos.subtitle}
+            {t.clientLogosSubtitle}
           </p>
         </div>
 

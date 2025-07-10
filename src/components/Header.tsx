@@ -46,16 +46,16 @@ const Header = () => {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
             <Link to="/services" className="text-foreground hover:text-primary transition-colors">
-              {t.header.services}
+              {t.headerServices}
             </Link>
             <Link to="/b-content" className="text-foreground hover:text-primary transition-colors">
-              {t.header.content}
+              {t.headerContent}
             </Link>
             <Link to="/success-stories" className="text-foreground hover:text-primary transition-colors">
-              {t.header.talents}
+              {t.headerTalents}
             </Link>
             <a href="#contact" onClick={handleContactClick} className="text-foreground hover:text-primary transition-colors">
-              {t.header.contact}
+              {t.headerContact}
             </a>
           </nav>
 
@@ -63,9 +63,9 @@ const Header = () => {
           <div className="hidden md:flex items-center space-x-4">
             <LanguageSelector />
             <Link to="/talent-intake">
-              <Button variant="outline">{t.header.joinAsTalent}</Button>
+              <Button variant="outline">{t.headerJoinTalent}</Button>
             </Link>
-            <Button>{t.header.getStarted}</Button>
+            <Button>{t.headerGetStarted}</Button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -82,16 +82,16 @@ const Header = () => {
           <div className="md:hidden mt-4 pb-4 border-t border-border pt-4">
             <nav className="flex flex-col space-y-4">
               <Link to="/services" className="text-foreground hover:text-primary transition-colors">
-                {t.header.services}
+                {t.headerServices}
               </Link>
               <Link to="/b-content" className="text-foreground hover:text-primary transition-colors">
-                {t.header.content}
+                {t.headerContent}
               </Link>
               <Link to="/success-stories" className="text-foreground hover:text-primary transition-colors">
-                {t.header.talents}
+                {t.headerTalents}
               </Link>
               <a href="#contact" onClick={handleContactClick} className="text-foreground hover:text-primary transition-colors">
-                {t.header.contact}
+                {t.headerContact}
               </a>
             </nav>
             <div className="flex flex-col space-y-2 mt-4">
@@ -99,9 +99,9 @@ const Header = () => {
                 <LanguageSelector />
               </div>
               <Link to="/talent-intake">
-                <Button variant="outline" className="w-full">{t.header.joinAsTalent}</Button>
+                <Button variant="outline" className="w-full">{t.headerJoinTalent}</Button>
               </Link>
-              <Button className="w-full">{t.header.getStarted}</Button>
+              <Button className="w-full">{t.headerGetStarted}</Button>
             </div>
           </div>
         )}

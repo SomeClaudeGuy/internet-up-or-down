@@ -9,25 +9,25 @@ const Testimonials = () => {
     {
       company: "Pinnacle",
       logo: "🎯",
-      text: t.testimonials.companies[0].text,
+      text: t.testimonialsQuote1,
       rating: 5
     },
     {
       company: "BetBoom", 
       logo: "💥",
-      text: t.testimonials.companies[1].text,
+      text: t.testimonialsQuote2,
       rating: 5
     },
     {
       company: "Leon",
       logo: "🦁", 
-      text: t.testimonials.companies[2].text,
+      text: t.testimonialsQuote3,
       rating: 5
     },
     {
       company: "22Bet",
       logo: "🎲",
-      text: t.testimonials.companies[3].text,
+      text: "Amazing results with their strategies. Our conversions doubled!",
       rating: 5
     }
   ];
@@ -37,10 +37,10 @@ const Testimonials = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            {t.testimonials.title}
+            {t.testimonialsTitle}
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            {t.testimonials.subtitle}
+            {t.testimonialsSubtitle}
           </p>
         </div>
 
@@ -73,26 +73,26 @@ const Testimonials = () => {
         {/* Results Section */}
         <div className="mt-20 bg-gradient-to-r from-primary/10 to-accent/10 rounded-2xl p-8 border border-border/50">
           <div className="text-center mb-8">
-            <h3 className="text-2xl font-bold mb-4">{t.testimonials.guaranteedResults}</h3>
-            <p className="text-muted-foreground">{t.testimonials.trackRecord}</p>
+            <h3 className="text-2xl font-bold mb-4">Guaranteed Results</h3>
+            <p className="text-muted-foreground">Track record of success across all campaigns</p>
           </div>
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             <div className="text-center">
               <div className="text-2xl md:text-3xl font-bold text-primary mb-2">20K+</div>
-              <div className="text-sm text-muted-foreground">{t.testimonials.stats.registrations}</div>
+              <div className="text-sm text-muted-foreground">New Registrations</div>
             </div>
             <div className="text-center">
               <div className="text-2xl md:text-3xl font-bold text-primary mb-2">6K+</div>
-              <div className="text-sm text-muted-foreground">{t.testimonials.stats.ftds}</div>
+              <div className="text-sm text-muted-foreground">First-Time Deposits</div>
             </div>
             <div className="text-center">
               <div className="text-2xl md:text-3xl font-bold text-primary mb-2">99%</div>
-              <div className="text-sm text-muted-foreground">{t.testimonials.stats.satisfaction}</div>
+              <div className="text-sm text-muted-foreground">Client Satisfaction</div>
             </div>
             <div className="text-center">
               <div className="text-2xl md:text-3xl font-bold text-primary mb-2">24/7</div>
-              <div className="text-sm text-muted-foreground">{t.testimonials.stats.optimization}</div>
+              <div className="text-sm text-muted-foreground">Campaign Optimization</div>
             </div>
           </div>
 
@@ -100,21 +100,21 @@ const Testimonials = () => {
             <div className="space-y-2">
               <div className="flex items-center space-x-2">
                 <div className="w-2 h-2 bg-primary rounded-full"></div>
-                <span>{t.testimonials.features[0]}</span>
+                <span>Performance-based pricing available</span>
               </div>
               <div className="flex items-center space-x-2">
                 <div className="w-2 h-2 bg-primary rounded-full"></div>
-                <span>{t.testimonials.features[1]}</span>
+                <span>24/7 campaign monitoring</span>
               </div>
             </div>
             <div className="space-y-2">
               <div className="flex items-center space-x-2">
                 <div className="w-2 h-2 bg-primary rounded-full"></div>
-                <span>{t.testimonials.features[2]}</span>
+                <span>Dedicated account manager</span>
               </div>
               <div className="flex items-center space-x-2">
                 <div className="w-2 h-2 bg-primary rounded-full"></div>
-                <span>{t.testimonials.features[3]}</span>
+                <span>Money-back guarantee</span>
               </div>
             </div>
           </div>

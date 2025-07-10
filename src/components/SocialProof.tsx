@@ -8,21 +8,21 @@ const SocialProof = () => {
   const proofPoints = [
     {
       metric: "5+",
-      description: t.socialProof.metrics.experience.label,
+      description: t.socialProofExperienceLabel,
       icon: DollarSign,
-      highlight: t.socialProof.metrics.experience.highlight
+      highlight: t.socialProofExperienceHighlight
     },
     {
       metric: "200+",
-      description: t.socialProof.metrics.stories.label,
+      description: t.socialProofStoriesLabel,
       icon: TrendingUp,
-      highlight: t.socialProof.metrics.stories.highlight
+      highlight: t.socialProofStoriesHighlight
     },
     {
       metric: "4.9★",
-      description: t.socialProof.metrics.rating.label,
+      description: t.socialProofRatingLabel,
       icon: Star,
-      highlight: t.socialProof.metrics.rating.highlight
+      highlight: t.socialProofRatingHighlight
     }
   ];
 
@@ -31,10 +31,10 @@ const SocialProof = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            {t.socialProof.title}
+            {t.socialProofTitle}
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            {t.socialProof.subtitle}
+            {t.socialProofSubtitle}
           </p>
         </div>
 
@@ -56,7 +56,11 @@ const SocialProof = () => {
 
         {/* Testimonials */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {t.socialProof.testimonials.map((testimonial, index) => (
+          {[
+            { quote: t.testimonialsQuote1, author: t.testimonialsAuthor1, role: t.testimonialsRole1, result: t.testimonialsResult1 },
+            { quote: t.testimonialsQuote2, author: t.testimonialsAuthor2, role: t.testimonialsRole2, result: t.testimonialsResult2 },
+            { quote: t.testimonialsQuote3, author: t.testimonialsAuthor3, role: t.testimonialsRole3, result: t.testimonialsResult3 }
+          ].map((testimonial, index) => (
             <Card key={index} className="bg-card/50 backdrop-blur-sm border-border/50 hover:border-primary/50 transition-all duration-300">
               <CardContent className="p-6">
                 <div className="flex mb-4">

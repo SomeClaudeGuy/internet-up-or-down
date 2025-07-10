@@ -15,10 +15,10 @@ const Contact = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            {t.contact.title}
+            {t.contactTitle}
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            {t.contact.subtitle}
+            {t.contactSubtitle}
           </p>
           <div className="mt-6 flex justify-center items-center gap-4 text-sm">
             <div className="flex items-center gap-2">
@@ -34,7 +34,7 @@ const Contact = () => {
           {/* Contact Form */}
           <Card className="bg-card/50 backdrop-blur-sm border-border/50">
             <CardHeader>
-              <CardTitle className="text-2xl">{t.contact.form.title}</CardTitle>
+              <CardTitle className="text-2xl">{t.contactFormTitle}</CardTitle>
             </CardHeader>
             <CardContent className="space-y-6">
               <form className="space-y-4">
