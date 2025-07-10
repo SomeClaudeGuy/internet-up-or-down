@@ -14,56 +14,59 @@ import {
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
+import { useTranslation } from "@/hooks/useTranslation";
 
 const Services = () => {
+  const t = useTranslation();
+  
   const services = [
     {
       icon: Target,
-      title: "Traffic for Casino Operators",
-      description: "High-quality traffic generation with proven conversion rates. Specialized in casino and betting platforms.",
-      features: ["Quality traffic", "High conversion", "Global reach"],
+      title: t.services.services.traffic.title,
+      description: t.services.services.traffic.description,
+      features: t.services.services.traffic.features,
       color: "from-blue-500 to-cyan-500",
-      price: "From $5,000/mo"
+      price: t.services.services.traffic.price
     },
     {
       icon: BarChart,
-      title: "Benchmarking & Analytics",
-      description: "Comprehensive market analysis and platform benchmarking to optimize your competitive position.",
-      features: ["Market analysis", "Competitor insights", "Performance metrics"],
+      title: t.services.services.analytics.title,
+      description: t.services.services.analytics.description,
+      features: t.services.services.analytics.features,
       color: "from-purple-500 to-pink-500",
-      price: "From $3,000/mo"
+      price: t.services.services.analytics.price
     },
     {
       icon: Users,
-      title: "Social Media Management",
-      description: "Full-scale social media strategies tailored for the iGaming industry across all major platforms.",
-      features: ["Content strategy", "Community building", "Brand awareness"],
+      title: t.services.services.social.title,
+      description: t.services.services.social.description,
+      features: t.services.services.social.features,
       color: "from-green-500 to-emerald-500",
-      price: "From $2,500/mo"
+      price: t.services.services.social.price
     },
     {
       icon: Megaphone,
-      title: "Sponsorships & Activations",
-      description: "Strategic partnerships and brand activations that connect with your target audience effectively.",
-      features: ["Event sponsorships", "Brand partnerships", "Audience engagement"],
+      title: t.services.services.sponsorships.title,
+      description: t.services.services.sponsorships.description,
+      features: t.services.services.sponsorships.features,
       color: "from-orange-500 to-red-500",
-      price: "From $10,000/project"
+      price: t.services.services.sponsorships.price
     },
     {
       icon: TrendingUp,
-      title: "Media Buying & Marketing",
-      description: "Performance-driven media buying strategies optimized for maximum ROI in the iGaming sector.",
-      features: ["Media buying", "Performance optimization", "ROI focused"],
+      title: t.services.services.mediaBuying.title,
+      description: t.services.services.mediaBuying.description,
+      features: t.services.services.mediaBuying.features,
       color: "from-indigo-500 to-purple-500",
-      price: "From $15,000/mo"
+      price: t.services.services.mediaBuying.price
     },
     {
       icon: Video,
-      title: "Content & Event Production",
-      description: "High-quality audiovisual content and event production services for maximum brand impact.",
-      features: ["Video production", "Event management", "Creative content"],
+      title: t.services.services.content.title,
+      description: t.services.services.content.description,
+      features: t.services.services.content.features,
       color: "from-pink-500 to-rose-500",
-      price: "From $8,000/project"
+      price: t.services.services.content.price
     }
   ];
 
@@ -76,15 +79,14 @@ const Services = () => {
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-flex items-center space-x-2 bg-primary/10 px-4 py-2 rounded-full mb-6">
               <Zap className="w-4 h-4 text-primary" />
-              <span className="text-sm font-medium text-primary">Our Services</span>
+              <span className="text-sm font-medium text-primary">{t.services.ourServices}</span>
             </div>
             
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              How We <span className="text-primary">10X Your Results</span>
+              <span dangerouslySetInnerHTML={{ __html: t.services.title.replace('10X Your Results', '<span class="text-primary">10X Your Results</span>') }} />
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-              Our proven system has generated <strong className="text-foreground">$50M+</strong> in revenue. 
-              Here's exactly how we'll scale your iGaming business.
+              <span dangerouslySetInnerHTML={{ __html: t.services.subtitle.replace('$50M+', '<strong class="text-foreground">$50M+</strong>') }} />
             </p>
           </div>
         </div>
@@ -129,7 +131,7 @@ const Services = () => {
                   </div>
 
                   <Button variant="outline" className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
-                    Learn More
+                    {t.services.learnMore}
                     <ArrowRight className="ml-2 w-4 h-4" />
                   </Button>
                 </CardContent>
@@ -147,14 +149,13 @@ const Services = () => {
               <div className="w-16 h-16 mx-auto mb-6 bg-primary/10 rounded-full flex items-center justify-center">
                 <Star className="w-8 h-8 text-primary" />
               </div>
-              <h2 className="text-4xl font-bold mb-6">Premium B.Content Services</h2>
+              <h2 className="text-4xl font-bold mb-6">{t.services.bContent.title}</h2>
               <p className="text-xl text-muted-foreground mb-8">
-                Professional PR and content creation services specifically designed for gaming and betting brands. 
-                Get published on major media outlets or get your money back.
+                {t.services.bContent.description}
               </p>
               <Link to="/b-content">
                 <Button size="lg" className="text-lg px-8 py-6">
-                  Explore B.Content
+                  {t.services.bContent.button}
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
               </Link>
@@ -169,18 +170,17 @@ const Services = () => {
           <div className="text-center bg-gradient-to-r from-primary/20 to-accent/20 rounded-2xl p-8 border border-primary/30 relative overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-accent/5"></div>
             <div className="relative z-10">
-              <h3 className="text-3xl font-bold mb-4">💰 ROI Guarantee: 5X Your Investment or We Work for FREE</h3>
+              <h3 className="text-3xl font-bold mb-4">{t.services.roiGuarantee.title}</h3>
               <p className="text-lg text-muted-foreground mb-6 max-w-2xl mx-auto">
-                Join 500+ operators who've seen <strong className="text-foreground">300%+ ROI</strong> in 90 days. 
-                If we don't deliver 5X returns, you don't pay a cent.
+                <span dangerouslySetInnerHTML={{ __html: t.services.roiGuarantee.description.replace('300%+ ROI', '<strong class="text-foreground">300%+ ROI</strong>') }} />
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <Button size="lg" className="group text-lg px-8 py-4 bg-gradient-to-r from-primary to-accent shadow-2xl shadow-primary/25">
-                  Claim Your FREE $10K Marketing Plan
+                  {t.services.roiGuarantee.button}
                   <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
                 <div className="text-sm text-muted-foreground">
-                  ⏰ <strong>Only 7 spots left this month</strong>
+                  <span dangerouslySetInnerHTML={{ __html: t.services.roiGuarantee.urgency.replace('Only 7 spots left this month', '<strong>Only 7 spots left this month</strong>') }} />
                 </div>
               </div>
             </div>

@@ -500,7 +500,64 @@ export const translations = {
     talentMiaDesc: "Instagram • 1.5M Followers",
     talentMiaStory: "380K",
     talentMiaConversion: "10.2%",
-    talentMiaROI: "640%"
+    talentMiaROI: "640%",
+    
+    // Services Page
+    services: {
+      title: "How We 10X Your Results",
+      subtitle: "Our proven system has generated $50M+ in revenue. Here's exactly how we'll scale your iGaming business.",
+      ourServices: "Our Services",
+      learnMore: "Learn More",
+      services: {
+        traffic: {
+          title: "Traffic for Casino Operators",
+          description: "High-quality traffic generation with proven conversion rates. Specialized in casino and betting platforms.",
+          features: ["Quality traffic", "High conversion", "Global reach"],
+          price: "From $5,000/mo"
+        },
+        analytics: {
+          title: "Benchmarking & Analytics",
+          description: "Comprehensive market analysis and platform benchmarking to optimize your competitive position.",
+          features: ["Market analysis", "Competitor insights", "Performance metrics"],
+          price: "From $3,000/mo"
+        },
+        social: {
+          title: "Social Media Management",
+          description: "Full-scale social media strategies tailored for the iGaming industry across all major platforms.",
+          features: ["Content strategy", "Community building", "Brand awareness"],
+          price: "From $2,500/mo"
+        },
+        sponsorships: {
+          title: "Sponsorships & Activations",
+          description: "Strategic partnerships and brand activations that connect with your target audience effectively.",
+          features: ["Event sponsorships", "Brand partnerships", "Audience engagement"],
+          price: "From $10,000/project"
+        },
+        mediaBuying: {
+          title: "Media Buying & Marketing",
+          description: "Performance-driven media buying strategies optimized for maximum ROI in the iGaming sector.",
+          features: ["Media buying", "Performance optimization", "ROI focused"],
+          price: "From $15,000/mo"
+        },
+        content: {
+          title: "Content & Event Production",
+          description: "High-quality audiovisual content and event production services for maximum brand impact.",
+          features: ["Video production", "Event management", "Creative content"],
+          price: "From $8,000/project"
+        }
+      },
+      bContent: {
+        title: "Premium B.Content Services",
+        description: "Professional PR and content creation services specifically designed for gaming and betting brands. Get published on major media outlets or get your money back.",
+        button: "Explore B.Content"
+      },
+      roiGuarantee: {
+        title: "💰 ROI Guarantee: 5X Your Investment or We Work for FREE",
+        description: "Join 500+ operators who've seen 300%+ ROI in 90 days. If we don't deliver 5X returns, you don't pay a cent.",
+        button: "Claim Your FREE $10K Marketing Plan",
+        urgency: "⏰ Only 7 spots left this month"
+      }
+    }
   },
 
   es: {
@@ -951,7 +1008,64 @@ export const translations = {
     talentMiaDesc: "Instagram • 1.5M Seguidores",
     talentMiaStory: "380K",
     talentMiaConversion: "10.2%",
-    talentMiaROI: "640%"
+    talentMiaROI: "640%",
+    
+    // Services Page
+    services: {
+      title: "Cómo Multiplicamos por 10 Tus Resultados",
+      subtitle: "Nuestro sistema probado ha generado más de $50M en ingresos. Así es como escalaremos tu negocio de iGaming.",
+      ourServices: "Nuestros Servicios",
+      learnMore: "Saber Más",
+      services: {
+        traffic: {
+          title: "Tráfico para Operadores de Casino",
+          description: "Generación de tráfico de alta calidad con tasas de conversión probadas. Especializado en plataformas de casino y apuestas.",
+          features: ["Tráfico de calidad", "Alta conversión", "Alcance global"],
+          price: "Desde $5,000/mes"
+        },
+        analytics: {
+          title: "Benchmarking y Análisis",
+          description: "Análisis de mercado integral y benchmarking de plataformas para optimizar tu posición competitiva.",
+          features: ["Análisis de mercado", "Insights de competencia", "Métricas de rendimiento"],
+          price: "Desde $3,000/mes"
+        },
+        social: {
+          title: "Gestión de Redes Sociales",
+          description: "Estrategias completas de redes sociales adaptadas para la industria iGaming en todas las plataformas principales.",
+          features: ["Estrategia de contenido", "Construcción de comunidad", "Conocimiento de marca"],
+          price: "Desde $2,500/mes"
+        },
+        sponsorships: {
+          title: "Patrocinios y Activaciones",
+          description: "Asociaciones estratégicas y activaciones de marca que conectan efectivamente con tu audiencia objetivo.",
+          features: ["Patrocinios de eventos", "Asociaciones de marca", "Engagement de audiencia"],
+          price: "Desde $10,000/proyecto"
+        },
+        mediaBuying: {
+          title: "Compra de Medios y Marketing",
+          description: "Estrategias de compra de medios orientadas al rendimiento optimizadas para máximo ROI en el sector iGaming.",
+          features: ["Compra de medios", "Optimización de rendimiento", "Enfoque en ROI"],
+          price: "Desde $15,000/mes"
+        },
+        content: {
+          title: "Producción de Contenido y Eventos",
+          description: "Servicios de contenido audiovisual y producción de eventos de alta calidad para máximo impacto de marca.",
+          features: ["Producción de video", "Gestión de eventos", "Contenido creativo"],
+          price: "Desde $8,000/proyecto"
+        }
+      },
+      bContent: {
+        title: "Servicios Premium B.Content",
+        description: "Servicios profesionales de PR y creación de contenido específicamente diseñados para marcas de gaming y apuestas. Publica en medios principales o te devolvemos tu dinero.",
+        button: "Explorar B.Content"
+      },
+      roiGuarantee: {
+        title: "💰 Garantía de ROI: 5X Tu Inversión o Trabajamos GRATIS",
+        description: "Únete a más de 500 operadores que han visto más de 300% ROI en 90 días. Si no entregamos 5X retornos, no pagas ni un centavo.",
+        button: "Reclama Tu Plan de Marketing GRATUITO de $10K",
+        urgency: "⏰ Solo quedan 7 cupos este mes"
+      }
+    }
   },
 
   ru: {
@@ -1402,7 +1516,64 @@ export const translations = {
     talentMiaDesc: "Instagram • 1.5M Подписчиков",
     talentMiaStory: "380K",
     talentMiaConversion: "10.2%",
-    talentMiaROI: "640%"
+    talentMiaROI: "640%",
+    
+    // Services Page
+    services: {
+      title: "Как Мы Увеличиваем Ваши Результаты в 10 Раз",
+      subtitle: "Наша проверенная система принесла более $50M дохода. Вот как мы будем масштабировать ваш iGaming бизнес.",
+      ourServices: "Наши Услуги",
+      learnMore: "Узнать Больше",
+      services: {
+        traffic: {
+          title: "Трафик для Операторов Казино",
+          description: "Генерация высококачественного трафика с проверенными коэффициентами конверсии. Специализируемся на казино и букмекерских платформах.",
+          features: ["Качественный трафик", "Высокая конверсия", "Глобальный охват"],
+          price: "От $5,000/мес"
+        },
+        analytics: {
+          title: "Бенчмаркинг и Аналитика",
+          description: "Комплексный анализ рынка и бенчмаркинг платформ для оптимизации вашей конкурентной позиции.",
+          features: ["Анализ рынка", "Insights конкурентов", "Метрики производительности"],
+          price: "От $3,000/мес"
+        },
+        social: {
+          title: "Управление Социальными Сетями",
+          description: "Полномасштабные стратегии социальных сетей, адаптированные для индустрии iGaming на всех основных платформах.",
+          features: ["Стратегия контента", "Построение сообщества", "Узнаваемость бренда"],
+          price: "От $2,500/мес"
+        },
+        sponsorships: {
+          title: "Спонсорство и Активации",
+          description: "Стратегические партнерства и активации бренда, которые эффективно связывают с вашей целевой аудиторией.",
+          features: ["Спонсорство событий", "Партнерства брендов", "Вовлечение аудитории"],
+          price: "От $10,000/проект"
+        },
+        mediaBuying: {
+          title: "Медиа-закупки и Маркетинг",
+          description: "Стратегии медиа-закупок, ориентированные на производительность, оптимизированные для максимального ROI в секторе iGaming.",
+          features: ["Медиа-закупки", "Оптимизация производительности", "Фокус на ROI"],
+          price: "От $15,000/мес"
+        },
+        content: {
+          title: "Производство Контента и Мероприятий",
+          description: "Высококачественные услуги аудиовизуального контента и производства мероприятий для максимального воздействия бренда.",
+          features: ["Видеопроизводство", "Управление мероприятиями", "Креативный контент"],
+          price: "От $8,000/проект"
+        }
+      },
+      bContent: {
+        title: "Премиум Услуги B.Content",
+        description: "Профессиональные услуги PR и создания контента, специально разработанные для игровых и букмекерских брендов. Публикуйтесь в крупных медиа или мы вернем деньги.",
+        button: "Изучить B.Content"
+      },
+      roiGuarantee: {
+        title: "💰 Гарантия ROI: 5X Ваши Инвестиции или Мы Работаем БЕСПЛАТНО",
+        description: "Присоединяйтесь к 500+ операторам, которые увидели 300%+ ROI за 90 дней. Если мы не обеспечим 5X возврат, вы не платите ни копейки.",
+        button: "Получите Ваш БЕСПЛАТНЫЙ Маркетинговый План на $10K",
+        urgency: "⏰ Осталось только 7 мест в этом месяце"
+      }
+    }
   },
 
   ua: {
@@ -1853,7 +2024,64 @@ export const translations = {
     talentMiaDesc: "Instagram • 1.5M Підписників",
     talentMiaStory: "380K",
     talentMiaConversion: "10.2%",
-    talentMiaROI: "640%"
+    talentMiaROI: "640%",
+    
+    // Services Page
+    services: {
+      title: "Як Ми Збільшуємо Ваші Результати в 10 Разів",
+      subtitle: "Наша перевірена система принесла понад $50M доходу. Ось як ми масштабуватимемо ваш iGaming бізнес.",
+      ourServices: "Наші Послуги",
+      learnMore: "Дізнатися Більше",
+      services: {
+        traffic: {
+          title: "Трафік для Операторів Казино",
+          description: "Генерація високоякісного трафіку з перевіреними коефіцієнтами конверсії. Спеціалізуємося на казино та букмекерських платформах.",
+          features: ["Якісний трафік", "Висока конверсія", "Глобальний охоплення"],
+          price: "Від $5,000/міс"
+        },
+        analytics: {
+          title: "Бенчмаркінг та Аналітика",
+          description: "Комплексний аналіз ринку та бенчмаркінг платформ для оптимізації вашої конкурентної позиції.",
+          features: ["Аналіз ринку", "Insights конкурентів", "Метрики продуктивності"],
+          price: "Від $3,000/міс"
+        },
+        social: {
+          title: "Управління Соціальними Мережами",
+          description: "Повномасштабні стратегії соціальних мереж, адаптовані для індустрії iGaming на всіх основних платформах.",
+          features: ["Стратегія контенту", "Побудова спільноти", "Впізнаваність бренду"],
+          price: "Від $2,500/міс"
+        },
+        sponsorships: {
+          title: "Спонсорство та Активації",
+          description: "Стратегічні партнерства та активації бренду, які ефективно пов'язують з вашою цільовою аудиторією.",
+          features: ["Спонсорство подій", "Партнерства брендів", "Залучення аудиторії"],
+          price: "Від $10,000/проект"
+        },
+        mediaBuying: {
+          title: "Медіа-закупівлі та Маркетинг",
+          description: "Стратегії медіа-закупівель, орієнтовані на продуктивність, оптимізовані для максимального ROI в секторі iGaming.",
+          features: ["Медіа-закупівлі", "Оптимізація продуктивності", "Фокус на ROI"],
+          price: "Від $15,000/міс"
+        },
+        content: {
+          title: "Виробництво Контенту та Заходів",
+          description: "Високоякісні послуги аудіовізуального контенту та виробництва заходів для максимального впливу бренду.",
+          features: ["Відеовиробництво", "Управління заходами", "Креативний контент"],
+          price: "Від $8,000/проект"
+        }
+      },
+      bContent: {
+        title: "Преміум Послуги B.Content",
+        description: "Професійні послуги PR та створення контенту, спеціально розроблені для ігрових та букмекерських брендів. Публікуйтеся в великих медіа або ми повернемо гроші.",
+        button: "Дослідити B.Content"
+      },
+      roiGuarantee: {
+        title: "💰 Гарантія ROI: 5X Ваші Інвестиції або Ми Працюємо БЕЗКОШТОВНО",
+        description: "Приєднуйтесь до 500+ операторів, які побачили 300%+ ROI за 90 днів. Якщо ми не забезпечимо 5X повернення, ви не платите ні копійки.",
+        button: "Отримайте Ваш БЕЗКОШТОВНИЙ Маркетинговий План на $10K",
+        urgency: "⏰ Залишилося лише 7 місць цього місяця"
+      }
+    }
   }
 };
 
