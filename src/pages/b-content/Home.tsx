@@ -7,19 +7,19 @@ const BContentHome = () => {
   const t = useTranslation();
   const services = [
     {
-      title: "Premium PR Services",
-      description: "Strategic media placements that establish authority and drive traffic",
-      features: ["Tier 1 Media Placements", "Thought Leadership Articles", "Crisis Management", "Brand Positioning"]
+      title: t.bContentPRTitle,
+      description: t.bContentPRDesc,
+      features: [t.bContentPRFeature1, t.bContentPRFeature2, t.bContentPRFeature3, t.bContentPRFeature4]
     },
     {
-      title: "Content Marketing",
-      description: "High-converting content that educates and converts your audience",
-      features: ["Blog Strategy & Writing", "Video Content Creation", "Social Media Content", "Email Campaigns"]
+      title: t.bContentMarketingTitle,
+      description: t.bContentMarketingDesc,
+      features: [t.bContentMarketingFeature1, t.bContentMarketingFeature2, t.bContentMarketingFeature3, t.bContentMarketingFeature4]
     },
     {
-      title: "Influencer Partnerships",
-      description: "Connect with top-tier influencers in the gaming and betting space",
-      features: ["Influencer Matching", "Campaign Management", "Performance Tracking", "ROI Optimization"]
+      title: t.bContentInfluencerTitle,
+      description: t.bContentInfluencerDesc,
+      features: [t.bContentInfluencerFeature1, t.bContentInfluencerFeature2, t.bContentInfluencerFeature3, t.bContentInfluencerFeature4]
     }
   ];
 

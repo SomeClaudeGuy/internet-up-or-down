@@ -347,6 +347,7 @@ export const translations = {
     bContentInfluencerFeature3: "Performance Tracking",
     bContentInfluencerFeature4: "ROI Optimization",
 
+
     // B-Content Services
     bContentServicesHeroTitle: "Premium Content & PR Services",
     bContentServicesHeroSubtitle: "Comprehensive content marketing and PR solutions designed specifically for gaming and betting brands that demand results.",
@@ -707,6 +708,26 @@ export const translations = {
     bContentBettingPrice: "Desde $20,000/mes",
     bContentMicroService: "Redes de Micro-Influencers",
     bContentMicroPrice: "Desde $8,000/mes",
+
+    // B-Content Home Services
+    bContentPRTitle: "Servicios Premium de PR",
+    bContentPRDesc: "Ubicaciones estratégicas en medios que establecen autoridad y generan tráfico",
+    bContentPRFeature1: "Ubicaciones en Medios de Primer Nivel",
+    bContentPRFeature2: "Artículos de Liderazgo de Pensamiento", 
+    bContentPRFeature3: "Gestión de Crisis",
+    bContentPRFeature4: "Posicionamiento de Marca",
+    bContentMarketingTitle: "Marketing de Contenido",
+    bContentMarketingDesc: "Contenido de alta conversión que educa y convierte a tu audiencia",
+    bContentMarketingFeature1: "Estrategia y Redacción de Blog",
+    bContentMarketingFeature2: "Creación de Contenido de Video",
+    bContentMarketingFeature3: "Contenido de Redes Sociales",
+    bContentMarketingFeature4: "Campañas de Email",
+    bContentInfluencerTitle: "Asociaciones con Influencers", 
+    bContentInfluencerDesc: "Conecta con influencers de primer nivel en el espacio gaming y de apuestas",
+    bContentInfluencerFeature1: "Emparejamiento de Influencers",
+    bContentInfluencerFeature2: "Gestión de Campañas",
+    bContentInfluencerFeature3: "Seguimiento de Rendimiento",
+    bContentInfluencerFeature4: "Optimización de ROI",
 
     // B-Content Services
     bContentServicesHeroTitle: "Servicios Premium de Contenido y PR",
@@ -1069,6 +1090,26 @@ export const translations = {
     bContentMicroService: "Сети Микро-Инфлюенсеров",
     bContentMicroPrice: "От $8,000/мес",
 
+    // B-Content Home Services
+    bContentPRTitle: "Премиальные PR Услуги",
+    bContentPRDesc: "Стратегические размещения в СМИ, которые устанавливают авторитет и привлекают трафик",
+    bContentPRFeature1: "Размещения в Топ СМИ",
+    bContentPRFeature2: "Статьи Лидерства Мысли", 
+    bContentPRFeature3: "Управление Кризисами",
+    bContentPRFeature4: "Позиционирование Бренда",
+    bContentMarketingTitle: "Контент Маркетинг",
+    bContentMarketingDesc: "Высококонвертирующий контент, который обучает и конвертирует вашу аудиторию",
+    bContentMarketingFeature1: "Стратегия и Написание Блога",
+    bContentMarketingFeature2: "Создание Видео Контента",
+    bContentMarketingFeature3: "Контент для Социальных Сетей",
+    bContentMarketingFeature4: "Email Кампании",
+    bContentInfluencerTitle: "Партнерства с Инфлюенсерами", 
+    bContentInfluencerDesc: "Соединяйтесь с топовыми инфлюенсерами в игровом пространстве и пространстве ставок",
+    bContentInfluencerFeature1: "Подбор Инфлюенсеров",
+    bContentInfluencerFeature2: "Управление Кампаниями",
+    bContentInfluencerFeature3: "Отслеживание Производительности",
+    bContentInfluencerFeature4: "Оптимизация ROI",
+
     // B-Content Services
     bContentServicesHeroTitle: "Премиальные Услуги Контента и PR",
     bContentServicesHeroSubtitle: "Комплексные решения контент-маркетинга и связей с общественностью, разработанные специально для игровых брендов и брендов ставок, которые требуют результатов.",
@@ -1429,6 +1470,26 @@ export const translations = {
     bContentBettingPrice: "Від $20,000/міс",
     bContentMicroService: "Мережі Мікро-Інфлюенсерів",
     bContentMicroPrice: "Від $8,000/міс",
+
+    // B-Content Home Services
+    bContentPRTitle: "Преміальні PR Послуги",
+    bContentPRDesc: "Стратегічні розміщення в ЗМІ, які встановлюють авторитет і залучають трафік",
+    bContentPRFeature1: "Розміщення в Топ ЗМІ",
+    bContentPRFeature2: "Статті Лідерства Думки", 
+    bContentPRFeature3: "Управління Кризами",
+    bContentPRFeature4: "Позиціонування Бренду",
+    bContentMarketingTitle: "Контент Маркетинг",
+    bContentMarketingDesc: "Висококонвертуючий контент, який навчає та конвертує вашу аудиторію",
+    bContentMarketingFeature1: "Стратегія та Написання Блогу",
+    bContentMarketingFeature2: "Створення Відео Контенту",
+    bContentMarketingFeature3: "Контент для Соціальних Мереж",
+    bContentMarketingFeature4: "Email Кампанії",
+    bContentInfluencerTitle: "Партнерства з Інфлюенсерами", 
+    bContentInfluencerDesc: "Підключайтеся до топових інфлюенсерів у ігровому просторі та просторі ставок",
+    bContentInfluencerFeature1: "Підбір Інфлюенсерів",
+    bContentInfluencerFeature2: "Управління Кампаніями",
+    bContentInfluencerFeature3: "Відстеження Продуктивності",
+    bContentInfluencerFeature4: "Оптимізація ROI",
 
     // B-Content Services
     bContentServicesHeroTitle: "Преміальні Послуги Контенту та PR",
