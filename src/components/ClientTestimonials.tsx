@@ -2,9 +2,22 @@ import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Star } from "lucide-react";
 import { useTranslation } from "@/hooks/useTranslation";
 
-const Testimonials = () => {
+const ClientTestimonials = () => {
   const t = useTranslation();
   
+  const clients = [
+    { name: "Stake", logo: "🎯" },
+    { name: "BetBoom", logo: "💥" },
+    { name: "Leon", logo: "🦁" },
+    { name: "Pragmatic", logo: "⚡" },
+    { name: "PIN-UP", logo: "📌" },
+    { name: "Kick", logo: "⚽" },
+    { name: "Betano", logo: "🎰" },
+    { name: "Bet365", logo: "🎲" },
+    { name: "22Bet", logo: "🏆" },
+    { name: "Pinnacle", logo: "🎪" },
+  ];
+
   const testimonials = [
     {
       company: "Pinnacle",
@@ -33,8 +46,45 @@ const Testimonials = () => {
   ];
 
   return (
-    <section className="py-20 bg-background">
+    <section className="py-20 bg-muted/30">
       <div className="container mx-auto px-4">
+        {/* Client Logos Section */}
+        <div className="text-center mb-16">
+          <h2 className="text-2xl md:text-3xl font-bold mb-4">
+            {t.clientLogosTitle}
+          </h2>
+          <p className="text-muted-foreground max-w-2xl mx-auto mb-12">
+            {t.clientLogosSubtitle}
+          </p>
+
+          {/* Scrolling Logos */}
+          <div className="relative overflow-hidden mb-16">
+            <div className="flex animate-marquee space-x-12">
+              {/* First set */}
+              {clients.map((client, index) => (
+                <div
+                  key={`first-${index}`}
+                  className="flex items-center space-x-3 bg-card border border-border rounded-lg px-6 py-4 min-w-[160px] hover:scale-105 transition-transform"
+                >
+                  <span className="text-2xl">{client.logo}</span>
+                  <span className="font-medium whitespace-nowrap">{client.name}</span>
+                </div>
+              ))}
+              {/* Second set for seamless loop */}
+              {clients.map((client, index) => (
+                <div
+                  key={`second-${index}`}
+                  className="flex items-center space-x-3 bg-card border border-border rounded-lg px-6 py-4 min-w-[160px] hover:scale-105 transition-transform"
+                >
+                  <span className="text-2xl">{client.logo}</span>
+                  <span className="font-medium whitespace-nowrap">{client.name}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Testimonials Section */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             {t.testimonialsTitle}
@@ -44,7 +94,7 @@ const Testimonials = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto mb-16">
           {testimonials.map((testimonial, index) => (
             <Card 
               key={index}
@@ -71,7 +121,7 @@ const Testimonials = () => {
         </div>
 
         {/* Results Section */}
-        <div className="mt-20 bg-gradient-to-r from-primary/10 to-accent/10 rounded-2xl p-8 border border-border/50">
+        <div className="bg-gradient-to-r from-primary/10 to-accent/10 rounded-2xl p-8 border border-border/50">
           <div className="text-center mb-8">
             <h3 className="text-2xl font-bold mb-4">{t.testimonialsResultsTitle}</h3>
             <p className="text-muted-foreground">{t.testimonialsResultsSubtitle}</p>
@@ -124,4 +174,4 @@ const Testimonials = () => {
   );
 };
 
-export default Testimonials;
+export default ClientTestimonials;

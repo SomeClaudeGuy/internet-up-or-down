@@ -1,11 +1,11 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import ClientLogos from "@/components/ClientLogos";
+import ClientTestimonials from "@/components/ClientTestimonials";
 import SocialProof from "@/components/SocialProof";
 import Services from "@/components/Services";
-import GlobalPresence from "@/components/GlobalPresence";
-import TalentCTA from "@/components/TalentCTA";
-import Testimonials from "@/components/Testimonials";
+import WhoWeAre from "@/components/WhoWeAre";
+import Gallery from "@/components/Gallery";
+import RequestDeck from "@/components/RequestDeck";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
@@ -14,12 +14,12 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <Header />
       <Hero />
-      <ClientLogos />
+      <ClientTestimonials />
       <SocialProof />
       <Services />
-      <GlobalPresence />
-      <TalentCTA />
-      <Testimonials />
+      <WhoWeAre />
+      <Gallery />
+      <RequestDeck />
       <Contact />
       <Footer />
     </div>

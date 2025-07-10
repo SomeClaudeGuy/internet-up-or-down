@@ -77,10 +77,10 @@ const Services = () => {
       <section className="pt-24 pb-16 bg-gradient-to-br from-primary/10 via-background to-accent/10">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center space-x-2 bg-primary/10 px-4 py-2 rounded-full mb-6">
-              <Zap className="w-4 h-4 text-primary" />
-              <span className="text-sm font-medium text-primary">{t.services.ourServices}</span>
-            </div>
+          <div className="inline-flex items-center space-x-2 bg-primary/10 px-4 py-2 rounded-full mb-6">
+            <Zap className="w-4 h-4 text-primary" />
+            <span className="text-sm font-medium text-primary">{t.services.ourServices}</span>
+          </div>
             
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
               <span dangerouslySetInnerHTML={{ __html: t.services.title.replace('10X Your Results', '<span class="text-primary">10X Your Results</span>') }} />
@@ -110,9 +110,6 @@ const Services = () => {
                   <CardTitle className="text-xl group-hover:text-primary transition-colors">
                     {service.title}
                   </CardTitle>
-                  <Badge variant="outline" className="w-fit mx-auto">
-                    {service.price}
-                  </Badge>
                 </CardHeader>
                 <CardContent className="text-center space-y-4">
                   <CardDescription className="text-base">
@@ -164,29 +161,6 @@ const Services = () => {
         </div>
       </section>
 
-      {/* ROI Guarantee */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center bg-gradient-to-r from-primary/20 to-accent/20 rounded-2xl p-8 border border-primary/30 relative overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-accent/5"></div>
-            <div className="relative z-10">
-              <h3 className="text-3xl font-bold mb-4">{t.services.roiGuarantee.title}</h3>
-              <p className="text-lg text-muted-foreground mb-6 max-w-2xl mx-auto">
-                <span dangerouslySetInnerHTML={{ __html: t.services.roiGuarantee.description.replace('300%+ ROI', '<strong class="text-foreground">300%+ ROI</strong>') }} />
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <Button size="lg" className="group text-lg px-8 py-4 bg-gradient-to-r from-primary to-accent shadow-2xl shadow-primary/25">
-                  {t.services.roiGuarantee.button}
-                  <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                </Button>
-                <div className="text-sm text-muted-foreground">
-                  <span dangerouslySetInnerHTML={{ __html: t.services.roiGuarantee.urgency.replace('Only 7 spots left this month', '<strong>Only 7 spots left this month</strong>') }} />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
     </>
   );
 };
