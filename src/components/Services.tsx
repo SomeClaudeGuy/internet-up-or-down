@@ -13,48 +13,48 @@ import {
 
 const Services = () => {
   const t = useTranslation();
-  
+
   const serviceItems = [
     {
       icon: Target,
-      title: t.services.services.traffic.title,
-      description: t.services.services.traffic.description,
-      features: t.services.services.traffic.features,
+      title: t.servicesTrafficTitle,
+      description: t.servicesTrafficDesc,
+      features: [t.servicesTrafficFeature1, t.servicesTrafficFeature2, t.servicesTrafficFeature3],
       color: "from-blue-500 to-cyan-500"
     },
     {
       icon: BarChart,
-      title: t.services.services.analytics.title,
-      description: t.services.services.analytics.description,
-      features: t.services.services.analytics.features,
+      title: t.servicesAnalyticsTitle,
+      description: t.servicesAnalyticsDesc,
+      features: [t.servicesAnalyticsFeature1, t.servicesAnalyticsFeature2, t.servicesAnalyticsFeature3],
       color: "from-purple-500 to-pink-500"
     },
     {
       icon: Users,
-      title: t.services.services.social.title,
-      description: t.services.services.social.description,
-      features: t.services.services.social.features,
+      title: t.servicesSocialTitle,
+      description: t.servicesSocialDesc,
+      features: [t.servicesSocialFeature1, t.servicesSocialFeature2, t.servicesSocialFeature3],
       color: "from-green-500 to-emerald-500"
     },
     {
       icon: Megaphone,
-      title: t.services.services.sponsorships.title,
-      description: t.services.services.sponsorships.description,
-      features: t.services.services.sponsorships.features,
+      title: t.servicesSponsorshipsTitle,
+      description: t.servicesSponsorshipsDesc,
+      features: [t.servicesSponsorshipsFeature1, t.servicesSponsorshipsFeature2, t.servicesSponsorshipsFeature3],
       color: "from-orange-500 to-red-500"
     },
     {
       icon: TrendingUp,
-      title: t.services.services.media.title,
-      description: t.services.services.media.description,
-      features: t.services.services.media.features,
+      title: t.servicesMediaTitle,
+      description: t.servicesMediaDesc,
+      features: [t.servicesMediaFeature1, t.servicesMediaFeature2, t.servicesMediaFeature3],
       color: "from-indigo-500 to-purple-500"
     },
     {
       icon: Video,
-      title: t.services.services.content.title,
-      description: t.services.services.content.description,
-      features: t.services.services.content.features,
+      title: t.servicesContentTitle,
+      description: t.servicesContentDesc,
+      features: [t.servicesContentFeature1, t.servicesContentFeature2, t.servicesContentFeature3],
       color: "from-pink-500 to-rose-500"
     }
   ];
@@ -64,10 +64,10 @@ const Services = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            {t.services.title}
+            {t.servicesTitle}
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            {t.services.subtitle}
+            {t.servicesSubtitle}
           </p>
         </div>
 
@@ -104,7 +104,7 @@ const Services = () => {
                 </div>
 
                 <Button variant="outline" className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
-                  {t.services.learnMore}
+                  {t.servicesLearnMore}
                   <ArrowRight className="ml-2 w-4 h-4" />
                 </Button>
               </CardContent>
@@ -115,19 +115,19 @@ const Services = () => {
         <div className="text-center mt-16 bg-gradient-to-r from-primary/20 to-accent/20 rounded-2xl p-8 border border-primary/30 relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-accent/5"></div>
           <div className="relative z-10">
-            <h3 className="text-3xl font-bold mb-4">{t.services.ctaTitle}</h3>
+            <h3 className="text-3xl font-bold mb-4">{t.servicesCtaTitle}</h3>
             <p className="text-lg text-muted-foreground mb-6 max-w-2xl mx-auto">
-              {t.services.ctaDescription}
+              {t.servicesCtaDesc}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Button size="lg" asChild className="group text-lg px-8 py-4 bg-gradient-to-r from-primary to-accent shadow-2xl shadow-primary/25">
                 <a href="https://docs.google.com/forms/d/1948-2HcLLEeciF3QQIzeTB-nPmM6-qsD3HopP5-bTyQ/viewform?edit_requested=true#response=ACYDBNgoe9qnpdvzE2IG3-SgO1FgdPRTnh9slrfCToFtyek2Of0Osps9NvqxQ-7epsdcl_0" target="_blank" rel="noopener noreferrer">
-                  {t.services.ctaButton}
+                  {t.servicesCtaButton}
                   <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </a>
               </Button>
               <div className="text-sm text-muted-foreground">
-                {t.services.ctaUrgency}
+                {t.servicesCtaUrgency}
               </div>
             </div>
           </div>
