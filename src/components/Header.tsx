@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
+import LanguageSelector from "@/components/LanguageSelector";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -57,7 +58,8 @@ const Header = () => {
           </nav>
 
           {/* Desktop CTA */}
-          <div className="hidden md:flex space-x-4">
+          <div className="hidden md:flex items-center space-x-4">
+            <LanguageSelector />
             <Link to="/talent-intake">
               <Button variant="outline">Join as Talent</Button>
             </Link>
@@ -91,6 +93,9 @@ const Header = () => {
               </a>
             </nav>
             <div className="flex flex-col space-y-2 mt-4">
+              <div className="mb-2">
+                <LanguageSelector />
+              </div>
               <Link to="/talent-intake">
                 <Button variant="outline" className="w-full">Join as Talent</Button>
               </Link>
