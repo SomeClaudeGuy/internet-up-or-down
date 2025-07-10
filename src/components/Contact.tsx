@@ -20,13 +20,13 @@ const Contact = () => {
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             {t.contactSubtitle}
           </p>
-          <div className="mt-6 flex justify-center items-center gap-4 text-sm">
+           <div className="mt-6 flex justify-center items-center gap-4 text-sm">
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-              <span className="text-green-400">Available now</span>
+              <span className="text-green-400">{t.contactAvailable}</span>
             </div>
             <span className="text-muted-foreground">•</span>
-            <span className="text-muted-foreground">Response within 2 hours</span>
+            <span className="text-muted-foreground">{t.contactResponse}</span>
           </div>
         </div>
 
@@ -40,78 +40,78 @@ const Contact = () => {
               <form className="space-y-4">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="space-y-2">
-                    <Label htmlFor="firstName">First Name</Label>
-                    <Input id="firstName" placeholder="John" />
+                    <Label htmlFor="firstName">{t.contactFirstName}</Label>
+                    <Input id="firstName" placeholder={t.contactFirstNamePlaceholder} />
                   </div>
                   <div className="space-y-2">
-                    <Label htmlFor="lastName">Last Name</Label>
-                    <Input id="lastName" placeholder="Doe" />
+                    <Label htmlFor="lastName">{t.contactLastName}</Label>
+                    <Input id="lastName" placeholder={t.contactLastNamePlaceholder} />
                   </div>
                 </div>
 
                 <div className="space-y-2">
-                  <Label htmlFor="email">Email Address</Label>
-                  <Input id="email" type="email" placeholder="john@example.com" />
+                  <Label htmlFor="email">{t.contactEmailField}</Label>
+                  <Input id="email" type="email" placeholder={t.contactEmailPlaceholder} />
                 </div>
 
                 <div className="space-y-2">
-                  <Label htmlFor="phone">Phone Number</Label>
-                  <Input id="phone" type="tel" placeholder="+1 (555) 123-4567" />
+                  <Label htmlFor="phone">{t.contactPhoneField}</Label>
+                  <Input id="phone" type="tel" placeholder={t.contactPhonePlaceholder} />
                 </div>
 
                 <div className="space-y-2">
-                  <Label htmlFor="company">Company/Brand</Label>
-                  <Input id="company" placeholder="Your Company Name" />
+                  <Label htmlFor="company">{t.contactCompanyField}</Label>
+                  <Input id="company" placeholder={t.contactCompanyPlaceholder} />
                 </div>
 
                 <div className="space-y-2">
-                  <Label htmlFor="type">How would you like to be identified?</Label>
+                  <Label htmlFor="type">{t.contactIdentityQuestion}</Label>
                   <Select>
                     <SelectTrigger>
-                      <SelectValue placeholder="Select option" />
+                      <SelectValue placeholder={t.contactSelectOption} />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="brand">Brand</SelectItem>
-                      <SelectItem value="operator">Betting or Casino Operator</SelectItem>
-                      <SelectItem value="developer">Game Developer</SelectItem>
-                      <SelectItem value="talent">Talent/Influencer</SelectItem>
-                      <SelectItem value="other">Other</SelectItem>
+                      <SelectItem value="brand">{t.contactIdentityBrand}</SelectItem>
+                      <SelectItem value="operator">{t.contactIdentityOperator}</SelectItem>
+                      <SelectItem value="developer">{t.contactIdentityDeveloper}</SelectItem>
+                      <SelectItem value="talent">{t.contactIdentityTalent}</SelectItem>
+                      <SelectItem value="other">{t.contactIdentityOther}</SelectItem>
                     </SelectContent>
                   </Select>
                 </div>
 
                 <div className="space-y-2">
-                  <Label htmlFor="contact-method">Preferred Contact Method</Label>
+                  <Label htmlFor="contact-method">{t.contactMethodField}</Label>
                   <Select>
                     <SelectTrigger>
-                      <SelectValue placeholder="Choose your preferred method" />
+                      <SelectValue placeholder={t.contactSelectMethod} />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="email">Email</SelectItem>
-                      <SelectItem value="phone">Phone</SelectItem>
-                      <SelectItem value="whatsapp">WhatsApp</SelectItem>
-                      <SelectItem value="telegram">Telegram</SelectItem>
-                      <SelectItem value="skype">Skype</SelectItem>
+                      <SelectItem value="email">{t.contactMethodEmail}</SelectItem>
+                      <SelectItem value="phone">{t.contactMethodPhone}</SelectItem>
+                      <SelectItem value="whatsapp">{t.contactMethodWhatsApp}</SelectItem>
+                      <SelectItem value="telegram">{t.contactMethodTelegram}</SelectItem>
+                      <SelectItem value="skype">{t.contactMethodSkype}</SelectItem>
                     </SelectContent>
                   </Select>
                 </div>
 
                 <div className="space-y-2">
-                  <Label htmlFor="message">Your Message</Label>
+                  <Label htmlFor="message">{t.contactMessageField}</Label>
                   <Textarea 
                     id="message" 
-                    placeholder="Tell us about your project, goals, and how we can help..."
+                    placeholder={t.contactMessagePlaceholder}
                     rows={4}
                   />
                 </div>
 
                 <Button asChild className="w-full text-lg py-6">
                   <a href="https://docs.google.com/forms/d/1948-2HcLLEeciF3QQIzeTB-nPmM6-qsD3HopP5-bTyQ/viewform?edit_requested=true#response=ACYDBNgoe9qnpdvzE2IG3-SgO1FgdPRTnh9slrfCToFtyek2Of0Osps9NvqxQ-7epsdcl_0" target="_blank" rel="noopener noreferrer">
-                    🚀 Get My Free Strategy Session
+                    {t.contactFormButton}
                   </a>
                 </Button>
                 <p className="text-xs text-center text-muted-foreground mt-2">
-                  No spam. We'll only send you updates about your campaign.
+                  {t.contactFormDisclaimer}
                 </p>
               </form>
             </CardContent>
@@ -122,27 +122,27 @@ const Contact = () => {
             {/* Quick Contact */}
             <Card className="bg-card/50 backdrop-blur-sm border-border/50">
               <CardHeader>
-                <CardTitle className="text-xl">Quick Contact</CardTitle>
+                <CardTitle className="text-xl">{t.contactQuickTitle}</CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
                 <div className="flex items-center space-x-3">
                   <Mail className="w-5 h-5 text-primary" />
                   <div>
-                    <div className="font-medium">Email</div>
+                    <div className="font-medium">{t.contactEmail}</div>
                     <div className="text-muted-foreground">hello@basher.agency</div>
                   </div>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Phone className="w-5 h-5 text-primary" />
                   <div>
-                    <div className="font-medium">Phone</div>
+                    <div className="font-medium">{t.contactPhone}</div>
                     <div className="text-muted-foreground">+1 (555) 123-4567</div>
                   </div>
                 </div>
                 <div className="flex items-center space-x-3">
                   <MessageCircle className="w-5 h-5 text-primary" />
                   <div>
-                    <div className="font-medium">WhatsApp</div>
+                    <div className="font-medium">{t.contactWhatsApp}</div>
                     <div className="text-muted-foreground">+1 (555) 123-4567</div>
                   </div>
                 </div>
@@ -152,27 +152,27 @@ const Contact = () => {
             {/* Office Locations */}
             <Card className="bg-card/50 backdrop-blur-sm border-border/50">
               <CardHeader>
-                <CardTitle className="text-xl">Our Offices</CardTitle>
+                <CardTitle className="text-xl">{t.contactOfficesTitle}</CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
                 <div className="flex items-start space-x-3">
                   <MapPin className="w-5 h-5 text-primary mt-0.5" />
                   <div>
-                    <div className="font-medium">Latin America HQ</div>
+                    <div className="font-medium">{t.contactOfficeLatam}</div>
                     <div className="text-muted-foreground text-sm">São Paulo, Brazil</div>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
                   <MapPin className="w-5 h-5 text-primary mt-0.5" />
                   <div>
-                    <div className="font-medium">Europe Office</div>
+                    <div className="font-medium">{t.contactOfficeEurope}</div>
                     <div className="text-muted-foreground text-sm">Madrid, Spain</div>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
                   <MapPin className="w-5 h-5 text-primary mt-0.5" />
                   <div>
-                    <div className="font-medium">APAC Office</div>
+                    <div className="font-medium">{t.contactOfficeApac}</div>
                     <div className="text-muted-foreground text-sm">Melbourne, Australia</div>
                   </div>
                 </div>
@@ -184,21 +184,21 @@ const Contact = () => {
               <CardContent className="pt-6">
                 <div className="text-center space-y-4">
                   <div>
-                    <div className="text-2xl font-bold text-primary mb-1">⚡ 2 Hours</div>
-                    <div className="text-sm font-medium">Average Response Time</div>
+                    <div className="text-2xl font-bold text-primary mb-1">{t.contactTrustResponse}</div>
+                    <div className="text-sm font-medium">{t.contactTrustResponseDesc}</div>
                   </div>
                   <div className="grid grid-cols-2 gap-4 text-center">
                     <div>
-                      <div className="text-lg font-bold text-primary">50+</div>
-                      <div className="text-xs text-muted-foreground">Happy Clients</div>
+                      <div className="text-lg font-bold text-primary">{t.contactTrustClients}</div>
+                      <div className="text-xs text-muted-foreground">{t.contactTrustClientsDesc}</div>
                     </div>
                     <div>
-                      <div className="text-lg font-bold text-primary">100%</div>
-                      <div className="text-xs text-muted-foreground">Money Back</div>
+                      <div className="text-lg font-bold text-primary">{t.contactTrustGuarantee}</div>
+                      <div className="text-xs text-muted-foreground">{t.contactTrustGuaranteeDesc}</div>
                     </div>
                   </div>
                   <div className="text-xs text-muted-foreground">
-                    🏆 Award-winning campaigns • 🔒 NDA protected • 📈 Results guaranteed
+                    {t.contactTrustFooter}
                   </div>
                 </div>
               </CardContent>

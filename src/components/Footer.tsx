@@ -1,7 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { Mail, Phone, MapPin, Linkedin, Twitter, Instagram } from "lucide-react";
+import { useTranslation } from "@/hooks/useTranslation";
 
 const Footer = () => {
+  const t = useTranslation();
+  
   return (
     <footer className="bg-card border-t border-border">
       <div className="container mx-auto px-4 py-12">
@@ -15,8 +18,7 @@ const Footer = () => {
               <span className="text-xl font-bold">Basher Agency</span>
             </div>
             <p className="text-muted-foreground">
-              The worldwide leading marketing agency for casino/betting operators, 
-              influencers, and audiovisual content.
+              {t.footerDescription}
             </p>
             <div className="flex space-x-3">
               <Button variant="ghost" size="sm" className="p-2">
@@ -33,33 +35,33 @@ const Footer = () => {
 
           {/* Services */}
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold">Services</h3>
+            <h3 className="text-lg font-semibold">{t.footerServicesTitle}</h3>
             <ul className="space-y-2 text-muted-foreground">
-              <li><a href="#" className="hover:text-primary transition-colors">Traffic Generation</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Benchmarking</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Social Media</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Sponsorships</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Media Buying</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Content Production</a></li>
+              <li><a href="#" className="hover:text-primary transition-colors">{t.footerServicesTraffic}</a></li>
+              <li><a href="#" className="hover:text-primary transition-colors">{t.footerServicesBenchmarking}</a></li>
+              <li><a href="#" className="hover:text-primary transition-colors">{t.footerServicesSocial}</a></li>
+              <li><a href="#" className="hover:text-primary transition-colors">{t.footerServicesSponsorships}</a></li>
+              <li><a href="#" className="hover:text-primary transition-colors">{t.footerServicesMedia}</a></li>
+              <li><a href="#" className="hover:text-primary transition-colors">{t.footerServicesContent}</a></li>
             </ul>
           </div>
 
           {/* Regions */}
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold">Regions</h3>
+            <h3 className="text-lg font-semibold">{t.footerRegionsTitle}</h3>
             <ul className="space-y-2 text-muted-foreground">
-              <li><a href="#" className="hover:text-primary transition-colors">Latin America</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">North America</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Europe</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">APAC</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Australia</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">New Zealand</a></li>
+              <li><a href="#" className="hover:text-primary transition-colors">{t.footerRegionsLatam}</a></li>
+              <li><a href="#" className="hover:text-primary transition-colors">{t.footerRegionsNorthAmerica}</a></li>
+              <li><a href="#" className="hover:text-primary transition-colors">{t.footerRegionsEurope}</a></li>
+              <li><a href="#" className="hover:text-primary transition-colors">{t.footerRegionsApac}</a></li>
+              <li><a href="#" className="hover:text-primary transition-colors">{t.footerRegionsAustralia}</a></li>
+              <li><a href="#" className="hover:text-primary transition-colors">{t.footerRegionsNewZealand}</a></li>
             </ul>
           </div>
 
           {/* Contact */}
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold">Contact</h3>
+            <h3 className="text-lg font-semibold">{t.footerContactTitle}</h3>
             <div className="space-y-3 text-muted-foreground">
               <div className="flex items-center space-x-2">
                 <Mail className="w-4 h-4" />
@@ -71,11 +73,11 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-2">
                 <MapPin className="w-4 h-4" />
-                <span>Global offices</span>
+                <span>{t.footerContactGlobal}</span>
               </div>
             </div>
             <Button className="w-full" onClick={() => window.location.href = '/work-with-us'}>
-              Work With Us
+              {t.footerWorkWithUs}
             </Button>
           </div>
         </div>
@@ -84,12 +86,12 @@ const Footer = () => {
         <div className="border-t border-border mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-muted-foreground text-sm">
-              © 2024 Basher Agency. All rights reserved.
+              {t.footerCopyright}
             </div>
             <div className="flex space-x-6 text-sm text-muted-foreground">
-              <a href="#" className="hover:text-primary transition-colors">Privacy Policy</a>
-              <a href="#" className="hover:text-primary transition-colors">Terms of Service</a>
-              <a href="#" className="hover:text-primary transition-colors">Cookie Policy</a>
+              <a href="#" className="hover:text-primary transition-colors">{t.footerPrivacy}</a>
+              <a href="#" className="hover:text-primary transition-colors">{t.footerTerms}</a>
+              <a href="#" className="hover:text-primary transition-colors">{t.footerCookies}</a>
             </div>
           </div>
         </div>

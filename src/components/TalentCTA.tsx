@@ -1,28 +1,31 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Star, Trophy, DollarSign, Globe, ArrowRight } from "lucide-react";
+import { useTranslation } from "@/hooks/useTranslation";
 
 const TalentCTA = () => {
+  const t = useTranslation();
+  
   const benefits = [
     {
       icon: DollarSign,
-      title: "Top Earnings",
-      description: "Competitive rates and performance bonuses"
+      title: t.talentTopEarnings,
+      description: t.talentTopEarningsDesc
     },
     {
       icon: Globe,
-      title: "Global Reach",
-      description: "Work with brands across 4 continents"
+      title: t.talentGlobalReach,
+      description: t.talentGlobalReachDesc
     },
     {
       icon: Trophy,
-      title: "Premium Brands",
-      description: "Partner with industry-leading operators"
+      title: t.talentPremiumBrands,
+      description: t.talentPremiumBrandsDesc
     },
     {
       icon: Star,
-      title: "Full Support",
-      description: "Dedicated account management and resources"
+      title: t.talentFullSupport,
+      description: t.talentFullSupportDesc
     }
   ];
 
@@ -33,14 +36,13 @@ const TalentCTA = () => {
           {/* Header */}
           <div className="mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Earn <span className="text-primary">Great Income</span> as Our Partner
+              {t.talentCtaTitle}
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              <strong className="text-foreground">200+ influencers</strong> already earning well with our exclusive iGaming partnerships. 
-              Join our growing talent network.
+              {t.talentCtaSubtitle}
             </p>
             <div className="mt-4 text-lg font-semibold text-accent">
-              💰 Competitive rates and performance bonuses available
+              {t.talentCtaBonus}
             </div>
           </div>
 
@@ -66,35 +68,35 @@ const TalentCTA = () => {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               <div className="text-center">
                 <div className="text-3xl md:text-4xl font-bold text-primary mb-2">200+</div>
-                <div className="text-sm text-muted-foreground">Active Talents</div>
+                <div className="text-sm text-muted-foreground">{t.talentStatsActive}</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl md:text-4xl font-bold text-primary mb-2">100M+</div>
-                <div className="text-sm text-muted-foreground">Monthly Reach</div>
+                <div className="text-sm text-muted-foreground">{t.talentStatsReach}</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl md:text-4xl font-bold text-primary mb-2">50+</div>
-                <div className="text-sm text-muted-foreground">Brand Partners</div>
+                <div className="text-sm text-muted-foreground">{t.talentStatsPartners}</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl md:text-4xl font-bold text-primary mb-2">24/7</div>
-                <div className="text-sm text-muted-foreground">Support</div>
+                <div className="text-sm text-muted-foreground">{t.talentStatsSupport}</div>
               </div>
             </div>
           </div>
 
           {/* Regional Talent Showcase */}
           <div className="mb-12">
-            <h3 className="text-2xl font-bold mb-8">Talents Across All Regions</h3>
+            <h3 className="text-2xl font-bold mb-8">{t.talentRegionsTitle}</h3>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-              {["LATAM 🌎", "North America 🇺🇸", "APAC 🌏", "Europe 🇪🇺"].map((region, index) => (
+              {[t.talentRegionLatam, t.talentRegionNorthAmerica, t.talentRegionApac, t.talentRegionEurope].map((region, index) => (
                 <div 
                   key={index}
                   className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-lg p-6 hover:border-primary/50 transition-all duration-300 hover:scale-105"
                 >
                   <div className="text-2xl mb-2">{region.split(' ')[1]}</div>
                   <div className="font-semibold text-primary">{region.split(' ')[0]}</div>
-                  <div className="text-sm text-muted-foreground mt-2">Elite talents ready to partner</div>
+                  <div className="text-sm text-muted-foreground mt-2">{t.talentRegionReady}</div>
                 </div>
               ))}
             </div>
@@ -104,7 +106,7 @@ const TalentCTA = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" asChild className="group text-lg px-10 py-6 bg-gradient-to-r from-accent to-primary shadow-2xl shadow-accent/25">
               <a href="https://docs.google.com/forms/d/1948-2HcLLEeciF3QQIzeTB-nPmM6-qsD3HopP5-bTyQ/viewform?edit_requested=true#response=ACYDBNgoe9qnpdvzE2IG3-SgO1FgdPRTnh9slrfCToFtyek2Of0Osps9NvqxQ-7epsdcl_0" target="_blank" rel="noopener noreferrer">
-                💎 Apply to Elite Network (2 min)
+                {t.talentApplyButton}
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </a>
             </Button>
@@ -113,7 +115,7 @@ const TalentCTA = () => {
           {/* Requirements */}
           <div className="mt-8 text-sm text-muted-foreground">
             <p>
-              ⭐ Minimum 10K followers • 🎮 Gaming/Casino content focus • 📊 Consistent engagement rates
+              {t.talentRequirements}
             </p>
           </div>
         </div>
