@@ -2,34 +2,36 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Check, Star, Award, Target, Zap, Users } from "lucide-react";
+import { useTranslation } from "@/hooks/useTranslation";
 
 const BContentServices = () => {
+  const t = useTranslation();
   const serviceCategories = [
     {
-      title: "Content Strategy & Creation",
+      title: t.bContentCategoryStrategy,
       icon: Target,
       services: [
-        { name: "Blog Strategy & Writing", price: "From $2,500/mo", features: ["SEO-optimized articles", "Industry research", "Content calendar", "Performance tracking"] },
-        { name: "Video Content Production", price: "From $5,000/project", features: ["Script writing", "Professional production", "Post-production", "Multi-platform optimization"] },
-        { name: "Social Media Content", price: "From $1,500/mo", features: ["Platform-specific content", "Community management", "Engagement strategy", "Analytics reporting"] }
+        { name: t.bContentBlogService, price: t.bContentBlogPrice, features: ["SEO-optimized articles", "Industry research", "Content calendar", "Performance tracking"] },
+        { name: t.bContentVideoService, price: t.bContentVideoPrice, features: ["Script writing", "Professional production", "Post-production", "Multi-platform optimization"] },
+        { name: t.bContentSocialService, price: t.bContentSocialPrice, features: ["Platform-specific content", "Community management", "Engagement strategy", "Analytics reporting"] }
       ]
     },
     {
-      title: "Public Relations",
+      title: t.bContentCategoryPR,
       icon: Award,
       services: [
-        { name: "Tier 1 Media Placements", price: "From $10,000/mo", features: ["Forbes, TechCrunch, Bloomberg", "Press release distribution", "Media relationship management", "Crisis communication"] },
-        { name: "Thought Leadership", price: "From $7,500/mo", features: ["Executive positioning", "Speaking opportunities", "Industry awards", "Expert commentary"] },
-        { name: "Brand Positioning", price: "From $5,000/mo", features: ["Brand narrative development", "Competitive analysis", "Market positioning", "Messaging framework"] }
+        { name: t.bContentTierService, price: t.bContentTierPrice, features: ["Forbes, TechCrunch, Bloomberg", "Press release distribution", "Media relationship management", "Crisis communication"] },
+        { name: t.bContentLeadershipService, price: t.bContentLeadershipPrice, features: ["Executive positioning", "Speaking opportunities", "Industry awards", "Expert commentary"] },
+        { name: t.bContentBrandingService, price: t.bContentBrandingPrice, features: ["Brand narrative development", "Competitive analysis", "Market positioning", "Messaging framework"] }
       ]
     },
     {
-      title: "Influencer Marketing",
+      title: t.bContentCategoryInfluencer,
       icon: Users,
       services: [
-        { name: "Gaming Influencer Campaigns", price: "From $15,000/mo", features: ["Tier 1 gaming influencers", "Campaign management", "Performance tracking", "Compliance management"] },
-        { name: "Sports Betting Partnerships", price: "From $20,000/mo", features: ["Licensed partnerships", "Responsible gambling focus", "Multi-platform campaigns", "ROI optimization"] },
-        { name: "Micro-Influencer Networks", price: "From $8,000/mo", features: ["Niche audience targeting", "Authentic partnerships", "Cost-effective reach", "Community building"] }
+        { name: t.bContentGamingInfluencerService, price: t.bContentGamingInfluencerPrice, features: ["Tier 1 gaming influencers", "Campaign management", "Performance tracking", "Compliance management"] },
+        { name: t.bContentBettingService, price: t.bContentBettingPrice, features: ["Licensed partnerships", "Responsible gambling focus", "Multi-platform campaigns", "ROI optimization"] },
+        { name: t.bContentMicroService, price: t.bContentMicroPrice, features: ["Niche audience targeting", "Authentic partnerships", "Cost-effective reach", "Community building"] }
       ]
     }
   ];
@@ -46,11 +48,10 @@ const BContentServices = () => {
             </div>
             
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              Premium Content & PR Services
+              {t.bContentServicesHeroTitle}
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-              Comprehensive content marketing and PR solutions designed specifically 
-              for gaming and betting brands that demand results.
+              {t.bContentServicesHeroSubtitle}
             </p>
           </div>
         </div>
@@ -86,7 +87,7 @@ const BContentServices = () => {
                           </li>
                         ))}
                       </ul>
-                      <Button className="w-full">Get Started</Button>
+                      <Button className="w-full">{t.bContentGetStarted}</Button>
                     </CardContent>
                   </Card>
                 ))}
@@ -101,13 +102,12 @@ const BContentServices = () => {
         <div className="container mx-auto px-4">
           <Card className="max-w-4xl mx-auto">
             <CardContent className="p-12 text-center">
-              <h2 className="text-4xl font-bold mb-6">Need a Custom Solution?</h2>
+              <h2 className="text-4xl font-bold mb-6">{t.bContentCustomSolutionTitle}</h2>
               <p className="text-xl text-muted-foreground mb-8">
-                Every gaming and betting brand is unique. We create tailored content and PR strategies 
-                that align with your specific goals, compliance requirements, and market positioning.
+                {t.bContentCustomSolutionDesc}
               </p>
               <Button size="lg" className="text-lg px-8 py-6">
-                Schedule Strategy Call
+                {t.bContentStrategyCall}
               </Button>
             </CardContent>
           </Card>

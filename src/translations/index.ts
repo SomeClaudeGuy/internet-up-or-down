@@ -302,6 +302,31 @@ export const translations = {
     bContentMetricImpressions: "Impressions Generated",
     bContentMetricRetention: "Client Retention Rate",
 
+    // B-Content Service Categories
+    bContentCategoryStrategy: "Content Strategy & Creation",
+    bContentCategoryPR: "Public Relations",
+    bContentCategoryInfluencer: "Influencer Marketing",
+    
+    // Service Items
+    bContentBlogService: "Blog Strategy & Writing",
+    bContentBlogPrice: "From $2,500/mo",
+    bContentVideoService: "Video Content Production", 
+    bContentVideoPrice: "From $5,000/project",
+    bContentSocialService: "Social Media Content",
+    bContentSocialPrice: "From $1,500/mo",
+    bContentTierService: "Tier 1 Media Placements",
+    bContentTierPrice: "From $10,000/mo",
+    bContentLeadershipService: "Thought Leadership",
+    bContentLeadershipPrice: "From $7,500/mo",
+    bContentBrandingService: "Brand Positioning",
+    bContentBrandingPrice: "From $5,000/mo",
+    bContentGamingInfluencerService: "Gaming Influencer Campaigns",
+    bContentGamingInfluencerPrice: "From $15,000/mo",
+    bContentBettingService: "Sports Betting Partnerships",
+    bContentBettingPrice: "From $20,000/mo",
+    bContentMicroService: "Micro-Influencer Networks",
+    bContentMicroPrice: "From $8,000/mo",
+
     // B-Content Services
     bContentServicesHeroTitle: "Premium Content & PR Services",
     bContentServicesHeroSubtitle: "Comprehensive content marketing and PR solutions designed specifically for gaming and betting brands that demand results.",
@@ -637,6 +662,31 @@ export const translations = {
     bContentMetricPlacements: "Ubicaciones en Medios de Primer Nivel",
     bContentMetricImpressions: "Impresiones Generadas", 
     bContentMetricRetention: "Tasa de Retención de Clientes",
+
+    // B-Content Service Categories
+    bContentCategoryStrategy: "Estrategia y Creación de Contenido",
+    bContentCategoryPR: "Relaciones Públicas",
+    bContentCategoryInfluencer: "Marketing de Influencers",
+    
+    // Service Items
+    bContentBlogService: "Estrategia y Redacción de Blog",
+    bContentBlogPrice: "Desde $2,500/mes",
+    bContentVideoService: "Producción de Contenido de Video", 
+    bContentVideoPrice: "Desde $5,000/proyecto",
+    bContentSocialService: "Contenido de Redes Sociales",
+    bContentSocialPrice: "Desde $1,500/mes",
+    bContentTierService: "Ubicaciones en Medios de Primer Nivel",
+    bContentTierPrice: "Desde $10,000/mes",
+    bContentLeadershipService: "Liderazgo de Pensamiento",
+    bContentLeadershipPrice: "Desde $7,500/mes",
+    bContentBrandingService: "Posicionamiento de Marca",
+    bContentBrandingPrice: "Desde $5,000/mes",
+    bContentGamingInfluencerService: "Campañas de Influencers Gaming",
+    bContentGamingInfluencerPrice: "Desde $15,000/mes",
+    bContentBettingService: "Asociaciones de Apuestas Deportivas",
+    bContentBettingPrice: "Desde $20,000/mes",
+    bContentMicroService: "Redes de Micro-Influencers",
+    bContentMicroPrice: "Desde $8,000/mes",
 
     // B-Content Services
     bContentServicesHeroTitle: "Servicios Premium de Contenido y PR",
@@ -974,6 +1024,31 @@ export const translations = {
     bContentMetricImpressions: "Сгенерированные Просмотры",
     bContentMetricRetention: "Уровень Удержания Клиентов",
 
+    // B-Content Service Categories
+    bContentCategoryStrategy: "Стратегия и Создание Контента",
+    bContentCategoryPR: "Связи с Общественностью",
+    bContentCategoryInfluencer: "Инфлюенсер Маркетинг",
+    
+    // Service Items
+    bContentBlogService: "Стратегия и Написание Блога",
+    bContentBlogPrice: "От $2,500/мес",
+    bContentVideoService: "Производство Видео Контента", 
+    bContentVideoPrice: "От $5,000/проект",
+    bContentSocialService: "Контент для Социальных Сетей",
+    bContentSocialPrice: "От $1,500/мес",
+    bContentTierService: "Размещения в Топ СМИ",
+    bContentTierPrice: "От $10,000/мес",
+    bContentLeadershipService: "Лидерство Мысли",
+    bContentLeadershipPrice: "От $7,500/мес",
+    bContentBrandingService: "Позиционирование Бренда",
+    bContentBrandingPrice: "От $5,000/мес",
+    bContentGamingInfluencerService: "Кампании Игровых Инфлюенсеров",
+    bContentGamingInfluencerPrice: "От $15,000/мес",
+    bContentBettingService: "Партнерства Спортивных Ставок",
+    bContentBettingPrice: "От $20,000/мес",
+    bContentMicroService: "Сети Микро-Инфлюенсеров",
+    bContentMicroPrice: "От $8,000/мес",
+
     // B-Content Services
     bContentServicesHeroTitle: "Премиальные Услуги Контента и PR",
     bContentServicesHeroSubtitle: "Комплексные решения контент-маркетинга и связей с общественностью, разработанные специально для игровых брендов и брендов ставок, которые требуют результатов.",
@@ -1309,6 +1384,31 @@ export const translations = {
     bContentMetricPlacements: "Розміщення в Топ ЗМІ",
     bContentMetricImpressions: "Згенеровані Перегляди",
     bContentMetricRetention: "Рівень Утримання Клієнтів",
+
+    // B-Content Service Categories  
+    bContentCategoryStrategy: "Стратегія та Створення Контенту",
+    bContentCategoryPR: "Зв'язки з Громадськістю",
+    bContentCategoryInfluencer: "Інфлюенсер Маркетинг",
+    
+    // Service Items
+    bContentBlogService: "Стратегія та Написання Блогу",
+    bContentBlogPrice: "Від $2,500/міс",
+    bContentVideoService: "Виробництво Відео Контенту", 
+    bContentVideoPrice: "Від $5,000/проект",
+    bContentSocialService: "Контент для Соціальних Мереж",
+    bContentSocialPrice: "Від $1,500/міс",
+    bContentTierService: "Розміщення в Топ ЗМІ",
+    bContentTierPrice: "Від $10,000/міс",
+    bContentLeadershipService: "Лідерство Думки",
+    bContentLeadershipPrice: "Від $7,500/міс",
+    bContentBrandingService: "Позиціонування Бренду",
+    bContentBrandingPrice: "Від $5,000/міс",
+    bContentGamingInfluencerService: "Кампанії Ігрових Інфлюенсерів",
+    bContentGamingInfluencerPrice: "Від $15,000/міс",
+    bContentBettingService: "Партнерства Спортивних Ставок",
+    bContentBettingPrice: "Від $20,000/міс",
+    bContentMicroService: "Мережі Мікро-Інфлюенсерів",
+    bContentMicroPrice: "Від $8,000/міс",
 
     // B-Content Services
     bContentServicesHeroTitle: "Преміальні Послуги Контенту та PR",
