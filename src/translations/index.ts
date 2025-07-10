@@ -179,6 +179,27 @@ export interface Translations {
       awards: string;
     };
   };
+  clientLogos: {
+    title: string;
+    subtitle: string;
+  };
+  testimonials: {
+    title: string;
+    subtitle: string;
+    companies: {
+      company: string;
+      text: string;
+    }[];
+    guaranteedResults: string;
+    trackRecord: string;
+    stats: {
+      registrations: string;
+      ftds: string;
+      satisfaction: string;
+      optimization: string;
+    };
+    features: string[];
+  };
   footer: {
     description: string;
     services: {
@@ -409,6 +430,46 @@ const translations: Record<Language, Translations> = {
         awards: "🏆 Award-winning campaigns • 🔒 NDA protected • 📈 Results guaranteed"
       }
     },
+    clientLogos: {
+      title: "Trusted by the biggest names in iGaming",
+      subtitle: "Working with industry leaders across casino operators, betting platforms, and game providers worldwide."
+    },
+    testimonials: {
+      title: "Who Trusts Us",
+      subtitle: "Hear from our partners about the results we've delivered together in the iGaming industry.",
+      companies: [
+        {
+          company: "Pinnacle",
+          text: "Basher has been a close partner throughout these years in LATAM, thanks to his knowledge in eSports we were able to develop successful campaigns together delivering quality results."
+        },
+        {
+          company: "BetBoom",
+          text: "We've been working with Basher Agency for a whole year! They are highly skilled professionals in streamers, ambassadors, social media, and special projects for esports. Working together is very comfortable, so we highly recommend the agency as a reliable partner."
+        },
+        {
+          company: "Leon",
+          text: "Working with Basher Agency for over a year in APAC, Australia, and New Zealand has been a game-changer. Their expertise in iGaming marketing, influencer partnerships, and high-quality traffic generation has delivered outstanding results. The team is proactive, data-driven, and truly understands the market. Basher is not just a partner—they are a key part of our success."
+        },
+        {
+          company: "22Bet",
+          text: "Working with the basher agency was always a pleasure, sometimes there were unpleasant situations that arose due to the nature of our work, however, all these situations were resolved by the basher agency with excellent quality and speed. I cannot say anything else but recommend them to anyone who is willing to do business with them."
+        }
+      ],
+      guaranteedResults: "Guaranteed Results",
+      trackRecord: "Our track record speaks for itself",
+      stats: {
+        registrations: "Monthly Registrations",
+        ftds: "Monthly FTDs",
+        satisfaction: "Client Satisfaction",
+        optimization: "Real-time Optimization"
+      },
+      features: [
+        "Real-time optimization to maximize conversions and ROI",
+        "Monthly reports and weekly strategy meetings",
+        "Expertise in marketing, branding, and social media",
+        "Local market support from industry experts"
+      ]
+    },
     footer: {
       description: "The worldwide leading marketing agency for casino/betting operators, influencers, and audiovisual content.",
       services: {
@@ -636,6 +697,46 @@ const translations: Record<Language, Translations> = {
         guarantee: "100% Devolución de Dinero",
         awards: "🏆 Campañas galardonadas • 🔒 Protegido por NDA • 📈 Resultados garantizados"
       }
+    },
+    clientLogos: {
+      title: "Confianza de los nombres más grandes en iGaming",
+      subtitle: "Trabajando con líderes de la industria en operadores de casino, plataformas de apuestas y proveedores de juegos en todo el mundo."
+    },
+    testimonials: {
+      title: "Quién Confía en Nosotros",
+      subtitle: "Escucha de nuestros socios sobre los resultados que hemos entregado juntos en la industria iGaming.",
+      companies: [
+        {
+          company: "Pinnacle",
+          text: "Basher ha sido un socio cercano durante estos años en LATAM, gracias a su conocimiento en eSports pudimos desarrollar campañas exitosas juntos entregando resultados de calidad."
+        },
+        {
+          company: "BetBoom",
+          text: "¡Hemos estado trabajando con Basher Agency durante todo un año! Son profesionales altamente calificados en streamers, embajadores, redes sociales y proyectos especiales para esports. Trabajar juntos es muy cómodo, por lo que recomendamos encarecidamente la agencia como un socio confiable."
+        },
+        {
+          company: "Leon",
+          text: "Trabajar con Basher Agency durante más de un año en APAC, Australia y Nueva Zelanda ha sido un cambio de juego. Su experiencia en marketing iGaming, asociaciones de influencers y generación de tráfico de alta calidad ha entregado resultados sobresalientes. El equipo es proactivo, basado en datos y realmente entiende el mercado. Basher no es solo un socio, son una parte clave de nuestro éxito."
+        },
+        {
+          company: "22Bet",
+          text: "Trabajar con basher agency siempre fue un placer, a veces hubo situaciones desagradables que surgieron debido a la naturaleza de nuestro trabajo, sin embargo, todas estas situaciones fueron resueltas por basher agency con excelente calidad y velocidad. No puedo decir nada más que recomendarlos a cualquiera que esté dispuesto a hacer negocios con ellos."
+        }
+      ],
+      guaranteedResults: "Resultados Garantizados",
+      trackRecord: "Nuestro historial habla por sí mismo",
+      stats: {
+        registrations: "Registros Mensuales",
+        ftds: "FTDs Mensuales",
+        satisfaction: "Satisfacción del Cliente",
+        optimization: "Optimización en Tiempo Real"
+      },
+      features: [
+        "Optimización en tiempo real para maximizar conversiones y ROI",
+        "Reportes mensuales y reuniones de estrategia semanales",
+        "Experiencia en marketing, branding y redes sociales",
+        "Soporte de mercado local de expertos de la industria"
+      ]
     },
     footer: {
       description: "La agencia de marketing líder mundial para operadores de casino/apuestas, influencers y contenido audiovisual.",
@@ -865,6 +966,46 @@ const translations: Record<Language, Translations> = {
         awards: "🏆 Награжденные кампании • 🔒 Защищено NDA • 📈 Гарантированные результаты"
       }
     },
+    clientLogos: {
+      title: "Доверие крупнейших имен в iGaming",
+      subtitle: "Работаем с лидерами индустрии среди операторов казино, платформ ставок и поставщиков игр по всему миру."
+    },
+    testimonials: {
+      title: "Кто Нам Доверяет",
+      subtitle: "Услышьте от наших партнеров о результатах, которые мы достигли вместе в индустрии iGaming.",
+      companies: [
+        {
+          company: "Pinnacle",
+          text: "Basher был близким партнером на протяжении этих лет в LATAM, благодаря его знаниям в eSports мы смогли разработать успешные кампании вместе, обеспечивающие качественные результаты."
+        },
+        {
+          company: "BetBoom",
+          text: "Мы работаем с Basher Agency уже целый год! Это высококвалифицированные профессионалы в стримерах, амбассадорах, социальных сетях и специальных проектах для киберспорта. Работать вместе очень комфортно, поэтому мы настоятельно рекомендуем агентство как надежного партнера."
+        },
+        {
+          company: "Leon",
+          text: "Работа с Basher Agency более года в APAC, Австралии и Новой Зеландии стала переломным моментом. Их экспертиза в маркетинге iGaming, партнерстве с инфлюенсерами и генерации высококачественного трафика принесла выдающиеся результаты. Команда проактивна, основана на данных и действительно понимает рынок. Basher не просто партнер - они ключевая часть нашего успеха."
+        },
+        {
+          company: "22Bet",
+          text: "Работать с basher agency всегда было удовольствием, иногда возникали неприятные ситуации из-за характера нашей работы, однако все эти ситуации были решены basher agency с отличным качеством и скоростью. Я не могу сказать ничего, кроме как рекомендовать их всем, кто готов вести с ними бизнес."
+        }
+      ],
+      guaranteedResults: "Гарантированные Результаты",
+      trackRecord: "Наш послужной список говорит сам за себя",
+      stats: {
+        registrations: "Ежемесячные Регистрации",
+        ftds: "Ежемесячные FTD",
+        satisfaction: "Удовлетворенность Клиентов",
+        optimization: "Оптимизация в Реальном Времени"
+      },
+      features: [
+        "Оптимизация в реальном времени для максимизации конверсий и ROI",
+        "Ежемесячные отчеты и еженедельные стратегические встречи",
+        "Экспертиза в маркетинге, брендинге и социальных сетях",
+        "Локальная поддержка рынка от экспертов индустрии"
+      ]
+    },
     footer: {
       description: "Ведущее мировое маркетинговое агентство для операторов казино/ставок, инфлюенсеров и аудиовизуального контента.",
       services: {
@@ -1092,6 +1233,46 @@ const translations: Record<Language, Translations> = {
         guarantee: "100% Повернення Грошей",
         awards: "🏆 Нагороджені кампанії • 🔒 Захищено NDA • 📈 Гарантовані результати"
       }
+    },
+    clientLogos: {
+      title: "Довіра найбільших імен в iGaming",
+      subtitle: "Працюємо з лідерами індустрії серед операторів казино, платформ ставок та постачальників ігор по всьому світу."
+    },
+    testimonials: {
+      title: "Хто Нам Довіряє",
+      subtitle: "Почуйте від наших партнерів про результати, яких ми досягли разом в індустрії iGaming.",
+      companies: [
+        {
+          company: "Pinnacle",
+          text: "Basher був близьким партнером протягом цих років в LATAM, завдяки його знанням в eSports ми змогли розробити успішні кампанії разом, забезпечуючи якісні результати."
+        },
+        {
+          company: "BetBoom",
+          text: "Ми працюємо з Basher Agency вже цілий рік! Це висококваліфіковані професіонали в стрімерах, амбасадорах, соціальних мережах та спеціальних проектах для кіберспорту. Працювати разом дуже комфортно, тому ми наполегливо рекомендуємо агентство як надійного партнера."
+        },
+        {
+          company: "Leon",
+          text: "Робота з Basher Agency більше року в APAC, Австралії та Новій Зеландії стала переломним моментом. Їх експертиза в маркетингу iGaming, партнерстві з інфлюенсерами та генерації високоякісного трафіку принесла видатні результати. Команда проактивна, заснована на даних і справді розуміє ринок. Basher не просто партнер - вони ключова частина нашого успіху."
+        },
+        {
+          company: "22Bet",
+          text: "Працювати з basher agency завжди було задоволенням, іноді виникали неприємні ситуації через характер нашої роботи, однак всі ці ситуації були вирішені basher agency з відмінною якістю та швидкістю. Я не можу сказати нічого, окрім як рекомендувати їх всім, хто готовий вести з ними бізнес."
+        }
+      ],
+      guaranteedResults: "Гарантовані Результати",
+      trackRecord: "Наш послужний список говорить сам за себе",
+      stats: {
+        registrations: "Щомісячні Реєстрації",
+        ftds: "Щомісячні FTD",
+        satisfaction: "Задоволення Клієнтів",
+        optimization: "Оптимізація в Реальному Часі"
+      },
+      features: [
+        "Оптимізація в реальному часі для максимізації конверсій та ROI",
+        "Щомісячні звіти та щотижневі стратегічні зустрічі",
+        "Експертиза в маркетингу, брендингу та соціальних мережах",
+        "Локальна підтримка ринку від експертів індустрії"
+      ]
     },
     footer: {
       description: "Провідне світове маркетингове агентство для операторів казино/ставок, інфлюенсерів та аудіовізуального контенту.",

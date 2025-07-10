@@ -1,4 +1,8 @@
+import { useTranslation } from "@/hooks/useTranslation";
+
 const ClientLogos = () => {
+  const t = useTranslation();
+  
   const clients = [
     { name: "Stake", logo: "🎯" },
     { name: "BetBoom", logo: "💥" },
@@ -17,10 +21,10 @@ const ClientLogos = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-2xl md:text-3xl font-bold mb-4">
-            Trusted by the biggest names in iGaming
+            {t.clientLogos.title}
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Working with industry leaders across casino operators, betting platforms, and game providers worldwide.
+            {t.clientLogos.subtitle}
           </p>
         </div>
 
