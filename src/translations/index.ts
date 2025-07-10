@@ -838,7 +838,34 @@ export const translations = {
     talentPortfolio: "Enlaces de Portafolio/Canal",
     talentGoals: "Objetivos de Asociación",
     talentSubmit: "🚀 Enviar Solicitud",
-    talentReviewNote: "Revisaremos tu solicitud y te responderemos en 48 horas."
+    talentReviewNote: "Revisaremos tu solicitud y te responderemos en 48 horas.",
+
+    // Success Stories
+    successStoriesTitle: "Nuestras Historias de Éxito",
+    successStoriesSubtitle: "Descubre cómo nuestros talentosos creadores han transformado marcas y generado millones en ingresos a través de asociaciones de contenido estratégico.",
+    successStatsROI: "Aumento Promedio de ROI",
+    successStatsTalents: "Talentos Exitosos", 
+    successStatsCampaigns: "Campañas Entregadas",
+    successStatsSatisfaction: "Satisfacción del Cliente",
+    successEliteTitle: "Conoce a Nuestros Talentos de Élite",
+    
+    // Talent Categories
+    successCategoryGaming: "Gaming",
+    successCategoryCasino: "Casino",
+    successCategorySports: "Deportes",
+    successCategoryPoker: "Póker",
+    successCategoryTech: "Tecnología",
+    successCategoryLifestyle: "Estilo de Vida",
+    
+    // Metrics
+    successMetricViewers: "Espectadores Promedio:",
+    successMetricMonthlyViews: "Visualizaciones Mensuales:",
+    successMetricEngagement: "Tasa de Participación:",
+    successMetricPeakViewers: "Pico de Espectadores:",
+    successMetricAvgViews: "Visualizaciones Promedio:",
+    successMetricStoryViews: "Visualizaciones de Historia:",
+    successMetricConversion: "Tasa de Conversión:",
+    successMetricROI: "ROI de Campaña:"
   },
 
   ru: {
@@ -1219,7 +1246,34 @@ export const translations = {
     talentPortfolio: "Ссылки на Портфолио/Канал",
     talentGoals: "Цели Партнерства",
     talentSubmit: "🚀 Отправить Заявку",
-    talentReviewNote: "Мы рассмотрим вашу заявку и свяжемся с вами в течение 48 часов."
+    talentReviewNote: "Мы рассмотрим вашу заявку и свяжемся с вами в течение 48 часов.",
+
+    // Success Stories
+    successStoriesTitle: "Наши Истории Успеха",
+    successStoriesSubtitle: "Узнайте, как наши талантливые создатели трансформировали бренды и создали миллионы доходов через стратегические партнерства контента.",
+    successStatsROI: "Средний Рост ROI",
+    successStatsTalents: "Успешные Таланты", 
+    successStatsCampaigns: "Доставленные Кампании",
+    successStatsSatisfaction: "Удовлетворенность Клиентов",
+    successEliteTitle: "Познакомьтесь с Нашими Элитными Талантами",
+    
+    // Talent Categories
+    successCategoryGaming: "Гейминг",
+    successCategoryCasino: "Казино",
+    successCategorySports: "Спорт",
+    successCategoryPoker: "Покер",
+    successCategoryTech: "Технологии",
+    successCategoryLifestyle: "Образ Жизни",
+    
+    // Metrics
+    successMetricViewers: "Средние Зрители:",
+    successMetricMonthlyViews: "Месячные Просмотры:",
+    successMetricEngagement: "Коэффициент Вовлеченности:",
+    successMetricPeakViewers: "Пиковые Зрители:",
+    successMetricAvgViews: "Средние Просмотры:",
+    successMetricStoryViews: "Просмотры Историй:",
+    successMetricConversion: "Коэффициент Конверсии:",
+    successMetricROI: "ROI Кампании:"
   },
 
   ua: {
@@ -1600,7 +1654,34 @@ export const translations = {
     talentPortfolio: "Посилання на Портфоліо/Канал",
     talentGoals: "Цілі Партнерства",
     talentSubmit: "🚀 Надіслати Заявку",
-    talentReviewNote: "Ми розглянемо вашу заявку і зв'яжемося з вами протягом 48 годин."
+    talentReviewNote: "Ми розглянемо вашу заявку і зв'яжемося з вами протягом 48 годин.",
+
+    // Success Stories
+    successStoriesTitle: "Наші Історії Успіху",
+    successStoriesSubtitle: "Дізнайтеся, як наші талановиті творці трансформували бренди та створили мільйони доходів через стратегічні партнерства контенту.",
+    successStatsROI: "Середнє Зростання ROI",
+    successStatsTalents: "Успішні Таланти", 
+    successStatsCampaigns: "Доставлені Кампанії",
+    successStatsSatisfaction: "Задоволеність Клієнтів",
+    successEliteTitle: "Познайомтеся з Нашими Елітними Талантами",
+    
+    // Talent Categories
+    successCategoryGaming: "Гейминг",
+    successCategoryCasino: "Казино",
+    successCategorySports: "Спорт",
+    successCategoryPoker: "Покер",
+    successCategoryTech: "Технології",
+    successCategoryLifestyle: "Спосіб Життя",
+    
+    // Metrics
+    successMetricViewers: "Середні Глядачі:",
+    successMetricMonthlyViews: "Місячні Перегляди:",
+    successMetricEngagement: "Коефіцієнт Залученості:",
+    successMetricPeakViewers: "Пікові Глядачі:",
+    successMetricAvgViews: "Середні Перегляди:",
+    successMetricStoryViews: "Перегляди Історій:",
+    successMetricConversion: "Коефіцієнт Конверсії:",
+    successMetricROI: "ROI Кампанії:"
   }
 };
 
