@@ -11,17 +11,23 @@ export interface Translations {
   };
   hero: {
     badge: string;
-    title: string;
+    title: {
+      main: string;
+      highlight: string;
+    };
     subtitle: string;
-    description: string;
-    socialProof: string;
-    rating: string;
-    consultation: string;
-    caseStudy: string;
+    socialProof: {
+      talents: string;
+      rating: string;
+    };
+    cta: {
+      primary: string;
+      secondary: string;
+    };
     urgency: string;
     stats: {
       experience: string;
-      successStories: string;
+      success: string;
       retention: string;
       response: string;
     };
@@ -248,17 +254,23 @@ const translations: Record<Language, Translations> = {
     },
     hero: {
       badge: "⚡ 200+ Success Stories • Proven Results",
-      title: "Turn Your iGaming Traffic Into Pure Profit",
+      title: {
+        main: "Turn Your iGaming Traffic Into",
+        highlight: "Pure Profit"
+      },
       subtitle: "We've helped 200+ casino operators and influencers grow their business. Join our proven iGaming marketing network.",
-      description: "Join our growing talent network and start earning with premium brand partnerships.",
-      socialProof: "200+ Talents Trust Us",
-      rating: "⭐⭐⭐⭐⭐ 4.9/5 Rating",
-      consultation: "🚀 Get Your FREE Marketing Consultation",
-      caseStudy: "Watch $1M Case Study (2 min)",
+      socialProof: {
+        talents: "200+ Talents Trust Us",
+        rating: "⭐⭐⭐⭐⭐ 4.9/5 Rating"
+      },
+      cta: {
+        primary: "🚀 Get Your FREE Marketing Consultation",
+        secondary: "Watch $1M Case Study (2 min)"
+      },
       urgency: "⏰ Get Started: Free consultation to discuss your goals.",
       stats: {
         experience: "Years Experience",
-        successStories: "Success Stories",
+        success: "Success Stories",
         retention: "Client Retention",
         response: "Average Response"
       }
@@ -516,17 +528,23 @@ const translations: Record<Language, Translations> = {
     },
     hero: {
       badge: "⚡ 200+ Historias de Éxito • Resultados Comprobados",
-      title: "Convierte tu Tráfico iGaming en Pura Ganancia",
+      title: {
+        main: "Convierte tu Tráfico iGaming en",
+        highlight: "Pura Ganancia"
+      },
       subtitle: "Hemos ayudado a 200+ operadores de casino e influencers a hacer crecer su negocio. Únete a nuestra red probada de marketing iGaming.",
-      description: "Únete a nuestra creciente red de talentos y comienza a ganar con alianzas premium de marca.",
-      socialProof: "200+ Talentos Confían en Nosotros",
-      rating: "⭐⭐⭐⭐⭐ 4.9/5 Calificación",
-      consultation: "🚀 Obtén tu Consulta de Marketing GRATUITA",
-      caseStudy: "Ver Caso de Estudio $1M (2 min)",
+      socialProof: {
+        talents: "200+ Talentos Confían en Nosotros",
+        rating: "⭐⭐⭐⭐⭐ 4.9/5 Calificación"
+      },
+      cta: {
+        primary: "🚀 Obtén tu Consulta de Marketing GRATUITA",
+        secondary: "Ver Caso de Estudio $1M (2 min)"
+      },
       urgency: "⏰ Comienza Ahora: Consulta gratuita para discutir tus objetivos.",
       stats: {
         experience: "Años de Experiencia",
-        successStories: "Historias de Éxito",
+        success: "Historias de Éxito",
         retention: "Retención de Clientes",
         response: "Respuesta Promedio"
       }
@@ -784,17 +802,23 @@ const translations: Record<Language, Translations> = {
     },
     hero: {
       badge: "⚡ 200+ Историй Успеха • Проверенные Результаты",
-      title: "Превратите свой iGaming Трафик в Чистую Прибыль",
+      title: {
+        main: "Превратите свой iGaming Трафик в",
+        highlight: "Чистую Прибыль"
+      },
       subtitle: "Мы помогли 200+ операторам казино и инфлюенсерам развить их бизнес. Присоединяйтесь к нашей проверенной сети iGaming маркетинга.",
-      description: "Присоединяйтесь к нашей растущей сети талантов и начните зарабатывать с премиальными брендовыми партнерствами.",
-      socialProof: "200+ Талантов Доверяют Нам",
-      rating: "⭐⭐⭐⭐⭐ 4.9/5 Рейтинг",
-      consultation: "🚀 Получите БЕСПЛАТНУЮ Маркетинговую Консультацию",
-      caseStudy: "Смотреть Кейс $1М (2 мин)",
+      socialProof: {
+        talents: "200+ Талантов Доверяют Нам",
+        rating: "⭐⭐⭐⭐⭐ 4.9/5 Рейтинг"
+      },
+      cta: {
+        primary: "🚀 Получите БЕСПЛАТНУЮ Маркетинговую Консультацию",
+        secondary: "Смотреть Кейс $1М (2 мин)"
+      },
       urgency: "⏰ Начать Сейчас: Бесплатная консультация для обсуждения ваших целей.",
       stats: {
         experience: "Лет Опыта",
-        successStories: "Истории Успеха",
+        success: "Истории Успеха",
         retention: "Удержание Клиентов",
         response: "Среднее Время Ответа"
       }
@@ -1052,17 +1076,23 @@ const translations: Record<Language, Translations> = {
     },
     hero: {
       badge: "⚡ 200+ Історій Успіху • Перевірені Результати",
-      title: "Перетворіть свій iGaming Трафік на Чистий Прибуток",
+      title: {
+        main: "Перетворіть свій iGaming Трафік на",
+        highlight: "Чистий Прибуток"
+      },
       subtitle: "Ми допомогли 200+ операторам казино та інфлюенсерам розвинути їхній бізнес. Приєднуйтесь до нашої перевіреної мережі iGaming маркетингу.",
-      description: "Приєднуйтесь до нашої зростаючої мережі талантів і почніть заробляти з преміальними брендовими партнерствами.",
-      socialProof: "200+ Талантів Довіряють Нам",
-      rating: "⭐⭐⭐⭐⭐ 4.9/5 Рейтинг",
-      consultation: "🚀 Отримайте БЕЗКОШТОВНУ Маркетингову Консультацію",
-      caseStudy: "Дивитися Кейс $1М (2 хв)",
+      socialProof: {
+        talents: "200+ Талантів Довіряють Нам",
+        rating: "⭐⭐⭐⭐⭐ 4.9/5 Рейтинг"
+      },
+      cta: {
+        primary: "🚀 Отримайте БЕЗКОШТОВНУ Маркетингову Консультацію",
+        secondary: "Дивитися Кейс $1М (2 хв)"
+      },
       urgency: "⏰ Почати Зараз: Безкоштовна консультація для обговорення ваших цілей.",
       stats: {
         experience: "Років Досвіду",
-        successStories: "Історії Успіху",
+        success: "Історії Успіху",
         retention: "Утримання Клієнтів",
         response: "Середній Час Відповіді"
       }
