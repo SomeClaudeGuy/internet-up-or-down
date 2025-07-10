@@ -2,8 +2,10 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Star, TrendingUp, Users, Award } from "lucide-react";
+import { useTranslation } from "@/hooks/useTranslation";
 
 const SuccessStories = () => {
+  const t = useTranslation();
   return (
     <div className="min-h-screen bg-background">
       <Header />
@@ -12,10 +14,10 @@ const SuccessStories = () => {
       <section className="pt-24 pb-16 bg-gradient-to-br from-primary/5 to-accent/5">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            Our <span className="text-primary">Success Stories</span>
+            {t.successStoriesTitle}
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Discover how our talented creators have transformed brands and generated millions in revenue through strategic content partnerships.
+            {t.successStoriesSubtitle}
           </p>
         </div>
       </section>
@@ -28,28 +30,28 @@ const SuccessStories = () => {
               <CardContent className="pt-6">
                 <TrendingUp className="w-12 h-12 text-primary mx-auto mb-4" />
                 <div className="text-3xl font-bold text-primary mb-2">500%</div>
-                <div className="text-muted-foreground">Average ROI Increase</div>
+                <div className="text-muted-foreground">{t.successStatsROI}</div>
               </CardContent>
             </Card>
             <Card className="text-center">
               <CardContent className="pt-6">
                 <Users className="w-12 h-12 text-primary mx-auto mb-4" />
                 <div className="text-3xl font-bold text-primary mb-2">50+</div>
-                <div className="text-muted-foreground">Successful Talents</div>
+                <div className="text-muted-foreground">{t.successStatsTalents}</div>
               </CardContent>
             </Card>
             <Card className="text-center">
               <CardContent className="pt-6">
                 <Award className="w-12 h-12 text-primary mx-auto mb-4" />
                 <div className="text-3xl font-bold text-primary mb-2">100+</div>
-                <div className="text-muted-foreground">Campaigns Delivered</div>
+                <div className="text-muted-foreground">{t.successStatsCampaigns}</div>
               </CardContent>
             </Card>
             <Card className="text-center">
               <CardContent className="pt-6">
                 <Star className="w-12 h-12 text-primary mx-auto mb-4" />
                 <div className="text-3xl font-bold text-primary mb-2">98%</div>
-                <div className="text-muted-foreground">Client Satisfaction</div>
+                <div className="text-muted-foreground">{t.successStatsSatisfaction}</div>
               </CardContent>
             </Card>
           </div>
@@ -60,7 +62,7 @@ const SuccessStories = () => {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
-            Meet Our <span className="text-primary">Elite Talents</span>
+            {t.successEliteTitle}
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -73,7 +75,7 @@ const SuccessStories = () => {
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                 />
                 <div className="absolute top-4 right-4 bg-primary/90 text-primary-foreground px-3 py-1 rounded-full text-sm font-medium">
-                  Gaming
+                  {t.successCategoryGaming}
                 </div>
               </div>
               <CardContent className="p-6">
@@ -81,7 +83,7 @@ const SuccessStories = () => {
                 <p className="text-muted-foreground mb-3">Twitch Partner • 850K Followers</p>
                 <div className="space-y-2 text-sm">
                   <div className="flex justify-between">
-                    <span>Avg. Viewers:</span>
+                    <span>{t.successMetricViewers}</span>
                     <span className="font-medium">12.5K</span>
                   </div>
                   <div className="flex justify-between">

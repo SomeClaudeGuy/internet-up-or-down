@@ -431,6 +431,33 @@ export const translations = {
     talentExpIntermediate: "6-20 partnerships", 
     talentExpExperienced: "20+ partnerships",
     talentExpProfessional: "Full-time creator",
+
+    // Success Stories
+    successStoriesTitle: "Our Success Stories",
+    successStoriesSubtitle: "Discover how our talented creators have transformed brands and generated millions in revenue through strategic content partnerships.",
+    successStatsROI: "Average ROI Increase",
+    successStatsTalents: "Successful Talents", 
+    successStatsCampaigns: "Campaigns Delivered",
+    successStatsSatisfaction: "Client Satisfaction",
+    successEliteTitle: "Meet Our Elite Talents",
+    
+    // Talent Categories
+    successCategoryGaming: "Gaming",
+    successCategoryCasino: "Casino",
+    successCategorySports: "Sports",
+    successCategoryPoker: "Poker",
+    successCategoryTech: "Tech",
+    successCategoryLifestyle: "Lifestyle",
+    
+    // Metrics
+    successMetricViewers: "Avg. Viewers:",
+    successMetricMonthlyViews: "Monthly Views:",
+    successMetricEngagement: "Engagement Rate:",
+    successMetricPeakViewers: "Peak Viewers:",
+    successMetricAvgViews: "Avg. Views:",
+    successMetricStoryViews: "Story Views:",
+    successMetricConversion: "Conversion Rate:",
+    successMetricROI: "Campaign ROI:",
   },
 
   es: {
