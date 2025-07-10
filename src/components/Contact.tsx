@@ -4,18 +4,21 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { useTranslation } from "@/hooks/useTranslation";
 import { Mail, Phone, MapPin, MessageCircle } from "lucide-react";
 
 const Contact = () => {
+  const t = useTranslation();
+  
   return (
     <section id="contact" className="py-20 bg-muted/30">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Ready to <span className="text-primary">10X Your Results</span>?
+            {t.contact.title}
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Join 50+ industry leaders who trust us with their growth. Free consultation call - guaranteed results or money back.
+            {t.contact.subtitle}
           </p>
           <div className="mt-6 flex justify-center items-center gap-4 text-sm">
             <div className="flex items-center gap-2">
@@ -31,7 +34,7 @@ const Contact = () => {
           {/* Contact Form */}
           <Card className="bg-card/50 backdrop-blur-sm border-border/50">
             <CardHeader>
-              <CardTitle className="text-2xl">Get Started Today</CardTitle>
+              <CardTitle className="text-2xl">{t.contact.form.title}</CardTitle>
             </CardHeader>
             <CardContent className="space-y-6">
               <form className="space-y-4">
