@@ -296,6 +296,12 @@ export const translations = {
     bContentFreeAudit: "Get Free Content Audit",
     bContentScheduleConsult: "Schedule Consultation",
 
+    // B-Content Metrics
+    bContentMetricTraffic: "Average Traffic Increase",
+    bContentMetricPlacements: "Tier 1 Media Placements", 
+    bContentMetricImpressions: "Impressions Generated",
+    bContentMetricRetention: "Client Retention Rate",
+
     // B-Content Services
     bContentServicesHeroTitle: "Premium Content & PR Services",
     bContentServicesHeroSubtitle: "Comprehensive content marketing and PR solutions designed specifically for gaming and betting brands that demand results.",
@@ -625,6 +631,12 @@ export const translations = {
     bContentCtaSubtitle: "Únete a 100+ marcas de gaming y apuestas que confían en B.Content para sus necesidades de marketing de contenido y relaciones públicas.",
     bContentFreeAudit: "Obtener Auditoría Gratuita de Contenido",
     bContentScheduleConsult: "Programar Consulta",
+
+    // B-Content Metrics
+    bContentMetricTraffic: "Incremento Promedio de Tráfico",
+    bContentMetricPlacements: "Ubicaciones en Medios de Primer Nivel",
+    bContentMetricImpressions: "Impresiones Generadas", 
+    bContentMetricRetention: "Tasa de Retención de Clientes",
 
     // B-Content Services
     bContentServicesHeroTitle: "Servicios Premium de Contenido y PR",
@@ -956,6 +968,12 @@ export const translations = {
     bContentFreeAudit: "Получить Бесплатный Аудит Контента",
     bContentScheduleConsult: "Запланировать Консультацию",
 
+    // B-Content Metrics
+    bContentMetricTraffic: "Средний Рост Трафика",
+    bContentMetricPlacements: "Размещения в Топ СМИ",
+    bContentMetricImpressions: "Сгенерированные Просмотры",
+    bContentMetricRetention: "Уровень Удержания Клиентов",
+
     // B-Content Services
     bContentServicesHeroTitle: "Премиальные Услуги Контента и PR",
     bContentServicesHeroSubtitle: "Комплексные решения контент-маркетинга и связей с общественностью, разработанные специально для игровых брендов и брендов ставок, которые требуют результатов.",
@@ -1285,6 +1303,12 @@ export const translations = {
     bContentCtaSubtitle: "Приєднуйтесь до 100+ ігрових брендів та брендів ставок, які довіряють B.Content свої потреби в контент-маркетингу та зв'язках з громадськістю.",
     bContentFreeAudit: "Отримати Безкоштовний Аудит Контенту",
     bContentScheduleConsult: "Запланувати Консультацію",
+
+    // B-Content Metrics  
+    bContentMetricTraffic: "Середнє Зростання Трафіку",
+    bContentMetricPlacements: "Розміщення в Топ ЗМІ",
+    bContentMetricImpressions: "Згенеровані Перегляди",
+    bContentMetricRetention: "Рівень Утримання Клієнтів",
 
     // B-Content Services
     bContentServicesHeroTitle: "Преміальні Послуги Контенту та PR",

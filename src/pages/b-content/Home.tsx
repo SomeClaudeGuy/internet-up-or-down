@@ -24,10 +24,10 @@ const BContentHome = () => {
   ];
 
   const results = [
-    { metric: "300%", label: "Average Traffic Increase" },
-    { metric: "50+", label: "Tier 1 Media Placements" },
-    { metric: "2M+", label: "Impressions Generated" },
-    { metric: "98%", label: "Client Retention Rate" }
+    { metric: "300%", label: t.bContentMetricTraffic },
+    { metric: "50+", label: t.bContentMetricPlacements },
+    { metric: "2M+", label: t.bContentMetricImpressions },
+    { metric: "98%", label: t.bContentMetricRetention }
   ];
 
   return (
