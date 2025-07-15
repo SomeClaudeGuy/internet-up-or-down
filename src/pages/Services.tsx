@@ -149,7 +149,7 @@ const Services = () => {
                     {service.description}
                   </CardDescription>
                   
-                  <div className="flex flex-wrap gap-2 justify-center items-start min-h-[80px]">
+                  <div className="flex flex-wrap gap-2 justify-center items-start min-h-[80px] flex-1">
                     {service.features.map((feature, idx) => (
                       <span 
                         key={idx}
@@ -193,7 +193,7 @@ const Services = () => {
                     {service.description}
                   </CardDescription>
                   
-                  <div className="flex flex-wrap gap-2 justify-center items-start min-h-[80px]">
+                  <div className="flex flex-wrap gap-2 justify-center items-start min-h-[80px] flex-1">
                     {service.features.map((feature, idx) => (
                       <span 
                         key={idx}
