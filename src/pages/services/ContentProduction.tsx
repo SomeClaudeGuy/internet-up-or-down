@@ -65,34 +65,78 @@ const ContentProduction = () => {
     <div className="min-h-screen bg-background">
       <Header />
       
-      {/* Hero Section */}
-      <section className="pt-32 pb-20 bg-gradient-to-br from-background via-pink-500/5 to-rose-500/10">
+      {/* Hero Section - Asymmetric Layout */}
+      <section className="pt-32 pb-20 relative">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <Badge className="mb-6 px-4 py-2 text-sm font-medium">
-              <Video className="w-4 h-4 mr-2" />
-              Premium Content & Event Production
-            </Badge>
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
+            <div className="lg:col-span-2 space-y-8">
+              <div>
+                <Badge className="mb-6 px-4 py-2 text-sm font-medium bg-pink-500/10 text-pink-500 border-pink-500/20">
+                  <Video className="w-4 h-4 mr-2" />
+                  Premium Content & Event Production
+                </Badge>
+                
+                <h1 className="text-4xl md:text-6xl font-bold mb-6">
+                  <span className="block text-foreground">Content That</span>
+                  <span className="block bg-gradient-to-r from-pink-500 to-rose-500 bg-clip-text text-transparent">
+                    Captivates & Converts
+                  </span>
+                </h1>
+                
+                <p className="text-xl text-muted-foreground mb-8">
+                  High-quality audiovisual content and event production services that create maximum brand impact. 
+                  From viral videos to live events, we bring your vision to life.
+                </p>
+                
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Button size="lg" className="text-lg px-8 py-4 bg-gradient-to-r from-pink-500 to-rose-500 shadow-2xl shadow-pink-500/25" asChild>
+                    <a href="https://docs.google.com/forms/d/1948-2HcLLEeciF3QQIzeTB-nPmM6-qsD3HopP5-bTyQ/viewform?edit_requested=true#response=ACYDBNgoe9qnpdvzE2IG3-SgO1FgdPRTnh9slrfCToFtyek2Of0Osps9NvqxQ-7epsdcl_0" target="_blank" rel="noopener noreferrer" className="flex items-center whitespace-nowrap">
+                      🎬 Start Your Content Journey
+                      <ArrowRight className="ml-2 w-5 h-5" />
+                    </a>
+                  </Button>
+                  <Button variant="outline" size="lg" className="text-lg px-8 py-4">
+                    🎥 View Our Reel
+                  </Button>
+                </div>
+              </div>
+            </div>
             
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-pink-500 to-rose-500 bg-clip-text text-transparent">
-              Content That Captivates & Converts
-            </h1>
-            
-            <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-              High-quality audiovisual content and event production services that create maximum brand impact. 
-              From viral videos to live events, we bring your vision to life.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="text-lg px-8 py-4 bg-gradient-to-r from-pink-500 to-rose-500 shadow-2xl shadow-pink-500/25" asChild>
-                <a href="https://docs.google.com/forms/d/1948-2HcLLEeciF3QQIzeTB-nPmM6-qsD3HopP5-bTyQ/viewform?edit_requested=true#response=ACYDBNgoe9qnpdvzE2IG3-SgO1FgdPRTnh9slrfCToFtyek2Of0Osps9NvqxQ-7epsdcl_0" target="_blank" rel="noopener noreferrer" className="flex items-center whitespace-nowrap">
-                  🎬 Start Your Content Journey
-                  <ArrowRight className="ml-2 w-5 h-5" />
-                </a>
-              </Button>
-              <Button variant="outline" size="lg" className="text-lg px-8 py-4">
-                🎥 View Our Reel
-              </Button>
+            <div className="lg:col-span-1">
+              <div className="sticky top-32 space-y-6">
+                <div className="bg-gradient-to-br from-pink-500/20 to-rose-500/20 rounded-2xl p-6 backdrop-blur-sm">
+                  <h3 className="text-lg font-semibold mb-4">Production Stats</h3>
+                  <div className="space-y-4">
+                    <div className="flex justify-between items-center">
+                      <span className="text-sm text-muted-foreground">Video Views</span>
+                      <span className="text-lg font-bold text-pink-500">100M+</span>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span className="text-sm text-muted-foreground">Videos Produced</span>
+                      <span className="text-lg font-bold text-rose-500">500+</span>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span className="text-sm text-muted-foreground">Events Managed</span>
+                      <span className="text-lg font-bold text-pink-500">50+</span>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span className="text-sm text-muted-foreground">Satisfaction Rate</span>
+                      <span className="text-lg font-bold text-rose-500">98%</span>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="bg-card border border-border/50 rounded-xl p-6">
+                  <h4 className="font-semibold mb-3">Content Types</h4>
+                  <div className="flex flex-wrap gap-2">
+                    {["Videos", "Events", "Podcasts", "Animation"].map((type) => (
+                      <span key={type} className="px-3 py-1 bg-pink-500/10 text-pink-500 text-sm rounded-full">
+                        {type}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

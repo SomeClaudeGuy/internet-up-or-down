@@ -63,23 +63,55 @@ const Sponsorships = () => {
     <div className="min-h-screen bg-background">
       <Header />
       
-      {/* Hero Section */}
-      <section className="pt-32 pb-20 bg-gradient-to-br from-background via-orange-500/5 to-red-500/10">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <Badge className="mb-6 px-4 py-2 text-sm font-medium">
-              <Megaphone className="w-4 h-4 mr-2" />
-              Premium Sponsorships & Activations
-            </Badge>
-            
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">
-              Sponsorships That Drive Results
-            </h1>
-            
-            <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-              Strategic partnerships and brand activations that connect with your target audience. 
-              From major tournaments to celebrity partnerships, we create impactful sponsorship experiences.
-            </p>
+      {/* Hero Section - Full Width with Overlay */}
+      <section className="pt-32 pb-20 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-orange-500/10 via-background to-red-500/10"></div>
+        <div className="absolute inset-0">
+          <div className="absolute top-10 left-10 w-72 h-72 bg-orange-500/10 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-10 right-10 w-96 h-96 bg-red-500/10 rounded-full blur-3xl"></div>
+        </div>
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <Badge className="mb-8 px-6 py-3 text-base font-medium bg-orange-500/10 text-orange-500 border-orange-500/20">
+                <Megaphone className="w-5 h-5 mr-2" />
+                Premium Sponsorships & Activations
+              </Badge>
+              
+              <h1 className="text-5xl md:text-7xl font-bold mb-8">
+                <span className="block bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent mb-4">
+                  Sponsorships
+                </span>
+                <span className="block text-4xl md:text-5xl text-foreground">
+                  That Create Impact
+                </span>
+              </h1>
+              
+              <p className="text-xl text-muted-foreground mb-12 max-w-4xl mx-auto">
+                Strategic partnerships and brand activations that connect with your target audience. 
+                From major tournaments to celebrity partnerships, we create memorable sponsorship experiences.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+              <div className="bg-card/80 backdrop-blur-sm border border-orange-500/20 rounded-2xl p-6 text-center hover:scale-105 transition-transform">
+                <div className="text-3xl font-bold text-orange-500 mb-2">15M+</div>
+                <div className="text-sm text-muted-foreground">Event Impressions</div>
+              </div>
+              <div className="bg-card/80 backdrop-blur-sm border border-red-500/20 rounded-2xl p-6 text-center hover:scale-105 transition-transform">
+                <div className="text-3xl font-bold text-red-500 mb-2">500%</div>
+                <div className="text-sm text-muted-foreground">Brand Awareness Lift</div>
+              </div>
+              <div className="bg-card/80 backdrop-blur-sm border border-orange-500/20 rounded-2xl p-6 text-center hover:scale-105 transition-transform">
+                <div className="text-3xl font-bold text-orange-500 mb-2">50+</div>
+                <div className="text-sm text-muted-foreground">Major Events</div>
+              </div>
+              <div className="bg-card/80 backdrop-blur-sm border border-red-500/20 rounded-2xl p-6 text-center hover:scale-105 transition-transform">
+                <div className="text-3xl font-bold text-red-500 mb-2">98%</div>
+                <div className="text-sm text-muted-foreground">Satisfaction Rate</div>
+              </div>
+            </div>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="text-lg px-8 py-4 bg-gradient-to-r from-orange-500 to-red-500 shadow-2xl shadow-orange-500/25" asChild>
@@ -88,7 +120,7 @@ const Sponsorships = () => {
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </a>
               </Button>
-              <Button variant="outline" size="lg" className="text-lg px-8 py-4">
+              <Button variant="outline" size="lg" className="text-lg px-8 py-4 backdrop-blur-sm">
                 📊 View Success Stories
               </Button>
             </div>

@@ -63,34 +63,69 @@ const SocialMedia = () => {
     <div className="min-h-screen bg-background">
       <Header />
       
-      {/* Hero Section */}
-      <section className="pt-32 pb-20 bg-gradient-to-br from-background via-green-500/5 to-emerald-500/10">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <Badge className="mb-6 px-4 py-2 text-sm font-medium">
-              <Users className="w-4 h-4 mr-2" />
-              Social Media Excellence
-            </Badge>
+      {/* Hero Section - Diagonal Split */}
+      <section className="pt-32 pb-20 relative">
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-gradient-to-br from-green-500/10 via-background to-emerald-500/5"></div>
+          <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-bl from-green-500/5 to-transparent transform skew-x-12 origin-top-right"></div>
+        </div>
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-center">
+            <div className="lg:col-span-3">
+              <Badge className="mb-6 px-4 py-2 text-sm font-medium bg-green-500/10 text-green-500 border-green-500/20">
+                <Users className="w-4 h-4 mr-2" />
+                Social Media Excellence
+              </Badge>
+              
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+                <span className="block text-foreground mb-2">Social Media</span>
+                <span className="block bg-gradient-to-r from-green-500 to-emerald-500 bg-clip-text text-transparent">
+                  That Dominates
+                </span>
+              </h1>
+              
+              <p className="text-xl text-muted-foreground mb-8 max-w-2xl">
+                Build massive social communities, drive viral engagement, and convert followers into players 
+                with our proven iGaming social media strategies.
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button size="lg" className="text-lg px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-500 shadow-2xl shadow-green-500/25" asChild>
+                  <a href="https://docs.google.com/forms/d/1948-2HcLLEeciF3QQIzeTB-nPmM6-qsD3HopP5-bTyQ/viewform?edit_requested=true#response=ACYDBNgoe9qnpdvzE2IG3-SgO1FgdPRTnh9slrfCToFtyek2Of0Osps9NvqxQ-7epsdcl_0" target="_blank" rel="noopener noreferrer" className="flex items-center whitespace-nowrap">
+                    🚀 Grow Your Social Presence
+                    <ArrowRight className="ml-2 w-5 h-5" />
+                  </a>
+                </Button>
+                <Button variant="outline" size="lg" className="text-lg px-8 py-4">
+                  📱 View Portfolio
+                </Button>
+              </div>
+            </div>
             
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-green-500 to-emerald-500 bg-clip-text text-transparent">
-              Social Media Management That Converts
-            </h1>
-            
-            <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-              Build massive social communities, drive viral engagement, and convert followers into players 
-              with our proven iGaming social media strategies.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="text-lg px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-500 shadow-2xl shadow-green-500/25" asChild>
-                <a href="https://docs.google.com/forms/d/1948-2HcLLEeciF3QQIzeTB-nPmM6-qsD3HopP5-bTyQ/viewform?edit_requested=true#response=ACYDBNgoe9qnpdvzE2IG3-SgO1FgdPRTnh9slrfCToFtyek2Of0Osps9NvqxQ-7epsdcl_0" target="_blank" rel="noopener noreferrer" className="flex items-center whitespace-nowrap">
-                  🚀 Grow Your Social Presence
-                  <ArrowRight className="ml-2 w-5 h-5" />
-                </a>
-              </Button>
-              <Button variant="outline" size="lg" className="text-lg px-8 py-4">
-                📱 View Portfolio
-              </Button>
+            <div className="lg:col-span-2">
+              <div className="grid grid-cols-2 gap-4">
+                <div className="space-y-4">
+                  <div className="bg-gradient-to-r from-green-500 to-emerald-500 rounded-xl p-4 text-white text-center">
+                    <div className="text-2xl font-bold">500%</div>
+                    <div className="text-sm opacity-90">Follower Growth</div>
+                  </div>
+                  <div className="bg-card border border-border/50 rounded-xl p-4 text-center">
+                    <div className="text-2xl font-bold text-green-500">25%</div>
+                    <div className="text-sm text-muted-foreground">Engagement Rate</div>
+                  </div>
+                </div>
+                <div className="space-y-4 mt-8">
+                  <div className="bg-card border border-border/50 rounded-xl p-4 text-center">
+                    <div className="text-2xl font-bold text-emerald-500">15M+</div>
+                    <div className="text-sm text-muted-foreground">Monthly Impressions</div>
+                  </div>
+                  <div className="bg-gradient-to-r from-emerald-500 to-green-500 rounded-xl p-4 text-white text-center">
+                    <div className="text-2xl font-bold">24/7</div>
+                    <div className="text-sm opacity-90">Monitoring</div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

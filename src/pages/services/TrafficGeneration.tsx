@@ -54,23 +54,45 @@ const TrafficGeneration = () => {
     <div className="min-h-screen bg-background">
       <Header />
       
-      {/* Hero Section */}
-      <section className="pt-32 pb-20 bg-gradient-to-br from-background via-primary/5 to-accent/10">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <Badge className="mb-6 px-4 py-2 text-sm font-medium">
-              <Target className="w-4 h-4 mr-2" />
+      {/* Hero Section - Centered with Metrics */}
+      <section className="pt-32 pb-20 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-background via-primary/5 to-accent/10"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,rgba(120,119,198,0.3),transparent)]"></div>
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-5xl mx-auto text-center">
+            <Badge className="mb-8 px-6 py-3 text-base font-medium bg-primary/10 text-primary border-primary/20">
+              <Target className="w-5 h-5 mr-2" />
               Premium Traffic Generation
             </Badge>
             
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-              High-Quality Traffic for Casino Operators
+            <h1 className="text-5xl md:text-7xl font-bold mb-8 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+              Traffic That Converts
             </h1>
             
-            <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-              Drive premium player acquisition with our exclusive traffic sources. Proven conversion rates, 
-              advanced targeting, and fraud protection for sustainable growth.
+            <p className="text-xl text-muted-foreground mb-12 max-w-4xl mx-auto">
+              Exclusive traffic sources with proven conversion rates. Advanced targeting, fraud protection, 
+              and real-time optimization for sustainable player acquisition growth.
             </p>
+
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
+              <div className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-xl p-6">
+                <div className="text-3xl font-bold text-primary mb-2">2,000+</div>
+                <div className="text-sm text-muted-foreground">New Players/Month</div>
+              </div>
+              <div className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-xl p-6">
+                <div className="text-3xl font-bold text-accent mb-2">15%</div>
+                <div className="text-sm text-muted-foreground">First Deposit Rate</div>
+              </div>
+              <div className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-xl p-6">
+                <div className="text-3xl font-bold text-primary mb-2">98%</div>
+                <div className="text-sm text-muted-foreground">Quality Score</div>
+              </div>
+              <div className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-xl p-6">
+                <div className="text-3xl font-bold text-accent mb-2">24/7</div>
+                <div className="text-sm text-muted-foreground">Monitoring</div>
+              </div>
+            </div>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="text-lg px-8 py-4 bg-gradient-to-r from-primary to-accent shadow-2xl shadow-primary/25" asChild>
@@ -79,7 +101,7 @@ const TrafficGeneration = () => {
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </a>
               </Button>
-              <Button variant="outline" size="lg" className="text-lg px-8 py-4">
+              <Button variant="outline" size="lg" className="text-lg px-8 py-4 backdrop-blur-sm">
                 📞 Schedule Strategy Call
               </Button>
             </div>

@@ -54,34 +54,60 @@ const Analytics = () => {
     <div className="min-h-screen bg-background">
       <Header />
       
-      {/* Hero Section */}
-      <section className="pt-32 pb-20 bg-gradient-to-br from-background via-purple-500/5 to-pink-500/10">
+      {/* Hero Section - Split Layout */}
+      <section className="pt-32 pb-20">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <Badge className="mb-6 px-4 py-2 text-sm font-medium">
-              <BarChart className="w-4 h-4 mr-2" />
-              Market Intelligence & Analytics
-            </Badge>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <Badge className="mb-6 px-4 py-2 text-sm font-medium bg-purple-500/10 text-purple-500 border-purple-500/20">
+                <BarChart className="w-4 h-4 mr-2" />
+                Market Intelligence & Analytics
+              </Badge>
+              
+              <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent">
+                Data-Driven Market Intelligence
+              </h1>
+              
+              <p className="text-lg text-muted-foreground mb-8">
+                Transform raw data into competitive advantages with our comprehensive market analysis, 
+                competitor benchmarking, and performance optimization insights.
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button size="lg" className="text-lg px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 shadow-2xl shadow-purple-500/25" asChild>
+                  <a href="https://docs.google.com/forms/d/1948-2HcLLEeciF3QQIzeTB-nPmM6-qsD3HopP5-bTyQ/viewform?edit_requested=true#response=ACYDBNgoe9qnpdvzE2IG3-SgO1FgdPRTnh9slrfCToFtyek2Of0Osps9NvqxQ-7epsdcl_0" target="_blank" rel="noopener noreferrer" className="flex items-center whitespace-nowrap">
+                    📊 Get Free Market Analysis
+                    <ArrowRight className="ml-2 w-5 h-5" />
+                  </a>
+                </Button>
+                <Button variant="outline" size="lg" className="text-lg px-8 py-4">
+                  📈 View Sample Reports
+                </Button>
+              </div>
+            </div>
             
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent">
-              Benchmarking & Analytics Excellence
-            </h1>
-            
-            <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-              Gain competitive advantage with comprehensive market analysis, competitor benchmarking, 
-              and performance optimization insights that drive strategic decisions.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="text-lg px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 shadow-2xl shadow-purple-500/25" asChild>
-                <a href="https://docs.google.com/forms/d/1948-2HcLLEeciF3QQIzeTB-nPmM6-qsD3HopP5-bTyQ/viewform?edit_requested=true#response=ACYDBNgoe9qnpdvzE2IG3-SgO1FgdPRTnh9slrfCToFtyek2Of0Osps9NvqxQ-7epsdcl_0" target="_blank" rel="noopener noreferrer" className="flex items-center whitespace-nowrap">
-                  📊 Get Free Market Analysis
-                  <ArrowRight className="ml-2 w-5 h-5" />
-                </a>
-              </Button>
-              <Button variant="outline" size="lg" className="text-lg px-8 py-4">
-                📈 View Sample Reports
-              </Button>
+            <div className="relative">
+              <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-3xl blur-3xl"></div>
+              <div className="relative bg-card border border-border/50 rounded-2xl p-8">
+                <div className="grid grid-cols-2 gap-6">
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-purple-500 mb-1">300%</div>
+                    <div className="text-sm text-muted-foreground">Performance Lift</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-pink-500 mb-1">50+</div>
+                    <div className="text-sm text-muted-foreground">KPIs Tracked</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-purple-500 mb-1">24/7</div>
+                    <div className="text-sm text-muted-foreground">Monitoring</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-pink-500 mb-1">98%</div>
+                    <div className="text-sm text-muted-foreground">Accuracy Rate</div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
