@@ -85,12 +85,6 @@ const BusinessConsulting = () => {
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-6xl mx-auto text-center">
-            {/* Business Icon */}
-            <div className="mb-8">
-              <div className="w-32 h-32 mx-auto bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl flex items-center justify-center transform hover:scale-110 transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/50 group cursor-pointer">
-                <Building2 className="w-16 h-16 group-hover:animate-pulse" />
-              </div>
-            </div>
             
             <Badge className="mb-8 px-6 py-3 text-base font-medium bg-blue-500/20 text-blue-300 border-blue-500/30">
               <Target className="w-5 h-5 mr-2" />
