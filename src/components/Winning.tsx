@@ -3,26 +3,12 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 
 const Winning = () => {
-  const awards = [
-    {
-      title: "Digital Marketing Agency of the Year",
-      year: "2024",
-      organization: "Global Marketing Awards",
-      description: "Recognized for outstanding innovation and results in digital marketing"
-    },
-    {
-      title: "Best Gaming Marketing Campaign",
-      year: "2024",
-      organization: "Gaming Industry Awards",
-      description: "For our groundbreaking campaign with leading gaming platform"
-    },
-    {
-      title: "Excellence in Influencer Marketing",
-      year: "2023",
-      organization: "Influencer Marketing Hub",
-      description: "Outstanding performance in creator partnerships and ROI"
-    }
-  ];
+  const award = {
+    title: "Digital Marketing Agency of the Year",
+    year: "2024",
+    organization: "Global Marketing Awards",
+    description: "Recognized for outstanding innovation and results in digital marketing"
+  };
 
   const achievements = [
     {
@@ -77,25 +63,23 @@ const Winning = () => {
           </p>
         </div>
 
-        {/* Awards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-          {awards.map((award, index) => (
-            <Card key={index} className="bg-gradient-to-br from-card/50 to-primary/5 backdrop-blur-sm border-border/50 hover:border-primary/30 transition-all duration-300 hover:scale-105">
-              <CardContent className="p-8 text-center">
-                <div className="w-16 h-16 mx-auto mb-6 bg-gradient-to-br from-yellow-500/20 to-yellow-600/20 rounded-full flex items-center justify-center">
-                  <Award className="w-8 h-8 text-yellow-600" />
-                </div>
-                <Badge variant="secondary" className="mb-4 bg-primary/10 text-primary">
-                  {award.year}
-                </Badge>
-                <h3 className="text-xl font-bold mb-2">{award.title}</h3>
-                <p className="text-sm text-primary font-medium mb-3">{award.organization}</p>
-                <p className="text-muted-foreground text-sm leading-relaxed">
-                  {award.description}
-                </p>
-              </CardContent>
-            </Card>
-          ))}
+        {/* Single Award Showcase */}
+        <div className="max-w-2xl mx-auto mb-16">
+          <Card className="bg-gradient-to-br from-card/50 to-primary/5 backdrop-blur-sm border-border/50 hover:border-primary/30 transition-all duration-300 hover:scale-105">
+            <CardContent className="p-12 text-center">
+              <div className="w-24 h-24 mx-auto mb-8 bg-gradient-to-br from-yellow-500/20 to-yellow-600/20 rounded-full flex items-center justify-center">
+                <Award className="w-12 h-12 text-yellow-600" />
+              </div>
+              <Badge variant="secondary" className="mb-6 bg-primary/10 text-primary text-lg px-4 py-2">
+                {award.year}
+              </Badge>
+              <h3 className="text-3xl font-bold mb-4">{award.title}</h3>
+              <p className="text-lg text-primary font-medium mb-4">{award.organization}</p>
+              <p className="text-muted-foreground leading-relaxed text-lg">
+                {award.description}
+              </p>
+            </CardContent>
+          </Card>
         </div>
 
         {/* Achievement Stats */}

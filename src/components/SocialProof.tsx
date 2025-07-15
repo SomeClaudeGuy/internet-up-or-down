@@ -7,22 +7,22 @@ const SocialProof = () => {
   
   const proofPoints = [
     {
-      metric: "5+",
-      description: t.socialProofExperienceLabel,
-      icon: DollarSign,
-      highlight: t.socialProofExperienceHighlight
-    },
-    {
-      metric: "200+",
-      description: t.socialProofStoriesLabel,
+      metric: "300%",
+      description: "Average ROI",
       icon: TrendingUp,
-      highlight: t.socialProofStoriesHighlight
+      highlight: "Proven performance metrics"
     },
     {
-      metric: "4.9★",
-      description: t.socialProofRatingLabel,
+      metric: "$50M+",
+      description: "Media Managed",
+      icon: DollarSign,
+      highlight: "Trusted with significant budgets"
+    },
+    {
+      metric: "15+",
+      description: "Countries",
       icon: Star,
-      highlight: t.socialProofRatingHighlight
+      highlight: "Global reach and expertise"
     }
   ];
 

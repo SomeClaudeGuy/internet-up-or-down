@@ -3,6 +3,7 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Users, Award, Globe, Target } from "lucide-react";
+import Autoplay from "embla-carousel-autoplay";
 import techWorldMapImage from "@/assets/tech-world-map.jpg";
 import gamerPortraitImage from "@/assets/gamer-portrait.png";
 import gamingEnvironmentImage from "@/assets/gaming-environment.png";
@@ -103,7 +104,14 @@ const WhoWeAre = () => {
               <h3 className="text-3xl font-bold mb-6 text-center">Our Story</h3>
               
               <div className="max-w-4xl mx-auto">
-                <Carousel className="w-full">
+                <Carousel 
+                  className="w-full" 
+                  plugins={[
+                    Autoplay({
+                      delay: 4000,
+                    }),
+                  ]}
+                >
                   <CarouselContent>
                     {storySlides.map((slide, index) => (
                       <CarouselItem key={index}>
