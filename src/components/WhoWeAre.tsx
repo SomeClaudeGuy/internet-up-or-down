@@ -86,48 +86,63 @@ const WhoWeAre = () => {
           </div>
           
           <h2 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-8 leading-tight">
-            The Faces Behind <span className="text-primary">Basher</span>
+            Meet <span className="text-primary">Basher</span>
           </h2>
           <p className="text-lg md:text-xl lg:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-            Meet the award-winning team that's revolutionizing digital marketing for the gaming and betting industry
+            The award-winning team revolutionizing digital marketing for the gaming and betting industry
           </p>
         </div>
 
-        {/* Team Carousel */}
-        <div className="mb-20">
-          <h3 className="text-3xl font-bold text-center mb-12">Our Leadership Team</h3>
-          <div className="max-w-4xl mx-auto">
-            <Carousel className="w-full">
-              <CarouselContent>
-                {teamImages.map((member, index) => (
-                  <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-                    <Card className="bg-card/50 backdrop-blur-sm border-border/50 hover:border-primary/50 transition-all duration-300 hover:scale-105">
-                      <CardContent className="p-6 text-center">
-                        <div className="relative mb-6">
-                          <img
-                            src={member.image}
-                            alt={member.name}
-                            className="w-32 h-32 mx-auto rounded-full object-cover border-4 border-primary/20"
-                          />
-                          <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2">
-                            <Badge variant="secondary" className="bg-primary text-primary-foreground">
-                              {member.role}
-                            </Badge>
-                          </div>
-                        </div>
-                        <h4 className="text-xl font-bold mb-2">{member.name}</h4>
-                        <p className="text-muted-foreground text-sm leading-relaxed">
-                          {member.description}
-                        </p>
-                      </CardContent>
-                    </Card>
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-              <CarouselPrevious />
-              <CarouselNext />
-            </Carousel>
-          </div>
+        {/* Our Story with Integrated Team */}
+        <div className="max-w-6xl mx-auto mb-20">
+          <Card className="bg-card/30 backdrop-blur-sm border-border/50">
+            <CardContent className="p-12">
+              <h3 className="text-3xl font-bold mb-6 text-center">Our Story</h3>
+              <p className="text-lg text-muted-foreground leading-relaxed mb-8 text-center">
+                Founded in 2019, Basher has grown from a small team of passionate gamers and marketers into an award-winning digital marketing agency. 
+                We specialize in connecting gaming and betting brands with their ideal audiences through authentic, performance-driven campaigns.
+              </p>
+              
+              {/* Integrated Team Carousel */}
+              <div className="max-w-4xl mx-auto mb-8">
+                <Carousel className="w-full">
+                  <CarouselContent>
+                    {teamImages.map((member, index) => (
+                      <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                        <Card className="bg-card/50 backdrop-blur-sm border-border/50 hover:border-primary/50 transition-all duration-300 hover:scale-105">
+                          <CardContent className="p-6 text-center">
+                            <div className="relative mb-6">
+                              <img
+                                src={member.image}
+                                alt={member.name}
+                                className="w-32 h-32 mx-auto rounded-full object-cover border-4 border-primary/20"
+                              />
+                              <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2">
+                                <Badge variant="secondary" className="bg-primary text-primary-foreground">
+                                  {member.role}
+                                </Badge>
+                              </div>
+                            </div>
+                            <h4 className="text-xl font-bold mb-2">{member.name}</h4>
+                            <p className="text-muted-foreground text-sm leading-relaxed">
+                              {member.description}
+                            </p>
+                          </CardContent>
+                        </Card>
+                      </CarouselItem>
+                    ))}
+                  </CarouselContent>
+                  <CarouselPrevious />
+                  <CarouselNext />
+                </Carousel>
+              </div>
+              
+              <p className="text-lg text-muted-foreground leading-relaxed text-center">
+                With over $50M in managed media spend and partnerships with 200+ content creators worldwide, we've proven that authentic storytelling 
+                and data-driven strategies create the most impactful results.
+              </p>
+            </CardContent>
+          </Card>
         </div>
 
         {/* Achievements Grid */}
@@ -143,23 +158,6 @@ const WhoWeAre = () => {
               </CardContent>
             </Card>
           ))}
-        </div>
-
-        {/* Our Story */}
-        <div className="max-w-4xl mx-auto text-center">
-          <Card className="bg-card/30 backdrop-blur-sm border-border/50">
-            <CardContent className="p-12">
-              <h3 className="text-3xl font-bold mb-6">Our Story</h3>
-              <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                Founded in 2019, Basher has grown from a small team of passionate gamers and marketers into an award-winning digital marketing agency. 
-                We specialize in connecting gaming and betting brands with their ideal audiences through authentic, performance-driven campaigns.
-              </p>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                With over $50M in managed media spend and partnerships with 200+ content creators worldwide, we've proven that authentic storytelling 
-                and data-driven strategies create the most impactful results.
-              </p>
-            </CardContent>
-          </Card>
         </div>
       </div>
     </section>
