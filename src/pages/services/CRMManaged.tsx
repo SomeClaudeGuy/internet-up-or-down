@@ -174,16 +174,23 @@ const CRMManaged = () => {
                 <div className="relative mb-6">
                   <div className="w-48 h-48 mx-auto bg-gradient-to-br from-red-500/20 to-orange-500/20 rounded-2xl border border-red-500/30 flex items-center justify-center relative overflow-hidden">
                     <div className="absolute inset-0 bg-gradient-to-br from-red-500/10 to-orange-500/10"></div>
-                    <div className="relative z-10">
-                      <div className="grid grid-cols-3 gap-2 p-4">
-                        {Array.from({ length: 9 }, (_, i) => (
-                          <div
-                            key={i}
-                            className="w-8 h-8 bg-red-500/40 rounded animate-pulse"
-                            style={{ animationDelay: `${i * 0.2}s` }}
-                          />
-                        ))}
-                      </div>
+                    <div className="relative z-10 w-full h-full">
+                      {/* Chaotic scattered elements */}
+                      <div className="absolute top-2 left-4 w-3 h-6 bg-red-500/60 rounded animate-bounce" style={{ animationDelay: '0.1s' }}></div>
+                      <div className="absolute top-8 right-6 w-5 h-3 bg-orange-500/70 rounded-full animate-pulse" style={{ animationDelay: '0.3s' }}></div>
+                      <div className="absolute top-16 left-12 w-4 h-4 bg-red-600/50 transform rotate-45 animate-spin" style={{ animationDelay: '0.5s' }}></div>
+                      <div className="absolute top-20 right-3 w-2 h-8 bg-orange-600/80 rounded animate-bounce" style={{ animationDelay: '0.7s' }}></div>
+                      <div className="absolute top-32 left-6 w-6 h-2 bg-red-500/40 rounded-full animate-pulse" style={{ animationDelay: '0.9s' }}></div>
+                      <div className="absolute top-28 right-8 w-3 h-3 bg-orange-500/60 rounded-full animate-ping" style={{ animationDelay: '1.1s' }}></div>
+                      <div className="absolute bottom-20 left-8 w-5 h-5 bg-red-600/70 transform rotate-12 animate-bounce" style={{ animationDelay: '1.3s' }}></div>
+                      <div className="absolute bottom-16 right-4 w-2 h-5 bg-orange-600/50 rounded animate-pulse" style={{ animationDelay: '1.5s' }}></div>
+                      <div className="absolute bottom-8 left-3 w-7 h-3 bg-red-500/60 rounded animate-ping" style={{ animationDelay: '1.7s' }}></div>
+                      <div className="absolute bottom-4 right-10 w-3 h-7 bg-orange-500/80 transform -rotate-45 animate-spin" style={{ animationDelay: '1.9s' }}></div>
+                      <div className="absolute top-12 left-16 w-4 h-2 bg-red-600/40 rounded-full animate-bounce" style={{ animationDelay: '2.1s' }}></div>
+                      <div className="absolute top-24 left-2 w-2 h-4 bg-orange-600/70 rounded animate-pulse" style={{ animationDelay: '2.3s' }}></div>
+                      <div className="absolute bottom-12 left-14 w-3 h-3 bg-red-500/90 rounded-full animate-ping" style={{ animationDelay: '2.5s' }}></div>
+                      <div className="absolute bottom-24 right-2 w-6 h-2 bg-orange-500/50 transform rotate-90 animate-bounce" style={{ animationDelay: '2.7s' }}></div>
+                      <div className="absolute top-6 left-20 w-2 h-2 bg-red-600/60 rounded-full animate-pulse" style={{ animationDelay: '2.9s' }}></div>
                     </div>
                   </div>
                 </div>
