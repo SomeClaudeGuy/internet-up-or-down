@@ -57,8 +57,13 @@ const Analytics = () => {
       {/* Hero Section - Dashboard-style Layout */}
       <section className="pt-24 pb-20 relative overflow-hidden min-h-screen flex items-center">
         <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-background to-pink-500/5"></div>
-        <div className="absolute top-20 left-20 w-72 h-72 bg-purple-500/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 right-20 w-96 h-96 bg-pink-500/10 rounded-full blur-3xl"></div>
+        <div className="absolute top-20 left-20 w-72 h-72 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-20 right-20 w-96 h-96 bg-pink-500/10 rounded-full blur-3xl animate-pulse delay-700"></div>
+        
+        {/* Floating data points */}
+        <div className="absolute top-1/4 left-1/3 w-3 h-3 bg-purple-400 rounded-full animate-bounce delay-300"></div>
+        <div className="absolute top-1/3 right-1/4 w-2 h-2 bg-pink-400 rounded-full animate-bounce delay-500"></div>
+        <div className="absolute bottom-1/3 left-1/4 w-4 h-4 bg-blue-400 rounded-full animate-bounce delay-1000"></div>
         
         <div className="container mx-auto px-4 relative z-10">
           {/* Dashboard Header */}
@@ -79,39 +84,39 @@ const Analytics = () => {
 
           {/* Dashboard Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-            <div className="bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl p-6 text-white">
+            <div className="bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl p-6 text-white transform hover:scale-105 transition-all duration-500 hover:shadow-2xl hover:shadow-purple-500/30 group">
               <div className="flex items-center justify-between mb-4">
-                <BarChart className="w-8 h-8" />
+                <BarChart className="w-8 h-8 group-hover:animate-bounce" />
                 <span className="text-sm opacity-80">Performance</span>
               </div>
-              <div className="text-3xl font-bold mb-1">300%</div>
+              <div className="text-3xl font-bold mb-1 animate-fade-in">300%</div>
               <div className="text-sm opacity-80">Average Improvement</div>
             </div>
             
-            <div className="bg-card border-2 border-purple-500/20 rounded-2xl p-6">
+            <div className="bg-card border-2 border-purple-500/20 rounded-2xl p-6 transform hover:scale-105 transition-all duration-500 hover:shadow-xl hover:border-purple-500/50 group">
               <div className="flex items-center justify-between mb-4">
-                <Target className="w-8 h-8 text-purple-500" />
+                <Target className="w-8 h-8 text-purple-500 group-hover:animate-pulse" />
                 <span className="text-sm text-muted-foreground">Metrics</span>
               </div>
-              <div className="text-3xl font-bold text-purple-500 mb-1">50+</div>
+              <div className="text-3xl font-bold text-purple-500 mb-1 animate-fade-in">50+</div>
               <div className="text-sm text-muted-foreground">KPIs Tracked</div>
             </div>
             
-            <div className="bg-card border-2 border-pink-500/20 rounded-2xl p-6">
+            <div className="bg-card border-2 border-pink-500/20 rounded-2xl p-6 transform hover:scale-105 transition-all duration-500 hover:shadow-xl hover:border-pink-500/50 group">
               <div className="flex items-center justify-between mb-4">
-                <Eye className="w-8 h-8 text-pink-500" />
+                <Eye className="w-8 h-8 text-pink-500 group-hover:animate-pulse" />
                 <span className="text-sm text-muted-foreground">Monitoring</span>
               </div>
-              <div className="text-3xl font-bold text-pink-500 mb-1">24/7</div>
+              <div className="text-3xl font-bold text-pink-500 mb-1 animate-fade-in">24/7</div>
               <div className="text-sm text-muted-foreground">Real-time</div>
             </div>
             
-            <div className="bg-gradient-to-br from-pink-500 to-pink-600 rounded-2xl p-6 text-white">
+            <div className="bg-gradient-to-br from-pink-500 to-pink-600 rounded-2xl p-6 text-white transform hover:scale-105 transition-all duration-500 hover:shadow-2xl hover:shadow-pink-500/30 group">
               <div className="flex items-center justify-between mb-4">
-                <Database className="w-8 h-8" />
+                <Database className="w-8 h-8 group-hover:animate-bounce" />
                 <span className="text-sm opacity-80">Accuracy</span>
               </div>
-              <div className="text-3xl font-bold mb-1">98%</div>
+              <div className="text-3xl font-bold mb-1 animate-fade-in">98%</div>
               <div className="text-sm opacity-80">Data Quality</div>
             </div>
           </div>

@@ -70,24 +70,27 @@ const ContentProduction = () => {
         <div className="absolute inset-0 bg-gradient-to-br from-black via-pink-900/20 to-rose-900/20"></div>
         
         {/* Video Frame Effect */}
-        <div className="absolute inset-8 border-4 border-pink-500/30 rounded-3xl">
+        <div className="absolute inset-8 border-4 border-pink-500/30 rounded-3xl transform hover:scale-[1.02] transition-all duration-1000">
           <div className="absolute top-4 left-4 flex space-x-2">
-            <div className="w-4 h-4 bg-red-500 rounded-full"></div>
-            <div className="w-4 h-4 bg-yellow-500 rounded-full"></div>
-            <div className="w-4 h-4 bg-green-500 rounded-full"></div>
+            <div className="w-4 h-4 bg-red-500 rounded-full animate-pulse"></div>
+            <div className="w-4 h-4 bg-yellow-500 rounded-full animate-pulse delay-300"></div>
+            <div className="w-4 h-4 bg-green-500 rounded-full animate-pulse delay-700"></div>
           </div>
           
-          <div className="absolute top-4 right-4 text-pink-500 text-sm font-mono">
+          <div className="absolute top-4 right-4 text-pink-500 text-sm font-mono animate-pulse">
             REC ●
           </div>
+          
+          {/* Film grain effect */}
+          <div className="absolute inset-4 bg-gradient-to-br from-pink-500/5 to-rose-500/5 rounded-2xl"></div>
         </div>
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-6xl mx-auto text-center">
             {/* Play Button Icon */}
             <div className="mb-8">
-              <div className="w-32 h-32 mx-auto bg-gradient-to-r from-pink-500 to-rose-500 rounded-full flex items-center justify-center">
-                <Play className="w-16 h-16 ml-2" fill="white" />
+              <div className="w-32 h-32 mx-auto bg-gradient-to-r from-pink-500 to-rose-500 rounded-full flex items-center justify-center transform hover:scale-110 transition-all duration-500 hover:shadow-2xl hover:shadow-pink-500/50 group cursor-pointer">
+                <Play className="w-16 h-16 ml-2 group-hover:animate-pulse" fill="white" />
               </div>
             </div>
             

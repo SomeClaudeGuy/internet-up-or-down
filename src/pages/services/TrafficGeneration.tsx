@@ -55,10 +55,15 @@ const TrafficGeneration = () => {
       <Header />
       
       {/* Hero Section - Funnel Visualization */}
-      <section className="pt-32 pb-20 relative min-h-screen flex items-center">
+      <section className="pt-32 pb-20 relative min-h-screen flex items-center overflow-hidden">
         <div className="absolute inset-0">
-          <div className="absolute top-0 left-1/4 w-1 h-full bg-gradient-to-b from-blue-500/50 to-green-500/50"></div>
-          <div className="absolute top-0 right-1/4 w-1 h-full bg-gradient-to-b from-green-500/50 to-blue-500/50"></div>
+          <div className="absolute top-0 left-1/4 w-1 h-full bg-gradient-to-b from-blue-500/50 to-green-500/50 animate-pulse"></div>
+          <div className="absolute top-0 right-1/4 w-1 h-full bg-gradient-to-b from-green-500/50 to-blue-500/50 animate-pulse delay-500"></div>
+          
+          {/* Animated particles */}
+          <div className="absolute top-1/4 left-1/2 w-2 h-2 bg-blue-400 rounded-full animate-ping"></div>
+          <div className="absolute top-2/3 left-1/3 w-3 h-3 bg-green-400 rounded-full animate-bounce delay-700"></div>
+          <div className="absolute bottom-1/4 right-1/3 w-1 h-1 bg-cyan-400 rounded-full animate-pulse delay-1000"></div>
         </div>
         
         <div className="container mx-auto px-4 relative z-10">
@@ -83,8 +88,8 @@ const TrafficGeneration = () => {
             <div className="space-y-8 mb-16">
               {/* Stage 1 - Traffic Sources */}
               <div className="flex items-center justify-center">
-                <div className="bg-gradient-to-r from-blue-500 to-blue-600 rounded-2xl p-8 text-white text-center min-w-[300px]">
-                  <Globe className="w-12 h-12 mx-auto mb-4" />
+                <div className="bg-gradient-to-r from-blue-500 to-blue-600 rounded-2xl p-8 text-white text-center min-w-[300px] transform hover:scale-105 transition-all duration-700 hover:shadow-2xl hover:shadow-blue-500/40 group">
+                  <Globe className="w-12 h-12 mx-auto mb-4 group-hover:animate-spin" />
                   <h3 className="text-2xl font-bold mb-2">Premium Sources</h3>
                   <p className="text-lg opacity-90">100M+ Monthly Reach</p>
                 </div>
@@ -97,8 +102,8 @@ const TrafficGeneration = () => {
               
               {/* Stage 2 - Targeting */}
               <div className="flex items-center justify-center">
-                <div className="bg-gradient-to-r from-cyan-500 to-cyan-600 rounded-2xl p-8 text-white text-center min-w-[280px]">
-                  <Users className="w-12 h-12 mx-auto mb-4" />
+                <div className="bg-gradient-to-r from-cyan-500 to-cyan-600 rounded-2xl p-8 text-white text-center min-w-[280px] transform hover:scale-105 transition-all duration-700 hover:shadow-2xl hover:shadow-cyan-500/40 group">
+                  <Users className="w-12 h-12 mx-auto mb-4 group-hover:animate-pulse" />
                   <h3 className="text-2xl font-bold mb-2">Precision Targeting</h3>
                   <p className="text-lg opacity-90">98% Quality Score</p>
                 </div>
@@ -111,8 +116,8 @@ const TrafficGeneration = () => {
               
               {/* Stage 3 - Optimization */}
               <div className="flex items-center justify-center">
-                <div className="bg-gradient-to-r from-green-500 to-green-600 rounded-2xl p-8 text-white text-center min-w-[260px]">
-                  <TrendingUp className="w-12 h-12 mx-auto mb-4" />
+                <div className="bg-gradient-to-r from-green-500 to-green-600 rounded-2xl p-8 text-white text-center min-w-[260px] transform hover:scale-105 transition-all duration-700 hover:shadow-2xl hover:shadow-green-500/40 group">
+                  <TrendingUp className="w-12 h-12 mx-auto mb-4 group-hover:animate-bounce" />
                   <h3 className="text-2xl font-bold mb-2">Real-time Optimization</h3>
                   <p className="text-lg opacity-90">15% FTD Rate</p>
                 </div>
@@ -125,8 +130,8 @@ const TrafficGeneration = () => {
               
               {/* Stage 4 - Results */}
               <div className="flex items-center justify-center">
-                <div className="bg-gradient-to-r from-emerald-500 to-emerald-600 rounded-2xl p-8 text-white text-center min-w-[240px]">
-                  <Zap className="w-12 h-12 mx-auto mb-4" />
+                <div className="bg-gradient-to-r from-emerald-500 to-emerald-600 rounded-2xl p-8 text-white text-center min-w-[240px] transform hover:scale-105 transition-all duration-700 hover:shadow-2xl hover:shadow-emerald-500/40 group">
+                  <Zap className="w-12 h-12 mx-auto mb-4 group-hover:animate-pulse" />
                   <h3 className="text-2xl font-bold mb-2">Converting Players</h3>
                   <p className="text-lg opacity-90">2,000+ New Players/Month</p>
                 </div>

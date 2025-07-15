@@ -64,10 +64,15 @@ const SocialMedia = () => {
       <Header />
       
       {/* Hero Section - Diagonal Split */}
-      <section className="pt-32 pb-20 relative">
+      <section className="pt-32 pb-20 relative overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-gradient-to-br from-green-500/10 via-background to-emerald-500/5"></div>
           <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-bl from-green-500/5 to-transparent transform skew-x-12 origin-top-right"></div>
+          
+          {/* Social media icons floating */}
+          <div className="absolute top-1/4 left-1/4 w-8 h-8 bg-green-400/20 rounded-full animate-pulse"></div>
+          <div className="absolute top-1/3 right-1/3 w-6 h-6 bg-emerald-400/20 rounded-full animate-bounce delay-300"></div>
+          <div className="absolute bottom-1/3 left-1/2 w-4 h-4 bg-teal-400/20 rounded-full animate-ping delay-700"></div>
         </div>
         
         <div className="container mx-auto px-4 relative z-10">
@@ -106,22 +111,22 @@ const SocialMedia = () => {
             <div className="lg:col-span-2">
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-4">
-                  <div className="bg-gradient-to-r from-green-500 to-emerald-500 rounded-xl p-4 text-white text-center">
-                    <div className="text-2xl font-bold">500%</div>
+                  <div className="bg-gradient-to-r from-green-500 to-emerald-500 rounded-xl p-4 text-white text-center transform hover:scale-105 transition-all duration-500 hover:shadow-xl hover:shadow-green-500/30 group">
+                    <div className="text-2xl font-bold animate-fade-in">500%</div>
                     <div className="text-sm opacity-90">Follower Growth</div>
                   </div>
-                  <div className="bg-card border border-border/50 rounded-xl p-4 text-center">
-                    <div className="text-2xl font-bold text-green-500">25%</div>
+                  <div className="bg-card border border-border/50 rounded-xl p-4 text-center transform hover:scale-105 transition-all duration-500 hover:shadow-lg hover:border-green-500/50">
+                    <div className="text-2xl font-bold text-green-500 animate-fade-in">25%</div>
                     <div className="text-sm text-muted-foreground">Engagement Rate</div>
                   </div>
                 </div>
                 <div className="space-y-4 mt-8">
-                  <div className="bg-card border border-border/50 rounded-xl p-4 text-center">
-                    <div className="text-2xl font-bold text-emerald-500">15M+</div>
+                  <div className="bg-card border border-border/50 rounded-xl p-4 text-center transform hover:scale-105 transition-all duration-500 hover:shadow-lg hover:border-emerald-500/50">
+                    <div className="text-2xl font-bold text-emerald-500 animate-fade-in">15M+</div>
                     <div className="text-sm text-muted-foreground">Monthly Impressions</div>
                   </div>
-                  <div className="bg-gradient-to-r from-emerald-500 to-green-500 rounded-xl p-4 text-white text-center">
-                    <div className="text-2xl font-bold">24/7</div>
+                  <div className="bg-gradient-to-r from-emerald-500 to-green-500 rounded-xl p-4 text-white text-center transform hover:scale-105 transition-all duration-500 hover:shadow-xl hover:shadow-emerald-500/30">
+                    <div className="text-2xl font-bold animate-fade-in">24/7</div>
                     <div className="text-sm opacity-90">Monitoring</div>
                   </div>
                 </div>

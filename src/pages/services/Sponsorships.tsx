@@ -66,9 +66,13 @@ const Sponsorships = () => {
       {/* Hero Section - Stadium/Arena Style */}
       <section className="pt-20 pb-20 relative overflow-hidden bg-gradient-to-b from-orange-950 via-red-950 to-black text-white min-h-screen flex items-center">
         {/* Stadium Lights Effect */}
-        <div className="absolute top-0 left-1/4 w-2 h-32 bg-gradient-to-b from-yellow-300 to-transparent"></div>
-        <div className="absolute top-0 right-1/4 w-2 h-32 bg-gradient-to-b from-yellow-300 to-transparent"></div>
-        <div className="absolute top-0 left-1/2 w-3 h-40 bg-gradient-to-b from-white to-transparent transform -translate-x-1/2"></div>
+        <div className="absolute top-0 left-1/4 w-2 h-32 bg-gradient-to-b from-yellow-300 to-transparent animate-pulse"></div>
+        <div className="absolute top-0 right-1/4 w-2 h-32 bg-gradient-to-b from-yellow-300 to-transparent animate-pulse delay-500"></div>
+        <div className="absolute top-0 left-1/2 w-3 h-40 bg-gradient-to-b from-white to-transparent transform -translate-x-1/2 animate-pulse delay-1000"></div>
+        
+        {/* Additional stadium effects */}
+        <div className="absolute top-1/4 left-1/6 w-1 h-20 bg-gradient-to-b from-orange-400 to-transparent animate-pulse delay-300"></div>
+        <div className="absolute top-1/4 right-1/6 w-1 h-20 bg-gradient-to-b from-red-400 to-transparent animate-pulse delay-700"></div>
         
         {/* Crowd Silhouette */}
         <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black via-gray-900/50 to-transparent"></div>
@@ -95,12 +99,12 @@ const Sponsorships = () => {
             </div>
 
             {/* Scoreboard Style Stats */}
-            <div className="bg-black/80 rounded-3xl p-8 border-4 border-yellow-400 mb-16">
+            <div className="bg-black/80 rounded-3xl p-8 border-4 border-yellow-400 mb-16 transform hover:scale-105 transition-all duration-700 hover:shadow-2xl hover:shadow-yellow-400/30">
               <div className="text-center mb-6">
-                <div className="text-yellow-400 text-xl font-bold mb-2">PARTNERSHIP STATS</div>
+                <div className="text-yellow-400 text-xl font-bold mb-2 animate-pulse">PARTNERSHIP STATS</div>
                 <div className="flex justify-center items-center space-x-4">
                   <div className="w-3 h-3 bg-red-500 rounded-full animate-pulse"></div>
-                  <div className="text-red-400 text-sm">LIVE</div>
+                  <div className="text-red-400 text-sm font-bold">LIVE</div>
                   <div className="w-3 h-3 bg-red-500 rounded-full animate-pulse"></div>
                 </div>
               </div>

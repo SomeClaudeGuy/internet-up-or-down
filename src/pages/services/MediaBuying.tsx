@@ -75,6 +75,10 @@ const MediaBuying = () => {
           <div className="absolute top-0 left-[55%] w-px h-full bg-gradient-to-b from-indigo-400 to-transparent animate-pulse delay-300"></div>
           <div className="absolute top-0 left-[70%] w-px h-full bg-gradient-to-b from-cyan-400 to-transparent animate-pulse delay-400"></div>
           <div className="absolute top-0 left-[85%] w-px h-full bg-gradient-to-b from-pink-400 to-transparent animate-pulse delay-500"></div>
+          
+          {/* Additional data streams */}
+          <div className="absolute top-0 left-[15%] w-0.5 h-full bg-gradient-to-b from-yellow-400 to-transparent animate-pulse delay-600"></div>
+          <div className="absolute top-0 left-[60%] w-0.5 h-full bg-gradient-to-b from-red-400 to-transparent animate-pulse delay-800"></div>
         </div>
         
         <div className="container mx-auto px-4 relative z-10">
@@ -101,12 +105,12 @@ const MediaBuying = () => {
             {/* Trading Dashboard */}
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
               {/* Main Trading Panel */}
-              <div className="lg:col-span-2 bg-black/50 rounded-2xl border border-indigo-500/30 p-6 backdrop-blur-sm">
+              <div className="lg:col-span-2 bg-black/50 rounded-2xl border border-indigo-500/30 p-6 backdrop-blur-sm transform hover:scale-105 transition-all duration-700 hover:shadow-2xl hover:shadow-indigo-500/30">
                 <div className="flex items-center justify-between mb-6">
-                  <h3 className="text-lg font-semibold text-indigo-400">LIVE TRADING METRICS</h3>
+                  <h3 className="text-lg font-semibold text-indigo-400 animate-pulse">LIVE TRADING METRICS</h3>
                   <div className="flex items-center space-x-2">
                     <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-                    <span className="text-green-400 text-sm font-mono">ACTIVE</span>
+                    <span className="text-green-400 text-sm font-mono animate-fade-in">ACTIVE</span>
                   </div>
                 </div>
                 
@@ -151,12 +155,12 @@ const MediaBuying = () => {
               </div>
               
               {/* AI Control Panel */}
-              <div className="bg-black/50 rounded-2xl border border-purple-500/30 p-6 backdrop-blur-sm">
+              <div className="bg-black/50 rounded-2xl border border-purple-500/30 p-6 backdrop-blur-sm transform hover:scale-105 transition-all duration-700 hover:shadow-2xl hover:shadow-purple-500/30">
                 <div className="text-center mb-6">
-                  <div className="w-16 h-16 mx-auto bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center mb-4">
-                    <Zap className="w-8 h-8 text-white" />
+                  <div className="w-16 h-16 mx-auto bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center mb-4 transform hover:rotate-180 transition-all duration-1000 group">
+                    <Zap className="w-8 h-8 text-white group-hover:animate-pulse" />
                   </div>
-                  <h3 className="text-lg font-semibold text-purple-400">AI ENGINE</h3>
+                  <h3 className="text-lg font-semibold text-purple-400 animate-pulse">AI ENGINE</h3>
                 </div>
                 
                 <div className="space-y-4">
