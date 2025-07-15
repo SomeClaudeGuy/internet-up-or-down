@@ -25,138 +25,14 @@ import {
   FileText,
   Lightbulb,
   ArrowDown,
-  RefreshCw
+  RefreshCw,
+  Shuffle,
+  Grid3x3,
+  Building2
 } from "lucide-react";
-import { Canvas, useFrame } from "@react-three/fiber";
-import { OrbitControls, Text, Float, Sphere, Box } from "@react-three/drei";
 import { useRef, useState } from "react";
-import * as THREE from "three";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-
-// 3D Components for the transformation visual
-const ChaosData = () => {
-  const groupRef = useRef<THREE.Group>(null);
-  const [hovered, setHovered] = useState(false);
-  
-  useFrame((state) => {
-    if (groupRef.current) {
-      groupRef.current.rotation.x = Math.sin(state.clock.elapsedTime * 0.5) * 0.1;
-      groupRef.current.rotation.y = state.clock.elapsedTime * 0.2;
-    }
-  });
-
-  return (
-    <group ref={groupRef} position={[-2, 0, 0]}>
-      <Float speed={2} rotationIntensity={0.5} floatIntensity={0.5}>
-        <Box args={[0.3, 0.3, 0.3]} position={[0, 0, 0]}>
-          <meshStandardMaterial color="#ef4444" transparent opacity={0.7} />
-        </Box>
-      </Float>
-      <Float speed={1.5} rotationIntensity={0.3} floatIntensity={0.3}>
-        <Box args={[0.2, 0.2, 0.2]} position={[0.5, 0.3, 0.2]}>
-          <meshStandardMaterial color="#f97316" transparent opacity={0.6} />
-        </Box>
-      </Float>
-      <Float speed={1.8} rotationIntensity={0.4} floatIntensity={0.4}>
-        <Box args={[0.25, 0.25, 0.25]} position={[-0.3, -0.4, 0.1]}>
-          <meshStandardMaterial color="#eab308" transparent opacity={0.8} />
-        </Box>
-      </Float>
-      <Float speed={2.2} rotationIntensity={0.6} floatIntensity={0.6}>
-        <Sphere args={[0.15]} position={[0.2, -0.2, -0.3]}>
-          <meshStandardMaterial color="#dc2626" transparent opacity={0.5} />
-        </Sphere>
-      </Float>
-      <Text
-        position={[0, -0.8, 0]}
-        fontSize={0.15}
-        color="#ef4444"
-        anchorX="center"
-        anchorY="middle"
-        font="/fonts/inter.woff"
-      >
-        CHAOS
-      </Text>
-    </group>
-  );
-};
-
-const OrganizedData = () => {
-  const groupRef = useRef<THREE.Group>(null);
-  
-  useFrame((state) => {
-    if (groupRef.current) {
-      groupRef.current.rotation.y = Math.sin(state.clock.elapsedTime * 0.3) * 0.1;
-    }
-  });
-
-  return (
-    <group ref={groupRef} position={[2, 0, 0]}>
-      <Float speed={1} rotationIntensity={0.1} floatIntensity={0.2}>
-        <Box args={[0.4, 0.4, 0.4]} position={[0, 0, 0]}>
-          <meshStandardMaterial color="#10b981" transparent opacity={0.8} />
-        </Box>
-      </Float>
-      <Float speed={1.2} rotationIntensity={0.1} floatIntensity={0.2}>
-        <Box args={[0.3, 0.3, 0.3]} position={[0.5, 0, 0.5]}>
-          <meshStandardMaterial color="#059669" transparent opacity={0.7} />
-        </Box>
-      </Float>
-      <Float speed={1.1} rotationIntensity={0.1} floatIntensity={0.2}>
-        <Box args={[0.3, 0.3, 0.3]} position={[-0.5, 0, 0.5]}>
-          <meshStandardMaterial color="#047857" transparent opacity={0.7} />
-        </Box>
-      </Float>
-      <Float speed={1.3} rotationIntensity={0.1} floatIntensity={0.2}>
-        <Box args={[0.3, 0.3, 0.3]} position={[0, 0.5, 0]}>
-          <meshStandardMaterial color="#065f46" transparent opacity={0.7} />
-        </Box>
-      </Float>
-      <Text
-        position={[0, -0.8, 0]}
-        fontSize={0.15}
-        color="#10b981"
-        anchorX="center"
-        anchorY="middle"
-        font="/fonts/inter.woff"
-      >
-        ORGANIZED
-      </Text>
-    </group>
-  );
-};
-
-const TransformationArrow = () => {
-  const arrowRef = useRef<THREE.Group>(null);
-  
-  useFrame((state) => {
-    if (arrowRef.current) {
-      arrowRef.current.scale.x = 1 + Math.sin(state.clock.elapsedTime * 2) * 0.1;
-    }
-  });
-
-  return (
-    <group ref={arrowRef} position={[0, 0, 0]}>
-      <Box args={[0.8, 0.05, 0.05]} position={[0, 0, 0]}>
-        <meshStandardMaterial color="#3b82f6" />
-      </Box>
-      <Box args={[0.15, 0.15, 0.05]} position={[0.4, 0, 0]} rotation={[0, 0, Math.PI / 4]}>
-        <meshStandardMaterial color="#3b82f6" />
-      </Box>
-      <Text
-        position={[0, 0.3, 0]}
-        fontSize={0.1}
-        color="#3b82f6"
-        anchorX="center"
-        anchorY="middle"
-        font="/fonts/inter.woff"
-      >
-        WE TRANSFORM
-      </Text>
-    </group>
-  );
-};
 
 const CRMManaged = () => {
   const t = useTranslation();
@@ -279,7 +155,7 @@ const CRMManaged = () => {
         </div>
       </section>
 
-      {/* 3D Transformation Visual */}
+      {/* Visual Transformation Section */}
       <section className="py-20 bg-gradient-to-b from-slate-900 to-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
@@ -291,23 +167,61 @@ const CRMManaged = () => {
             </p>
           </div>
           
-          <div className="relative h-96 rounded-2xl overflow-hidden bg-gradient-to-br from-slate-800 to-slate-900 border border-blue-500/20">
-            <Canvas camera={{ position: [0, 0, 5], fov: 50 }}>
-              <ambientLight intensity={0.5} />
-              <pointLight position={[10, 10, 10]} intensity={1} />
-              <pointLight position={[-10, -10, -10]} intensity={0.5} />
+          <div className="max-w-5xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+              {/* Before: Chaos */}
+              <div className="text-center">
+                <div className="relative mb-6">
+                  <div className="w-48 h-48 mx-auto bg-gradient-to-br from-red-500/20 to-orange-500/20 rounded-2xl border border-red-500/30 flex items-center justify-center relative overflow-hidden">
+                    <div className="absolute inset-0 bg-gradient-to-br from-red-500/10 to-orange-500/10"></div>
+                    <div className="relative z-10">
+                      <div className="grid grid-cols-3 gap-2 p-4">
+                        {Array.from({ length: 9 }, (_, i) => (
+                          <div
+                            key={i}
+                            className="w-8 h-8 bg-red-500/40 rounded animate-pulse"
+                            style={{ animationDelay: `${i * 0.2}s` }}
+                          />
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <h3 className="text-xl font-bold text-red-400 mb-2">BEFORE: Chaos</h3>
+                <p className="text-gray-400">Scattered data, manual processes, missed opportunities</p>
+              </div>
               
-              <ChaosData />
-              <TransformationArrow />
-              <OrganizedData />
+              {/* Arrow */}
+              <div className="flex justify-center items-center">
+                <div className="relative">
+                  <ArrowRight className="w-16 h-16 text-blue-500 animate-pulse" />
+                  <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 text-blue-400 font-bold text-sm whitespace-nowrap">
+                    WE TRANSFORM
+                  </div>
+                </div>
+              </div>
               
-              <OrbitControls enablePan={false} enableZoom={false} />
-            </Canvas>
-            
-            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-center">
-              <p className="text-sm text-gray-400">
-                Interactive 3D visualization • Drag to rotate
-              </p>
+              {/* After: Organized */}
+              <div className="text-center">
+                <div className="relative mb-6">
+                  <div className="w-48 h-48 mx-auto bg-gradient-to-br from-green-500/20 to-emerald-500/20 rounded-2xl border border-green-500/30 flex items-center justify-center relative overflow-hidden">
+                    <div className="absolute inset-0 bg-gradient-to-br from-green-500/10 to-emerald-500/10"></div>
+                    <div className="relative z-10">
+                      <div className="grid grid-cols-3 gap-2 p-4">
+                        {Array.from({ length: 9 }, (_, i) => (
+                          <div
+                            key={i}
+                            className="w-8 h-8 bg-green-500/60 rounded animate-pulse"
+                            style={{ animationDelay: `${i * 0.1}s` }}
+                          />
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <h3 className="text-xl font-bold text-green-400 mb-2">AFTER: Organized</h3>
+                <p className="text-gray-400">Centralized data, automated workflows, customer success</p>
+              </div>
             </div>
           </div>
         </div>
