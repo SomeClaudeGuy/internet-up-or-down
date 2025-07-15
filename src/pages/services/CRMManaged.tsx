@@ -14,7 +14,16 @@ import {
   Workflow,
   Mail,
   Calendar,
-  MessageSquare
+  MessageSquare,
+  Zap,
+  Shield,
+  Clock,
+  TrendingUp,
+  Heart,
+  Star,
+  AlertCircle,
+  FileText,
+  Lightbulb
 } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -22,156 +31,171 @@ import Footer from "@/components/Footer";
 const CRMManaged = () => {
   const t = useTranslation();
 
-  const services = [
+  const painPoints = [
     {
-      icon: Database,
-      title: "CRM Setup & Configuration",
-      description: "Complete CRM system setup, customization, and configuration tailored to your business needs"
+      icon: AlertCircle,
+      title: "Scattered Customer Data",
+      description: "Information spread across emails, spreadsheets, and sticky notes"
     },
     {
-      icon: Users,
-      title: "Lead Management",
-      description: "Comprehensive lead tracking, scoring, and nurturing systems to maximize conversion rates"
+      icon: Clock,
+      title: "Manual Follow-ups",
+      description: "Missing opportunities because tasks fall through the cracks"
     },
     {
-      icon: Workflow,
-      title: "Sales Pipeline Automation",
-      description: "Automated workflows and processes to streamline your sales operations and improve efficiency"
+      icon: FileText,
+      title: "No Sales Pipeline Visibility",
+      description: "Can't track deals or forecast revenue accurately"
     },
     {
-      icon: BarChart3,
-      title: "Analytics & Reporting",
-      description: "Advanced reporting and analytics to track performance, identify trends, and optimize results"
-    },
-    {
-      icon: Mail,
-      title: "Email Marketing Integration",
-      description: "Seamless email marketing automation integrated with your CRM for personalized campaigns"
-    },
-    {
-      icon: Phone,
-      title: "Customer Support Systems",
-      description: "Integrated customer support and ticketing systems for exceptional customer service"
+      icon: Target,
+      title: "Inconsistent Customer Experience",
+      description: "Different team members provide different levels of service"
     }
   ];
 
-  const keyFeatures = [
-    { title: "Custom Configuration", description: "Tailored to your business processes" },
-    { title: "Full Integration", description: "Seamless connection with existing tools" },
-    { title: "24/7 Support", description: "Round-the-clock monitoring and assistance" },
-    { title: "Team Training", description: "Comprehensive user training and documentation" }
+  const solutions = [
+    {
+      icon: Database,
+      title: "Centralized Customer Hub",
+      description: "Every customer interaction, purchase history, and preference in one place",
+      benefit: "360° customer view"
+    },
+    {
+      icon: Zap,
+      title: "Automated Workflows",
+      description: "Smart automation that nurtures leads and follows up automatically",
+      benefit: "Never miss an opportunity"
+    },
+    {
+      icon: BarChart3,
+      title: "Real-time Analytics",
+      description: "Live dashboard showing sales performance and customer insights",
+      benefit: "Data-driven decisions"
+    },
+    {
+      icon: Users,
+      title: "Team Collaboration",
+      description: "Seamless handoffs between sales, marketing, and support teams",
+      benefit: "Consistent experience"
+    }
+  ];
+
+  const services = [
+    {
+      icon: Settings,
+      title: "CRM Strategy & Setup",
+      description: "We design and implement a CRM system that fits your unique business model",
+      features: ["Custom field configuration", "Workflow design", "Integration planning"]
+    },
+    {
+      icon: Workflow,
+      title: "Automation Implementation",
+      description: "Smart automation that works 24/7 to nurture leads and retain customers",
+      features: ["Lead scoring", "Email sequences", "Task automation"]
+    },
+    {
+      icon: TrendingUp,
+      title: "Performance Optimization",
+      description: "Continuous monitoring and improvement to maximize your CRM ROI",
+      features: ["Analytics setup", "Performance monitoring", "Regular optimization"]
+    }
+  ];
+
+  const whyChooseUs = [
+    {
+      icon: Shield,
+      title: "Proven Track Record",
+      description: "Successfully managed CRM implementations across various industries"
+    },
+    {
+      icon: Heart,
+      title: "Customer-Centric Approach",
+      description: "We focus on improving your customer relationships, not just the technology"
+    },
+    {
+      icon: Lightbulb,
+      title: "Strategic Thinking",
+      description: "We don't just set up systems; we design strategies that drive growth"
+    },
+    {
+      icon: Clock,
+      title: "Ongoing Support",
+      description: "Dedicated support team to ensure your CRM continues to deliver results"
+    }
   ];
 
   return (
     <div className="min-h-screen bg-background">
       <Header />
       
-      {/* Hero Section */}
-      <section className="pt-20 pb-20 relative overflow-hidden bg-gradient-to-br from-emerald-950 via-slate-900 to-teal-950 text-white min-h-screen flex items-center">
-        <div className="absolute inset-0 bg-gradient-to-br from-emerald-900/20 via-slate-900/20 to-teal-900/20"></div>
+      {/* Hero Section - Problem-Focused */}
+      <section className="pt-20 pb-10 relative overflow-hidden bg-gradient-to-br from-slate-950 via-blue-950 to-indigo-950 text-white">
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/10 via-slate-900/10 to-indigo-900/10"></div>
         
-        {/* CRM Grid Pattern */}
-        <div className="absolute inset-0 opacity-10">
-          <div className="grid grid-cols-8 gap-2 h-full">
-            {Array.from({ length: 64 }, (_, i) => (
-              <div
-                key={i}
-                className="border border-emerald-400/20 rounded animate-pulse"
-                style={{ animationDelay: `${i * 0.1}s` }}
-              />
-            ))}
-          </div>
+        {/* Animated Background Elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-500/20 to-indigo-500/20 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-indigo-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
         </div>
         
         <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-6xl mx-auto text-center">
-            <Badge className="mb-8 px-6 py-3 text-base font-medium bg-emerald-500/20 text-emerald-300 border-emerald-500/30">
-              <Settings className="w-5 h-5 mr-2" />
-              CRM Managed Services
+          <div className="max-w-4xl mx-auto text-center">
+            <Badge className="mb-8 px-6 py-3 text-base font-medium bg-red-500/20 text-red-300 border-red-500/30">
+              <AlertCircle className="w-5 h-5 mr-2" />
+              Customer Management Crisis
             </Badge>
             
-            <h1 className="text-6xl md:text-8xl font-bold mb-8">
-              <span className="block text-white mb-4">STREAMLINE</span>
-              <span className="block bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent mb-4">YOUR</span>
-              <span className="block text-white">CRM</span>
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+              Is Your Business <span className="text-red-400">Losing Customers</span><br />
+              Because of Poor CRM?
             </h1>
             
-            <p className="text-xl text-gray-300 mb-12 max-w-4xl mx-auto">
-              Complete CRM management services that streamline your customer relationships, 
-              automate sales processes, and optimize your business operations with expert support.
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Stop letting valuable customers slip through the cracks. Our CRM management service transforms chaotic customer data into a growth engine.
             </p>
-
-            {/* Key Features */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
-              {keyFeatures.map((feature, index) => (
-                <div key={index} className="text-center">
-                  <div className="text-lg font-bold text-emerald-400 mb-2">{feature.title}</div>
-                  <div className="text-sm text-gray-400">{feature.description}</div>
-                </div>
-              ))}
-            </div>
             
-            {/* Services Preview */}
-            <div className="bg-gradient-to-r from-emerald-900/50 to-teal-900/50 rounded-2xl p-6 backdrop-blur-sm border border-emerald-500/30 mb-12">
-              <div className="flex items-center justify-center space-x-8">
-                <div className="flex items-center space-x-2">
-                  <Database className="w-6 h-6 text-emerald-400" />
-                  <span className="text-emerald-300">CRM Setup</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <Users className="w-6 h-6 text-teal-400" />
-                  <span className="text-teal-300">Lead Management</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <Workflow className="w-6 h-6 text-emerald-400" />
-                  <span className="text-emerald-300">Automation</span>
-                </div>
-              </div>
-            </div>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="text-lg px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-500 shadow-2xl shadow-emerald-500/25" asChild>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+              <Button size="lg" className="text-lg px-8 py-4 bg-gradient-to-r from-blue-500 to-indigo-500 shadow-2xl shadow-blue-500/25" asChild>
                 <a href="https://docs.google.com/forms/d/1948-2HcLLEeciF3QQIzeTB-nPmM6-qsD3HopP5-bTyQ/viewform?edit_requested=true#response=ACYDBNgoe9qnpdvzE2IG3-SgO1FgdPRTnh9slrfCToFtyek2Of0Osps9NvqxQ-7epsdcl_0" target="_blank" rel="noopener noreferrer" className="flex items-center whitespace-nowrap">
-                  🚀 Start CRM Management
+                  🚀 Fix My CRM Today
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </a>
               </Button>
-              <Button variant="outline" size="lg" className="text-lg px-8 py-4 border-emerald-500/30 text-emerald-300 hover:bg-emerald-500/10">
-                📊 Learn More
+              <Button variant="outline" size="lg" className="text-lg px-8 py-4 border-blue-500/30 text-blue-300 hover:bg-blue-500/10">
+                📊 See How It Works
               </Button>
             </div>
-            
-            <p className="text-sm text-gray-400 mt-6">
-              💼 Free CRM audit • Custom implementation • Ongoing support
-            </p>
           </div>
         </div>
       </section>
 
-      {/* Services Section */}
-      <section className="py-20 bg-background">
+      {/* Pain Points Section */}
+      <section className="py-20 bg-gradient-to-b from-red-950/20 to-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Complete CRM Management Solutions</h2>
-            <p className="text-xl text-muted-foreground">End-to-end CRM services to optimize your customer relationships</p>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-red-400">
+              Sound Familiar?
+            </h2>
+            <p className="text-xl text-muted-foreground">
+              These CRM nightmares are costing you money every day
+            </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {services.map((service, index) => (
-              <Card key={index} className="group hover:scale-105 transition-all duration-300 border-border/50 hover:border-emerald-500/50">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            {painPoints.map((pain, index) => (
+              <Card key={index} className="border-red-500/20 bg-red-950/10 hover:bg-red-950/20 transition-all duration-300">
                 <CardContent className="p-6">
                   <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-emerald-500 to-teal-500 p-0.5 flex-shrink-0">
-                      <div className="w-full h-full bg-card rounded-lg flex items-center justify-center">
-                        <service.icon className="w-6 h-6 text-foreground" />
-                      </div>
+                    <div className="w-12 h-12 rounded-lg bg-red-500/20 flex items-center justify-center flex-shrink-0">
+                      <pain.icon className="w-6 h-6 text-red-400" />
                     </div>
                     <div className="flex-1">
-                      <h3 className="text-lg font-semibold mb-2 group-hover:text-emerald-500 transition-colors">
-                        {service.title}
+                      <h3 className="text-lg font-semibold mb-2 text-red-400">
+                        {pain.title}
                       </h3>
                       <p className="text-sm text-muted-foreground">
-                        {service.description}
+                        {pain.description}
                       </p>
                     </div>
                   </div>
@@ -182,80 +206,161 @@ const CRMManaged = () => {
         </div>
       </section>
 
-      {/* Process Section */}
+      {/* Solution Section */}
+      <section className="py-20 bg-gradient-to-b from-green-950/20 to-background">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <Badge className="mb-6 px-6 py-3 text-base font-medium bg-green-500/20 text-green-300 border-green-500/30">
+              <CheckCircle className="w-5 h-5 mr-2" />
+              The Solution
+            </Badge>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Turn CRM Chaos Into <span className="text-green-400">Customer Success</span>
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Our managed CRM service transforms your customer management from a daily struggle into your competitive advantage
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            {solutions.map((solution, index) => (
+              <Card key={index} className="border-green-500/20 bg-green-950/10 hover:bg-green-950/20 transition-all duration-300 group">
+                <CardContent className="p-6">
+                  <div className="flex items-start space-x-4">
+                    <div className="w-12 h-12 rounded-lg bg-green-500/20 flex items-center justify-center flex-shrink-0 group-hover:bg-green-500/30 transition-colors">
+                      <solution.icon className="w-6 h-6 text-green-400" />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-lg font-semibold mb-2 text-green-400">
+                        {solution.title}
+                      </h3>
+                      <p className="text-sm text-muted-foreground mb-3">
+                        {solution.description}
+                      </p>
+                      <Badge variant="outline" className="border-green-500/30 text-green-300">
+                        {solution.benefit}
+                      </Badge>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Services Section */}
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Our CRM Management Process</h2>
-            <p className="text-xl text-muted-foreground">A proven approach to CRM success</p>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              How We Make It Happen
+            </h2>
+            <p className="text-xl text-muted-foreground">
+              Three core services that transform your customer management
+            </p>
           </div>
           
-          <div className="max-w-4xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-              <div className="text-center">
-                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-emerald-500 to-teal-500 flex items-center justify-center text-white font-bold text-xl">
-                  1
-                </div>
-                <h3 className="text-lg font-semibold mb-2">Assessment</h3>
-                <p className="text-sm text-muted-foreground">
-                  Complete analysis of your current systems and business requirements
-                </p>
-              </div>
-              
-              <div className="text-center">
-                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-emerald-500 to-teal-500 flex items-center justify-center text-white font-bold text-xl">
-                  2
-                </div>
-                <h3 className="text-lg font-semibold mb-2">Implementation</h3>
-                <p className="text-sm text-muted-foreground">
-                  Custom CRM setup, configuration, and integration with your existing tools
-                </p>
-              </div>
-              
-              <div className="text-center">
-                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-emerald-500 to-teal-500 flex items-center justify-center text-white font-bold text-xl">
-                  3
-                </div>
-                <h3 className="text-lg font-semibold mb-2">Training</h3>
-                <p className="text-sm text-muted-foreground">
-                  Comprehensive team training and documentation for smooth adoption
-                </p>
-              </div>
-              
-              <div className="text-center">
-                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-emerald-500 to-teal-500 flex items-center justify-center text-white font-bold text-xl">
-                  4
-                </div>
-                <h3 className="text-lg font-semibold mb-2">Optimization</h3>
-                <p className="text-sm text-muted-foreground">
-                  Ongoing monitoring, optimization, and support to ensure peak performance
-                </p>
-              </div>
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {services.map((service, index) => (
+              <Card key={index} className="hover:shadow-lg transition-all duration-300 border-border/50 hover:border-blue-500/50 group">
+                <CardHeader className="text-center pb-4">
+                  <div className="w-16 h-16 mx-auto mb-4 rounded-xl bg-gradient-to-r from-blue-500 to-indigo-500 p-0.5 group-hover:scale-110 transition-transform">
+                    <div className="w-full h-full bg-card rounded-xl flex items-center justify-center">
+                      <service.icon className="w-8 h-8 text-foreground" />
+                    </div>
+                  </div>
+                  <CardTitle className="text-xl group-hover:text-blue-500 transition-colors">
+                    {service.title}
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="text-center">
+                  <CardDescription className="text-base mb-4">
+                    {service.description}
+                  </CardDescription>
+                  <div className="space-y-2">
+                    {service.features.map((feature, idx) => (
+                      <div key={idx} className="flex items-center justify-center space-x-2">
+                        <CheckCircle className="w-4 h-4 text-green-500" />
+                        <span className="text-sm text-muted-foreground">{feature}</span>
+                      </div>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose Us Section */}
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Why Trust Us With Your CRM?
+            </h2>
+            <p className="text-xl text-muted-foreground">
+              We're not just another tech company - we're your growth partners
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {whyChooseUs.map((reason, index) => (
+              <Card key={index} className="hover:shadow-lg transition-all duration-300 border-border/50 hover:border-purple-500/50 group">
+                <CardContent className="p-6">
+                  <div className="flex items-start space-x-4">
+                    <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-purple-500 to-pink-500 p-0.5 flex-shrink-0 group-hover:scale-110 transition-transform">
+                      <div className="w-full h-full bg-card rounded-lg flex items-center justify-center">
+                        <reason.icon className="w-6 h-6 text-foreground" />
+                      </div>
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-lg font-semibold mb-2 group-hover:text-purple-500 transition-colors">
+                        {reason.title}
+                      </h3>
+                      <p className="text-sm text-muted-foreground">
+                        {reason.description}
+                      </p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-emerald-500/20 to-teal-500/20">
+      <section className="py-20 bg-gradient-to-r from-blue-600/20 to-indigo-600/20">
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Optimize Your CRM?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              Ready to Transform Your Customer Management?
+            </h2>
             <p className="text-xl text-muted-foreground mb-8">
-              Let our experts handle your CRM management while you focus on growing your business
+              Stop losing customers to poor CRM. Start your transformation today.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="text-lg px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-500 shadow-2xl shadow-emerald-500/25" asChild>
-                <a href="https://docs.google.com/forms/d/1948-2HcLLEeciF3QQIzeTB-nPmM6-qsD3HopP5-bTyQ/viewform?edit_requested=true#response=ACYDBNgoe9qnpdvzE2IG3-SgO1FgdPRTnh9slrfCToFtyek2Of0Osps9NvqxQ-7epsdcl_0" target="_blank" rel="noopener noreferrer" className="flex items-center whitespace-nowrap">
-                  🚀 Start Your CRM Journey
-                  <ArrowRight className="ml-2 w-5 h-5" />
-                </a>
-              </Button>
-              
-              <div className="text-sm text-muted-foreground flex items-center justify-center">
-                💼 Free CRM audit • Custom implementation • Ongoing support
+            <div className="bg-gradient-to-r from-blue-950/50 to-indigo-950/50 rounded-2xl p-8 backdrop-blur-sm border border-blue-500/30 mb-8">
+              <h3 className="text-2xl font-bold mb-4 text-blue-400">
+                🎯 Free CRM Health Check
+              </h3>
+              <p className="text-gray-300 mb-6">
+                We'll analyze your current customer management setup and show you exactly where you're losing money
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button size="lg" className="text-lg px-8 py-4 bg-gradient-to-r from-blue-500 to-indigo-500 shadow-2xl shadow-blue-500/25" asChild>
+                  <a href="https://docs.google.com/forms/d/1948-2HcLLEeciF3QQIzeTB-nPmM6-qsD3HopP5-bTyQ/viewform?edit_requested=true#response=ACYDBNgoe9qnpdvzE2IG3-SgO1FgdPRTnh9slrfCToFtyek2Of0Osps9NvqxQ-7epsdcl_0" target="_blank" rel="noopener noreferrer" className="flex items-center whitespace-nowrap">
+                    🚀 Get My Free CRM Audit
+                    <ArrowRight className="ml-2 w-5 h-5" />
+                  </a>
+                </Button>
               </div>
+            </div>
+            
+            <div className="text-sm text-muted-foreground">
+              ✅ No commitment required • ✅ Actionable insights • ✅ Custom recommendations
             </div>
           </div>
         </div>
