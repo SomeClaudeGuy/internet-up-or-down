@@ -127,11 +127,12 @@ const Services = () => {
       {/* Services Grid */}
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (
+          {/* First 6 services in 3 columns */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
+            {services.slice(0, 6).map((service, index) => (
               <Card 
                 key={index} 
-                className="group hover:scale-105 transition-all duration-300 border-border/50 hover:border-primary/50 bg-card/50 backdrop-blur-sm h-full"
+                className="group hover:scale-105 transition-all duration-300 border-border/50 hover:border-primary/50 bg-card/50 backdrop-blur-sm flex flex-col h-full"
               >
                 <CardHeader className="text-center">
                   <div className={`w-16 h-16 mx-auto mb-4 rounded-xl bg-gradient-to-r ${service.color} p-0.5`}>
@@ -143,12 +144,12 @@ const Services = () => {
                     {service.title}
                   </CardTitle>
                 </CardHeader>
-                <CardContent className="text-center space-y-4">
+                <CardContent className="text-center space-y-4 flex-1 flex flex-col">
                   <CardDescription className="text-base">
                     {service.description}
                   </CardDescription>
                   
-                  <div className="flex flex-wrap gap-2 justify-center">
+                  <div className="flex flex-wrap gap-2 justify-center flex-1">
                     {service.features.map((feature, idx) => (
                       <span 
                         key={idx}
@@ -159,8 +160,52 @@ const Services = () => {
                     ))}
                   </div>
 
-                  <Button variant="outline" className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors" asChild>
+                  <Button variant="outline" className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors mt-auto" asChild>
                     <Link to={getServiceUrl(index)}>
+                      {t.services.learnMore}
+                      <ArrowRight className="ml-2 w-4 h-4" />
+                    </Link>
+                  </Button>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+          
+          {/* Last 2 services centered */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-2xl mx-auto">
+            {services.slice(6, 8).map((service, index) => (
+              <Card 
+                key={index + 6} 
+                className="group hover:scale-105 transition-all duration-300 border-border/50 hover:border-primary/50 bg-card/50 backdrop-blur-sm flex flex-col h-full"
+              >
+                <CardHeader className="text-center">
+                  <div className={`w-16 h-16 mx-auto mb-4 rounded-xl bg-gradient-to-r ${service.color} p-0.5`}>
+                    <div className="w-full h-full bg-card rounded-xl flex items-center justify-center">
+                      <service.icon className="w-8 h-8 text-foreground" />
+                    </div>
+                  </div>
+                  <CardTitle className="text-xl group-hover:text-primary transition-colors">
+                    {service.title}
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="text-center space-y-4 flex-1 flex flex-col">
+                  <CardDescription className="text-base">
+                    {service.description}
+                  </CardDescription>
+                  
+                  <div className="flex flex-wrap gap-2 justify-center flex-1">
+                    {service.features.map((feature, idx) => (
+                      <span 
+                        key={idx}
+                        className="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full border border-primary/20"
+                      >
+                        {feature}
+                      </span>
+                    ))}
+                  </div>
+
+                  <Button variant="outline" className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors mt-auto" asChild>
+                    <Link to={getServiceUrl(index + 6)}>
                       {t.services.learnMore}
                       <ArrowRight className="ml-2 w-4 h-4" />
                     </Link>
