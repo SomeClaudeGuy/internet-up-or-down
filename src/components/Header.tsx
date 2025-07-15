@@ -51,6 +51,9 @@ const Header = () => {
             <Link to="/b-content" className="text-foreground hover:text-primary transition-colors">
               {t.headerContent}
             </Link>
+            <Link to="/gallery" className="text-foreground hover:text-primary transition-colors">
+              Gallery
+            </Link>
             <Link to="/success-stories" className="text-foreground hover:text-primary transition-colors">
               {t.headerTalents}
             </Link>
@@ -86,6 +89,9 @@ const Header = () => {
               </Link>
               <Link to="/b-content" className="text-foreground hover:text-primary transition-colors">
                 {t.headerContent}
+              </Link>
+              <Link to="/gallery" className="text-foreground hover:text-primary transition-colors">
+                Gallery
               </Link>
               <Link to="/success-stories" className="text-foreground hover:text-primary transition-colors">
                 {t.headerTalents}

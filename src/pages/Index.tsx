@@ -4,8 +4,8 @@ import ClientTestimonials from "@/components/ClientTestimonials";
 import SocialProof from "@/components/SocialProof";
 import Services from "@/components/Services";
 import WhoWeAre from "@/components/WhoWeAre";
-import Gallery from "@/components/Gallery";
-import RequestDeck from "@/components/RequestDeck";
+import Winning from "@/components/Winning";
+import GetStarted from "@/components/GetStarted";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
@@ -18,8 +18,8 @@ const Index = () => {
       <SocialProof />
       <Services />
       <WhoWeAre />
-      <Gallery />
-      <RequestDeck />
+      <Winning />
+      <GetStarted />
       <Contact />
       <Footer />
     </div>

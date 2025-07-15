@@ -16,6 +16,7 @@ import WorkWithUsBenefits from "./pages/work-with-us/Benefits";
 import Services from "./pages/Services";
 import SuccessStories from "./pages/SuccessStories";
 import TalentIntake from "./pages/TalentIntake";
+import GalleryPage from "./pages/Gallery";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -46,6 +47,7 @@ const App = () => (
           
           {/* Standalone pages */}
           <Route path="/services" element={<Services />} />
+          <Route path="/gallery" element={<GalleryPage />} />
           <Route path="/success-stories" element={<SuccessStories />} />
           <Route path="/talent-intake" element={<TalentIntake />} />
           

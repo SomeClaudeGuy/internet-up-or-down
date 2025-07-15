@@ -11,24 +11,27 @@ import analyticsImage from "@/assets/analytics-dashboard.png";
 const WhoWeAre = () => {
   const t = useTranslation();
 
-  const teamImages = [
+  const storySlides = [
     {
+      type: "founder",
       image: gamerPortraitImage,
-      name: "Alex Rodriguez",
-      role: "CEO & Founder",
-      description: "15+ years in digital marketing, former Twitch Gaming Director"
+      title: "The Beginning",
+      content: "Founded in 2019 by Alex Rodriguez, former Twitch Gaming Director with 15+ years in digital marketing.",
+      stats: "15+ Years Experience"
     },
     {
+      type: "growth",
       image: gamingEnvironmentImage,
-      name: "Sarah Chen",
-      role: "Head of Strategy",
-      description: "Ex-Google Ads specialist with $50M+ managed spend"
+      title: "Rapid Growth",
+      content: "Our team expanded globally, recruiting top talent from Google, Facebook, and leading gaming companies.",
+      stats: "200+ Team Members"
     },
     {
+      type: "success",
       image: analyticsImage,
-      name: "Marcus Johnson",
-      role: "Creative Director",
-      description: "Award-winning content creator with 100M+ views generated"
+      title: "Award-Winning Results",
+      content: "Recognized as the Digital Marketing Agency of the Year 2024, managing $50M+ in media spend.",
+      stats: "Award-Winning Agency"
     }
   ];
 
@@ -93,42 +96,40 @@ const WhoWeAre = () => {
           </p>
         </div>
 
-        {/* Our Story with Integrated Team */}
+        {/* Interactive Story Slider */}
         <div className="max-w-6xl mx-auto mb-20">
           <Card className="bg-card/30 backdrop-blur-sm border-border/50">
             <CardContent className="p-12">
               <h3 className="text-3xl font-bold mb-6 text-center">Our Story</h3>
-              <p className="text-lg text-muted-foreground leading-relaxed mb-8 text-center">
-                Founded in 2019, Basher has grown from a small team of passionate gamers and marketers into an award-winning digital marketing agency. 
-                We specialize in connecting gaming and betting brands with their ideal audiences through authentic, performance-driven campaigns.
-              </p>
               
-              {/* Integrated Team Carousel */}
-              <div className="max-w-4xl mx-auto mb-8">
+              <div className="max-w-4xl mx-auto">
                 <Carousel className="w-full">
                   <CarouselContent>
-                    {teamImages.map((member, index) => (
-                      <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-                        <Card className="bg-card/50 backdrop-blur-sm border-border/50 hover:border-primary/50 transition-all duration-300 hover:scale-105">
-                          <CardContent className="p-6 text-center">
-                            <div className="relative mb-6">
-                              <img
-                                src={member.image}
-                                alt={member.name}
-                                className="w-32 h-32 mx-auto rounded-full object-cover border-4 border-primary/20"
-                              />
-                              <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2">
-                                <Badge variant="secondary" className="bg-primary text-primary-foreground">
-                                  {member.role}
-                                </Badge>
-                              </div>
+                    {storySlides.map((slide, index) => (
+                      <CarouselItem key={index}>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                          <div className="relative">
+                            <img
+                              src={slide.image}
+                              alt={slide.title}
+                              className="w-full h-64 md:h-80 object-cover rounded-lg border-2 border-primary/20"
+                            />
+                            <div className="absolute bottom-4 left-4">
+                              <Badge variant="secondary" className="bg-primary/90 text-primary-foreground">
+                                {slide.stats}
+                              </Badge>
                             </div>
-                            <h4 className="text-xl font-bold mb-2">{member.name}</h4>
-                            <p className="text-muted-foreground text-sm leading-relaxed">
-                              {member.description}
+                          </div>
+                          <div className="space-y-4">
+                            <h4 className="text-2xl font-bold text-primary">{slide.title}</h4>
+                            <p className="text-lg text-muted-foreground leading-relaxed">
+                              {slide.content}
                             </p>
-                          </CardContent>
-                        </Card>
+                            <div className="flex items-center space-x-2 text-sm text-muted-foreground">
+                              <span>Chapter {index + 1} of {storySlides.length}</span>
+                            </div>
+                          </div>
+                        </div>
                       </CarouselItem>
                     ))}
                   </CarouselContent>
@@ -137,10 +138,12 @@ const WhoWeAre = () => {
                 </Carousel>
               </div>
               
-              <p className="text-lg text-muted-foreground leading-relaxed text-center">
-                With over $50M in managed media spend and partnerships with 200+ content creators worldwide, we've proven that authentic storytelling 
-                and data-driven strategies create the most impactful results.
-              </p>
+              <div className="text-center mt-8">
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  Today, we continue to push boundaries in digital marketing, delivering award-winning campaigns 
+                  that drive real results for our clients worldwide.
+                </p>
+              </div>
             </CardContent>
           </Card>
         </div>
