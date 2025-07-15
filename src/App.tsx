@@ -14,6 +14,12 @@ import WorkWithUsHome from "./pages/work-with-us/Home";
 import WorkWithUsPositions from "./pages/work-with-us/Positions";
 import WorkWithUsBenefits from "./pages/work-with-us/Benefits";
 import Services from "./pages/Services";
+import TrafficGeneration from "./pages/services/TrafficGeneration";
+import Analytics from "./pages/services/Analytics";
+import SocialMedia from "./pages/services/SocialMedia";
+import Sponsorships from "./pages/services/Sponsorships";
+import MediaBuying from "./pages/services/MediaBuying";
+import ContentProduction from "./pages/services/ContentProduction";
 import SuccessStories from "./pages/SuccessStories";
 import TalentIntake from "./pages/TalentIntake";
 import GalleryPage from "./pages/Gallery";
@@ -47,6 +53,12 @@ const App = () => (
           
           {/* Standalone pages */}
           <Route path="/services" element={<Services />} />
+          <Route path="/services/traffic-generation" element={<TrafficGeneration />} />
+          <Route path="/services/analytics" element={<Analytics />} />
+          <Route path="/services/social-media" element={<SocialMedia />} />
+          <Route path="/services/sponsorships" element={<Sponsorships />} />
+          <Route path="/services/media-buying" element={<MediaBuying />} />
+          <Route path="/services/content-production" element={<ContentProduction />} />
           <Route path="/gallery" element={<GalleryPage />} />
           <Route path="/success-stories" element={<SuccessStories />} />
           <Route path="/talent-intake" element={<TalentIntake />} />

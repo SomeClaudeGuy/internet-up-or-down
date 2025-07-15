@@ -14,6 +14,18 @@ import {
 const Services = () => {
   const t = useTranslation();
 
+  const getServiceUrl = (index: number) => {
+    const urls = [
+      '/services/traffic-generation',
+      '/services/analytics', 
+      '/services/social-media',
+      '/services/sponsorships',
+      '/services/media-buying',
+      '/services/content-production'
+    ];
+    return urls[index];
+  };
+
   const serviceItems = [
     {
       icon: Target,
@@ -103,9 +115,11 @@ const Services = () => {
                   ))}
                 </div>
 
-                <Button variant="outline" className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
-                  {t.servicesLearnMore}
-                  <ArrowRight className="ml-2 w-4 h-4" />
+                <Button variant="outline" className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors" asChild>
+                  <a href={getServiceUrl(index)}>
+                    {t.servicesLearnMore}
+                    <ArrowRight className="ml-2 w-4 h-4" />
+                  </a>
                 </Button>
               </CardContent>
             </Card>
