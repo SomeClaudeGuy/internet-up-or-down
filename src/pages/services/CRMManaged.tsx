@@ -55,22 +55,11 @@ const CRMManaged = () => {
     }
   ];
 
-  const features = [
-    "24/7 System Monitoring",
-    "Custom Workflow Development",
-    "Multi-platform Integration",
-    "Regular Performance Audits",
-    "Team Training & Support",
-    "Data Migration Services",
-    "Security & Compliance",
-    "Scalable Solutions"
-  ];
-
-  const outcomes = [
-    { metric: "85%", label: "Increase in Lead Conversion" },
-    { metric: "60%", label: "Reduction in Manual Tasks" },
-    { metric: "300+", label: "CRM Systems Managed" },
-    { metric: "99.9%", label: "System Uptime" }
+  const keyFeatures = [
+    { title: "Custom Configuration", description: "Tailored to your business processes" },
+    { title: "Full Integration", description: "Seamless connection with existing tools" },
+    { title: "24/7 Support", description: "Round-the-clock monitoring and assistance" },
+    { title: "Team Training", description: "Comprehensive user training and documentation" }
   ];
 
   return (
@@ -96,35 +85,28 @@ const CRMManaged = () => {
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-6xl mx-auto text-center">
-            {/* CRM Icon */}
-            <div className="mb-8">
-              <div className="w-32 h-32 mx-auto bg-gradient-to-r from-emerald-500 to-teal-500 rounded-2xl flex items-center justify-center transform hover:scale-110 transition-all duration-500 hover:shadow-2xl hover:shadow-emerald-500/50 group cursor-pointer">
-                <Database className="w-16 h-16 group-hover:animate-pulse" />
-              </div>
-            </div>
-            
             <Badge className="mb-8 px-6 py-3 text-base font-medium bg-emerald-500/20 text-emerald-300 border-emerald-500/30">
               <Settings className="w-5 h-5 mr-2" />
               CRM Managed Services
             </Badge>
             
             <h1 className="text-6xl md:text-8xl font-bold mb-8">
-              <span className="block text-white mb-4">MANAGE</span>
+              <span className="block text-white mb-4">STREAMLINE</span>
               <span className="block bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent mb-4">YOUR</span>
-              <span className="block text-white">CUSTOMERS</span>
+              <span className="block text-white">CRM</span>
             </h1>
             
             <p className="text-xl text-gray-300 mb-12 max-w-4xl mx-auto">
               Complete CRM management services that streamline your customer relationships, 
-              automate sales processes, and drive measurable business growth.
+              automate sales processes, and optimize your business operations with expert support.
             </p>
 
-            {/* Key Metrics */}
+            {/* Key Features */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
-              {outcomes.map((outcome, index) => (
+              {keyFeatures.map((feature, index) => (
                 <div key={index} className="text-center">
-                  <div className="text-4xl font-bold text-emerald-400 mb-2">{outcome.metric}</div>
-                  <div className="text-sm text-gray-400">{outcome.label}</div>
+                  <div className="text-lg font-bold text-emerald-400 mb-2">{feature.title}</div>
+                  <div className="text-sm text-gray-400">{feature.description}</div>
                 </div>
               ))}
             </div>
@@ -155,7 +137,7 @@ const CRMManaged = () => {
                 </a>
               </Button>
               <Button variant="outline" size="lg" className="text-lg px-8 py-4 border-emerald-500/30 text-emerald-300 hover:bg-emerald-500/10">
-                📊 View CRM Demo
+                📊 Learn More
               </Button>
             </div>
             
@@ -174,45 +156,24 @@ const CRMManaged = () => {
             <p className="text-xl text-muted-foreground">End-to-end CRM services to optimize your customer relationships</p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {services.map((service, index) => (
               <Card key={index} className="group hover:scale-105 transition-all duration-300 border-border/50 hover:border-emerald-500/50">
-                <CardHeader className="text-center">
-                  <div className="w-16 h-16 mx-auto mb-4 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-500 p-0.5">
-                    <div className="w-full h-full bg-card rounded-xl flex items-center justify-center">
-                      <service.icon className="w-8 h-8 text-foreground" />
+                <CardContent className="p-6">
+                  <div className="flex items-start space-x-4">
+                    <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-emerald-500 to-teal-500 p-0.5 flex-shrink-0">
+                      <div className="w-full h-full bg-card rounded-lg flex items-center justify-center">
+                        <service.icon className="w-6 h-6 text-foreground" />
+                      </div>
                     </div>
-                  </div>
-                  <CardTitle className="text-xl group-hover:text-emerald-500 transition-colors">
-                    {service.title}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent className="text-center">
-                  <CardDescription className="text-base">
-                    {service.description}
-                  </CardDescription>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="py-20 bg-muted/30">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">What's Included</h2>
-            <p className="text-xl text-muted-foreground">Comprehensive CRM management with everything you need</p>
-          </div>
-          
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
-            {features.map((feature, index) => (
-              <Card key={index} className="group hover:scale-105 transition-all duration-300 border-border/50 hover:border-emerald-500/50">
-                <CardContent className="p-6 text-center">
-                  <CheckCircle className="w-6 h-6 text-emerald-500 mx-auto mb-3" />
-                  <div className="text-sm font-medium group-hover:text-emerald-500 transition-colors">
-                    {feature}
+                    <div className="flex-1">
+                      <h3 className="text-lg font-semibold mb-2 group-hover:text-emerald-500 transition-colors">
+                        {service.title}
+                      </h3>
+                      <p className="text-sm text-muted-foreground">
+                        {service.description}
+                      </p>
+                    </div>
                   </div>
                 </CardContent>
               </Card>
@@ -222,7 +183,7 @@ const CRMManaged = () => {
       </section>
 
       {/* Process Section */}
-      <section className="py-20 bg-background">
+      <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Our CRM Management Process</h2>
@@ -275,43 +236,6 @@ const CRMManaged = () => {
         </div>
       </section>
 
-      {/* Custom Solution Section */}
-      <section className="py-20 bg-muted/30">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-gradient-to-r from-emerald-500/20 to-teal-500/20 rounded-2xl p-12">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">Get Your Custom CRM Solution</h2>
-              <p className="text-xl text-muted-foreground mb-8">
-                Every business has unique needs. Let us create a tailored CRM management solution 
-                that perfectly fits your workflow and drives your business forward.
-              </p>
-              
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-                <div className="flex items-center justify-center space-x-2">
-                  <CheckCircle className="w-5 h-5 text-emerald-500" />
-                  <span className="text-sm">Custom Configuration</span>
-                </div>
-                <div className="flex items-center justify-center space-x-2">
-                  <CheckCircle className="w-5 h-5 text-emerald-500" />
-                  <span className="text-sm">Full Integration</span>
-                </div>
-                <div className="flex items-center justify-center space-x-2">
-                  <CheckCircle className="w-5 h-5 text-emerald-500" />
-                  <span className="text-sm">24/7 Support</span>
-                </div>
-              </div>
-              
-              <Button size="lg" className="text-lg px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-500 shadow-2xl shadow-emerald-500/25" asChild>
-                <a href="https://docs.google.com/forms/d/1948-2HcLLEeciF3QQIzeTB-nPmM6-qsD3HopP5-bTyQ/viewform?edit_requested=true#response=ACYDBNgoe9qnpdvzE2IG3-SgO1FgdPRTnh9slrfCToFtyek2Of0Osps9NvqxQ-7epsdcl_0" target="_blank" rel="noopener noreferrer" className="flex items-center whitespace-nowrap">
-                  💬 Get Custom Quote
-                  <ArrowRight className="ml-2 w-5 h-5" />
-                </a>
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-emerald-500/20 to-teal-500/20">
         <div className="container mx-auto px-4 text-center">
@@ -324,7 +248,7 @@ const CRMManaged = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="text-lg px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-500 shadow-2xl shadow-emerald-500/25" asChild>
                 <a href="https://docs.google.com/forms/d/1948-2HcLLEeciF3QQIzeTB-nPmM6-qsD3HopP5-bTyQ/viewform?edit_requested=true#response=ACYDBNgoe9qnpdvzE2IG3-SgO1FgdPRTnh9slrfCToFtyek2Of0Osps9NvqxQ-7epsdcl_0" target="_blank" rel="noopener noreferrer" className="flex items-center whitespace-nowrap">
-                  🚀 Start CRM Management
+                  🚀 Start Your CRM Journey
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </a>
               </Button>
