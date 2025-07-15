@@ -118,17 +118,12 @@ const Analytics = () => {
               
               <h1 className="text-5xl md:text-7xl font-black mb-8 leading-tight">
                 <span className="block bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
-                  Analytics
-                </span>
-                <span className="block text-foreground">That Actually</span>
-                <span className="block bg-gradient-to-r from-green-500 to-emerald-500 bg-clip-text text-transparent">
-                  Drive Results
+                  {(t as any).analyticsTitle || "Analytics That Actually Drive Results"}
                 </span>
               </h1>
               
               <p className="text-xl text-muted-foreground mb-12 max-w-4xl mx-auto leading-relaxed">
-                Transform your data into competitive advantage with our comprehensive analytics suite. 
-                We turn complex data into crystal-clear insights that drive strategic decisions and measurable growth.
+                {(t as any).analyticsDesc || "Transform your data into competitive advantage with our comprehensive analytics suite. We turn complex data into crystal-clear insights that drive strategic decisions and measurable growth."}
               </p>
             </div>
 

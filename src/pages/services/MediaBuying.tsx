@@ -195,15 +195,11 @@ const MediaBuying = () => {
             </div>
             
             <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-              <span className="block bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-                Strategic Media Buying
-              </span>
-              <span className="block text-foreground">That Drives Results</span>
+              {(t as any).mediaBuyingPageTitle || "Strategic Media Buying That Drives Results"}
             </h1>
             
             <p className="text-xl text-muted-foreground mb-12 max-w-4xl mx-auto leading-relaxed">
-              Professional media buying services that help gaming and entertainment brands reach their target audiences 
-              efficiently across all major advertising platforms. We handle the complexity while you focus on your business.
+              {(t as any).mediaBuyingPageDesc || "Professional media buying services that help gaming and entertainment brands reach their target audiences efficiently across all major advertising platforms. We handle the complexity while you focus on your business."}
             </p>
 
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">

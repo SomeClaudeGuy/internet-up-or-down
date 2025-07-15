@@ -276,9 +276,18 @@ export const translations = {
     businessConsultingFinalCtaButton: "🚀 Start Your Transformation",
     businessConsultingFinalCtaDisclaimer: "💼 Free strategic consultation • Custom roadmaps • Implementation support",
 
-    // Analytics
+    // Analytics page specific
     analyticsTitle: "Advanced Analytics & Data Intelligence",
     analyticsSubtitle: "Transform your data into actionable insights with our comprehensive analytics platform. Make data-driven decisions that accelerate growth and maximize ROI.",
+    analyticsDesc: "Transform your data into competitive advantage with our comprehensive analytics suite. We turn complex data into crystal-clear insights that drive strategic decisions and measurable growth.",
+    
+    // Media Buying page specific
+    mediaBuyingPageTitle: "Strategic Media Buying That Drives Results",
+    mediaBuyingPageDesc: "Professional media buying services that help gaming and entertainment brands reach their target audiences efficiently across all major advertising platforms. We handle the complexity while you focus on your business.",
+    
+    // Sponsorships page specific
+    sponsorshipsPageTitle: "Strategic Sponsorships That Drive Results",
+    sponsorshipsPageDesc: "We've helped gaming brands achieve over $500M in revenue through strategic sponsorship placements at premium events. Our data-driven approach ensures maximum ROI and brand impact.",
     analyticsFeature1Title: "AI-Powered Insights",
     analyticsFeature1Desc: "Machine learning algorithms analyze patterns and predict future trends",
     analyticsFeature2Title: "Deep Data Mining",
@@ -921,9 +930,18 @@ export const translations = {
     businessConsultingFinalCtaButton: "🚀 Inicia Tu Transformación",
     businessConsultingFinalCtaDisclaimer: "💼 Consulta estratégica gratuita • Hojas de ruta personalizadas • Soporte de implementación",
 
-    // Analytics
+    // Analytics page specific
     analyticsTitle: "Analítica Avanzada e Inteligencia de Datos",
     analyticsSubtitle: "Transforma tus datos en insights accionables con nuestra plataforma de analítica integral. Toma decisiones basadas en datos que aceleren el crecimiento y maximicen el ROI.",
+    analyticsDesc: "Transforma tus datos en ventaja competitiva con nuestra suite integral de analítica. Convertimos datos complejos en insights cristalinos que impulsan decisiones estratégicas y crecimiento medible.",
+    
+    // Media Buying page specific
+    mediaBuyingPageTitle: "Compra de Medios Estratégica que Genera Resultados",
+    mediaBuyingPageDesc: "Servicios profesionales de compra de medios que ayudan a las marcas de juegos y entretenimiento a llegar a sus audiencias objetivo de manera eficiente en todas las principales plataformas publicitarias. Manejamos la complejidad mientras tú te enfocas en tu negocio.",
+    
+    // Sponsorships page specific
+    sponsorshipsPageTitle: "Patrocinios Estratégicos que Generan Resultados",
+    sponsorshipsPageDesc: "Hemos ayudado a las marcas de juegos a lograr más de $500M en ingresos a través de ubicaciones estratégicas de patrocinio en eventos premium. Nuestro enfoque basado en datos asegura el máximo ROI e impacto de marca.",
     analyticsFeature1Title: "Insights Impulsados por IA",
     analyticsFeature1Desc: "Algoritmos de aprendizaje automático analizan patrones y predicen tendencias futuras",
     analyticsFeature2Title: "Minería de Datos Profunda",

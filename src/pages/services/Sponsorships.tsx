@@ -164,15 +164,11 @@ const Sponsorships = () => {
             </div>
             
             <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-              <span className="block text-foreground">Strategic Sponsorships</span>
-              <span className="block bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">
-                That Drive Results
-              </span>
+              {(t as any).sponsorshipsPageTitle || "Strategic Sponsorships That Drive Results"}
             </h1>
             
             <p className="text-xl text-muted-foreground mb-12 max-w-4xl mx-auto leading-relaxed">
-              We've helped gaming brands achieve over $500M in revenue through strategic sponsorship placements 
-              at premium events. Our data-driven approach ensures maximum ROI and brand impact.
+              {(t as any).sponsorshipsPageDesc || "We've helped gaming brands achieve over $500M in revenue through strategic sponsorship placements at premium events. Our data-driven approach ensures maximum ROI and brand impact."}
             </p>
 
             <div className="flex flex-wrap items-center justify-center gap-8 mb-12">
