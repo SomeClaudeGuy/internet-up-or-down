@@ -106,9 +106,15 @@ const WhoWeAre = () => {
               <div className="max-w-4xl mx-auto">
                 <Carousel 
                   className="w-full" 
+                  opts={{
+                    align: "start",
+                    loop: true,
+                  }}
                   plugins={[
                     Autoplay({
                       delay: 4000,
+                      stopOnInteraction: false,
+                      stopOnMouseEnter: false,
                     }),
                   ]}
                 >

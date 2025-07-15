@@ -6,7 +6,6 @@ import Services from "@/components/Services";
 import WhoWeAre from "@/components/WhoWeAre";
 import Winning from "@/components/Winning";
 import GetStarted from "@/components/GetStarted";
-import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -20,7 +19,6 @@ const Index = () => {
       <WhoWeAre />
       <Winning />
       <GetStarted />
-      <Contact />
       <Footer />
     </div>
   );
