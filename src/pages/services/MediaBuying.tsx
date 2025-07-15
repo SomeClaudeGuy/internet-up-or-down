@@ -65,93 +65,138 @@ const MediaBuying = () => {
     <div className="min-h-screen bg-background">
       <Header />
       
-      {/* Hero Section - Layered Design */}
-      <section className="pt-32 pb-20 relative">
-        <div className="absolute inset-0 bg-gradient-to-br from-background via-indigo-500/5 to-purple-500/10"></div>
-        <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
+      {/* Hero Section - Trading Floor/Command Center Style */}
+      <section className="pt-20 pb-20 relative overflow-hidden bg-gradient-to-br from-slate-900 via-indigo-950 to-purple-950 text-white min-h-screen flex items-center">
+        {/* Matrix-style code rain effect */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-0 left-[10%] w-px h-full bg-gradient-to-b from-green-400 to-transparent animate-pulse"></div>
+          <div className="absolute top-0 left-[25%] w-px h-full bg-gradient-to-b from-blue-400 to-transparent animate-pulse delay-100"></div>
+          <div className="absolute top-0 left-[40%] w-px h-full bg-gradient-to-b from-purple-400 to-transparent animate-pulse delay-200"></div>
+          <div className="absolute top-0 left-[55%] w-px h-full bg-gradient-to-b from-indigo-400 to-transparent animate-pulse delay-300"></div>
+          <div className="absolute top-0 left-[70%] w-px h-full bg-gradient-to-b from-cyan-400 to-transparent animate-pulse delay-400"></div>
+          <div className="absolute top-0 left-[85%] w-px h-full bg-gradient-to-b from-pink-400 to-transparent animate-pulse delay-500"></div>
+        </div>
         
         <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-6xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-              <div className="order-2 lg:order-1">
-                <Badge className="mb-6 px-4 py-2 text-sm font-medium bg-indigo-500/10 text-indigo-500 border-indigo-500/20 inline-flex items-center">
-                  <TrendingUp className="w-4 h-4 mr-2" />
-                  Performance Media Buying
-                </Badge>
-                
-                <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                  <span className="block text-foreground mb-2">Media Buying</span>
-                  <span className="block text-2xl md:text-3xl text-muted-foreground font-normal mb-2">That Delivers</span>
-                  <span className="block bg-gradient-to-r from-indigo-500 to-purple-500 bg-clip-text text-transparent">
-                    Maximum ROI
-                  </span>
-                </h1>
-                
-                <p className="text-lg text-muted-foreground mb-8 max-w-xl">
-                  Performance-driven media buying strategies powered by AI and advanced analytics. 
-                  We've managed $50M+ in ad spend, delivering exceptional ROI for iGaming operators.
-                </p>
-                
-                <div className="flex flex-col sm:flex-row gap-4 mb-8">
-                  <Button size="lg" className="text-lg px-8 py-4 bg-gradient-to-r from-indigo-500 to-purple-500 shadow-2xl shadow-indigo-500/25" asChild>
-                    <a href="https://docs.google.com/forms/d/1948-2HcLLEeciF3QQIzeTB-nPmM6-qsD3HopP5-bTyQ/viewform?edit_requested=true#response=ACYDBNgoe9qnpdvzE2IG3-SgO1FgdPRTnh9slrfCToFtyek2Of0Osps9NvqxQ-7epsdcl_0" target="_blank" rel="noopener noreferrer" className="flex items-center whitespace-nowrap">
-                      🚀 Optimize Your Ad Spend
-                      <ArrowRight className="ml-2 w-5 h-5" />
-                    </a>
-                  </Button>
-                  <Button variant="outline" size="lg" className="text-lg px-8 py-4">
-                    📊 Free ROI Audit
-                  </Button>
+          <div className="max-w-7xl mx-auto">
+            {/* Command Center Header */}
+            <div className="text-center mb-16">
+              <div className="inline-flex items-center bg-gradient-to-r from-indigo-500/20 to-purple-500/20 border border-indigo-500/30 rounded-full px-6 py-3 mb-8">
+                <div className="w-2 h-2 bg-green-400 rounded-full mr-3 animate-pulse"></div>
+                <TrendingUp className="w-5 h-5 mr-2 text-indigo-400" />
+                <span className="text-indigo-300 font-semibold">MEDIA BUYING COMMAND CENTER</span>
+                <div className="w-2 h-2 bg-green-400 rounded-full ml-3 animate-pulse"></div>
+              </div>
+              
+              <h1 className="text-6xl md:text-8xl font-black mb-8 tracking-tight">
+                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400 mb-2">MEDIA</span>
+                <span className="block text-white drop-shadow-2xl">BUYING</span>
+              </h1>
+              
+              <p className="text-xl text-gray-300 mb-12 max-w-4xl mx-auto">
+                Advanced algorithmic media buying powered by AI and real-time market intelligence
+              </p>
+            </div>
+
+            {/* Trading Dashboard */}
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+              {/* Main Trading Panel */}
+              <div className="lg:col-span-2 bg-black/50 rounded-2xl border border-indigo-500/30 p-6 backdrop-blur-sm">
+                <div className="flex items-center justify-between mb-6">
+                  <h3 className="text-lg font-semibold text-indigo-400">LIVE TRADING METRICS</h3>
+                  <div className="flex items-center space-x-2">
+                    <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                    <span className="text-green-400 text-sm font-mono">ACTIVE</span>
+                  </div>
                 </div>
                 
-                <div className="grid grid-cols-2 gap-4 text-sm">
-                  <div className="flex items-center space-x-2">
-                    <div className="w-2 h-2 bg-indigo-500 rounded-full"></div>
-                    <span className="text-muted-foreground">AI-Powered Optimization</span>
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+                  <div className="bg-gradient-to-br from-green-900/50 to-green-800/50 rounded-lg p-4 border border-green-500/30">
+                    <div className="text-green-400 text-xs font-mono mb-1">ROAS</div>
+                    <div className="text-2xl font-black text-green-400">400%</div>
+                    <div className="text-green-400 text-xs">↗ +15%</div>
                   </div>
-                  <div className="flex items-center space-x-2">
-                    <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
-                    <span className="text-muted-foreground">Real-Time Bidding</span>
+                  <div className="bg-gradient-to-br from-blue-900/50 to-blue-800/50 rounded-lg p-4 border border-blue-500/30">
+                    <div className="text-blue-400 text-xs font-mono mb-1">SPEND</div>
+                    <div className="text-2xl font-black text-blue-400">$50M+</div>
+                    <div className="text-blue-400 text-xs">MANAGED</div>
                   </div>
-                  <div className="flex items-center space-x-2">
-                    <div className="w-2 h-2 bg-indigo-500 rounded-full"></div>
-                    <span className="text-muted-foreground">Multi-Platform Management</span>
+                  <div className="bg-gradient-to-br from-purple-900/50 to-purple-800/50 rounded-lg p-4 border border-purple-500/30">
+                    <div className="text-purple-400 text-xs font-mono mb-1">SAVINGS</div>
+                    <div className="text-2xl font-black text-purple-400">85%</div>
+                    <div className="text-purple-400 text-xs">COST CUT</div>
                   </div>
-                  <div className="flex items-center space-x-2">
-                    <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
-                    <span className="text-muted-foreground">Performance Tracking</span>
+                  <div className="bg-gradient-to-br from-indigo-900/50 to-indigo-800/50 rounded-lg p-4 border border-indigo-500/30">
+                    <div className="text-indigo-400 text-xs font-mono mb-1">UPTIME</div>
+                    <div className="text-2xl font-black text-indigo-400">24/7</div>
+                    <div className="text-indigo-400 text-xs">MONITOR</div>
                   </div>
+                </div>
+                
+                {/* Platform Status */}
+                <div className="space-y-2">
+                  <div className="text-xs text-gray-400 mb-2">PLATFORM STATUS</div>
+                  {[
+                    { name: "Google Ads", status: "OPTIMIZING", color: "green" },
+                    { name: "Facebook Meta", status: "SCALING", color: "blue" },
+                    { name: "TikTok Ads", status: "TESTING", color: "yellow" },
+                    { name: "Programmatic", status: "ACTIVE", color: "purple" }
+                  ].map((platform) => (
+                    <div key={platform.name} className="flex justify-between items-center text-sm">
+                      <span className="text-gray-300">{platform.name}</span>
+                      <span className={`text-${platform.color}-400 font-mono text-xs`}>{platform.status}</span>
+                    </div>
+                  ))}
                 </div>
               </div>
               
-              <div className="order-1 lg:order-2">
-                <div className="relative">
-                  <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/20 to-purple-500/20 rounded-3xl blur-3xl"></div>
-                  <div className="relative bg-card/90 backdrop-blur-sm border border-border/50 rounded-2xl p-8 space-y-6">
-                    <div className="text-center">
-                      <h3 className="text-lg font-semibold mb-4">Performance Metrics</h3>
-                    </div>
-                    
-                    <div className="grid grid-cols-2 gap-4">
-                      <div className="bg-gradient-to-br from-indigo-500/10 to-transparent rounded-xl p-4 text-center">
-                        <div className="text-2xl font-bold text-indigo-500 mb-1">400%</div>
-                        <div className="text-xs text-muted-foreground">ROAS Improvement</div>
-                      </div>
-                      <div className="bg-gradient-to-br from-purple-500/10 to-transparent rounded-xl p-4 text-center">
-                        <div className="text-2xl font-bold text-purple-500 mb-1">$50M+</div>
-                        <div className="text-xs text-muted-foreground">Ad Spend Managed</div>
-                      </div>
-                      <div className="bg-gradient-to-br from-purple-500/10 to-transparent rounded-xl p-4 text-center">
-                        <div className="text-2xl font-bold text-purple-500 mb-1">85%</div>
-                        <div className="text-xs text-muted-foreground">Cost Reduction</div>
-                      </div>
-                      <div className="bg-gradient-to-br from-indigo-500/10 to-transparent rounded-xl p-4 text-center">
-                        <div className="text-2xl font-bold text-indigo-500 mb-1">24/7</div>
-                        <div className="text-xs text-muted-foreground">Monitoring</div>
-                      </div>
-                    </div>
+              {/* AI Control Panel */}
+              <div className="bg-black/50 rounded-2xl border border-purple-500/30 p-6 backdrop-blur-sm">
+                <div className="text-center mb-6">
+                  <div className="w-16 h-16 mx-auto bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center mb-4">
+                    <Zap className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-purple-400">AI ENGINE</h3>
+                </div>
+                
+                <div className="space-y-4">
+                  <div className="flex justify-between text-sm">
+                    <span className="text-gray-400">Optimization Level</span>
+                    <span className="text-purple-400">MAXIMUM</span>
+                  </div>
+                  <div className="flex justify-between text-sm">
+                    <span className="text-gray-400">Learning Mode</span>
+                    <span className="text-indigo-400">ADAPTIVE</span>
+                  </div>
+                  <div className="flex justify-between text-sm">
+                    <span className="text-gray-400">Bid Strategy</span>
+                    <span className="text-green-400">AUTO</span>
+                  </div>
+                  <div className="flex justify-between text-sm">
+                    <span className="text-gray-400">Risk Level</span>
+                    <span className="text-yellow-400">BALANCED</span>
                   </div>
                 </div>
+              </div>
+            </div>
+
+            {/* Command Buttons */}
+            <div className="text-center">
+              <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-8">
+                <Button size="lg" className="text-lg px-10 py-5 bg-gradient-to-r from-indigo-500 to-purple-500 shadow-2xl shadow-indigo-500/25 font-bold" asChild>
+                  <a href="https://docs.google.com/forms/d/1948-2HcLLEeciF3QQIzeTB-nPmM6-qsD3HopP5-bTyQ/viewform?edit_requested=true#response=ACYDBNgoe9qnpdvzE2IG3-SgO1FgdPRTnh9slrfCToFtyek2Of0Osps9NvqxQ-7epsdcl_0" target="_blank" rel="noopener noreferrer" className="flex items-center whitespace-nowrap">
+                    🚀 INITIATE MEDIA BUYING
+                    <ArrowRight className="ml-3 w-5 h-5" />
+                  </a>
+                </Button>
+                
+                <Button variant="outline" size="lg" className="text-lg px-10 py-5 border-2 border-indigo-500/50 text-indigo-400 hover:bg-indigo-500/10 font-bold">
+                  📊 RUN DIAGNOSTICS
+                </Button>
+              </div>
+              
+              <div className="text-indigo-400 text-sm font-mono">
+                [AI OPTIMIZATION] • [REAL-TIME BIDDING] • [PERFORMANCE TRACKING]
               </div>
             </div>
           </div>

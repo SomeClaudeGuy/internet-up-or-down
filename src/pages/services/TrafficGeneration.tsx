@@ -54,56 +54,97 @@ const TrafficGeneration = () => {
     <div className="min-h-screen bg-background">
       <Header />
       
-      {/* Hero Section - Centered with Metrics */}
-      <section className="pt-32 pb-20 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-background via-primary/5 to-accent/10"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,rgba(120,119,198,0.3),transparent)]"></div>
+      {/* Hero Section - Funnel Visualization */}
+      <section className="pt-32 pb-20 relative min-h-screen flex items-center">
+        <div className="absolute inset-0">
+          <div className="absolute top-0 left-1/4 w-1 h-full bg-gradient-to-b from-blue-500/50 to-green-500/50"></div>
+          <div className="absolute top-0 right-1/4 w-1 h-full bg-gradient-to-b from-green-500/50 to-blue-500/50"></div>
+        </div>
         
         <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-5xl mx-auto text-center">
-            <Badge className="mb-8 px-6 py-3 text-base font-medium bg-primary/10 text-primary border-primary/20">
-              <Target className="w-5 h-5 mr-2" />
-              Premium Traffic Generation
-            </Badge>
-            
-            <h1 className="text-5xl md:text-7xl font-bold mb-8 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-              Traffic That Converts
-            </h1>
-            
-            <p className="text-xl text-muted-foreground mb-12 max-w-4xl mx-auto">
-              Exclusive traffic sources with proven conversion rates. Advanced targeting, fraud protection, 
-              and real-time optimization for sustainable player acquisition growth.
-            </p>
+          <div className="max-w-6xl mx-auto">
+            {/* Header */}
+            <div className="text-center mb-20">
+              <Badge className="mb-6 px-6 py-3 text-base font-medium bg-blue-500/10 text-blue-500 border-blue-500/20">
+                <Target className="w-5 h-5 mr-2" />
+                Traffic Generation Funnel
+              </Badge>
+              
+              <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-500 to-green-500 bg-clip-text text-transparent">
+                Traffic Funnel
+              </h1>
+              
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+                Visualize your complete traffic generation journey from source to conversion
+              </p>
+            </div>
 
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
-              <div className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-xl p-6">
-                <div className="text-3xl font-bold text-primary mb-2">2,000+</div>
-                <div className="text-sm text-muted-foreground">New Players/Month</div>
+            {/* Traffic Funnel Visualization */}
+            <div className="space-y-8 mb-16">
+              {/* Stage 1 - Traffic Sources */}
+              <div className="flex items-center justify-center">
+                <div className="bg-gradient-to-r from-blue-500 to-blue-600 rounded-2xl p-8 text-white text-center min-w-[300px]">
+                  <Globe className="w-12 h-12 mx-auto mb-4" />
+                  <h3 className="text-2xl font-bold mb-2">Premium Sources</h3>
+                  <p className="text-lg opacity-90">100M+ Monthly Reach</p>
+                </div>
               </div>
-              <div className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-xl p-6">
-                <div className="text-3xl font-bold text-accent mb-2">15%</div>
-                <div className="text-sm text-muted-foreground">First Deposit Rate</div>
+              
+              {/* Arrow Down */}
+              <div className="flex justify-center">
+                <div className="w-0 h-0 border-l-[20px] border-r-[20px] border-t-[30px] border-l-transparent border-r-transparent border-t-blue-500/50"></div>
               </div>
-              <div className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-xl p-6">
-                <div className="text-3xl font-bold text-primary mb-2">98%</div>
-                <div className="text-sm text-muted-foreground">Quality Score</div>
+              
+              {/* Stage 2 - Targeting */}
+              <div className="flex items-center justify-center">
+                <div className="bg-gradient-to-r from-cyan-500 to-cyan-600 rounded-2xl p-8 text-white text-center min-w-[280px]">
+                  <Users className="w-12 h-12 mx-auto mb-4" />
+                  <h3 className="text-2xl font-bold mb-2">Precision Targeting</h3>
+                  <p className="text-lg opacity-90">98% Quality Score</p>
+                </div>
               </div>
-              <div className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-xl p-6">
-                <div className="text-3xl font-bold text-accent mb-2">24/7</div>
-                <div className="text-sm text-muted-foreground">Monitoring</div>
+              
+              {/* Arrow Down */}
+              <div className="flex justify-center">
+                <div className="w-0 h-0 border-l-[20px] border-r-[20px] border-t-[30px] border-l-transparent border-r-transparent border-t-cyan-500/50"></div>
+              </div>
+              
+              {/* Stage 3 - Optimization */}
+              <div className="flex items-center justify-center">
+                <div className="bg-gradient-to-r from-green-500 to-green-600 rounded-2xl p-8 text-white text-center min-w-[260px]">
+                  <TrendingUp className="w-12 h-12 mx-auto mb-4" />
+                  <h3 className="text-2xl font-bold mb-2">Real-time Optimization</h3>
+                  <p className="text-lg opacity-90">15% FTD Rate</p>
+                </div>
+              </div>
+              
+              {/* Arrow Down */}
+              <div className="flex justify-center">
+                <div className="w-0 h-0 border-l-[20px] border-r-[20px] border-t-[30px] border-l-transparent border-r-transparent border-t-green-500/50"></div>
+              </div>
+              
+              {/* Stage 4 - Results */}
+              <div className="flex items-center justify-center">
+                <div className="bg-gradient-to-r from-emerald-500 to-emerald-600 rounded-2xl p-8 text-white text-center min-w-[240px]">
+                  <Zap className="w-12 h-12 mx-auto mb-4" />
+                  <h3 className="text-2xl font-bold mb-2">Converting Players</h3>
+                  <p className="text-lg opacity-90">2,000+ New Players/Month</p>
+                </div>
               </div>
             </div>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="text-lg px-8 py-4 bg-gradient-to-r from-primary to-accent shadow-2xl shadow-primary/25" asChild>
+
+            {/* CTA */}
+            <div className="text-center">
+              <Button size="lg" className="text-lg px-8 py-4 bg-gradient-to-r from-blue-500 to-green-500 shadow-2xl shadow-blue-500/25" asChild>
                 <a href="https://docs.google.com/forms/d/1948-2HcLLEeciF3QQIzeTB-nPmM6-qsD3HopP5-bTyQ/viewform?edit_requested=true#response=ACYDBNgoe9qnpdvzE2IG3-SgO1FgdPRTnh9slrfCToFtyek2Of0Osps9NvqxQ-7epsdcl_0" target="_blank" rel="noopener noreferrer" className="flex items-center whitespace-nowrap">
-                  🚀 Get Free Traffic Audit
+                  🚀 Build Your Traffic Funnel
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </a>
               </Button>
-              <Button variant="outline" size="lg" className="text-lg px-8 py-4 backdrop-blur-sm">
-                📞 Schedule Strategy Call
-              </Button>
+              
+              <p className="text-sm text-muted-foreground mt-4">
+                ⏰ Free audit • Custom funnel design • Launch in 48 hours
+              </p>
             </div>
           </div>
         </div>

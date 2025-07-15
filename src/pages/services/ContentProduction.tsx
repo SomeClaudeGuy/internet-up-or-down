@@ -65,79 +65,101 @@ const ContentProduction = () => {
     <div className="min-h-screen bg-background">
       <Header />
       
-      {/* Hero Section - Asymmetric Layout */}
-      <section className="pt-32 pb-20 relative">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
-            <div className="lg:col-span-2 space-y-8">
-              <div>
-                <Badge className="mb-6 px-4 py-2 text-sm font-medium bg-pink-500/10 text-pink-500 border-pink-500/20">
-                  <Video className="w-4 h-4 mr-2" />
-                  Premium Content & Event Production
-                </Badge>
-                
-                <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                  <span className="block text-foreground">Content That</span>
-                  <span className="block bg-gradient-to-r from-pink-500 to-rose-500 bg-clip-text text-transparent">
-                    Captivates & Converts
-                  </span>
-                </h1>
-                
-                <p className="text-xl text-muted-foreground mb-8">
-                  High-quality audiovisual content and event production services that create maximum brand impact. 
-                  From viral videos to live events, we bring your vision to life.
-                </p>
-                
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <Button size="lg" className="text-lg px-8 py-4 bg-gradient-to-r from-pink-500 to-rose-500 shadow-2xl shadow-pink-500/25" asChild>
-                    <a href="https://docs.google.com/forms/d/1948-2HcLLEeciF3QQIzeTB-nPmM6-qsD3HopP5-bTyQ/viewform?edit_requested=true#response=ACYDBNgoe9qnpdvzE2IG3-SgO1FgdPRTnh9slrfCToFtyek2Of0Osps9NvqxQ-7epsdcl_0" target="_blank" rel="noopener noreferrer" className="flex items-center whitespace-nowrap">
-                      🎬 Start Your Content Journey
-                      <ArrowRight className="ml-2 w-5 h-5" />
-                    </a>
-                  </Button>
-                  <Button variant="outline" size="lg" className="text-lg px-8 py-4">
-                    🎥 View Our Reel
-                  </Button>
+      {/* Hero Section - Video Player Style */}
+      <section className="pt-20 pb-20 relative overflow-hidden bg-black text-white min-h-screen flex items-center">
+        <div className="absolute inset-0 bg-gradient-to-br from-black via-pink-900/20 to-rose-900/20"></div>
+        
+        {/* Video Frame Effect */}
+        <div className="absolute inset-8 border-4 border-pink-500/30 rounded-3xl">
+          <div className="absolute top-4 left-4 flex space-x-2">
+            <div className="w-4 h-4 bg-red-500 rounded-full"></div>
+            <div className="w-4 h-4 bg-yellow-500 rounded-full"></div>
+            <div className="w-4 h-4 bg-green-500 rounded-full"></div>
+          </div>
+          
+          <div className="absolute top-4 right-4 text-pink-500 text-sm font-mono">
+            REC ●
+          </div>
+        </div>
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-6xl mx-auto text-center">
+            {/* Play Button Icon */}
+            <div className="mb-8">
+              <div className="w-32 h-32 mx-auto bg-gradient-to-r from-pink-500 to-rose-500 rounded-full flex items-center justify-center">
+                <Play className="w-16 h-16 ml-2" fill="white" />
+              </div>
+            </div>
+            
+            <Badge className="mb-8 px-6 py-3 text-base font-medium bg-pink-500/20 text-pink-300 border-pink-500/30">
+              <Video className="w-5 h-5 mr-2" />
+              Content Production Studio
+            </Badge>
+            
+            <h1 className="text-6xl md:text-8xl font-bold mb-8">
+              <span className="block text-white mb-4">LIGHTS</span>
+              <span className="block bg-gradient-to-r from-pink-400 to-rose-400 bg-clip-text text-transparent mb-4">CAMERA</span>
+              <span className="block text-white">ACTION!</span>
+            </h1>
+            
+            <p className="text-xl text-gray-300 mb-12 max-w-4xl mx-auto">
+              Professional content production that stops the scroll and drives action. 
+              From viral videos to live events, we create content that matters.
+            </p>
+
+            {/* Production Counter */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+              <div className="text-center">
+                <div className="text-4xl font-bold text-pink-400 mb-2">100M+</div>
+                <div className="text-sm text-gray-400">Video Views</div>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl font-bold text-rose-400 mb-2">500+</div>
+                <div className="text-sm text-gray-400">Videos Produced</div>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl font-bold text-pink-400 mb-2">50+</div>
+                <div className="text-sm text-gray-400">Events Managed</div>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl font-bold text-rose-400 mb-2">98%</div>
+                <div className="text-sm text-gray-400">Client Satisfaction</div>
+              </div>
+            </div>
+            
+            {/* Control Bar */}
+            <div className="bg-gradient-to-r from-pink-900/50 to-rose-900/50 rounded-2xl p-6 backdrop-blur-sm border border-pink-500/30 mb-12">
+              <div className="flex items-center justify-center space-x-8">
+                <div className="flex items-center space-x-2">
+                  <Camera className="w-6 h-6 text-pink-400" />
+                  <span className="text-pink-300">Video Production</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <Calendar className="w-6 h-6 text-rose-400" />
+                  <span className="text-rose-300">Event Management</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <Mic className="w-6 h-6 text-pink-400" />
+                  <span className="text-pink-300">Audio Production</span>
                 </div>
               </div>
             </div>
             
-            <div className="lg:col-span-1">
-              <div className="sticky top-32 space-y-6">
-                <div className="bg-gradient-to-br from-pink-500/20 to-rose-500/20 rounded-2xl p-6 backdrop-blur-sm">
-                  <h3 className="text-lg font-semibold mb-4">Production Stats</h3>
-                  <div className="space-y-4">
-                    <div className="flex justify-between items-center">
-                      <span className="text-sm text-muted-foreground">Video Views</span>
-                      <span className="text-lg font-bold text-pink-500">100M+</span>
-                    </div>
-                    <div className="flex justify-between items-center">
-                      <span className="text-sm text-muted-foreground">Videos Produced</span>
-                      <span className="text-lg font-bold text-rose-500">500+</span>
-                    </div>
-                    <div className="flex justify-between items-center">
-                      <span className="text-sm text-muted-foreground">Events Managed</span>
-                      <span className="text-lg font-bold text-pink-500">50+</span>
-                    </div>
-                    <div className="flex justify-between items-center">
-                      <span className="text-sm text-muted-foreground">Satisfaction Rate</span>
-                      <span className="text-lg font-bold text-rose-500">98%</span>
-                    </div>
-                  </div>
-                </div>
-                
-                <div className="bg-card border border-border/50 rounded-xl p-6">
-                  <h4 className="font-semibold mb-3">Content Types</h4>
-                  <div className="flex flex-wrap gap-2">
-                    {["Videos", "Events", "Podcasts", "Animation"].map((type) => (
-                      <span key={type} className="px-3 py-1 bg-pink-500/10 text-pink-500 text-sm rounded-full">
-                        {type}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button size="lg" className="text-lg px-8 py-4 bg-gradient-to-r from-pink-500 to-rose-500 shadow-2xl shadow-pink-500/25" asChild>
+                <a href="https://docs.google.com/forms/d/1948-2HcLLEeciF3QQIzeTB-nPmM6-qsD3HopP5-bTyQ/viewform?edit_requested=true#response=ACYDBNgoe9qnpdvzE2IG3-SgO1FgdPRTnh9slrfCToFtyek2Of0Osps9NvqxQ-7epsdcl_0" target="_blank" rel="noopener noreferrer" className="flex items-center whitespace-nowrap">
+                  🎬 Start Production
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </a>
+              </Button>
+              <Button variant="outline" size="lg" className="text-lg px-8 py-4 border-pink-500/30 text-pink-300 hover:bg-pink-500/10">
+                🎥 Watch Our Reel
+              </Button>
             </div>
+            
+            <p className="text-sm text-gray-400 mt-6">
+              🎥 Free creative consultation • Custom proposals • Production starts in 1 week
+            </p>
           </div>
         </div>
       </section>

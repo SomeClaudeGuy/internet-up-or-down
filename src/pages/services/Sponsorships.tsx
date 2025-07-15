@@ -63,66 +63,90 @@ const Sponsorships = () => {
     <div className="min-h-screen bg-background">
       <Header />
       
-      {/* Hero Section - Full Width with Overlay */}
-      <section className="pt-32 pb-20 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-orange-500/10 via-background to-red-500/10"></div>
-        <div className="absolute inset-0">
-          <div className="absolute top-10 left-10 w-72 h-72 bg-orange-500/10 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-10 right-10 w-96 h-96 bg-red-500/10 rounded-full blur-3xl"></div>
-        </div>
+      {/* Hero Section - Stadium/Arena Style */}
+      <section className="pt-20 pb-20 relative overflow-hidden bg-gradient-to-b from-orange-950 via-red-950 to-black text-white min-h-screen flex items-center">
+        {/* Stadium Lights Effect */}
+        <div className="absolute top-0 left-1/4 w-2 h-32 bg-gradient-to-b from-yellow-300 to-transparent"></div>
+        <div className="absolute top-0 right-1/4 w-2 h-32 bg-gradient-to-b from-yellow-300 to-transparent"></div>
+        <div className="absolute top-0 left-1/2 w-3 h-40 bg-gradient-to-b from-white to-transparent transform -translate-x-1/2"></div>
+        
+        {/* Crowd Silhouette */}
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black via-gray-900/50 to-transparent"></div>
         
         <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-16">
-              <Badge className="mb-8 px-6 py-3 text-base font-medium bg-orange-500/10 text-orange-500 border-orange-500/20">
-                <Megaphone className="w-5 h-5 mr-2" />
-                Premium Sponsorships & Activations
-              </Badge>
+          <div className="max-w-7xl mx-auto">
+            {/* Jumbotron Style Header */}
+            <div className="text-center mb-20">
+              <div className="inline-block bg-gradient-to-r from-orange-500 to-red-500 text-black px-8 py-4 rounded-2xl mb-8 font-bold text-lg">
+                <Megaphone className="w-6 h-6 mr-2 inline" />
+                LIVE FROM THE ARENA
+              </div>
               
-              <h1 className="text-5xl md:text-7xl font-bold mb-8">
-                <span className="block bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent mb-4">
-                  Sponsorships
-                </span>
-                <span className="block text-4xl md:text-5xl text-foreground">
-                  That Create Impact
-                </span>
+              <h1 className="text-7xl md:text-9xl font-black mb-6 tracking-wider">
+                <span className="block text-yellow-300 drop-shadow-2xl">SPONSOR</span>
+                <span className="block text-white drop-shadow-2xl">SHIPS</span>
               </h1>
               
-              <p className="text-xl text-muted-foreground mb-12 max-w-4xl mx-auto">
-                Strategic partnerships and brand activations that connect with your target audience. 
-                From major tournaments to celebrity partnerships, we create memorable sponsorship experiences.
-              </p>
+              <div className="bg-gradient-to-r from-orange-500/20 to-red-500/20 rounded-3xl p-8 backdrop-blur-sm border border-orange-500/30 mb-12">
+                <p className="text-2xl text-gray-200 max-w-5xl mx-auto">
+                  🏆 CHAMPIONSHIP-LEVEL PARTNERSHIPS • 🎮 ESPORTS DOMINATION • 🌟 CELEBRITY ACTIVATIONS
+                </p>
+              </div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-              <div className="bg-card/80 backdrop-blur-sm border border-orange-500/20 rounded-2xl p-6 text-center hover:scale-105 transition-transform">
-                <div className="text-3xl font-bold text-orange-500 mb-2">15M+</div>
-                <div className="text-sm text-muted-foreground">Event Impressions</div>
+            {/* Scoreboard Style Stats */}
+            <div className="bg-black/80 rounded-3xl p-8 border-4 border-yellow-400 mb-16">
+              <div className="text-center mb-6">
+                <div className="text-yellow-400 text-xl font-bold mb-2">PARTNERSHIP STATS</div>
+                <div className="flex justify-center items-center space-x-4">
+                  <div className="w-3 h-3 bg-red-500 rounded-full animate-pulse"></div>
+                  <div className="text-red-400 text-sm">LIVE</div>
+                  <div className="w-3 h-3 bg-red-500 rounded-full animate-pulse"></div>
+                </div>
               </div>
-              <div className="bg-card/80 backdrop-blur-sm border border-red-500/20 rounded-2xl p-6 text-center hover:scale-105 transition-transform">
-                <div className="text-3xl font-bold text-red-500 mb-2">500%</div>
-                <div className="text-sm text-muted-foreground">Brand Awareness Lift</div>
-              </div>
-              <div className="bg-card/80 backdrop-blur-sm border border-orange-500/20 rounded-2xl p-6 text-center hover:scale-105 transition-transform">
-                <div className="text-3xl font-bold text-orange-500 mb-2">50+</div>
-                <div className="text-sm text-muted-foreground">Major Events</div>
-              </div>
-              <div className="bg-card/80 backdrop-blur-sm border border-red-500/20 rounded-2xl p-6 text-center hover:scale-105 transition-transform">
-                <div className="text-3xl font-bold text-red-500 mb-2">98%</div>
-                <div className="text-sm text-muted-foreground">Satisfaction Rate</div>
+              
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div className="text-center border-r border-yellow-400/30 last:border-r-0">
+                  <div className="text-4xl font-black text-yellow-400 mb-2">15M+</div>
+                  <div className="text-gray-400 text-sm font-bold">EVENT VIEWS</div>
+                </div>
+                <div className="text-center border-r border-yellow-400/30 last:border-r-0">
+                  <div className="text-4xl font-black text-orange-400 mb-2">500%</div>
+                  <div className="text-gray-400 text-sm font-bold">BRAND LIFT</div>
+                </div>
+                <div className="text-center border-r border-yellow-400/30 last:border-r-0">
+                  <div className="text-4xl font-black text-red-400 mb-2">50+</div>
+                  <div className="text-gray-400 text-sm font-bold">MAJOR EVENTS</div>
+                </div>
+                <div className="text-center border-r border-yellow-400/30 last:border-r-0">
+                  <div className="text-4xl font-black text-yellow-400 mb-2">98%</div>
+                  <div className="text-gray-400 text-sm font-bold">SUCCESS RATE</div>
+                </div>
               </div>
             </div>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="text-lg px-8 py-4 bg-gradient-to-r from-orange-500 to-red-500 shadow-2xl shadow-orange-500/25" asChild>
-                <a href="https://docs.google.com/forms/d/1948-2HcLLEeciF3QQIzeTB-nPmM6-qsD3HopP5-bTyQ/viewform?edit_requested=true#response=ACYDBNgoe9qnpdvzE2IG3-SgO1FgdPRTnh9slrfCToFtyek2Of0Osps9NvqxQ-7epsdcl_0" target="_blank" rel="noopener noreferrer" className="flex items-center whitespace-nowrap">
-                  🏆 Explore Partnership Opportunities
-                  <ArrowRight className="ml-2 w-5 h-5" />
-                </a>
-              </Button>
-              <Button variant="outline" size="lg" className="text-lg px-8 py-4 backdrop-blur-sm">
-                📊 View Success Stories
-              </Button>
+
+            {/* Arena-style CTAs */}
+            <div className="text-center">
+              <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-8">
+                <Button size="lg" className="text-xl px-12 py-6 bg-gradient-to-r from-orange-500 to-red-500 shadow-2xl shadow-orange-500/25 font-bold" asChild>
+                  <a href="https://docs.google.com/forms/d/1948-2HcLLEeciF3QQIzeTB-nPmM6-qsD3HopP5-bTyQ/viewform?edit_requested=true#response=ACYDBNgoe9qnpdvzE2IG3-SgO1FgdPRTnh9slrfCToFtyek2Of0Osps9NvqxQ-7epsdcl_0" target="_blank" rel="noopener noreferrer" className="flex items-center whitespace-nowrap">
+                    🏆 JOIN THE CHAMPIONSHIP
+                    <ArrowRight className="ml-3 w-6 h-6" />
+                  </a>
+                </Button>
+                
+                <div className="text-yellow-400 text-lg font-bold">
+                  VS
+                </div>
+                
+                <Button variant="outline" size="lg" className="text-xl px-12 py-6 border-2 border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-black font-bold">
+                  📊 VIEW HIGHLIGHT REEL
+                </Button>
+              </div>
+              
+              <div className="text-gray-400 text-lg">
+                🎮 Premium partnerships • 🏟️ Major venues • 🌟 Celebrity endorsements
+              </div>
             </div>
           </div>
         </div>
