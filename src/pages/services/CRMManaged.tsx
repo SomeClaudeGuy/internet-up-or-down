@@ -23,10 +23,140 @@ import {
   Star,
   AlertCircle,
   FileText,
-  Lightbulb
+  Lightbulb,
+  ArrowDown,
+  RefreshCw
 } from "lucide-react";
+import { Canvas, useFrame } from "@react-three/fiber";
+import { OrbitControls, Text, Float, Sphere, Box } from "@react-three/drei";
+import { useRef, useState } from "react";
+import * as THREE from "three";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+
+// 3D Components for the transformation visual
+const ChaosData = () => {
+  const groupRef = useRef<THREE.Group>(null);
+  const [hovered, setHovered] = useState(false);
+  
+  useFrame((state) => {
+    if (groupRef.current) {
+      groupRef.current.rotation.x = Math.sin(state.clock.elapsedTime * 0.5) * 0.1;
+      groupRef.current.rotation.y = state.clock.elapsedTime * 0.2;
+    }
+  });
+
+  return (
+    <group ref={groupRef} position={[-2, 0, 0]}>
+      <Float speed={2} rotationIntensity={0.5} floatIntensity={0.5}>
+        <Box args={[0.3, 0.3, 0.3]} position={[0, 0, 0]}>
+          <meshStandardMaterial color="#ef4444" transparent opacity={0.7} />
+        </Box>
+      </Float>
+      <Float speed={1.5} rotationIntensity={0.3} floatIntensity={0.3}>
+        <Box args={[0.2, 0.2, 0.2]} position={[0.5, 0.3, 0.2]}>
+          <meshStandardMaterial color="#f97316" transparent opacity={0.6} />
+        </Box>
+      </Float>
+      <Float speed={1.8} rotationIntensity={0.4} floatIntensity={0.4}>
+        <Box args={[0.25, 0.25, 0.25]} position={[-0.3, -0.4, 0.1]}>
+          <meshStandardMaterial color="#eab308" transparent opacity={0.8} />
+        </Box>
+      </Float>
+      <Float speed={2.2} rotationIntensity={0.6} floatIntensity={0.6}>
+        <Sphere args={[0.15]} position={[0.2, -0.2, -0.3]}>
+          <meshStandardMaterial color="#dc2626" transparent opacity={0.5} />
+        </Sphere>
+      </Float>
+      <Text
+        position={[0, -0.8, 0]}
+        fontSize={0.15}
+        color="#ef4444"
+        anchorX="center"
+        anchorY="middle"
+        font="/fonts/inter.woff"
+      >
+        CHAOS
+      </Text>
+    </group>
+  );
+};
+
+const OrganizedData = () => {
+  const groupRef = useRef<THREE.Group>(null);
+  
+  useFrame((state) => {
+    if (groupRef.current) {
+      groupRef.current.rotation.y = Math.sin(state.clock.elapsedTime * 0.3) * 0.1;
+    }
+  });
+
+  return (
+    <group ref={groupRef} position={[2, 0, 0]}>
+      <Float speed={1} rotationIntensity={0.1} floatIntensity={0.2}>
+        <Box args={[0.4, 0.4, 0.4]} position={[0, 0, 0]}>
+          <meshStandardMaterial color="#10b981" transparent opacity={0.8} />
+        </Box>
+      </Float>
+      <Float speed={1.2} rotationIntensity={0.1} floatIntensity={0.2}>
+        <Box args={[0.3, 0.3, 0.3]} position={[0.5, 0, 0.5]}>
+          <meshStandardMaterial color="#059669" transparent opacity={0.7} />
+        </Box>
+      </Float>
+      <Float speed={1.1} rotationIntensity={0.1} floatIntensity={0.2}>
+        <Box args={[0.3, 0.3, 0.3]} position={[-0.5, 0, 0.5]}>
+          <meshStandardMaterial color="#047857" transparent opacity={0.7} />
+        </Box>
+      </Float>
+      <Float speed={1.3} rotationIntensity={0.1} floatIntensity={0.2}>
+        <Box args={[0.3, 0.3, 0.3]} position={[0, 0.5, 0]}>
+          <meshStandardMaterial color="#065f46" transparent opacity={0.7} />
+        </Box>
+      </Float>
+      <Text
+        position={[0, -0.8, 0]}
+        fontSize={0.15}
+        color="#10b981"
+        anchorX="center"
+        anchorY="middle"
+        font="/fonts/inter.woff"
+      >
+        ORGANIZED
+      </Text>
+    </group>
+  );
+};
+
+const TransformationArrow = () => {
+  const arrowRef = useRef<THREE.Group>(null);
+  
+  useFrame((state) => {
+    if (arrowRef.current) {
+      arrowRef.current.scale.x = 1 + Math.sin(state.clock.elapsedTime * 2) * 0.1;
+    }
+  });
+
+  return (
+    <group ref={arrowRef} position={[0, 0, 0]}>
+      <Box args={[0.8, 0.05, 0.05]} position={[0, 0, 0]}>
+        <meshStandardMaterial color="#3b82f6" />
+      </Box>
+      <Box args={[0.15, 0.15, 0.05]} position={[0.4, 0, 0]} rotation={[0, 0, Math.PI / 4]}>
+        <meshStandardMaterial color="#3b82f6" />
+      </Box>
+      <Text
+        position={[0, 0.3, 0]}
+        fontSize={0.1}
+        color="#3b82f6"
+        anchorX="center"
+        anchorY="middle"
+        font="/fonts/inter.woff"
+      >
+        WE TRANSFORM
+      </Text>
+    </group>
+  );
+};
 
 const CRMManaged = () => {
   const t = useTranslation();
@@ -34,94 +164,77 @@ const CRMManaged = () => {
   const painPoints = [
     {
       icon: AlertCircle,
-      title: "Scattered Customer Data",
-      description: "Information spread across emails, spreadsheets, and sticky notes"
+      title: "Data Scattered Everywhere",
+      description: "Customer information lost in emails, spreadsheets, and sticky notes"
     },
     {
       icon: Clock,
-      title: "Manual Follow-ups",
-      description: "Missing opportunities because tasks fall through the cracks"
+      title: "Manual Everything",
+      description: "Endless follow-ups, data entry, and missed opportunities"
     },
     {
       icon: FileText,
-      title: "No Sales Pipeline Visibility",
-      description: "Can't track deals or forecast revenue accurately"
+      title: "No Clear Pipeline",
+      description: "Can't track deals, forecast revenue, or measure performance"
     },
     {
       icon: Target,
-      title: "Inconsistent Customer Experience",
-      description: "Different team members provide different levels of service"
+      title: "Inconsistent Experience",
+      description: "Customers get different treatment from different team members"
     }
   ];
 
   const solutions = [
     {
       icon: Database,
-      title: "Centralized Customer Hub",
-      description: "Every customer interaction, purchase history, and preference in one place",
-      benefit: "360° customer view"
+      title: "Unified Customer Hub",
+      description: "All customer data centralized and accessible in one intelligent system",
+      benefit: "Complete customer view"
     },
     {
       icon: Zap,
-      title: "Automated Workflows",
-      description: "Smart automation that nurtures leads and follows up automatically",
-      benefit: "Never miss an opportunity"
+      title: "Smart Automation",
+      description: "Intelligent workflows that nurture leads and follow up automatically",
+      benefit: "Never miss opportunities"
     },
     {
       icon: BarChart3,
-      title: "Real-time Analytics",
-      description: "Live dashboard showing sales performance and customer insights",
-      benefit: "Data-driven decisions"
+      title: "Predictive Analytics",
+      description: "AI-powered insights that forecast trends and optimize performance",
+      benefit: "Data-driven growth"
     },
     {
       icon: Users,
-      title: "Team Collaboration",
-      description: "Seamless handoffs between sales, marketing, and support teams",
-      benefit: "Consistent experience"
+      title: "Seamless Collaboration",
+      description: "Perfect handoffs between sales, marketing, and support teams",
+      benefit: "Consistent excellence"
     }
   ];
 
-  const services = [
+  const transformation = [
     {
-      icon: Settings,
-      title: "CRM Strategy & Setup",
-      description: "We design and implement a CRM system that fits your unique business model",
-      features: ["Custom field configuration", "Workflow design", "Integration planning"]
+      step: "1",
+      title: "Audit & Strategy",
+      description: "We analyze your current setup and design a custom CRM strategy",
+      icon: Target
     },
     {
-      icon: Workflow,
-      title: "Automation Implementation",
-      description: "Smart automation that works 24/7 to nurture leads and retain customers",
-      features: ["Lead scoring", "Email sequences", "Task automation"]
+      step: "2",
+      title: "Implementation",
+      description: "Expert setup of your CRM system with all integrations and workflows",
+      icon: Settings
     },
     {
-      icon: TrendingUp,
-      title: "Performance Optimization",
-      description: "Continuous monitoring and improvement to maximize your CRM ROI",
-      features: ["Analytics setup", "Performance monitoring", "Regular optimization"]
-    }
-  ];
-
-  const whyChooseUs = [
-    {
-      icon: Shield,
-      title: "Proven Track Record",
-      description: "Successfully managed CRM implementations across various industries"
+      step: "3",
+      title: "Training & Launch",
+      description: "Complete team training and smooth transition to your new system",
+      icon: Users
     },
     {
-      icon: Heart,
-      title: "Customer-Centric Approach",
-      description: "We focus on improving your customer relationships, not just the technology"
-    },
-    {
-      icon: Lightbulb,
-      title: "Strategic Thinking",
-      description: "We don't just set up systems; we design strategies that drive growth"
-    },
-    {
-      icon: Clock,
-      title: "Ongoing Support",
-      description: "Dedicated support team to ensure your CRM continues to deliver results"
+      step: "4",
+      title: "Optimization",
+      description: "Continuous monitoring and improvement for maximum ROI",
+      icon: TrendingUp
     }
   ];
 
@@ -129,11 +242,10 @@ const CRMManaged = () => {
     <div className="min-h-screen bg-background">
       <Header />
       
-      {/* Hero Section - Problem-Focused */}
+      {/* Hero Section */}
       <section className="pt-20 pb-10 relative overflow-hidden bg-gradient-to-br from-slate-950 via-blue-950 to-indigo-950 text-white">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-900/10 via-slate-900/10 to-indigo-900/10"></div>
         
-        {/* Animated Background Elements */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-500/20 to-indigo-500/20 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-indigo-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
@@ -141,30 +253,61 @@ const CRMManaged = () => {
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <Badge className="mb-8 px-6 py-3 text-base font-medium bg-red-500/20 text-red-300 border-red-500/30">
+            <Badge className="mb-8 px-6 py-3 text-base font-medium bg-red-500/20 text-red-300 border-red-500/30 animate-pulse">
               <AlertCircle className="w-5 h-5 mr-2" />
-              Customer Management Crisis
+              CRM Crisis Alert
             </Badge>
             
             <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-              Is Your Business <span className="text-red-400">Losing Customers</span><br />
-              Because of Poor CRM?
+              Turn Your CRM From <span className="text-red-400">Chaos</span><br />
+              Into a <span className="text-green-400">Growth Engine</span>
             </h1>
             
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Stop letting valuable customers slip through the cracks. Our CRM management service transforms chaotic customer data into a growth engine.
+              Stop losing customers to poor data management. Our CRM experts transform scattered information into organized, automated customer success.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Button size="lg" className="text-lg px-8 py-4 bg-gradient-to-r from-blue-500 to-indigo-500 shadow-2xl shadow-blue-500/25" asChild>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button size="lg" className="text-lg px-8 py-4 bg-gradient-to-r from-blue-500 to-indigo-500 shadow-2xl shadow-blue-500/25 hover:scale-105 transition-all" asChild>
                 <a href="https://docs.google.com/forms/d/1948-2HcLLEeciF3QQIzeTB-nPmM6-qsD3HopP5-bTyQ/viewform?edit_requested=true#response=ACYDBNgoe9qnpdvzE2IG3-SgO1FgdPRTnh9slrfCToFtyek2Of0Osps9NvqxQ-7epsdcl_0" target="_blank" rel="noopener noreferrer" className="flex items-center whitespace-nowrap">
-                  🚀 Fix My CRM Today
+                  🚀 Transform My CRM
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </a>
               </Button>
-              <Button variant="outline" size="lg" className="text-lg px-8 py-4 border-blue-500/30 text-blue-300 hover:bg-blue-500/10">
-                📊 See How It Works
-              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 3D Transformation Visual */}
+      <section className="py-20 bg-gradient-to-b from-slate-900 to-background">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
+              Watch the Transformation
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              See how we turn CRM chaos into organized, automated success
+            </p>
+          </div>
+          
+          <div className="relative h-96 rounded-2xl overflow-hidden bg-gradient-to-br from-slate-800 to-slate-900 border border-blue-500/20">
+            <Canvas camera={{ position: [0, 0, 5], fov: 50 }}>
+              <ambientLight intensity={0.5} />
+              <pointLight position={[10, 10, 10]} intensity={1} />
+              <pointLight position={[-10, -10, -10]} intensity={0.5} />
+              
+              <ChaosData />
+              <TransformationArrow />
+              <OrganizedData />
+              
+              <OrbitControls enablePan={false} enableZoom={false} />
+            </Canvas>
+            
+            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-center">
+              <p className="text-sm text-gray-400">
+                Interactive 3D visualization • Drag to rotate
+              </p>
             </div>
           </div>
         </div>
@@ -175,16 +318,16 @@ const CRMManaged = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-red-400">
-              Sound Familiar?
+              Does This Sound Like Your Business?
             </h2>
             <p className="text-xl text-muted-foreground">
-              These CRM nightmares are costing you money every day
+              These CRM nightmares are costing you customers and revenue
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {painPoints.map((pain, index) => (
-              <Card key={index} className="border-red-500/20 bg-red-950/10 hover:bg-red-950/20 transition-all duration-300">
+              <Card key={index} className="border-red-500/20 bg-red-950/10 hover:bg-red-950/20 transition-all duration-300 hover:scale-105">
                 <CardContent className="p-6">
                   <div className="flex items-start space-x-4">
                     <div className="w-12 h-12 rounded-lg bg-red-500/20 flex items-center justify-center flex-shrink-0">
@@ -215,16 +358,16 @@ const CRMManaged = () => {
               The Solution
             </Badge>
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Turn CRM Chaos Into <span className="text-green-400">Customer Success</span>
+              Here's How We Make CRM <span className="text-green-400">Work For You</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Our managed CRM service transforms your customer management from a daily struggle into your competitive advantage
+              Transform your customer management from daily struggle to competitive advantage
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {solutions.map((solution, index) => (
-              <Card key={index} className="border-green-500/20 bg-green-950/10 hover:bg-green-950/20 transition-all duration-300 group">
+              <Card key={index} className="border-green-500/20 bg-green-950/10 hover:bg-green-950/20 transition-all duration-300 group hover:scale-105">
                 <CardContent className="p-6">
                   <div className="flex items-start space-x-4">
                     <div className="w-12 h-12 rounded-lg bg-green-500/20 flex items-center justify-center flex-shrink-0 group-hover:bg-green-500/30 transition-colors">
@@ -249,84 +392,42 @@ const CRMManaged = () => {
         </div>
       </section>
 
-      {/* Services Section */}
+      {/* Transformation Process */}
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              How We Make It Happen
+              Our 4-Step Transformation Process
             </h2>
             <p className="text-xl text-muted-foreground">
-              Three core services that transform your customer management
+              From chaos to customer success in 4 proven steps
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {services.map((service, index) => (
-              <Card key={index} className="hover:shadow-lg transition-all duration-300 border-border/50 hover:border-blue-500/50 group">
-                <CardHeader className="text-center pb-4">
-                  <div className="w-16 h-16 mx-auto mb-4 rounded-xl bg-gradient-to-r from-blue-500 to-indigo-500 p-0.5 group-hover:scale-110 transition-transform">
-                    <div className="w-full h-full bg-card rounded-xl flex items-center justify-center">
-                      <service.icon className="w-8 h-8 text-foreground" />
-                    </div>
-                  </div>
-                  <CardTitle className="text-xl group-hover:text-blue-500 transition-colors">
-                    {service.title}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent className="text-center">
-                  <CardDescription className="text-base mb-4">
-                    {service.description}
-                  </CardDescription>
-                  <div className="space-y-2">
-                    {service.features.map((feature, idx) => (
-                      <div key={idx} className="flex items-center justify-center space-x-2">
-                        <CheckCircle className="w-4 h-4 text-green-500" />
-                        <span className="text-sm text-muted-foreground">{feature}</span>
+          <div className="max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {transformation.map((step, index) => (
+                <Card key={index} className="hover:shadow-lg transition-all duration-300 border-border/50 hover:border-blue-500/50 group relative overflow-hidden">
+                  <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-indigo-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
+                  <CardContent className="p-6">
+                    <div className="flex items-start space-x-4">
+                      <div className="w-12 h-12 rounded-full bg-gradient-to-r from-blue-500 to-indigo-500 flex items-center justify-center flex-shrink-0 text-white font-bold text-lg group-hover:scale-110 transition-transform">
+                        {step.step}
                       </div>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Why Choose Us Section */}
-      <section className="py-20 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Why Trust Us With Your CRM?
-            </h2>
-            <p className="text-xl text-muted-foreground">
-              We're not just another tech company - we're your growth partners
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {whyChooseUs.map((reason, index) => (
-              <Card key={index} className="hover:shadow-lg transition-all duration-300 border-border/50 hover:border-purple-500/50 group">
-                <CardContent className="p-6">
-                  <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-purple-500 to-pink-500 p-0.5 flex-shrink-0 group-hover:scale-110 transition-transform">
-                      <div className="w-full h-full bg-card rounded-lg flex items-center justify-center">
-                        <reason.icon className="w-6 h-6 text-foreground" />
+                      <div className="flex-1">
+                        <h3 className="text-lg font-semibold mb-2 group-hover:text-blue-500 transition-colors">
+                          {step.title}
+                        </h3>
+                        <p className="text-sm text-muted-foreground">
+                          {step.description}
+                        </p>
                       </div>
+                      <step.icon className="w-6 h-6 text-blue-500 group-hover:scale-110 transition-transform" />
                     </div>
-                    <div className="flex-1">
-                      <h3 className="text-lg font-semibold mb-2 group-hover:text-purple-500 transition-colors">
-                        {reason.title}
-                      </h3>
-                      <p className="text-sm text-muted-foreground">
-                        {reason.description}
-                      </p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -336,31 +437,45 @@ const CRMManaged = () => {
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Ready to Transform Your Customer Management?
+              Ready to Transform Your CRM?
             </h2>
             <p className="text-xl text-muted-foreground mb-8">
-              Stop losing customers to poor CRM. Start your transformation today.
+              Stop losing customers to poor data management. Start winning with organized, automated CRM.
             </p>
             
             <div className="bg-gradient-to-r from-blue-950/50 to-indigo-950/50 rounded-2xl p-8 backdrop-blur-sm border border-blue-500/30 mb-8">
-              <h3 className="text-2xl font-bold mb-4 text-blue-400">
-                🎯 Free CRM Health Check
-              </h3>
+              <div className="flex items-center justify-center space-x-4 mb-4">
+                <RefreshCw className="w-8 h-8 text-blue-400 animate-spin" />
+                <h3 className="text-2xl font-bold text-blue-400">
+                  Free CRM Transformation Analysis
+                </h3>
+              </div>
               <p className="text-gray-300 mb-6">
-                We'll analyze your current customer management setup and show you exactly where you're losing money
+                Get a personalized report showing exactly how we'll transform your CRM chaos into customer success
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" className="text-lg px-8 py-4 bg-gradient-to-r from-blue-500 to-indigo-500 shadow-2xl shadow-blue-500/25" asChild>
+                <Button size="lg" className="text-lg px-8 py-4 bg-gradient-to-r from-blue-500 to-indigo-500 shadow-2xl shadow-blue-500/25 hover:scale-105 transition-all" asChild>
                   <a href="https://docs.google.com/forms/d/1948-2HcLLEeciF3QQIzeTB-nPmM6-qsD3HopP5-bTyQ/viewform?edit_requested=true#response=ACYDBNgoe9qnpdvzE2IG3-SgO1FgdPRTnh9slrfCToFtyek2Of0Osps9NvqxQ-7epsdcl_0" target="_blank" rel="noopener noreferrer" className="flex items-center whitespace-nowrap">
-                    🚀 Get My Free CRM Audit
+                    🚀 Get My Free Analysis
                     <ArrowRight className="ml-2 w-5 h-5" />
                   </a>
                 </Button>
               </div>
             </div>
             
-            <div className="text-sm text-muted-foreground">
-              ✅ No commitment required • ✅ Actionable insights • ✅ Custom recommendations
+            <div className="flex items-center justify-center space-x-8 text-sm text-muted-foreground">
+              <div className="flex items-center space-x-2">
+                <CheckCircle className="w-4 h-4 text-green-500" />
+                <span>No commitment</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <CheckCircle className="w-4 h-4 text-green-500" />
+                <span>Actionable insights</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <CheckCircle className="w-4 h-4 text-green-500" />
+                <span>Custom roadmap</span>
+              </div>
             </div>
           </div>
         </div>
