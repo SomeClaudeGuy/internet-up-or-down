@@ -49,48 +49,6 @@ const TrafficGeneration = () => {
     { metric: "24/7", label: "Campaign Monitoring" }
   ];
 
-  const packages = [
-    {
-      name: "Starter Package",
-      price: "$5,000/month",
-      description: "Perfect for new operators ready to scale",
-      features: [
-        "10,000+ Monthly Visitors",
-        "3 Traffic Sources",
-        "Basic Analytics Dashboard",
-        "Email Support",
-        "Weekly Performance Reports"
-      ]
-    },
-    {
-      name: "Growth Package",
-      price: "$15,000/month",
-      description: "Best for established operators looking to expand",
-      features: [
-        "50,000+ Monthly Visitors",
-        "8 Premium Traffic Sources",
-        "Advanced Analytics & AI Insights",
-        "Dedicated Account Manager",
-        "Daily Performance Optimization",
-        "A/B Testing & Landing Page Optimization"
-      ],
-      popular: true
-    },
-    {
-      name: "Enterprise Package",
-      price: "Custom Pricing",
-      description: "For large operators requiring maximum scale",
-      features: [
-        "200,000+ Monthly Visitors",
-        "15+ Exclusive Traffic Sources",
-        "White-label Analytics Platform",
-        "24/7 Dedicated Team",
-        "Real-time Campaign Optimization",
-        "Custom Integration & API Access",
-        "Performance-based Pricing Available"
-      ]
-    }
-  ];
 
   return (
     <div className="min-h-screen bg-background">
@@ -182,52 +140,39 @@ const TrafficGeneration = () => {
         </div>
       </section>
 
-      {/* Packages Section */}
+      {/* Bespoke Quote Section */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Choose Your Traffic Package</h2>
-            <p className="text-xl text-muted-foreground">Scalable solutions for operators of all sizes</p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {packages.map((pkg, index) => (
-              <Card key={index} className={`relative ${pkg.popular ? 'border-primary shadow-2xl shadow-primary/25 scale-105' : 'border-border/50'}`}>
-                {pkg.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <Badge className="bg-gradient-to-r from-primary to-accent text-white px-4 py-1">
-                      Most Popular
-                    </Badge>
-                  </div>
-                )}
-                
-                <CardHeader className="text-center pb-6">
-                  <CardTitle className="text-2xl mb-2">{pkg.name}</CardTitle>
-                  <div className="text-3xl font-bold text-primary mb-2">{pkg.price}</div>
-                  <CardDescription className="text-base">{pkg.description}</CardDescription>
-                </CardHeader>
-                
-                <CardContent className="space-y-4">
-                  {pkg.features.map((feature, featureIndex) => (
-                    <div key={featureIndex} className="flex items-center space-x-3">
-                      <CheckCircle className="w-5 h-5 text-primary flex-shrink-0" />
-                      <span className="text-sm">{feature}</span>
-                    </div>
-                  ))}
-                  
-                  <Button 
-                    className={`w-full mt-6 ${pkg.popular ? 'bg-gradient-to-r from-primary to-accent' : ''}`}
-                    variant={pkg.popular ? 'default' : 'outline'}
-                    asChild
-                  >
-                    <a href="https://docs.google.com/forms/d/1948-2HcLLEeciF3QQIzeTB-nPmM6-qsD3HopP5-bTyQ/viewform?edit_requested=true#response=ACYDBNgoe9qnpdvzE2IG3-SgO1FgdPRTnh9slrfCToFtyek2Of0Osps9NvqxQ-7epsdcl_0" target="_blank" rel="noopener noreferrer">
-                      Get Started
-                      <ArrowRight className="ml-2 w-4 h-4" />
-                    </a>
-                  </Button>
-                </CardContent>
-              </Card>
-            ))}
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="bg-gradient-to-r from-primary/20 to-accent/20 rounded-2xl p-12">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">Get Your Bespoke Traffic Solution</h2>
+              <p className="text-xl text-muted-foreground mb-8">
+                Every business has unique traffic needs. Let us create a custom traffic generation 
+                strategy tailored specifically to your target audience and goals.
+              </p>
+              
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                <div className="flex items-center justify-center space-x-2">
+                  <CheckCircle className="w-5 h-5 text-primary" />
+                  <span className="text-sm">Custom Targeting</span>
+                </div>
+                <div className="flex items-center justify-center space-x-2">
+                  <CheckCircle className="w-5 h-5 text-primary" />
+                  <span className="text-sm">Scalable Solutions</span>
+                </div>
+                <div className="flex items-center justify-center space-x-2">
+                  <CheckCircle className="w-5 h-5 text-primary" />
+                  <span className="text-sm">Performance Tracking</span>
+                </div>
+              </div>
+              
+              <Button size="lg" className="text-lg px-8 py-4 bg-gradient-to-r from-primary to-accent shadow-2xl shadow-primary/25" asChild>
+                <a href="https://docs.google.com/forms/d/1948-2HcLLEeciF3QQIzeTB-nPmM6-qsD3HopP5-bTyQ/viewform?edit_requested=true#response=ACYDBNgoe9qnpdvzE2IG3-SgO1FgdPRTnh9slrfCToFtyek2Of0Osps9NvqxQ-7epsdcl_0" target="_blank" rel="noopener noreferrer">
+                  💬 Request Custom Quote
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </a>
+              </Button>
+            </div>
           </div>
         </div>
       </section>

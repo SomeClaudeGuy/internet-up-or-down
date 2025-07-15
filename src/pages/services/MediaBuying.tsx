@@ -49,48 +49,6 @@ const MediaBuying = () => {
     { metric: "24/7", label: "Campaign Monitoring" }
   ];
 
-  const packages = [
-    {
-      name: "Performance Starter",
-      price: "$5,000/month",
-      description: "Essential media buying for growing operators",
-      features: [
-        "$20,000 Monthly Ad Spend Management",
-        "3 Platform Campaign Management",
-        "Weekly Performance Reports",
-        "Basic Optimization",
-        "Email Support"
-      ]
-    },
-    {
-      name: "Growth Accelerator",
-      price: "$12,000/month",
-      description: "Advanced media buying with full optimization",
-      features: [
-        "$100,000+ Monthly Ad Spend Management",
-        "Multi-Platform Campaign Management",
-        "AI-Powered Optimization",
-        "Real-Time Performance Dashboard",
-        "Dedicated Media Buyer",
-        "Daily Optimization & Reporting"
-      ],
-      popular: true
-    },
-    {
-      name: "Enterprise Scale",
-      price: "Custom Pricing",
-      description: "Large-scale media buying for major operators",
-      features: [
-        "$500,000+ Monthly Ad Spend Management",
-        "Full Programmatic Platform Access",
-        "Custom Attribution Modeling",
-        "24/7 Dedicated Media Buying Team",
-        "Advanced AI & Machine Learning",
-        "White-label Reporting Platform",
-        "Performance-based Fee Structure"
-      ]
-    }
-  ];
 
   const platforms = [
     { name: "Google Ads", description: "Search & Display campaigns" },
@@ -220,52 +178,39 @@ const MediaBuying = () => {
         </div>
       </section>
 
-      {/* Packages Section */}
+      {/* Bespoke Quote Section */}
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Media Buying Packages</h2>
-            <p className="text-xl text-muted-foreground">Scalable media buying solutions for every ad spend level</p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {packages.map((pkg, index) => (
-              <Card key={index} className={`relative ${pkg.popular ? 'border-indigo-500 shadow-2xl shadow-indigo-500/25 scale-105' : 'border-border/50'}`}>
-                {pkg.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <Badge className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-4 py-1">
-                      Most Popular
-                    </Badge>
-                  </div>
-                )}
-                
-                <CardHeader className="text-center pb-6">
-                  <CardTitle className="text-2xl mb-2">{pkg.name}</CardTitle>
-                  <div className="text-3xl font-bold text-indigo-500 mb-2">{pkg.price}</div>
-                  <CardDescription className="text-base">{pkg.description}</CardDescription>
-                </CardHeader>
-                
-                <CardContent className="space-y-4">
-                  {pkg.features.map((feature, featureIndex) => (
-                    <div key={featureIndex} className="flex items-center space-x-3">
-                      <CheckCircle className="w-5 h-5 text-indigo-500 flex-shrink-0" />
-                      <span className="text-sm">{feature}</span>
-                    </div>
-                  ))}
-                  
-                  <Button 
-                    className={`w-full mt-6 ${pkg.popular ? 'bg-gradient-to-r from-indigo-500 to-purple-500' : ''}`}
-                    variant={pkg.popular ? 'default' : 'outline'}
-                    asChild
-                  >
-                    <a href="https://docs.google.com/forms/d/1948-2HcLLEeciF3QQIzeTB-nPmM6-qsD3HopP5-bTyQ/viewform?edit_requested=true#response=ACYDBNgoe9qnpdvzE2IG3-SgO1FgdPRTnh9slrfCToFtyek2Of0Osps9NvqxQ-7epsdcl_0" target="_blank" rel="noopener noreferrer">
-                      Get Started
-                      <ArrowRight className="ml-2 w-4 h-4" />
-                    </a>
-                  </Button>
-                </CardContent>
-              </Card>
-            ))}
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="bg-gradient-to-r from-indigo-500/20 to-purple-500/20 rounded-2xl p-12">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">Get Your Bespoke Media Buying Strategy</h2>
+              <p className="text-xl text-muted-foreground mb-8">
+                Every campaign requires a unique approach. Let us create a custom media buying 
+                strategy that maximizes your ROI and reaches your ideal audience efficiently.
+              </p>
+              
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                <div className="flex items-center justify-center space-x-2">
+                  <CheckCircle className="w-5 h-5 text-indigo-500" />
+                  <span className="text-sm">Custom Targeting</span>
+                </div>
+                <div className="flex items-center justify-center space-x-2">
+                  <CheckCircle className="w-5 h-5 text-indigo-500" />
+                  <span className="text-sm">Platform Optimization</span>
+                </div>
+                <div className="flex items-center justify-center space-x-2">
+                  <CheckCircle className="w-5 h-5 text-indigo-500" />
+                  <span className="text-sm">ROI Maximization</span>
+                </div>
+              </div>
+              
+              <Button size="lg" className="text-lg px-8 py-4 bg-gradient-to-r from-indigo-500 to-purple-500 shadow-2xl shadow-indigo-500/25" asChild>
+                <a href="https://docs.google.com/forms/d/1948-2HcLLEeciF3QQIzeTB-nPmM6-qsD3HopP5-bTyQ/viewform?edit_requested=true#response=ACYDBNgoe9qnpdvzE2IG3-SgO1FgdPRTnh9slrfCToFtyek2Of0Osps9NvqxQ-7epsdcl_0" target="_blank" rel="noopener noreferrer">
+                  💬 Request Custom Quote
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </a>
+              </Button>
+            </div>
           </div>
         </div>
       </section>

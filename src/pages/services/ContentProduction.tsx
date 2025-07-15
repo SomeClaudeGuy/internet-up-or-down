@@ -49,48 +49,6 @@ const ContentProduction = () => {
     { metric: "98%", label: "Client Satisfaction Rate" }
   ];
 
-  const packages = [
-    {
-      name: "Content Essentials",
-      price: "$8,000/month",
-      description: "Essential content creation for growing brands",
-      features: [
-        "4 Professional Videos per Month",
-        "Basic Event Coverage",
-        "Standard Post-Production",
-        "Monthly Content Strategy",
-        "Email Support"
-      ]
-    },
-    {
-      name: "Production Pro",
-      price: "$20,000/month",
-      description: "Complete content production solution",
-      features: [
-        "12 Premium Videos per Month",
-        "Full Event Production",
-        "Advanced Post-Production",
-        "Custom Animation & Graphics",
-        "Dedicated Production Team",
-        "Weekly Strategy Sessions"
-      ],
-      popular: true
-    },
-    {
-      name: "Enterprise Studio",
-      price: "Custom Pricing",
-      description: "Full-scale content studio for major operators",
-      features: [
-        "Unlimited Content Production",
-        "Multi-Location Shoots",
-        "Celebrity & Influencer Collaborations",
-        "Live Event Broadcasting",
-        "24/7 Production Support",
-        "White-label Content Platform",
-        "Global Production Network"
-      ]
-    }
-  ];
 
   const contentTypes = [
     { name: "Brand Videos", description: "High-end brand storytelling videos" },
@@ -220,52 +178,39 @@ const ContentProduction = () => {
         </div>
       </section>
 
-      {/* Packages Section */}
+      {/* Bespoke Quote Section */}
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Production Packages</h2>
-            <p className="text-xl text-muted-foreground">Professional content production solutions for every scale</p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {packages.map((pkg, index) => (
-              <Card key={index} className={`relative ${pkg.popular ? 'border-pink-500 shadow-2xl shadow-pink-500/25 scale-105' : 'border-border/50'}`}>
-                {pkg.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <Badge className="bg-gradient-to-r from-pink-500 to-rose-500 text-white px-4 py-1">
-                      Most Popular
-                    </Badge>
-                  </div>
-                )}
-                
-                <CardHeader className="text-center pb-6">
-                  <CardTitle className="text-2xl mb-2">{pkg.name}</CardTitle>
-                  <div className="text-3xl font-bold text-pink-500 mb-2">{pkg.price}</div>
-                  <CardDescription className="text-base">{pkg.description}</CardDescription>
-                </CardHeader>
-                
-                <CardContent className="space-y-4">
-                  {pkg.features.map((feature, featureIndex) => (
-                    <div key={featureIndex} className="flex items-center space-x-3">
-                      <CheckCircle className="w-5 h-5 text-pink-500 flex-shrink-0" />
-                      <span className="text-sm">{feature}</span>
-                    </div>
-                  ))}
-                  
-                  <Button 
-                    className={`w-full mt-6 ${pkg.popular ? 'bg-gradient-to-r from-pink-500 to-rose-500' : ''}`}
-                    variant={pkg.popular ? 'default' : 'outline'}
-                    asChild
-                  >
-                    <a href="https://docs.google.com/forms/d/1948-2HcLLEeciF3QQIzeTB-nPmM6-qsD3HopP5-bTyQ/viewform?edit_requested=true#response=ACYDBNgoe9qnpdvzE2IG3-SgO1FgdPRTnh9slrfCToFtyek2Of0Osps9NvqxQ-7epsdcl_0" target="_blank" rel="noopener noreferrer">
-                      Get Started
-                      <ArrowRight className="ml-2 w-4 h-4" />
-                    </a>
-                  </Button>
-                </CardContent>
-              </Card>
-            ))}
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="bg-gradient-to-r from-pink-500/20 to-rose-500/20 rounded-2xl p-12">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">Get Your Bespoke Content Production</h2>
+              <p className="text-xl text-muted-foreground mb-8">
+                Every brand has a unique story to tell. Let us create custom content production 
+                solutions that perfectly capture your vision and engage your audience.
+              </p>
+              
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                <div className="flex items-center justify-center space-x-2">
+                  <CheckCircle className="w-5 h-5 text-pink-500" />
+                  <span className="text-sm">Custom Concepts</span>
+                </div>
+                <div className="flex items-center justify-center space-x-2">
+                  <CheckCircle className="w-5 h-5 text-pink-500" />
+                  <span className="text-sm">Professional Production</span>
+                </div>
+                <div className="flex items-center justify-center space-x-2">
+                  <CheckCircle className="w-5 h-5 text-pink-500" />
+                  <span className="text-sm">Multi-format Delivery</span>
+                </div>
+              </div>
+              
+              <Button size="lg" className="text-lg px-8 py-4 bg-gradient-to-r from-pink-500 to-rose-500 shadow-2xl shadow-pink-500/25" asChild>
+                <a href="https://docs.google.com/forms/d/1948-2HcLLEeciF3QQIzeTB-nPmM6-qsD3HopP5-bTyQ/viewform?edit_requested=true#response=ACYDBNgoe9qnpdvzE2IG3-SgO1FgdPRTnh9slrfCToFtyek2Of0Osps9NvqxQ-7epsdcl_0" target="_blank" rel="noopener noreferrer">
+                  💬 Request Custom Quote
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </a>
+              </Button>
+            </div>
           </div>
         </div>
       </section>

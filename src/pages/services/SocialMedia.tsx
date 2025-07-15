@@ -49,48 +49,6 @@ const SocialMedia = () => {
     { metric: "24/7", label: "Community Monitoring" }
   ];
 
-  const packages = [
-    {
-      name: "Social Starter",
-      price: "$2,500/month",
-      description: "Essential social media management for emerging brands",
-      features: [
-        "3 Social Media Platforms",
-        "20 Posts per Month",
-        "Basic Community Management",
-        "Monthly Analytics Report",
-        "Email Support"
-      ]
-    },
-    {
-      name: "Social Growth",
-      price: "$6,500/month",
-      description: "Comprehensive social media strategy for growing operators",
-      features: [
-        "All Major Social Platforms",
-        "60 Posts per Month + Stories",
-        "Advanced Community Management",
-        "Influencer Partnerships",
-        "Weekly Performance Reports",
-        "Dedicated Social Media Manager"
-      ],
-      popular: true
-    },
-    {
-      name: "Social Enterprise",
-      price: "Custom Pricing",
-      description: "Full-scale social media dominance for large operators",
-      features: [
-        "Multi-brand Social Management",
-        "Unlimited Content Creation",
-        "24/7 Community Management",
-        "Celebrity & Macro-Influencer Campaigns",
-        "Real-time Analytics Dashboard",
-        "Dedicated Social Media Team",
-        "Crisis Management & PR"
-      ]
-    }
-  ];
 
   const platforms = [
     { name: "Instagram", color: "from-purple-500 to-pink-500" },
@@ -212,52 +170,39 @@ const SocialMedia = () => {
         </div>
       </section>
 
-      {/* Packages Section */}
+      {/* Bespoke Quote Section */}
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Social Media Packages</h2>
-            <p className="text-xl text-muted-foreground">Choose the perfect package for your social media goals</p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {packages.map((pkg, index) => (
-              <Card key={index} className={`relative ${pkg.popular ? 'border-green-500 shadow-2xl shadow-green-500/25 scale-105' : 'border-border/50'}`}>
-                {pkg.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <Badge className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-4 py-1">
-                      Most Popular
-                    </Badge>
-                  </div>
-                )}
-                
-                <CardHeader className="text-center pb-6">
-                  <CardTitle className="text-2xl mb-2">{pkg.name}</CardTitle>
-                  <div className="text-3xl font-bold text-green-500 mb-2">{pkg.price}</div>
-                  <CardDescription className="text-base">{pkg.description}</CardDescription>
-                </CardHeader>
-                
-                <CardContent className="space-y-4">
-                  {pkg.features.map((feature, featureIndex) => (
-                    <div key={featureIndex} className="flex items-center space-x-3">
-                      <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
-                      <span className="text-sm">{feature}</span>
-                    </div>
-                  ))}
-                  
-                  <Button 
-                    className={`w-full mt-6 ${pkg.popular ? 'bg-gradient-to-r from-green-500 to-emerald-500' : ''}`}
-                    variant={pkg.popular ? 'default' : 'outline'}
-                    asChild
-                  >
-                    <a href="https://docs.google.com/forms/d/1948-2HcLLEeciF3QQIzeTB-nPmM6-qsD3HopP5-bTyQ/viewform?edit_requested=true#response=ACYDBNgoe9qnpdvzE2IG3-SgO1FgdPRTnh9slrfCToFtyek2Of0Osps9NvqxQ-7epsdcl_0" target="_blank" rel="noopener noreferrer">
-                      Get Started
-                      <ArrowRight className="ml-2 w-4 h-4" />
-                    </a>
-                  </Button>
-                </CardContent>
-              </Card>
-            ))}
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-2xl p-12">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">Get Your Bespoke Social Media Strategy</h2>
+              <p className="text-xl text-muted-foreground mb-8">
+                Every brand has a unique voice. Let us create a custom social media strategy 
+                that perfectly captures your brand's personality and drives real engagement.
+              </p>
+              
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                <div className="flex items-center justify-center space-x-2">
+                  <CheckCircle className="w-5 h-5 text-green-500" />
+                  <span className="text-sm">Brand-Specific Content</span>
+                </div>
+                <div className="flex items-center justify-center space-x-2">
+                  <CheckCircle className="w-5 h-5 text-green-500" />
+                  <span className="text-sm">Platform Optimization</span>
+                </div>
+                <div className="flex items-center justify-center space-x-2">
+                  <CheckCircle className="w-5 h-5 text-green-500" />
+                  <span className="text-sm">Community Management</span>
+                </div>
+              </div>
+              
+              <Button size="lg" className="text-lg px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-500 shadow-2xl shadow-green-500/25" asChild>
+                <a href="https://docs.google.com/forms/d/1948-2HcLLEeciF3QQIzeTB-nPmM6-qsD3HopP5-bTyQ/viewform?edit_requested=true#response=ACYDBNgoe9qnpdvzE2IG3-SgO1FgdPRTnh9slrfCToFtyek2Of0Osps9NvqxQ-7epsdcl_0" target="_blank" rel="noopener noreferrer">
+                  💬 Request Custom Quote
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </a>
+              </Button>
+            </div>
           </div>
         </div>
       </section>
