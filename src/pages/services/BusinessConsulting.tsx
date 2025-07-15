@@ -23,34 +23,34 @@ const BusinessConsulting = () => {
 
   const services = [
     {
-      icon: TrendingUp,
-      title: "Growth Strategy",
-      description: "Comprehensive growth planning and execution strategies tailored to your industry and goals"
-    },
-    {
       icon: Target,
-      title: "Market Analysis",
-      description: "Deep market research and competitive analysis to identify opportunities and threats"
-    },
-    {
-      icon: Users,
-      title: "Organizational Development",
-      description: "Team optimization, culture development, and leadership training programs"
-    },
-    {
-      icon: Settings,
-      title: "Process Optimization",
-      description: "Streamline operations, reduce costs, and improve efficiency across all business functions"
+      title: "Business Process Review",
+      description: "Comprehensive analysis of your current business processes to identify inefficiencies and optimization opportunities"
     },
     {
       icon: BarChart3,
-      title: "Performance Analytics",
-      description: "Data-driven insights and KPI development to measure and improve business performance"
+      title: "Performance Benchmarking",
+      description: "Compare your business performance against industry standards and best practices to identify improvement areas"
+    },
+    {
+      icon: TrendingUp,
+      title: "Strategic Planning",
+      description: "Develop comprehensive strategic plans that align with your business objectives and market opportunities"
+    },
+    {
+      icon: Settings,
+      title: "Operational Excellence",
+      description: "Streamline operations and implement best practices to enhance efficiency and reduce costs"
+    },
+    {
+      icon: Users,
+      title: "Organizational Assessment",
+      description: "Evaluate team structure, culture, and capabilities to optimize human resources and leadership"
     },
     {
       icon: Lightbulb,
-      title: "Innovation Consulting",
-      description: "Digital transformation, technology adoption, and innovation strategy development"
+      title: "Innovation Framework",
+      description: "Establish systems and processes to drive continuous innovation and competitive advantage"
     }
   ];
 
@@ -65,11 +65,11 @@ const BusinessConsulting = () => {
     "Gaming & Entertainment"
   ];
 
-  const outcomes = [
-    { metric: "2.5x", label: "Average Revenue Growth" },
-    { metric: "40%", label: "Cost Reduction Achieved" },
-    { metric: "250+", label: "Companies Transformed" },
-    { metric: "95%", label: "Client Retention Rate" }
+  const consultationAreas = [
+    { area: "Process Review", description: "Comprehensive analysis of current operations" },
+    { area: "Benchmarking", description: "Industry standards and best practices comparison" },
+    { area: "Strategic Planning", description: "Custom roadmaps for business transformation" },
+    { area: "360° Assessment", description: "Complete evaluation of all business aspects" }
   ];
 
   return (
@@ -114,16 +114,16 @@ const BusinessConsulting = () => {
             </h1>
             
             <p className="text-xl text-gray-300 mb-12 max-w-4xl mx-auto">
-              Strategic consulting that drives real results. From startup scaling to enterprise transformation, 
-              we partner with you to unlock your business potential and achieve sustainable growth.
+              360° business consultation that reviews, benchmarks, and optimizes your critical business processes. 
+              We provide comprehensive analysis and strategic guidance to help you make informed decisions and achieve sustainable growth.
             </p>
 
-            {/* Key Metrics */}
+            {/* Consultation Areas */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
-              {outcomes.map((outcome, index) => (
+              {consultationAreas.map((item, index) => (
                 <div key={index} className="text-center">
-                  <div className="text-4xl font-bold text-blue-400 mb-2">{outcome.metric}</div>
-                  <div className="text-sm text-gray-400">{outcome.label}</div>
+                  <div className="text-lg font-bold text-blue-400 mb-2">{item.area}</div>
+                  <div className="text-sm text-gray-400">{item.description}</div>
                 </div>
               ))}
             </div>
@@ -132,16 +132,16 @@ const BusinessConsulting = () => {
             <div className="bg-gradient-to-r from-blue-900/50 to-purple-900/50 rounded-2xl p-6 backdrop-blur-sm border border-blue-500/30 mb-12">
               <div className="flex items-center justify-center space-x-8">
                 <div className="flex items-center space-x-2">
-                  <TrendingUp className="w-6 h-6 text-blue-400" />
-                  <span className="text-blue-300">Growth Strategy</span>
+                  <Target className="w-6 h-6 text-blue-400" />
+                  <span className="text-blue-300">Process Review</span>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <Target className="w-6 h-6 text-purple-400" />
-                  <span className="text-purple-300">Market Analysis</span>
+                  <BarChart3 className="w-6 h-6 text-purple-400" />
+                  <span className="text-purple-300">Benchmarking</span>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <Users className="w-6 h-6 text-blue-400" />
-                  <span className="text-blue-300">Organizational Development</span>
+                  <Settings className="w-6 h-6 text-blue-400" />
+                  <span className="text-blue-300">360° Assessment</span>
                 </div>
               </div>
             </div>
@@ -149,17 +149,17 @@ const BusinessConsulting = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="text-lg px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 shadow-2xl shadow-blue-500/25" asChild>
                 <a href="https://docs.google.com/forms/d/1948-2HcLLEeciF3QQIzeTB-nPmM6-qsD3HopP5-bTyQ/viewform?edit_requested=true#response=ACYDBNgoe9qnpdvzE2IG3-SgO1FgdPRTnh9slrfCToFtyek2Of0Osps9NvqxQ-7epsdcl_0" target="_blank" rel="noopener noreferrer" className="flex items-center whitespace-nowrap">
-                  🚀 Start Transformation
+                  🚀 Start 360° Consultation
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </a>
               </Button>
               <Button variant="outline" size="lg" className="text-lg px-8 py-4 border-blue-500/30 text-blue-300 hover:bg-blue-500/10">
-                📊 View Case Studies
+                📊 Learn About Our Process
               </Button>
             </div>
             
             <p className="text-sm text-gray-400 mt-6">
-              💼 Free strategic consultation • Custom roadmaps • Implementation support
+              💼 Free business assessment • Custom process review • Strategic implementation roadmap
             </p>
           </div>
         </div>
@@ -169,8 +169,8 @@ const BusinessConsulting = () => {
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Comprehensive Business Solutions</h2>
-            <p className="text-xl text-muted-foreground">End-to-end consulting services to drive your business forward</p>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">360° Business Consultation Services</h2>
+            <p className="text-xl text-muted-foreground">Comprehensive review and optimization of your critical business processes</p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
