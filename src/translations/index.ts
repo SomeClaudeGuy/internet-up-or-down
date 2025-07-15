@@ -550,6 +550,12 @@ export const translations = {
           description: "Strategic business consulting that drives real results. From startup scaling to enterprise transformation.",
           features: ["Growth strategy", "Market analysis", "Process optimization"],
           price: "From $20,000/project"
+        },
+        crmManaged: {
+          title: "CRM Managed Services",
+          description: "Complete CRM management services that streamline customer relationships and automate sales processes.",
+          features: ["CRM setup", "Lead management", "Sales automation"],
+          price: "From $5,000/month"
         }
       },
       bContent: {
@@ -1064,6 +1070,12 @@ export const translations = {
           description: "Consultoría estratégica de negocios que impulsa resultados reales. Desde escalamiento de startups hasta transformación empresarial.",
           features: ["Estrategia de crecimiento", "Análisis de mercado", "Optimización de procesos"],
           price: "Desde $20,000/proyecto"
+        },
+        crmManaged: {
+          title: "Servicios de CRM Gestionados",
+          description: "Servicios completos de gestión de CRM que optimizan las relaciones con clientes y automatizan procesos de ventas.",
+          features: ["Configuración CRM", "Gestión de leads", "Automatización de ventas"],
+          price: "Desde $5,000/mes"
         }
       },
       bContent: {
@@ -1578,6 +1590,12 @@ export const translations = {
           description: "Стратегический бизнес-консалтинг, обеспечивающий реальные результаты. От масштабирования стартапов до трансформации предприятий.",
           features: ["Стратегия роста", "Анализ рынка", "Оптимизация процессов"],
           price: "От $20,000/проект"
+        },
+        crmManaged: {
+          title: "Управляемые CRM-Услуги",
+          description: "Полные услуги управления CRM, которые оптимизируют отношения с клиентами и автоматизируют процессы продаж.",
+          features: ["Настройка CRM", "Управление лидами", "Автоматизация продаж"],
+          price: "От $5,000/мес"
         }
       },
       bContent: {
@@ -2092,6 +2110,12 @@ export const translations = {
           description: "Стратегічний бізнес-консалтинг, що забезпечує реальні результати. Від масштабування стартапів до трансформації підприємств.",
           features: ["Стратегія зростання", "Аналіз ринку", "Оптимізація процесів"],
           price: "Від $20,000/проект"
+        },
+        crmManaged: {
+          title: "Керовані CRM-Послуги",
+          description: "Повні послуги управління CRM, які оптимізують відносини з клієнтами та автоматизують процеси продажів.",
+          features: ["Налаштування CRM", "Управління лідами", "Автоматизація продажів"],
+          price: "Від $5,000/міс"
         }
       },
       bContent: {

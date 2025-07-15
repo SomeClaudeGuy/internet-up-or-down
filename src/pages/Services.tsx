@@ -11,7 +11,8 @@ import {
   ArrowRight,
   Zap,
   Star,
-  Building2
+  Building2,
+  Database
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
@@ -28,7 +29,8 @@ const Services = () => {
       '/services/sponsorships',
       '/services/media-buying',
       '/services/content-production',
-      '/services/business-consulting'
+      '/services/business-consulting',
+      '/services/crm-managed'
     ];
     return urls[index];
   };
@@ -89,6 +91,14 @@ const Services = () => {
       features: t.services.services.businessConsulting.features,
       color: "from-slate-500 to-gray-500",
       price: t.services.services.businessConsulting.price
+    },
+    {
+      icon: Database,
+      title: t.services.services.crmManaged.title,
+      description: t.services.services.crmManaged.description,
+      features: t.services.services.crmManaged.features,
+      color: "from-emerald-500 to-teal-500",
+      price: t.services.services.crmManaged.price
     }
   ];
 

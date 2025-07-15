@@ -21,6 +21,7 @@ import Sponsorships from "./pages/services/Sponsorships";
 import MediaBuying from "./pages/services/MediaBuying";
 import ContentProduction from "./pages/services/ContentProduction";
 import BusinessConsulting from "./pages/services/BusinessConsulting";
+import CRMManaged from "./pages/services/CRMManaged";
 import SuccessStories from "./pages/SuccessStories";
 import TalentIntake from "./pages/TalentIntake";
 import GalleryPage from "./pages/Gallery";
@@ -61,6 +62,7 @@ const App = () => (
           <Route path="/services/media-buying" element={<MediaBuying />} />
           <Route path="/services/content-production" element={<ContentProduction />} />
           <Route path="/services/business-consulting" element={<BusinessConsulting />} />
+          <Route path="/services/crm-managed" element={<CRMManaged />} />
           <Route path="/gallery" element={<GalleryPage />} />
           <Route path="/success-stories" element={<SuccessStories />} />
           <Route path="/talent-intake" element={<TalentIntake />} />
