@@ -124,11 +124,11 @@ const Services = () => {
                   {service.description}
                 </CardDescription>
                 
-                <div className="flex flex-wrap gap-2 justify-center flex-1">
+                <div className="flex flex-wrap gap-2 justify-center items-start min-h-[80px]">
                   {service.features.map((feature, idx) => (
                     <span 
                       key={idx}
-                      className="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full border border-primary/20"
+                      className="px-3 py-1.5 bg-primary/10 text-primary text-xs font-medium rounded-full border border-primary/20 whitespace-nowrap flex-shrink-0"
                     >
                       {feature}
                     </span>
@@ -168,11 +168,11 @@ const Services = () => {
                   {service.description}
                 </CardDescription>
                 
-                <div className="flex flex-wrap gap-2 justify-center flex-1">
+                <div className="flex flex-wrap gap-2 justify-center items-start min-h-[80px]">
                   {service.features.map((feature, idx) => (
                     <span 
                       key={idx}
-                      className="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full border border-primary/20"
+                      className="px-3 py-1.5 bg-primary/10 text-primary text-xs font-medium rounded-full border border-primary/20 whitespace-nowrap flex-shrink-0"
                     >
                       {feature}
                     </span>
