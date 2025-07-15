@@ -10,7 +10,8 @@ import {
   Video,
   ArrowRight,
   Zap,
-  Star
+  Star,
+  Building2
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
@@ -26,7 +27,8 @@ const Services = () => {
       '/services/social-media',
       '/services/sponsorships',
       '/services/media-buying',
-      '/services/content-production'
+      '/services/content-production',
+      '/services/business-consulting'
     ];
     return urls[index];
   };
@@ -79,6 +81,14 @@ const Services = () => {
       features: t.services.services.content.features,
       color: "from-pink-500 to-rose-500",
       price: t.services.services.content.price
+    },
+    {
+      icon: Building2,
+      title: t.services.services.businessConsulting.title,
+      description: t.services.services.businessConsulting.description,
+      features: t.services.services.businessConsulting.features,
+      color: "from-slate-500 to-gray-500",
+      price: t.services.services.businessConsulting.price
     }
   ];
 

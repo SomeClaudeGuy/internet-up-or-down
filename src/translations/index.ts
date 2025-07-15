@@ -544,6 +544,12 @@ export const translations = {
           description: "High-quality audiovisual content and event production services for maximum brand impact.",
           features: ["Video production", "Event management", "Creative content"],
           price: "From $8,000/project"
+        },
+        businessConsulting: {
+          title: "Full-Suite Business Consulting",
+          description: "Strategic business consulting that drives real results. From startup scaling to enterprise transformation.",
+          features: ["Growth strategy", "Market analysis", "Process optimization"],
+          price: "From $20,000/project"
         }
       },
       bContent: {
@@ -1052,6 +1058,12 @@ export const translations = {
           description: "Servicios de contenido audiovisual y producción de eventos de alta calidad para máximo impacto de marca.",
           features: ["Producción de video", "Gestión de eventos", "Contenido creativo"],
           price: "Desde $8,000/proyecto"
+        },
+        businessConsulting: {
+          title: "Consultoría Integral de Negocios",
+          description: "Consultoría estratégica de negocios que impulsa resultados reales. Desde escalamiento de startups hasta transformación empresarial.",
+          features: ["Estrategia de crecimiento", "Análisis de mercado", "Optimización de procesos"],
+          price: "Desde $20,000/proyecto"
         }
       },
       bContent: {
@@ -1560,6 +1572,12 @@ export const translations = {
           description: "Высококачественные услуги аудиовизуального контента и производства мероприятий для максимального воздействия бренда.",
           features: ["Видеопроизводство", "Управление мероприятиями", "Креативный контент"],
           price: "От $8,000/проект"
+        },
+        businessConsulting: {
+          title: "Комплексный Бизнес-Консалтинг",
+          description: "Стратегический бизнес-консалтинг, обеспечивающий реальные результаты. От масштабирования стартапов до трансформации предприятий.",
+          features: ["Стратегия роста", "Анализ рынка", "Оптимизация процессов"],
+          price: "От $20,000/проект"
         }
       },
       bContent: {
@@ -2068,6 +2086,12 @@ export const translations = {
           description: "Високоякісні послуги аудіовізуального контенту та виробництва заходів для максимального впливу бренду.",
           features: ["Відеовиробництво", "Управління заходами", "Креативний контент"],
           price: "Від $8,000/проект"
+        },
+        businessConsulting: {
+          title: "Повний Бізнес-Консалтинг",
+          description: "Стратегічний бізнес-консалтинг, що забезпечує реальні результати. Від масштабування стартапів до трансформації підприємств.",
+          features: ["Стратегія зростання", "Аналіз ринку", "Оптимізація процесів"],
+          price: "Від $20,000/проект"
         }
       },
       bContent: {
