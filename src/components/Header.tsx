@@ -45,6 +45,9 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
+            <Link to="/" className="text-foreground hover:text-primary transition-colors">
+              Home
+            </Link>
             <Link to="/services" className="text-foreground hover:text-primary transition-colors">
               {t.headerServices}
             </Link>
@@ -84,6 +87,9 @@ const Header = () => {
         {isMenuOpen && (
           <div className="md:hidden mt-4 pb-4 border-t border-border pt-4">
             <nav className="flex flex-col space-y-4">
+              <Link to="/" className="text-foreground hover:text-primary transition-colors">
+                Home
+              </Link>
               <Link to="/services" className="text-foreground hover:text-primary transition-colors">
                 {t.headerServices}
               </Link>
