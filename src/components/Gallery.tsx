@@ -10,7 +10,7 @@ import betOnGameMobileImage from "@/assets/bet-on-game-mobile.png";
 import vipMobileRewardsImage from "@/assets/vip-mobile-rewards.png";
 
 const Gallery = () => {
-  const t = useTranslation();
+  const t = useTranslation() as any;
   const [filter, setFilter] = useState("all");
 
   const galleryItems = [
@@ -18,8 +18,8 @@ const Gallery = () => {
       id: 1,
       type: "video",
       category: "campaign",
-      title: "Stake Casino Summer Campaign",
-      description: "Multi-platform influencer campaign generating 5M+ impressions",
+      title: t.galleryCampaign1Title,
+      description: t.galleryCampaign1Desc,
       image: casinoSlotsImage,
       views: "2.1M",
       date: "2024-03-15",
@@ -29,8 +29,8 @@ const Gallery = () => {
       id: 2,
       type: "image",
       category: "activation",
-      title: "BetBoom Esports Tournament",
-      description: "Live tournament activation with 50+ streamers",
+      title: t.galleryCampaign2Title,
+      description: t.galleryCampaign2Desc,
       image: esportsEventImage,
       views: "1.8M",
       date: "2024-02-20",
@@ -40,8 +40,8 @@ const Gallery = () => {
       id: 3,
       type: "video",
       category: "campaign",
-      title: "Leon Mobile App Launch",
-      description: "Cross-platform mobile campaign with AR filters",
+      title: t.galleryCampaign3Title,
+      description: t.galleryCampaign3Desc,
       image: betOnGameMobileImage,
       views: "3.2M",
       date: "2024-01-10",
@@ -51,8 +51,8 @@ const Gallery = () => {
       id: 4,
       type: "image",
       category: "activation",
-      title: "VIP Rewards Program",
-      description: "Exclusive creator program with premium rewards",
+      title: t.galleryCampaign4Title,
+      description: t.galleryCampaign4Desc,
       image: vipMobileRewardsImage,
       views: "900K",
       date: "2023-12-05",
@@ -62,8 +62,8 @@ const Gallery = () => {
       id: 5,
       type: "video",
       category: "campaign",
-      title: "22Bet World Cup Campaign",
-      description: "Global sports betting campaign during World Cup",
+      title: t.galleryCampaign5Title,
+      description: t.galleryCampaign5Desc,
       image: casinoSlotsImage,
       views: "4.5M",
       date: "2023-11-18",
@@ -73,8 +73,8 @@ const Gallery = () => {
       id: 6,
       type: "image",
       category: "activation",
-      title: "Pinnacle Live Stream Series",
-      description: "Weekly live streams with top gaming influencers",
+      title: t.galleryCampaign6Title,
+      description: t.galleryCampaign6Desc,
       image: esportsEventImage,
       views: "1.2M",
       date: "2023-10-22",
@@ -87,9 +87,9 @@ const Gallery = () => {
     : galleryItems.filter(item => item.category === filter);
 
   const filters = [
-    { value: "all", label: "All Content" },
-    { value: "campaign", label: "Campaigns" },
-    { value: "activation", label: "Activations" }
+    { value: "all", label: t.galleryFilterAll },
+    { value: "campaign", label: t.galleryFilterCampaigns },
+    { value: "activation", label: t.galleryFilterActivations }
   ];
 
   return (
@@ -99,14 +99,14 @@ const Gallery = () => {
         <div className="text-center mb-20">
           <div className="inline-flex items-center space-x-2 bg-primary/10 backdrop-blur-md border border-primary/20 px-6 py-3 rounded-full mb-8 shadow-lg">
             <ImageIcon className="w-5 h-5 text-primary animate-pulse" />
-            <span className="text-sm font-semibold text-primary tracking-wide">Our Work</span>
+            <span className="text-sm font-semibold text-primary tracking-wide">{t.galleryBadge}</span>
           </div>
           
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 leading-tight">
-            Gallery of <span className="text-primary">Success</span>
+            {t.galleryTitle}
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Explore our latest campaigns, activations, and content that's driving real results for gaming and betting brands
+            {t.gallerySubtitle}
           </p>
         </div>
 
@@ -153,7 +153,7 @@ const Gallery = () => {
                     ) : (
                       <ImageIcon className="w-16 h-16 mx-auto mb-2" />
                     )}
-                    <p className="text-sm">View {item.type}</p>
+                    <p className="text-sm">{item.type === "video" ? t.galleryViewVideo : t.galleryViewImage}</p>
                   </div>
                 </div>
 
@@ -217,12 +217,12 @@ const Gallery = () => {
         <div className="text-center mt-20">
           <Card className="max-w-2xl mx-auto bg-gradient-to-r from-primary/10 to-accent/10 border-primary/20">
             <CardContent className="p-8">
-              <h3 className="text-2xl font-bold mb-4">Want to see your brand featured here?</h3>
+              <h3 className="text-2xl font-bold mb-4">{t.galleryCtaTitle}</h3>
               <p className="text-muted-foreground mb-6">
-                Let's create something amazing together. Our team is ready to bring your vision to life.
+                {t.galleryCtaDesc}
               </p>
               <Button size="lg" className="bg-gradient-to-r from-primary to-accent text-lg px-8 py-4">
-                Start Your Campaign
+                {t.galleryCtaButton}
               </Button>
             </CardContent>
           </Card>

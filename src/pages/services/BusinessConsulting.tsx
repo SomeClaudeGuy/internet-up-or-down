@@ -19,47 +19,47 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 const BusinessConsulting = () => {
-  const t = useTranslation();
+  const t = useTranslation() as any;
 
   const services = [
     {
       icon: Target,
-      title: "Business Process Review",
-      description: "Comprehensive analysis of your current business processes to identify inefficiencies and optimization opportunities"
+      title: t.businessConsultingService1Title,
+      description: t.businessConsultingService1Desc
     },
     {
       icon: BarChart3,
-      title: "Performance Benchmarking",
-      description: "Compare your business performance against industry standards and best practices to identify improvement areas"
+      title: t.businessConsultingService2Title,
+      description: t.businessConsultingService2Desc
     },
     {
       icon: TrendingUp,
-      title: "Strategic Planning",
-      description: "Develop comprehensive strategic plans that align with your business objectives and market opportunities"
+      title: t.businessConsultingService3Title,
+      description: t.businessConsultingService3Desc
     },
     {
       icon: Settings,
-      title: "Operational Excellence",
-      description: "Streamline operations and implement best practices to enhance efficiency and reduce costs"
+      title: t.businessConsultingService4Title,
+      description: t.businessConsultingService4Desc
     },
     {
       icon: Users,
-      title: "Organizational Assessment",
-      description: "Evaluate team structure, culture, and capabilities to optimize human resources and leadership"
+      title: t.businessConsultingService5Title,
+      description: t.businessConsultingService5Desc
     },
     {
       icon: Lightbulb,
-      title: "Innovation Framework",
-      description: "Establish systems and processes to drive continuous innovation and competitive advantage"
+      title: t.businessConsultingService6Title,
+      description: t.businessConsultingService6Desc
     }
   ];
 
 
   const consultationAreas = [
-    { area: "Process Review", description: "Comprehensive analysis of current operations" },
-    { area: "Benchmarking", description: "Industry standards and best practices comparison" },
-    { area: "Strategic Planning", description: "Custom roadmaps for business transformation" },
-    { area: "360° Assessment", description: "Complete evaluation of all business aspects" }
+    { area: t.businessConsultingArea1, description: t.businessConsultingArea1Desc },
+    { area: t.businessConsultingArea2, description: t.businessConsultingArea2Desc },
+    { area: t.businessConsultingArea3, description: t.businessConsultingArea3Desc },
+    { area: t.businessConsultingArea4, description: t.businessConsultingArea4Desc }
   ];
 
   return (
@@ -88,18 +88,15 @@ const BusinessConsulting = () => {
             
             <Badge className="mb-8 px-6 py-3 text-base font-medium bg-blue-500/20 text-blue-300 border-blue-500/30">
               <Target className="w-5 h-5 mr-2" />
-              Full-Suite Business Consulting
+              {t.businessConsultingBadge}
             </Badge>
             
             <h1 className="text-6xl md:text-8xl font-bold mb-8">
-              <span className="block text-white mb-4">TRANSFORM</span>
-              <span className="block bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-4">YOUR</span>
-              <span className="block text-white">BUSINESS</span>
+              {t.businessConsultingTitle}
             </h1>
             
             <p className="text-xl text-gray-300 mb-12 max-w-4xl mx-auto">
-              360° business consultation that reviews, benchmarks, and optimizes your critical business processes. 
-              We provide comprehensive analysis and strategic guidance to help you make informed decisions and achieve sustainable growth.
+              {t.businessConsultingSubtitle}
             </p>
 
             {/* Consultation Areas */}
@@ -132,18 +129,18 @@ const BusinessConsulting = () => {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="text-lg px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 shadow-2xl shadow-blue-500/25" asChild>
-                <a href="https://docs.google.com/forms/d/1948-2HcLLEeciF3QQIzeTB-nPmM6-qsD3HopP5-bTyQ/viewform?edit_requested=true#response=ACYDBNgoe9qnpdvzE2IG3-SgO1FgdPRTnh9slrfCToFtyek2Of0Osps9NvqxQ-7epsdcl_0" target="_blank" rel="noopener noreferrer" className="flex items-center whitespace-nowrap">
-                  🚀 Start 360° Consultation
+                 <a href="https://docs.google.com/forms/d/1948-2HcLLEeciF3QQIzeTB-nPmM6-qsD3HopP5-bTyQ/viewform?edit_requested=true#response=ACYDBNgoe9qnpdvzE2IG3-SgO1FgdPRTnh9slrfCToFtyek2Of0Osps9NvqxQ-7epsdcl_0" target="_blank" rel="noopener noreferrer" className="flex items-center whitespace-nowrap">
+                  {t.businessConsultingCta1}
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </a>
               </Button>
               <Button variant="outline" size="lg" className="text-lg px-8 py-4 border-blue-500/30 text-blue-300 hover:bg-blue-500/10">
-                📊 Learn About Our Process
+                {t.businessConsultingCta2}
               </Button>
             </div>
             
             <p className="text-sm text-gray-400 mt-6">
-              💼 Free business assessment • Custom process review • Strategic implementation roadmap
+              {t.businessConsultingDisclaimer}
             </p>
           </div>
         </div>
@@ -153,8 +150,8 @@ const BusinessConsulting = () => {
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">360° Business Consultation Services</h2>
-            <p className="text-xl text-muted-foreground">Comprehensive review and optimization of your critical business processes</p>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">{t.businessConsultingServicesTitle}</h2>
+            <p className="text-xl text-muted-foreground">{t.businessConsultingServicesSubtitle}</p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
@@ -187,8 +184,8 @@ const BusinessConsulting = () => {
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Proven Process</h2>
-            <p className="text-xl text-muted-foreground">A structured approach to business transformation</p>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">{t.businessConsultingProcessTitle}</h2>
+            <p className="text-xl text-muted-foreground">{t.businessConsultingProcessSubtitle}</p>
           </div>
           
           <div className="max-w-4xl mx-auto">
@@ -197,9 +194,9 @@ const BusinessConsulting = () => {
                 <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 flex items-center justify-center text-white font-bold text-xl">
                   1
                 </div>
-                <h3 className="text-lg font-semibold mb-2">Discovery</h3>
+                <h3 className="text-lg font-semibold mb-2">{t.businessConsultingProcess1Title}</h3>
                 <p className="text-sm text-muted-foreground">
-                  Comprehensive analysis of your current state, challenges, and opportunities
+                  {t.businessConsultingProcess1Desc}
                 </p>
               </div>
               
@@ -207,9 +204,9 @@ const BusinessConsulting = () => {
                 <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 flex items-center justify-center text-white font-bold text-xl">
                   2
                 </div>
-                <h3 className="text-lg font-semibold mb-2">Strategy</h3>
+                <h3 className="text-lg font-semibold mb-2">{t.businessConsultingProcess2Title}</h3>
                 <p className="text-sm text-muted-foreground">
-                  Custom roadmap development with clear objectives and measurable outcomes
+                  {t.businessConsultingProcess2Desc}
                 </p>
               </div>
               
@@ -217,9 +214,9 @@ const BusinessConsulting = () => {
                 <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 flex items-center justify-center text-white font-bold text-xl">
                   3
                 </div>
-                <h3 className="text-lg font-semibold mb-2">Implementation</h3>
+                <h3 className="text-lg font-semibold mb-2">{t.businessConsultingProcess3Title}</h3>
                 <p className="text-sm text-muted-foreground">
-                  Hands-on execution support with your team to ensure successful delivery
+                  {t.businessConsultingProcess3Desc}
                 </p>
               </div>
               
@@ -227,9 +224,9 @@ const BusinessConsulting = () => {
                 <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 flex items-center justify-center text-white font-bold text-xl">
                   4
                 </div>
-                <h3 className="text-lg font-semibold mb-2">Optimization</h3>
+                <h3 className="text-lg font-semibold mb-2">{t.businessConsultingProcess4Title}</h3>
                 <p className="text-sm text-muted-foreground">
-                  Continuous monitoring and refinement to maximize results and ROI
+                  {t.businessConsultingProcess4Desc}
                 </p>
               </div>
             </div>
@@ -242,21 +239,21 @@ const BusinessConsulting = () => {
       <section className="py-20 bg-gradient-to-r from-blue-500/20 to-purple-500/20">
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Transform Your Business?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">{t.businessConsultingFinalCtaTitle}</h2>
             <p className="text-xl text-muted-foreground mb-8">
-              Partner with experts who understand your industry and can deliver measurable results
+              {t.businessConsultingFinalCtaDesc}
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="text-lg px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 shadow-2xl shadow-blue-500/25" asChild>
                 <a href="https://docs.google.com/forms/d/1948-2HcLLEeciF3QQIzeTB-nPmM6-qsD3HopP5-bTyQ/viewform?edit_requested=true#response=ACYDBNgoe9qnpdvzE2IG3-SgO1FgdPRTnh9slrfCToFtyek2Of0Osps9NvqxQ-7epsdcl_0" target="_blank" rel="noopener noreferrer" className="flex items-center whitespace-nowrap">
-                  🚀 Start Your Transformation
+                  {t.businessConsultingFinalCtaButton}
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </a>
               </Button>
               
               <div className="text-sm text-muted-foreground flex items-center justify-center">
-                💼 Free strategic consultation • Custom roadmaps • Implementation support
+                {t.businessConsultingFinalCtaDisclaimer}
               </div>
             </div>
           </div>
