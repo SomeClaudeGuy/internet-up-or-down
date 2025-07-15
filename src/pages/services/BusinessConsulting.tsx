@@ -54,16 +54,6 @@ const BusinessConsulting = () => {
     }
   ];
 
-  const industries = [
-    "Technology & Software",
-    "Financial Services",
-    "Healthcare & Biotech",
-    "Manufacturing",
-    "Retail & E-commerce",
-    "Professional Services",
-    "Real Estate",
-    "Gaming & Entertainment"
-  ];
 
   const consultationAreas = [
     { area: "Process Review", description: "Comprehensive analysis of current operations" },
@@ -173,44 +163,24 @@ const BusinessConsulting = () => {
             <p className="text-xl text-muted-foreground">Comprehensive review and optimization of your critical business processes</p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {services.map((service, index) => (
               <Card key={index} className="group hover:scale-105 transition-all duration-300 border-border/50 hover:border-blue-500/50">
-                <CardHeader className="text-center">
-                  <div className="w-16 h-16 mx-auto mb-4 rounded-xl bg-gradient-to-r from-blue-500 to-purple-500 p-0.5">
-                    <div className="w-full h-full bg-card rounded-xl flex items-center justify-center">
-                      <service.icon className="w-8 h-8 text-foreground" />
+                <CardContent className="p-6">
+                  <div className="flex items-start space-x-4">
+                    <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-blue-500 to-purple-500 p-0.5 flex-shrink-0">
+                      <div className="w-full h-full bg-card rounded-lg flex items-center justify-center">
+                        <service.icon className="w-6 h-6 text-foreground" />
+                      </div>
                     </div>
-                  </div>
-                  <CardTitle className="text-xl group-hover:text-blue-500 transition-colors">
-                    {service.title}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent className="text-center">
-                  <CardDescription className="text-base">
-                    {service.description}
-                  </CardDescription>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Industries Section */}
-      <section className="py-20 bg-muted/30">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Industry Expertise</h2>
-            <p className="text-xl text-muted-foreground">Deep sector knowledge across multiple industries</p>
-          </div>
-          
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
-            {industries.map((industry, index) => (
-              <Card key={index} className="group hover:scale-105 transition-all duration-300 border-border/50 hover:border-blue-500/50">
-                <CardContent className="p-6 text-center">
-                  <div className="text-sm font-medium group-hover:text-blue-500 transition-colors">
-                    {industry}
+                    <div className="flex-1">
+                      <h3 className="text-lg font-semibold mb-2 group-hover:text-blue-500 transition-colors">
+                        {service.title}
+                      </h3>
+                      <p className="text-sm text-muted-foreground">
+                        {service.description}
+                      </p>
+                    </div>
                   </div>
                 </CardContent>
               </Card>
@@ -220,7 +190,7 @@ const BusinessConsulting = () => {
       </section>
 
       {/* Process Section */}
-      <section className="py-20 bg-background">
+      <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Proven Process</h2>
@@ -274,7 +244,7 @@ const BusinessConsulting = () => {
       </section>
 
       {/* Custom Consultation Section */}
-      <section className="py-20 bg-muted/30">
+      <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-2xl p-12">
