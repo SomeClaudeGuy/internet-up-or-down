@@ -84,13 +84,11 @@ const TrafficGeneration = () => {
             </div>
             
             <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-              Strategic Traffic Acquisition
+              {(t as any).trafficGenerationTitle || "Strategic Traffic Acquisition"}
             </h1>
             
             <p className="text-xl text-muted-foreground mb-12 leading-relaxed">
-              Our comprehensive traffic generation services help gaming and entertainment brands 
-              reach their target audiences through data-driven, multi-channel marketing strategies 
-              that deliver quality users and sustainable growth.
+              {(t as any).trafficGenerationDesc || "Our comprehensive traffic generation services help gaming and entertainment brands reach their target audiences through data-driven, multi-channel marketing strategies that deliver quality users and sustainable growth."}
             </p>
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">

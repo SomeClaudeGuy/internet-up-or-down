@@ -313,6 +313,26 @@ export const translations = {
     contentProductionFeature6Title: "Live Streaming",
     contentProductionFeature6Desc: "Professional live streaming production for events and campaigns",
 
+    // Traffic Generation
+    trafficGenerationTitle: "Traffic for Casino Operators", 
+    trafficGenerationSubtitle: "Drive high-quality, targeted traffic to your casino platform with our proven acquisition strategies",
+    trafficGenerationDesc: "Stop wasting money on low-quality traffic that doesn't convert. We deliver premium players who deposit, play, and return.",
+
+    // Social Media Management
+    socialMediaTitle: "Social Media Management",
+    socialMediaSubtitle: "Dominate social media with content that converts followers into players", 
+    socialMediaDesc: "Transform your social presence into a player acquisition machine with viral content and strategic community building.",
+
+    // Media Buying
+    mediaBuyingTitle: "Media Buying & Marketing",
+    mediaBuyingSubtitle: "Performance-driven media buying that maximizes your advertising ROI",
+    mediaBuyingDesc: "Stop burning budget on ineffective ads. Our data-driven approach ensures every dollar drives measurable results.",
+
+    // Sponsorships & Activations
+    sponsorshipsTitle: "Sponsorships & Activations", 
+    sponsorshipsSubtitle: "Strategic partnerships that amplify your brand presence",
+    sponsorshipsDesc: "Connect with your target audience through premium sponsorships and brand activations that drive engagement and conversions.",
+
     // Footer
     footerDescription: "The worldwide leading marketing agency for casino/betting operators, influencers, and audiovisual content.",
     footerServicesTitle: "Services",
@@ -938,6 +958,26 @@ export const translations = {
     contentProductionFeature6Title: "Streaming en Vivo",
     contentProductionFeature6Desc: "Producción profesional de streaming en vivo para eventos y campañas",
 
+    // Traffic Generation
+    trafficGenerationTitle: "Tráfico para Operadores de Casino",
+    trafficGenerationSubtitle: "Impulsa tráfico de alta calidad y dirigido a tu plataforma de casino con nuestras estrategias de adquisición probadas",
+    trafficGenerationDesc: "Deja de desperdiciar dinero en tráfico de baja calidad que no convierte. Entregamos jugadores premium que depositan, juegan y regresan.",
+
+    // Social Media Management
+    socialMediaTitle: "Gestión de Redes Sociales",
+    socialMediaSubtitle: "Domina las redes sociales con contenido que convierte seguidores en jugadores",
+    socialMediaDesc: "Transforma tu presencia social en una máquina de adquisición de jugadores con contenido viral y construcción estratégica de comunidad.",
+
+    // Media Buying
+    mediaBuyingTitle: "Compra de Medios y Marketing",
+    mediaBuyingSubtitle: "Compra de medios orientada al rendimiento que maximiza tu ROI publicitario",
+    mediaBuyingDesc: "Deja de quemar presupuesto en anuncios inefectivos. Nuestro enfoque basado en datos asegura que cada dólar genere resultados medibles.",
+
+    // Sponsorships & Activations
+    sponsorshipsTitle: "Patrocinios y Activaciones",
+    sponsorshipsSubtitle: "Asociaciones estratégicas que amplifican tu presencia de marca",
+    sponsorshipsDesc: "Conéctate con tu audiencia objetivo a través de patrocinios premium y activaciones de marca que impulsan engagement y conversiones.",
+
     // Footer
     footerDescription: "La agencia de marketing líder mundial para operadores de casino/apuestas, influencers y contenido audiovisual.",
     footerServicesTitle: "Servicios",
@@ -1554,6 +1594,26 @@ export const translations = {
     globalCtaDesc: "Используйте нашу всемирную сеть для расширения вашего охвата и выхода на новые рынки с уверенностью.",
     globalCtaButton: "Исследовать Глобальные Возможности",
 
+    // Traffic Generation
+    trafficGenerationTitle: "Трафик для Операторов Казино",
+    trafficGenerationSubtitle: "Привлекайте высококачественный, целевой трафик на вашу платформу казино с нашими проверенными стратегиями привлечения",
+    trafficGenerationDesc: "Перестаньте тратить деньги на низкокачественный трафик, который не конвертирует. Мы поставляем премиум игроков, которые делают депозиты, играют и возвращаются.",
+
+    // Social Media Management
+    socialMediaTitle: "Управление Социальными Сетями",
+    socialMediaSubtitle: "Доминируйте в социальных сетях с контентом, который превращает подписчиков в игроков",
+    socialMediaDesc: "Превратите ваше социальное присутствие в машину привлечения игроков с вирусным контентом и стратегическим построением сообщества.",
+
+    // Media Buying
+    mediaBuyingTitle: "Медиабаинг и Маркетинг",
+    mediaBuyingSubtitle: "Ориентированный на производительность медиабаинг, который максимизирует ваш рекламный ROI",
+    mediaBuyingDesc: "Перестаньте сжигать бюджет на неэффективных рекламах. Наш подход, основанный на данных, обеспечивает измеримые результаты от каждого доллара.",
+
+    // Sponsorships & Activations
+    sponsorshipsTitle: "Спонсорство и Активации",
+    sponsorshipsSubtitle: "Стратегические партнерства, которые усиливают присутствие вашего бренда",
+    sponsorshipsDesc: "Соединитесь с вашей целевой аудиторией через премиум спонсорство и активации бренда, которые стимулируют вовлеченность и конверсии.",
+
     // Not Found
     notFoundTitle: "Страница Не Найдена",
     notFoundDescription: "Извините, мы не смогли найти страницу, которую вы ищете.",
@@ -2073,6 +2133,26 @@ export const translations = {
     globalCtaTitle: "Готові Стати Глобальними?",
     globalCtaDesc: "Використовуйте нашу всесвітню мережу для розширення вашого охоплення та виходу на нові ринки з впевненістю.",
     globalCtaButton: "Досліджувати Глобальні Можливості",
+
+    // Traffic Generation
+    trafficGenerationTitle: "Трафік для Операторів Казино",
+    trafficGenerationSubtitle: "Привертайте високоякісний, цільовий трафік на вашу платформу казино з нашими перевіреними стратегіями залучення",
+    trafficGenerationDesc: "Перестаньте витрачати гроші на низькоякісний трафік, який не конвертує. Ми поставляємо преміум гравців, які роблять депозити, грають та повертаються.",
+
+    // Social Media Management
+    socialMediaTitle: "Управління Соціальними Мережами",
+    socialMediaSubtitle: "Домінуйте в соціальних мережах з контентом, який перетворює підписників на гравців",
+    socialMediaDesc: "Перетворіть вашу соціальну присутність на машину залучення гравців з вірусним контентом та стратегічним побудовою спільноти.",
+
+    // Media Buying
+    mediaBuyingTitle: "Медіа-закупівлі та Маркетинг",
+    mediaBuyingSubtitle: "Орієнтовані на продуктивність медіа-закупівлі, які максимізують ваш рекламний ROI",
+    mediaBuyingDesc: "Перестаньте спалювати бюджет на неефективних рекламах. Наш підхід, заснований на даних, забезпечує вимірювані результати від кожного долара.",
+
+    // Sponsorships & Activations
+    sponsorshipsTitle: "Спонсорство та Активації",
+    sponsorshipsSubtitle: "Стратегічні партнерства, які підсилюють присутність вашого бренду",
+    sponsorshipsDesc: "З'єднайтесь з вашою цільовою аудиторією через преміум спонсорство та активації бренду, які стимулюють залученість та конверсії.",
 
     // Not Found
     notFoundTitle: "Сторінка Не Знайдена",

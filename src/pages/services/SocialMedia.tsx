@@ -168,15 +168,14 @@ const SocialMedia = () => {
               </div>
               
               <h1 className="text-5xl md:text-7xl font-black mb-8 leading-tight">
-                <span className="block text-foreground">Social Media</span>
+                <span className="block text-foreground">{(t as any).socialMediaTitle || "Social Media"}</span>
                 <span className="block bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 bg-clip-text text-transparent">
                   That Goes Viral
                 </span>
               </h1>
               
               <p className="text-xl text-muted-foreground mb-12 max-w-4xl mx-auto leading-relaxed">
-                Transform your social presence into a conversion machine with content that captivates, 
-                engages, and drives real business results across all major platforms.
+                {(t as any).socialMediaDesc || "Transform your social presence into a conversion machine with content that captivates, engages, and drives real business results across all major platforms."}
               </p>
             </div>
 
