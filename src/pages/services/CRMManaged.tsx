@@ -105,22 +105,21 @@ const CRMManaged = () => {
           <div className="max-w-4xl mx-auto text-center">
             <Badge className="mb-8 px-6 py-3 text-base font-medium bg-red-500/20 text-red-300 border-red-500/30 animate-pulse">
               <AlertCircle className="w-5 h-5 mr-2" />
-              CRM Crisis Alert
+              {(t as any).crmPainPoint1Title || "CRM Crisis Alert"}
             </Badge>
             
             <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-              Turn Your CRM From <span className="text-red-400">Chaos</span><br />
-              Into a <span className="text-green-400">Growth Engine</span>
+              {(t as any).crmManagedTitle || "Turn Your CRM From Chaos Into a Growth Engine"}
             </h1>
             
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Stop losing customers to poor data management. Our CRM experts transform scattered information into organized, automated customer success.
+              {(t as any).crmManagedSubtitle || "Stop losing customers to poor data management. Our CRM experts transform scattered information into organized, automated customer success."}
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="text-lg px-8 py-4 bg-gradient-to-r from-blue-500 to-indigo-500 shadow-2xl shadow-blue-500/25 hover:scale-105 transition-all" asChild>
                 <a href="https://docs.google.com/forms/d/1948-2HcLLEeciF3QQIzeTB-nPmM6-qsD3HopP5-bTyQ/viewform?edit_requested=true#response=ACYDBNgoe9qnpdvzE2IG3-SgO1FgdPRTnh9slrfCToFtyek2Of0Osps9NvqxQ-7epsdcl_0" target="_blank" rel="noopener noreferrer" className="flex items-center whitespace-nowrap">
-                  🚀 Transform My CRM
+                  🚀 {(t as any).crmManagedCtaButton || "Transform My CRM"}
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </a>
               </Button>

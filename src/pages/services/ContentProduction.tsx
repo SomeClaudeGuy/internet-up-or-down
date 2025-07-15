@@ -106,8 +106,7 @@ const ContentProduction = () => {
             </h1>
             
             <p className="text-xl text-gray-300 mb-12 max-w-4xl mx-auto">
-              Professional content production that stops the scroll and drives action. 
-              From viral videos to live events, we create content that matters.
+              {(t as any).contentProductionDesc || "Professional content production that stops the scroll and drives action. From viral videos to live events, we create content that matters."}
             </p>
 
             {/* Production Counter */}

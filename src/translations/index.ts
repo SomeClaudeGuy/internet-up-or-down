@@ -295,10 +295,11 @@ export const translations = {
     crmPainPoint1Desc: "Customer information lost in emails, spreadsheets, and sticky notes",
     crmPainPoint2Title: "Manual Everything",
     crmPainPoint2Desc: "Endless follow-ups, data entry, and missed opportunities",
+    crmManagedCtaButton: "Transform My CRM",
 
     // Content Production
     contentProductionTitle: "Premium Content & Event Production",
-    contentProductionSubtitle: "High-quality audiovisual content and event production services for maximum brand impact",
+    contentProductionDesc: "Professional content production that stops the scroll and drives action. From viral videos to live events, we create content that matters.",
     contentProductionFeature1Title: "Video Production",
     contentProductionFeature1Desc: "High-end video content creation from concept to final delivery for maximum brand impact",
     contentProductionFeature2Title: "Event Management",
@@ -919,10 +920,11 @@ export const translations = {
     crmPainPoint1Desc: "Información de clientes perdida en emails, hojas de cálculo y notas adhesivas",
     crmPainPoint2Title: "Todo Manual",
     crmPainPoint2Desc: "Seguimientos interminables, entrada de datos y oportunidades perdidas",
+    crmManagedCtaButton: "Transformar Mi CRM",
 
     // Content Production
     contentProductionTitle: "Producción Premium de Contenido y Eventos",
-    contentProductionSubtitle: "Servicios de producción de contenido audiovisual y eventos de alta calidad para máximo impacto de marca",
+    contentProductionDesc: "Producción profesional de contenido que detiene el scroll e impulsa la acción. Desde videos virales hasta eventos en vivo, creamos contenido que importa.",
     contentProductionFeature1Title: "Producción de Video",
     contentProductionFeature1Desc: "Creación de contenido de video de alta gama desde el concepto hasta la entrega final para máximo impacto de marca",
     contentProductionFeature2Title: "Gestión de Eventos",
