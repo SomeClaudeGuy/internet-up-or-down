@@ -164,7 +164,7 @@ const ClientTestimonials = () => {
               </div>
               <div className="flex items-center space-x-2">
                 <div className="w-2 h-2 bg-primary rounded-full"></div>
-                <span>Money-back guarantee</span>
+                <span>Real-time reporting dashboard</span>
               </div>
             </div>
           </div>
