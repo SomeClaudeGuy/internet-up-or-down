@@ -87,32 +87,6 @@ const CRMManaged = () => {
     }
   ];
 
-  const transformation = [
-    {
-      step: "1",
-      title: "Audit & Strategy",
-      description: "We analyze your current setup and design a custom CRM strategy",
-      icon: Target
-    },
-    {
-      step: "2",
-      title: "Implementation",
-      description: "Expert setup of your CRM system with all integrations and workflows",
-      icon: Settings
-    },
-    {
-      step: "3",
-      title: "Training & Launch",
-      description: "Complete team training and smooth transition to your new system",
-      icon: Users
-    },
-    {
-      step: "4",
-      title: "Optimization",
-      description: "Continuous monitoring and improvement for maximum ROI",
-      icon: TrendingUp
-    }
-  ];
 
   return (
     <div className="min-h-screen bg-background">
@@ -313,45 +287,6 @@ const CRMManaged = () => {
         </div>
       </section>
 
-      {/* Transformation Process */}
-      <section className="py-20 bg-muted/30">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Our 4-Step Transformation Process
-            </h2>
-            <p className="text-xl text-muted-foreground">
-              From chaos to customer success in 4 proven steps
-            </p>
-          </div>
-          
-          <div className="max-w-4xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {transformation.map((step, index) => (
-                <Card key={index} className="hover:shadow-lg transition-all duration-300 border-border/50 hover:border-blue-500/50 group relative overflow-hidden">
-                  <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-indigo-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
-                  <CardContent className="p-6">
-                    <div className="flex items-start space-x-4">
-                      <div className="w-12 h-12 rounded-full bg-gradient-to-r from-blue-500 to-indigo-500 flex items-center justify-center flex-shrink-0 text-white font-bold text-lg group-hover:scale-110 transition-transform">
-                        {step.step}
-                      </div>
-                      <div className="flex-1">
-                        <h3 className="text-lg font-semibold mb-2 group-hover:text-blue-500 transition-colors">
-                          {step.title}
-                        </h3>
-                        <p className="text-sm text-muted-foreground">
-                          {step.description}
-                        </p>
-                      </div>
-                      <step.icon className="w-6 h-6 text-blue-500 group-hover:scale-110 transition-transform" />
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-600/20 to-indigo-600/20">
