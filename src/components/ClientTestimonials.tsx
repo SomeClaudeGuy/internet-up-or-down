@@ -120,55 +120,6 @@ const ClientTestimonials = () => {
           ))}
         </div>
 
-        {/* Results Section */}
-        <div className="bg-gradient-to-r from-primary/10 to-accent/10 rounded-2xl p-8 border border-border/50">
-          <div className="text-center mb-8">
-            <h3 className="text-2xl font-bold mb-4">{t.testimonialsResultsTitle}</h3>
-            <p className="text-muted-foreground">{t.testimonialsResultsSubtitle}</p>
-          </div>
-          
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            <div className="text-center">
-              <div className="text-2xl md:text-3xl font-bold text-primary mb-2">20K+</div>
-              <div className="text-sm text-muted-foreground">New Registrations</div>
-            </div>
-            <div className="text-center">
-              <div className="text-2xl md:text-3xl font-bold text-primary mb-2">6K+</div>
-              <div className="text-sm text-muted-foreground">First-Time Deposits</div>
-            </div>
-            <div className="text-center">
-              <div className="text-2xl md:text-3xl font-bold text-primary mb-2">99%</div>
-              <div className="text-sm text-muted-foreground">Client Satisfaction</div>
-            </div>
-            <div className="text-center">
-              <div className="text-2xl md:text-3xl font-bold text-primary mb-2">24/7</div>
-              <div className="text-sm text-muted-foreground">Campaign Optimization</div>
-            </div>
-          </div>
-
-          <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
-            <div className="space-y-2">
-              <div className="flex items-center space-x-2">
-                <div className="w-2 h-2 bg-primary rounded-full"></div>
-                <span>Performance-based pricing available</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <div className="w-2 h-2 bg-primary rounded-full"></div>
-                <span>24/7 campaign monitoring</span>
-              </div>
-            </div>
-            <div className="space-y-2">
-              <div className="flex items-center space-x-2">
-                <div className="w-2 h-2 bg-primary rounded-full"></div>
-                <span>Dedicated account manager</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <div className="w-2 h-2 bg-primary rounded-full"></div>
-                <span>Real-time reporting dashboard</span>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );
