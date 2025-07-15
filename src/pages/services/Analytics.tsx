@@ -1,193 +1,201 @@
-import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { useTranslation } from "@/hooks/useTranslation";
-import { BarChart, TrendingUp, Eye, Target, Database, Zap, ArrowRight, CheckCircle } from "lucide-react";
+import { 
+  BarChart, TrendingUp, Eye, Target, Database, Zap, CheckCircle, 
+  PieChart, LineChart, Activity, Users, Globe, Search 
+} from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 const Analytics = () => {
   const t = useTranslation();
 
-  const features = [
+  const analyticsServices = [
     {
+      title: "Market Intelligence & Competitive Analysis",
+      description: "Comprehensive market research and competitor benchmarking to understand your position in the gaming landscape.",
+      icon: Search,
+      capabilities: [
+        "Market size and growth analysis",
+        "Competitor performance tracking",
+        "Trend identification and forecasting",
+        "Regulatory impact assessment"
+      ],
+      tools: ["Data mining platforms", "Market research databases", "Competitive intelligence tools", "Trend analysis software"]
+    },
+    {
+      title: "Performance Analytics & KPI Tracking",
+      description: "Advanced analytics to track key performance indicators and measure the success of your marketing campaigns.",
       icon: BarChart,
-      title: "Market Intelligence",
-      description: "Comprehensive market analysis and competitor benchmarking across all major gaming markets"
+      capabilities: [
+        "Revenue attribution analysis",
+        "Customer lifetime value tracking",
+        "Campaign performance optimization",
+        "ROI measurement and reporting"
+      ],
+      tools: ["Google Analytics", "Adobe Analytics", "Custom tracking solutions", "Business intelligence platforms"]
     },
     {
-      icon: Eye,
-      title: "Competitor Insights",
-      description: "Deep dive into competitor strategies, performance metrics, and market positioning"
+      title: "User Behavior Analytics",
+      description: "Deep insights into user behavior patterns to optimize user experience and increase conversion rates.",
+      icon: Activity,
+      capabilities: [
+        "User journey mapping",
+        "Conversion funnel analysis",
+        "Heatmap and session recordings",
+        "A/B testing and optimization"
+      ],
+      tools: ["Hotjar", "Mixpanel", "Amplitude", "UserTesting platforms"]
     },
     {
+      title: "Financial Analytics & Reporting",
+      description: "Comprehensive financial analysis to track revenue, costs, and profitability across all channels.",
       icon: TrendingUp,
-      title: "Performance Metrics", 
-      description: "Advanced KPI tracking and performance optimization recommendations"
-    },
-    {
-      icon: Target,
-      title: "Strategic Planning",
-      description: "Data-driven strategic recommendations based on market trends and opportunities"
-    },
-    {
-      icon: Database,
-      title: "Custom Dashboards",
-      description: "Personalized analytics dashboards with real-time data visualization"
-    },
-    {
-      icon: Zap,
-      title: "Actionable Insights",
-      description: "Transform data into actionable strategies that drive measurable results"
+      capabilities: [
+        "Revenue stream analysis",
+        "Cost per acquisition tracking",
+        "Profit margin optimization",
+        "Budget allocation recommendations"
+      ],
+      tools: ["Financial modeling software", "Excel/Google Sheets", "Tableau", "Power BI"]
     }
   ];
 
-  const results = [
-    { metric: "300%", label: "Average Performance Improvement" },
-    { metric: "50+", label: "Key Metrics Tracked" },
-    { metric: "24/7", label: "Real-Time Monitoring" },
-    { metric: "98%", label: "Data Accuracy Rate" }
+  const analyticsProcess = [
+    {
+      step: "01",
+      title: "Data Collection & Integration",
+      description: "We gather data from multiple sources including your existing systems, third-party platforms, and market research databases to create a comprehensive data foundation.",
+      icon: Database
+    },
+    {
+      step: "02",
+      title: "Analysis & Insights Generation",
+      description: "Our team applies advanced analytical techniques to identify patterns, trends, and opportunities within your data.",
+      icon: Search
+    },
+    {
+      step: "03",
+      title: "Reporting & Visualization",
+      description: "We create clear, actionable reports and interactive dashboards that make complex data easy to understand and act upon.",
+      icon: PieChart
+    },
+    {
+      step: "04",
+      title: "Strategic Recommendations",
+      description: "Based on our analysis, we provide specific, actionable recommendations to improve performance and achieve your business objectives.",
+      icon: Target
+    }
   ];
 
+  const keyMetrics = [
+    { metric: "Revenue Attribution", description: "Track which channels drive the most valuable customers" },
+    { metric: "Customer Lifetime Value", description: "Understand the long-term value of your user base" },
+    { metric: "Conversion Rates", description: "Measure and optimize conversion across all touchpoints" },
+    { metric: "Market Share", description: "Monitor your position relative to competitors" },
+    { metric: "User Engagement", description: "Analyze how users interact with your platform" },
+    { metric: "Cost Efficiency", description: "Optimize spend across marketing channels" }
+  ];
 
   return (
     <div className="min-h-screen bg-background">
       <Header />
       
-      {/* Hero Section - Dashboard-style Layout */}
-      <section className="pt-24 pb-20 relative overflow-hidden min-h-screen flex items-center">
-        <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-background to-pink-500/5"></div>
-        <div className="absolute top-20 left-20 w-72 h-72 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-20 right-20 w-96 h-96 bg-pink-500/10 rounded-full blur-3xl animate-pulse delay-700"></div>
-        
-        {/* Floating data points */}
-        <div className="absolute top-1/4 left-1/3 w-3 h-3 bg-purple-400 rounded-full animate-bounce delay-300"></div>
-        <div className="absolute top-1/3 right-1/4 w-2 h-2 bg-pink-400 rounded-full animate-bounce delay-500"></div>
-        <div className="absolute bottom-1/3 left-1/4 w-4 h-4 bg-blue-400 rounded-full animate-bounce delay-1000"></div>
-        
-        <div className="container mx-auto px-4 relative z-10">
-          {/* Dashboard Header */}
-          <div className="text-center mb-16">
-            <Badge className="mb-6 px-6 py-3 text-base font-medium bg-purple-500/10 text-purple-500 border-purple-500/20">
-              <BarChart className="w-5 h-5 mr-2" />
-              Analytics Intelligence Dashboard
-            </Badge>
+      {/* Hero Section */}
+      <section className="pt-24 pb-16 bg-gradient-to-br from-background via-muted/20 to-background">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="inline-flex items-center bg-primary/10 rounded-full px-4 py-2 mb-8">
+              <BarChart className="w-4 h-4 text-primary mr-2" />
+              <span className="text-sm font-medium text-primary">Analytics & Intelligence Services</span>
+            </div>
             
-            <h1 className="text-6xl md:text-8xl font-bold mb-8 bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent">
-              Analytics
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+              Data-Driven Intelligence
             </h1>
             
-            <p className="text-2xl text-muted-foreground mb-12 max-w-4xl mx-auto">
-              Transform your business intelligence with data-driven insights, competitor analysis, and strategic recommendations
+            <p className="text-xl text-muted-foreground mb-12 leading-relaxed">
+              Transform raw data into actionable insights with our comprehensive analytics services. 
+              We help gaming and entertainment brands make informed decisions through advanced 
+              market intelligence, performance tracking, and strategic analysis.
             </p>
-          </div>
 
-          {/* Dashboard Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-            <div className="bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl p-6 text-white transform hover:scale-105 transition-all duration-500 hover:shadow-2xl hover:shadow-purple-500/30 group">
-              <div className="flex items-center justify-between mb-4">
-                <BarChart className="w-8 h-8 group-hover:animate-bounce" />
-                <span className="text-sm opacity-80">Performance</span>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
+              <div className="text-center p-4">
+                <div className="text-2xl font-bold text-primary mb-2">50+</div>
+                <div className="text-sm text-muted-foreground">Key Metrics Tracked</div>
               </div>
-              <div className="text-3xl font-bold mb-1 animate-fade-in">300%</div>
-              <div className="text-sm opacity-80">Average Improvement</div>
-            </div>
-            
-            <div className="bg-card border-2 border-purple-500/20 rounded-2xl p-6 transform hover:scale-105 transition-all duration-500 hover:shadow-xl hover:border-purple-500/50 group">
-              <div className="flex items-center justify-between mb-4">
-                <Target className="w-8 h-8 text-purple-500 group-hover:animate-pulse" />
-                <span className="text-sm text-muted-foreground">Metrics</span>
+              <div className="text-center p-4">
+                <div className="text-2xl font-bold text-primary mb-2">98%</div>
+                <div className="text-sm text-muted-foreground">Data Accuracy</div>
               </div>
-              <div className="text-3xl font-bold text-purple-500 mb-1 animate-fade-in">50+</div>
-              <div className="text-sm text-muted-foreground">KPIs Tracked</div>
-            </div>
-            
-            <div className="bg-card border-2 border-pink-500/20 rounded-2xl p-6 transform hover:scale-105 transition-all duration-500 hover:shadow-xl hover:border-pink-500/50 group">
-              <div className="flex items-center justify-between mb-4">
-                <Eye className="w-8 h-8 text-pink-500 group-hover:animate-pulse" />
-                <span className="text-sm text-muted-foreground">Monitoring</span>
+              <div className="text-center p-4">
+                <div className="text-2xl font-bold text-primary mb-2">24/7</div>
+                <div className="text-sm text-muted-foreground">Real-time Monitoring</div>
               </div>
-              <div className="text-3xl font-bold text-pink-500 mb-1 animate-fade-in">24/7</div>
-              <div className="text-sm text-muted-foreground">Real-time</div>
-            </div>
-            
-            <div className="bg-gradient-to-br from-pink-500 to-pink-600 rounded-2xl p-6 text-white transform hover:scale-105 transition-all duration-500 hover:shadow-2xl hover:shadow-pink-500/30 group">
-              <div className="flex items-center justify-between mb-4">
-                <Database className="w-8 h-8 group-hover:animate-bounce" />
-                <span className="text-sm opacity-80">Accuracy</span>
+              <div className="text-center p-4">
+                <div className="text-2xl font-bold text-primary mb-2">300%</div>
+                <div className="text-sm text-muted-foreground">Avg. Performance Lift</div>
               </div>
-              <div className="text-3xl font-bold mb-1 animate-fade-in">98%</div>
-              <div className="text-sm opacity-80">Data Quality</div>
-            </div>
-          </div>
-
-          {/* Action Buttons */}
-          <div className="text-center">
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-              <Button size="lg" className="text-lg px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 shadow-2xl shadow-purple-500/25" asChild>
-                <a href="https://docs.google.com/forms/d/1948-2HcLLEeciF3QQIzeTB-nPmM6-qsD3HopP5-bTyQ/viewform?edit_requested=true#response=ACYDBNgoe9qnpdvzE2IG3-SgO1FgdPRTnh9slrfCToFtyek2Of0Osps9NvqxQ-7epsdcl_0" target="_blank" rel="noopener noreferrer" className="flex items-center whitespace-nowrap">
-                  📊 Get Your Analytics Dashboard
-                  <ArrowRight className="ml-2 w-5 h-5" />
-                </a>
-              </Button>
-              <Button variant="outline" size="lg" className="text-lg px-8 py-4 border-purple-500/20">
-                📈 View Demo Report
-              </Button>
-            </div>
-            
-            <div className="text-sm text-muted-foreground">
-              🎯 Free market analysis • Custom dashboard • Live in 24 hours
             </div>
           </div>
         </div>
       </section>
 
-      {/* Results Section */}
-      <section className="py-20 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Data-Driven Success</h2>
-            <p className="text-xl text-muted-foreground">Intelligence that transforms strategy into results</p>
-          </div>
-          
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
-            {results.map((result, index) => (
-              <div key={index} className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-purple-500 mb-2">{result.metric}</div>
-                <div className="text-sm text-muted-foreground">{result.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Features Section */}
+      {/* Analytics Services Section */}
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Comprehensive Market Intelligence</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Advanced analytics and benchmarking tools that give you the competitive edge
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">Our Analytics Services</h2>
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+              We provide comprehensive analytics solutions that cover every aspect of your business, 
+              from market intelligence to performance optimization.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
-              <Card key={index} className="group hover:scale-105 transition-all duration-300 border-border/50 hover:border-purple-500/50">
-                <CardHeader className="text-center">
-                  <div className="w-16 h-16 mx-auto mb-4 rounded-xl bg-gradient-to-r from-purple-500 to-pink-500 p-0.5">
-                    <div className="w-full h-full bg-card rounded-xl flex items-center justify-center">
-                      <feature.icon className="w-8 h-8 text-foreground" />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-7xl mx-auto">
+            {analyticsServices.map((service, index) => (
+              <Card key={index} className="group hover:scale-105 transition-all duration-300 h-full">
+                <CardHeader>
+                  <div className="flex items-center mb-4">
+                    <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mr-4">
+                      <service.icon className="w-6 h-6 text-primary" />
+                    </div>
+                    <CardTitle className="text-xl">{service.title}</CardTitle>
+                  </div>
+                  <CardDescription className="text-base leading-relaxed">
+                    {service.description}
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                      <h4 className="font-semibold mb-3 text-sm text-muted-foreground uppercase tracking-wide">
+                        Key Capabilities
+                      </h4>
+                      <ul className="space-y-2">
+                        {service.capabilities.map((capability, i) => (
+                          <li key={i} className="flex items-start text-sm">
+                            <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
+                            {capability}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold mb-3 text-sm text-muted-foreground uppercase tracking-wide">
+                        Tools & Platforms
+                      </h4>
+                      <div className="flex flex-wrap gap-2">
+                        {service.tools.map((tool, i) => (
+                          <Badge key={i} variant="secondary" className="text-xs">
+                            {tool}
+                          </Badge>
+                        ))}
+                      </div>
                     </div>
                   </div>
-                  <CardTitle className="text-xl group-hover:text-purple-500 transition-colors">
-                    {feature.title}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent className="text-center">
-                  <CardDescription className="text-base">
-                    {feature.description}
-                  </CardDescription>
                 </CardContent>
               </Card>
             ))}
@@ -195,64 +203,109 @@ const Analytics = () => {
         </div>
       </section>
 
-      {/* Bespoke Quote Section */}
+      {/* Analytics Process Section */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-2xl p-12">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">Get Your Bespoke Analytics Solution</h2>
-              <p className="text-xl text-muted-foreground mb-8">
-                Every business is unique. Let us create a custom analytics and benchmarking solution 
-                tailored specifically to your needs and objectives.
-              </p>
-              
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-                <div className="flex items-center justify-center space-x-2">
-                  <CheckCircle className="w-5 h-5 text-purple-500" />
-                  <span className="text-sm">Custom Dashboards</span>
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">Our Analytics Process</h2>
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+              A systematic approach to transforming your data into actionable insights that drive 
+              business growth and competitive advantage.
+            </p>
+          </div>
+          
+          <div className="max-w-4xl mx-auto">
+            {analyticsProcess.map((step, index) => (
+              <div key={index} className="flex items-start mb-12 last:mb-0">
+                <div className="flex-shrink-0 mr-6">
+                  <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center relative">
+                    <step.icon className="w-8 h-8 text-primary" />
+                    <div className="absolute -top-2 -right-2 w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-xs font-bold">
+                      {step.step}
+                    </div>
+                  </div>
+                  {index < analyticsProcess.length - 1 && (
+                    <div className="w-0.5 h-12 bg-border mx-auto mt-4"></div>
+                  )}
                 </div>
-                <div className="flex items-center justify-center space-x-2">
-                  <CheckCircle className="w-5 h-5 text-purple-500" />
-                  <span className="text-sm">Tailored Reporting</span>
-                </div>
-                <div className="flex items-center justify-center space-x-2">
-                  <CheckCircle className="w-5 h-5 text-purple-500" />
-                  <span className="text-sm">Dedicated Support</span>
+                <div className="flex-1 pt-2">
+                  <h3 className="text-xl font-semibold mb-3">{step.title}</h3>
+                  <p className="text-muted-foreground leading-relaxed">{step.description}</p>
                 </div>
               </div>
-              
-              <Button size="lg" className="text-lg px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 shadow-2xl shadow-purple-500/25" asChild>
-                <a href="https://docs.google.com/forms/d/1948-2HcLLEeciF3QQIzeTB-nPmM6-qsD3HopP5-bTyQ/viewform?edit_requested=true#response=ACYDBNgoe9qnpdvzE2IG3-SgO1FgdPRTnh9slrfCToFtyek2Of0Osps9NvqxQ-7epsdcl_0" target="_blank" rel="noopener noreferrer" className="flex items-center whitespace-nowrap">
-                  💬 Request Custom Quote
-                  <ArrowRight className="ml-2 w-5 h-5" />
-                </a>
-              </Button>
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-purple-500/20 to-pink-500/20">
-        <div className="container mx-auto px-4 text-center">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Transform Your Strategic Decision Making</h2>
-            <p className="text-xl text-muted-foreground mb-8">
-              Join leading operators who rely on our market intelligence to stay ahead of the competition
+      {/* Key Metrics Section */}
+      <section className="py-20 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">Essential Business Metrics</h2>
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+              We track and analyze the metrics that matter most to your business success, 
+              providing you with the insights needed to make informed decisions.
             </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="text-lg px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 shadow-2xl shadow-purple-500/25" asChild>
-                <a href="https://docs.google.com/forms/d/1948-2HcLLEeciF3QQIzeTB-nPmM6-qsD3HopP5-bTyQ/viewform?edit_requested=true#response=ACYDBNgoe9qnpdvzE2IG3-SgO1FgdPRTnh9slrfCToFtyek2Of0Osps9NvqxQ-7epsdcl_0" target="_blank" rel="noopener noreferrer" className="flex items-center whitespace-nowrap">
-                  📊 Start Your Market Intelligence
-                  <ArrowRight className="ml-2 w-5 h-5" />
-                </a>
-              </Button>
-              
-              <div className="text-sm text-muted-foreground flex items-center justify-center">
-                🎯 Free market analysis • Expert insights • Setup in 24 hours
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {keyMetrics.map((metric, index) => (
+              <Card key={index} className="text-center p-6 hover:scale-105 transition-all duration-300">
+                <div className="w-12 h-12 mx-auto mb-4 rounded-lg bg-primary/10 flex items-center justify-center">
+                  <BarChart className="w-6 h-6 text-primary" />
+                </div>
+                <h3 className="text-lg font-semibold mb-2">{metric.metric}</h3>
+                <p className="text-sm text-muted-foreground">{metric.description}</p>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">Why Choose Our Analytics Services</h2>
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+              Our analytics expertise helps gaming and entertainment brands make data-driven decisions 
+              that lead to measurable business improvements.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+            <Card className="text-center p-6">
+              <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center">
+                <Eye className="w-8 h-8 text-primary" />
               </div>
-            </div>
+              <h3 className="text-lg font-semibold mb-2">Market Visibility</h3>
+              <p className="text-sm text-muted-foreground">Gain complete visibility into market trends and competitor performance</p>
+            </Card>
+            
+            <Card className="text-center p-6">
+              <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-green-500/10 flex items-center justify-center">
+                <TrendingUp className="w-8 h-8 text-green-500" />
+              </div>
+              <h3 className="text-lg font-semibold mb-2">Performance Optimization</h3>
+              <p className="text-sm text-muted-foreground">Identify opportunities to improve campaign performance and ROI</p>
+            </Card>
+            
+            <Card className="text-center p-6">
+              <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-blue-500/10 flex items-center justify-center">
+                <Target className="w-8 h-8 text-blue-500" />
+              </div>
+              <h3 className="text-lg font-semibold mb-2">Strategic Planning</h3>
+              <p className="text-sm text-muted-foreground">Make informed strategic decisions based on data-driven insights</p>
+            </Card>
+            
+            <Card className="text-center p-6">
+              <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-purple-500/10 flex items-center justify-center">
+                <Zap className="w-8 h-8 text-purple-500" />
+              </div>
+              <h3 className="text-lg font-semibold mb-2">Competitive Edge</h3>
+              <p className="text-sm text-muted-foreground">Stay ahead of the competition with advanced market intelligence</p>
+            </Card>
           </div>
         </div>
       </section>
