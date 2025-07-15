@@ -18,6 +18,18 @@ import { useTranslation } from "@/hooks/useTranslation";
 
 const Services = () => {
   const t = useTranslation();
+
+  const getServiceUrl = (index: number) => {
+    const urls = [
+      '/services/traffic-generation',
+      '/services/analytics', 
+      '/services/social-media',
+      '/services/sponsorships',
+      '/services/media-buying',
+      '/services/content-production'
+    ];
+    return urls[index];
+  };
   
   const services = [
     {
@@ -127,9 +139,11 @@ const Services = () => {
                     ))}
                   </div>
 
-                  <Button variant="outline" className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
-                    {t.services.learnMore}
-                    <ArrowRight className="ml-2 w-4 h-4" />
+                  <Button variant="outline" className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors" asChild>
+                    <Link to={getServiceUrl(index)}>
+                      {t.services.learnMore}
+                      <ArrowRight className="ml-2 w-4 h-4" />
+                    </Link>
                   </Button>
                 </CardContent>
               </Card>
