@@ -93,10 +93,10 @@ const Gallery = () => {
   ];
 
   return (
-    <section className="py-24 bg-gradient-to-br from-background via-primary/5 to-accent/5">
-      <div className="container mx-auto px-4">
+    <section className="py-32 bg-gradient-to-br from-background via-primary/5 to-accent/5">
+      <div className="container mx-auto px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-20">
           <div className="inline-flex items-center space-x-2 bg-primary/10 backdrop-blur-md border border-primary/20 px-6 py-3 rounded-full mb-8 shadow-lg">
             <ImageIcon className="w-5 h-5 text-primary animate-pulse" />
             <span className="text-sm font-semibold text-primary tracking-wide">Our Work</span>
@@ -111,7 +111,7 @@ const Gallery = () => {
         </div>
 
         {/* Filter Tabs */}
-        <div className="flex justify-center mb-12">
+        <div className="flex justify-center mb-16">
           <div className="flex space-x-2 bg-card/50 backdrop-blur-sm border border-border/50 rounded-full p-2">
             {filters.map((filterOption) => (
               <Button
@@ -132,7 +132,7 @@ const Gallery = () => {
         </div>
 
         {/* Gallery Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
           {filteredItems.map((item) => (
             <Card 
               key={item.id}
@@ -180,7 +180,7 @@ const Gallery = () => {
                 </div>
               </div>
 
-              <CardContent className="p-6">
+              <CardContent className="p-8">
                 <div className="flex items-center justify-between mb-3">
                   <Badge variant="outline" className="text-xs">
                     {item.category}
@@ -214,7 +214,7 @@ const Gallery = () => {
         </div>
 
         {/* Call to Action */}
-        <div className="text-center mt-16">
+        <div className="text-center mt-20">
           <Card className="max-w-2xl mx-auto bg-gradient-to-r from-primary/10 to-accent/10 border-primary/20">
             <CardContent className="p-8">
               <h3 className="text-2xl font-bold mb-4">Want to see your brand featured here?</h3>

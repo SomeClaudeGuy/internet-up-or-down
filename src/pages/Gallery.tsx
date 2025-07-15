@@ -6,7 +6,7 @@ const GalleryPage = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      <div className="pt-20">
+      <div className="pt-24">
         <Gallery />
       </div>
       <Footer />
