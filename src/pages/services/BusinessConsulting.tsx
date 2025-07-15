@@ -243,42 +243,6 @@ const BusinessConsulting = () => {
         </div>
       </section>
 
-      {/* Custom Consultation Section */}
-      <section className="py-20 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-2xl p-12">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">Get Your Custom Business Strategy</h2>
-              <p className="text-xl text-muted-foreground mb-8">
-                Every business is unique. Let us develop a tailored consulting approach 
-                that addresses your specific challenges and accelerates your growth.
-              </p>
-              
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-                <div className="flex items-center justify-center space-x-2">
-                  <CheckCircle className="w-5 h-5 text-blue-500" />
-                  <span className="text-sm">Strategic Assessment</span>
-                </div>
-                <div className="flex items-center justify-center space-x-2">
-                  <CheckCircle className="w-5 h-5 text-blue-500" />
-                  <span className="text-sm">Custom Implementation</span>
-                </div>
-                <div className="flex items-center justify-center space-x-2">
-                  <CheckCircle className="w-5 h-5 text-blue-500" />
-                  <span className="text-sm">Ongoing Support</span>
-                </div>
-              </div>
-              
-              <Button size="lg" className="text-lg px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 shadow-2xl shadow-blue-500/25" asChild>
-                <a href="https://docs.google.com/forms/d/1948-2HcLLEeciF3QQIzeTB-nPmM6-qsD3HopP5-bTyQ/viewform?edit_requested=true#response=ACYDBNgoe9qnpdvzE2IG3-SgO1FgdPRTnh9slrfCToFtyek2Of0Osps9NvqxQ-7epsdcl_0" target="_blank" rel="noopener noreferrer" className="flex items-center whitespace-nowrap">
-                  💬 Schedule Consultation
-                  <ArrowRight className="ml-2 w-5 h-5" />
-                </a>
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-500/20 to-purple-500/20">
