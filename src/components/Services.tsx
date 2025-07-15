@@ -1,6 +1,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { useTranslation } from "@/hooks/useTranslation";
+import { Link } from "react-router-dom";
 import { 
   Target, 
   TrendingUp, 
@@ -116,10 +117,10 @@ const Services = () => {
                 </div>
 
                 <Button variant="outline" className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors" asChild>
-                  <a href={getServiceUrl(index)}>
+                  <Link to={getServiceUrl(index)}>
                     {t.servicesLearnMore}
                     <ArrowRight className="ml-2 w-4 h-4" />
-                  </a>
+                  </Link>
                 </Button>
               </CardContent>
             </Card>
