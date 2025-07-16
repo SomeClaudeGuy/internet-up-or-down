@@ -14,29 +14,29 @@ const TrafficGeneration = () => {
 
   const trafficTypes = [
     {
-      title: "Social Media Traffic",
-      description: "Leverage social platforms to reach your target audience where they spend most of their time.",
+      title: (t as any).trafficSocialMediaTitle,
+      description: (t as any).trafficSocialMediaDesc,
       platforms: ["Facebook", "Instagram", "TikTok", "Twitter", "YouTube"],
       icon: Users,
       benefits: ["High engagement rates", "Precise demographic targeting", "Real-time campaign optimization"]
     },
     {
-      title: "Search Engine Marketing",
-      description: "Capture high-intent users actively searching for gaming and entertainment content.",
+      title: (t as any).trafficSEMTitle,
+      description: (t as any).trafficSEMDesc,
       platforms: ["Google Ads", "Bing Ads", "Yahoo Search"],
       icon: Target,
       benefits: ["Intent-based targeting", "Immediate visibility", "Performance tracking"]
     },
     {
-      title: "Native Advertising", 
-      description: "Seamlessly integrate your content within editorial environments for natural discovery.",
+      title: (t as any).trafficNativeTitle, 
+      description: (t as any).trafficNativeDesc,
       platforms: ["Taboola", "Outbrain", "Revcontent", "Content.ad"],
       icon: Eye,
       benefits: ["Non-intrusive advertising", "Higher engagement", "Brand safety"]
     },
     {
-      title: "Display & Programmatic",
-      description: "Automated buying of ad inventory across premium publisher networks.",
+      title: (t as any).trafficDisplayTitle,
+      description: (t as any).trafficDisplayDesc,
       platforms: ["Google Display", "Amazon DSP", "The Trade Desk"],
       icon: BarChart3,
       benefits: ["Real-time bidding", "Advanced targeting", "Cross-device reach"]
@@ -46,26 +46,26 @@ const TrafficGeneration = () => {
   const methodology = [
     {
       step: "01",
-      title: "Audience Research & Analysis",
-      description: "We conduct comprehensive market research to identify your ideal customer profiles and their online behavior patterns.",
+      title: (t as any).trafficStep1Title,
+      description: (t as any).trafficStep1Desc,
       icon: Search
     },
     {
       step: "02", 
-      title: "Multi-Channel Strategy Development",
-      description: "Based on research insights, we develop a tailored traffic acquisition strategy across multiple channels.",
+      title: (t as any).trafficStep2Title,
+      description: (t as any).trafficStep2Desc,
       icon: Filter
     },
     {
       step: "03",
-      title: "Campaign Optimization & Scaling",
-      description: "Continuous monitoring and optimization of campaigns to maximize ROI and scale successful initiatives.",
+      title: (t as any).trafficStep3Title,
+      description: (t as any).trafficStep3Desc,
       icon: TrendingUp
     },
     {
       step: "04",
-      title: "Performance Analytics & Reporting",
-      description: "Detailed reporting and analytics to track performance, measure success, and inform future strategies.",
+      title: (t as any).trafficStep4Title,
+      description: (t as any).trafficStep4Desc,
       icon: BarChart3
     }
   ];
@@ -84,11 +84,11 @@ const TrafficGeneration = () => {
             </div>
             
             <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-              {(t as any).trafficGenerationTitle || "Strategic Traffic Acquisition"}
+              {(t as any).trafficGenerationTitle}
             </h1>
             
             <p className="text-xl text-muted-foreground mb-12 leading-relaxed">
-              {(t as any).trafficGenerationDesc || "Our comprehensive traffic generation services help gaming and entertainment brands reach their target audiences through data-driven, multi-channel marketing strategies that deliver quality users and sustainable growth."}
+              {(t as any).trafficGenerationDesc}
             </p>
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
@@ -117,10 +117,9 @@ const TrafficGeneration = () => {
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Traffic Acquisition Channels</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">{(t as any).trafficAcquisitionChannelsTitle}</h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              We utilize a diverse mix of traffic channels to ensure consistent, high-quality user acquisition 
-              across multiple touchpoints in the customer journey.
+              {(t as any).trafficAcquisitionChannelsDesc}
             </p>
           </div>
           
@@ -175,10 +174,9 @@ const TrafficGeneration = () => {
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Our Traffic Generation Process</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">{(t as any).trafficProcessTitle}</h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              A systematic approach to driving quality traffic that converts, backed by data analysis 
-              and continuous optimization across all channels.
+              {(t as any).trafficProcessDesc}
             </p>
           </div>
           
@@ -210,9 +208,9 @@ const TrafficGeneration = () => {
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Performance Insights</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">{(t as any).trafficPerformanceTitle}</h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Data-driven results from our traffic generation campaigns across various industry verticals.
+              {(t as any).trafficPerformanceDesc}
             </p>
           </div>
           

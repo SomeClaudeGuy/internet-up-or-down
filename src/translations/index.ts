@@ -323,14 +323,74 @@ export const translations = {
     contentProductionFeature6Desc: "Professional live streaming production for events and campaigns",
 
     // Traffic Generation
-    trafficGenerationTitle: "Traffic for Casino Operators", 
+    trafficGenerationTitle: "Strategic Traffic Acquisition", 
     trafficGenerationSubtitle: "Drive high-quality, targeted traffic to your casino platform with our proven acquisition strategies",
-    trafficGenerationDesc: "Stop wasting money on low-quality traffic that doesn't convert. We deliver premium players who deposit, play, and return.",
+    trafficGenerationDesc: "Our comprehensive traffic generation services help gaming and entertainment brands reach their target audiences through data-driven, multi-channel marketing strategies that deliver quality users and sustainable growth.",
+    trafficAcquisitionChannelsTitle: "Traffic Acquisition Channels",
+    trafficAcquisitionChannelsDesc: "We utilize a diverse mix of traffic channels to ensure consistent, high-quality user acquisition across multiple touchpoints in the customer journey.",
+    trafficProcessTitle: "Our Traffic Generation Process",
+    trafficProcessDesc: "A systematic approach to driving quality traffic that converts, backed by data analysis and continuous optimization across all channels.",
+    trafficPerformanceTitle: "Performance Insights",
+    trafficPerformanceDesc: "Data-driven results from our traffic generation campaigns across various industry verticals.",
+    
+    // Traffic Types
+    trafficSocialMediaTitle: "Social Media Traffic",
+    trafficSocialMediaDesc: "Leverage social platforms to reach your target audience where they spend most of their time.",
+    trafficSEMTitle: "Search Engine Marketing",
+    trafficSEMDesc: "Capture high-intent users actively searching for gaming and entertainment content.",
+    trafficNativeTitle: "Native Advertising",
+    trafficNativeDesc: "Seamlessly integrate your content within editorial environments for natural discovery.",
+    trafficDisplayTitle: "Display & Programmatic",
+    trafficDisplayDesc: "Automated buying of ad inventory across premium publisher networks.",
+    
+    // Traffic Methodology
+    trafficStep1Title: "Audience Research & Analysis",
+    trafficStep1Desc: "We conduct comprehensive market research to identify your ideal customer profiles and their online behavior patterns.",
+    trafficStep2Title: "Multi-Channel Strategy Development", 
+    trafficStep2Desc: "Based on research insights, we develop a tailored traffic acquisition strategy across multiple channels.",
+    trafficStep3Title: "Campaign Optimization & Scaling",
+    trafficStep3Desc: "Continuous monitoring and optimization of campaigns to maximize ROI and scale successful initiatives.",
+    trafficStep4Title: "Performance Analytics & Reporting",
+    trafficStep4Desc: "Detailed reporting and analytics to track performance, measure success, and inform future strategies.",
 
     // Social Media Management
-    socialMediaTitle: "Social Media Management",
+    socialMediaTitle: "Social Media That Goes Viral",
     socialMediaSubtitle: "Dominate social media with content that converts followers into players", 
-    socialMediaDesc: "Transform your social presence into a player acquisition machine with viral content and strategic community building.",
+    socialMediaDesc: "Transform your social presence into a conversion machine with content that captivates, engages, and drives real business results across all major platforms.",
+    socialContentTypesTitle: "Content That Breaks the Internet",
+    socialContentTypesDesc: "We create scroll-stopping content that doesn't just get views—it gets results. Every post is strategically designed to drive engagement and conversions.",
+    socialEngagementTitle: "Engagement That Converts",
+    socialEngagementDesc: "Real metrics from real campaigns. We don't just build followers—we build communities that drive business results.",
+    socialFeaturesTitle: "Complete Social Management Suite",
+    socialFeaturesDesc: "From strategy to execution, we handle every aspect of your social media presence with precision and creativity.",
+    socialViralTitle: "Ready to Go Viral?",
+    socialViralDesc: "Join the brands that are dominating social media and converting followers into customers. Let's build your viral social presence together.",
+    
+    // Social Content Types
+    socialViralMomentsTitle: "Viral Gaming Moments",
+    socialViralMomentsDesc: "Capture and amplify those epic gaming moments that get shared millions of times",
+    socialBehindScenesTitle: "Behind-the-Scenes Content",
+    socialBehindScenesDesc: "Show the human side of your brand with exclusive behind-the-scenes content",
+    socialUserGeneratedTitle: "User-Generated Content",
+    socialUserGeneratedDesc: "Amplify your community's voice with authentic user-generated content campaigns",
+    socialLiveStreamingTitle: "Live Streaming Events",
+    socialLiveStreamingDesc: "Real-time engagement through live tournaments, Q&As, and interactive sessions",
+    
+    // Social Features
+    socialCalendarTitle: "Content Calendar Management",
+    socialCalendarDesc: "Strategic planning and scheduling across all platforms",
+    socialCommunityTitle: "Community Management",
+    socialCommunityDesc: "24/7 engagement and relationship building",
+    socialInfluencerTitle: "Influencer Partnerships",
+    socialInfluencerDesc: "Collaborate with top gaming influencers",
+    socialCreationTitle: "Content Creation",
+    socialCreationDesc: "Professional content production and design",
+    
+    // Additional Social Media content
+    socialContentBenefits: "Strategic post timing, Cross-platform coordination, Trend integration, Performance optimization",
+    socialCommunityBenefits: "Real-time responses, Crisis management, Brand voice consistency, Customer support",
+    socialInfluencerBenefits: "Influencer sourcing, Campaign management, Performance tracking, ROI optimization",
+    socialCreationBenefits: "Video production, Graphic design, Copywriting, Interactive content",
 
     // Media Buying
     mediaBuyingTitle: "Media Buying & Marketing",
@@ -977,14 +1037,68 @@ export const translations = {
     contentProductionFeature6Desc: "Producción profesional de streaming en vivo para eventos y campañas",
 
     // Traffic Generation
-    trafficGenerationTitle: "Tráfico para Operadores de Casino",
+    trafficGenerationTitle: "Adquisición Estratégica de Tráfico",
     trafficGenerationSubtitle: "Impulsa tráfico de alta calidad y dirigido a tu plataforma de casino con nuestras estrategias de adquisición probadas",
-    trafficGenerationDesc: "Deja de desperdiciar dinero en tráfico de baja calidad que no convierte. Entregamos jugadores premium que depositan, juegan y regresan.",
+    trafficGenerationDesc: "Nuestros servicios integrales de generación de tráfico ayudan a las marcas de juegos y entretenimiento a llegar a sus audiencias objetivo a través de estrategias de marketing multicanal basadas en datos que entregan usuarios de calidad y crecimiento sostenible.",
+    trafficAcquisitionChannelsTitle: "Canales de Adquisición de Tráfico",
+    trafficAcquisitionChannelsDesc: "Utilizamos una mezcla diversa de canales de tráfico para asegurar la adquisición consistente de usuarios de alta calidad en múltiples puntos de contacto en el viaje del cliente.",
+    trafficProcessTitle: "Nuestro Proceso de Generación de Tráfico",
+    trafficProcessDesc: "Un enfoque sistemático para generar tráfico de calidad que convierte, respaldado por análisis de datos y optimización continua en todos los canales.",
+    trafficPerformanceTitle: "Perspectivas de Rendimiento",
+    trafficPerformanceDesc: "Resultados basados en datos de nuestras campañas de generación de tráfico en varios verticales de la industria.",
+    
+    // Traffic Types
+    trafficSocialMediaTitle: "Tráfico de Redes Sociales",
+    trafficSocialMediaDesc: "Aprovecha las plataformas sociales para llegar a tu audiencia objetivo donde pasan la mayor parte de su tiempo.",
+    trafficSEMTitle: "Marketing en Motores de Búsqueda",
+    trafficSEMDesc: "Captura usuarios con alta intención que buscan activamente contenido de juegos y entretenimiento.",
+    trafficNativeTitle: "Publicidad Nativa",
+    trafficNativeDesc: "Integra perfectamente tu contenido dentro de entornos editoriales para un descubrimiento natural.",
+    trafficDisplayTitle: "Display y Programática",
+    trafficDisplayDesc: "Compra automatizada de inventario publicitario en redes de editores premium.",
+    
+    // Traffic Methodology
+    trafficStep1Title: "Investigación y Análisis de Audiencia",
+    trafficStep1Desc: "Realizamos investigación de mercado integral para identificar tus perfiles de cliente ideal y sus patrones de comportamiento online.",
+    trafficStep2Title: "Desarrollo de Estrategia Multicanal", 
+    trafficStep2Desc: "Basándose en insights de investigación, desarrollamos una estrategia de adquisición de tráfico personalizada en múltiples canales.",
+    trafficStep3Title: "Optimización y Escalado de Campañas",
+    trafficStep3Desc: "Monitoreo continuo y optimización de campañas para maximizar el ROI y escalar iniciativas exitosas.",
+    trafficStep4Title: "Analítica de Rendimiento e Informes",
+    trafficStep4Desc: "Informes detallados y analítica para rastrear rendimiento, medir éxito e informar estrategias futuras.",
 
     // Social Media Management
-    socialMediaTitle: "Gestión de Redes Sociales",
+    socialMediaTitle: "Redes Sociales que se Vuelven Virales",
     socialMediaSubtitle: "Domina las redes sociales con contenido que convierte seguidores en jugadores",
-    socialMediaDesc: "Transforma tu presencia social en una máquina de adquisición de jugadores con contenido viral y construcción estratégica de comunidad.",
+    socialMediaDesc: "Transforma tu presencia social en una máquina de conversión con contenido que cautiva, involucra y genera resultados comerciales reales en todas las plataformas principales.",
+    socialContentTypesTitle: "Contenido que Rompe Internet",
+    socialContentTypesDesc: "Creamos contenido que detiene el scroll y que no solo obtiene vistas—obtiene resultados. Cada publicación está estratégicamente diseñada para generar engagement y conversiones.",
+    socialEngagementTitle: "Engagement que Convierte",
+    socialEngagementDesc: "Métricas reales de campañas reales. No solo construimos seguidores—construimos comunidades que generan resultados comerciales.",
+    socialFeaturesTitle: "Suite Completa de Gestión Social",
+    socialFeaturesDesc: "Desde la estrategia hasta la ejecución, manejamos cada aspecto de tu presencia en redes sociales con precisión y creatividad.",
+    socialViralTitle: "¿Listo para Volverse Viral?",
+    socialViralDesc: "Únete a las marcas que dominan las redes sociales y convierten seguidores en clientes. Construyamos juntos tu presencia social viral.",
+    
+    // Social Content Types
+    socialViralMomentsTitle: "Momentos Virales de Gaming",
+    socialViralMomentsDesc: "Captura y amplifica esos momentos épicos de gaming que se comparten millones de veces",
+    socialBehindScenesTitle: "Contenido Behind-the-Scenes",
+    socialBehindScenesDesc: "Muestra el lado humano de tu marca con contenido exclusivo detrás de escenas",
+    socialUserGeneratedTitle: "Contenido Generado por Usuarios",
+    socialUserGeneratedDesc: "Amplifica la voz de tu comunidad con campañas auténticas de contenido generado por usuarios",
+    socialLiveStreamingTitle: "Eventos de Live Streaming",
+    socialLiveStreamingDesc: "Engagement en tiempo real a través de torneos en vivo, Q&As y sesiones interactivas",
+    
+    // Social Features
+    socialCalendarTitle: "Gestión de Calendario de Contenido",
+    socialCalendarDesc: "Planificación estratégica y programación en todas las plataformas",
+    socialCommunityTitle: "Gestión de Comunidad",
+    socialCommunityDesc: "Engagement 24/7 y construcción de relaciones",
+    socialInfluencerTitle: "Asociaciones con Influencers",
+    socialInfluencerDesc: "Colabora con los mejores influencers de gaming",
+    socialCreationTitle: "Creación de Contenido",
+    socialCreationDesc: "Producción profesional de contenido y diseño",
 
     // Media Buying
     mediaBuyingTitle: "Compra de Medios y Marketing",
@@ -1613,14 +1727,68 @@ export const translations = {
     globalCtaButton: "Исследовать Глобальные Возможности",
 
     // Traffic Generation
-    trafficGenerationTitle: "Трафик для Операторов Казино",
+    trafficGenerationTitle: "Стратегическое Привлечение Трафика",
     trafficGenerationSubtitle: "Привлекайте высококачественный, целевой трафик на вашу платформу казино с нашими проверенными стратегиями привлечения",
-    trafficGenerationDesc: "Перестаньте тратить деньги на низкокачественный трафик, который не конвертирует. Мы поставляем премиум игроков, которые делают депозиты, играют и возвращаются.",
+    trafficGenerationDesc: "Наши комплексные услуги генерации трафика помогают брендам игр и развлечений достичь своих целевых аудиторий через управляемые данными, многоканальные маркетинговые стратегии, которые обеспечивают качественных пользователей и устойчивый рост.",
+    trafficAcquisitionChannelsTitle: "Каналы Привлечения Трафика",
+    trafficAcquisitionChannelsDesc: "Мы используем разнообразную смесь каналов трафика для обеспечения последовательного, высококачественного привлечения пользователей через множественные точки контакта в путешествии клиента.",
+    trafficProcessTitle: "Наш Процесс Генерации Трафика",
+    trafficProcessDesc: "Систематический подход к привлечению качественного трафика, который конвертирует, подкрепленный анализом данных и непрерывной оптимизацией во всех каналах.",
+    trafficPerformanceTitle: "Аналитика Производительности",
+    trafficPerformanceDesc: "Результаты, основанные на данных наших кампаний генерации трафика в различных отраслевых вертикалях.",
+    
+    // Traffic Types
+    trafficSocialMediaTitle: "Трафик из Социальных Сетей",
+    trafficSocialMediaDesc: "Используйте социальные платформы для достижения вашей целевой аудитории там, где они проводят больше всего времени.",
+    trafficSEMTitle: "Маркетинг в Поисковых Системах",
+    trafficSEMDesc: "Захватывайте пользователей с высокими намерениями, активно ищущих игровой и развлекательный контент.",
+    trafficNativeTitle: "Нативная Реклама",
+    trafficNativeDesc: "Бесшовно интегрируйте ваш контент в редакционные среды для естественного обнаружения.",
+    trafficDisplayTitle: "Медийная и Программатическая Реклама",
+    trafficDisplayDesc: "Автоматизированная покупка рекламного инвентаря в сетях премиальных издателей.",
+    
+    // Traffic Methodology
+    trafficStep1Title: "Исследование и Анализ Аудитории",
+    trafficStep1Desc: "Мы проводим комплексное исследование рынка для идентификации ваших идеальных профилей клиентов и их поведенческих паттернов онлайн.",
+    trafficStep2Title: "Разработка Многоканальной Стратегии", 
+    trafficStep2Desc: "Основываясь на исследовательских инсайтах, мы разрабатываем индивидуальную стратегию привлечения трафика через множественные каналы.",
+    trafficStep3Title: "Оптимизация и Масштабирование Кампаний",
+    trafficStep3Desc: "Непрерывный мониторинг и оптимизация кампаний для максимизации ROI и масштабирования успешных инициатив.",
+    trafficStep4Title: "Аналитика Производительности и Отчетность",
+    trafficStep4Desc: "Детальная отчетность и аналитика для отслеживания производительности, измерения успеха и информирования будущих стратегий.",
 
     // Social Media Management
-    socialMediaTitle: "Управление Социальными Сетями",
+    socialMediaTitle: "Социальные Сети, Которые Становятся Вирусными",
     socialMediaSubtitle: "Доминируйте в социальных сетях с контентом, который превращает подписчиков в игроков",
-    socialMediaDesc: "Превратите ваше социальное присутствие в машину привлечения игроков с вирусным контентом и стратегическим построением сообщества.",
+    socialMediaDesc: "Трансформируйте ваше социальное присутствие в машину конверсии с контентом, который захватывает, вовлекает и приносит реальные бизнес-результаты на всех основных платформах.",
+    socialContentTypesTitle: "Контент, Который Ломает Интернет",
+    socialContentTypesDesc: "Мы создаем контент, который останавливает скролл и который не просто получает просмотры—он получает результаты. Каждый пост стратегически разработан для привлечения вовлеченности и конверсий.",
+    socialEngagementTitle: "Вовлеченность, Которая Конвертирует",
+    socialEngagementDesc: "Реальные метрики из реальных кампаний. Мы не просто строим подписчиков—мы строим сообщества, которые приносят бизнес-результаты.",
+    socialFeaturesTitle: "Полная Система Управления Социальными Сетями",
+    socialFeaturesDesc: "От стратегии до исполнения, мы обрабатываем каждый аспект вашего присутствия в социальных сетях с точностью и креативностью.",
+    socialViralTitle: "Готовы Стать Вирусными?",
+    socialViralDesc: "Присоединяйтесь к брендам, которые доминируют в социальных сетях и превращают подписчиков в клиентов. Давайте построим ваше вирусное социальное присутствие вместе.",
+    
+    // Social Content Types
+    socialViralMomentsTitle: "Вирусные Игровые Моменты",
+    socialViralMomentsDesc: "Захватывайте и усиливайте те эпические игровые моменты, которые делятся миллионы раз",
+    socialBehindScenesTitle: "Контент За Кулисами",
+    socialBehindScenesDesc: "Покажите человеческую сторону вашего бренда с эксклюзивным контентом за кулисами",
+    socialUserGeneratedTitle: "Пользовательский Контент",
+    socialUserGeneratedDesc: "Усиливайте голос вашего сообщества с аутентичными кампаниями пользовательского контента",
+    socialLiveStreamingTitle: "События Прямых Трансляций",
+    socialLiveStreamingDesc: "Вовлеченность в реальном времени через живые турниры, Q&A и интерактивные сессии",
+    
+    // Social Features
+    socialCalendarTitle: "Управление Календарем Контента",
+    socialCalendarDesc: "Стратегическое планирование и расписание на всех платформах",
+    socialCommunityTitle: "Управление Сообществом",
+    socialCommunityDesc: "24/7 вовлеченность и построение отношений",
+    socialInfluencerTitle: "Партнерства с Инфлюенсерами",
+    socialInfluencerDesc: "Сотрудничайте с топовыми игровыми инфлюенсерами",
+    socialCreationTitle: "Создание Контента",
+    socialCreationDesc: "Профессиональное производство контента и дизайн",
 
     // Media Buying
     mediaBuyingTitle: "Медиабаинг и Маркетинг",
@@ -2153,14 +2321,68 @@ export const translations = {
     globalCtaButton: "Досліджувати Глобальні Можливості",
 
     // Traffic Generation
-    trafficGenerationTitle: "Трафік для Операторів Казино",
+    trafficGenerationTitle: "Стратегічне Залучення Трафіку",
     trafficGenerationSubtitle: "Привертайте високоякісний, цільовий трафік на вашу платформу казино з нашими перевіреними стратегіями залучення",
-    trafficGenerationDesc: "Перестаньте витрачати гроші на низькоякісний трафік, який не конвертує. Ми поставляємо преміум гравців, які роблять депозити, грають та повертаються.",
+    trafficGenerationDesc: "Наші комплексні послуги генерації трафіку допомагають брендам ігор та розваг досягти своїх цільових аудиторій через керовані даними, багатоканальні маркетингові стратегії, які забезпечують якісних користувачів та стійке зростання.",
+    trafficAcquisitionChannelsTitle: "Канали Залучення Трафіку",
+    trafficAcquisitionChannelsDesc: "Ми використовуємо різноманітну суміш каналів трафіку для забезпечення послідовного, високоякісного залучення користувачів через множинні точки контакту в подорожі клієнта.",
+    trafficProcessTitle: "Наш Процес Генерації Трафіку",
+    trafficProcessDesc: "Систематичний підхід до залучення якісного трафіку, який конвертує, підкріплений аналізом даних та безперервною оптимізацією у всіх каналах.",
+    trafficPerformanceTitle: "Аналітика Продуктивності",
+    trafficPerformanceDesc: "Результати, засновані на даних наших кампаній генерації трафіку у різних галузевих вертикалях.",
+    
+    // Traffic Types
+    trafficSocialMediaTitle: "Трафік із Соціальних Мереж",
+    trafficSocialMediaDesc: "Використовуйте соціальні платформи для досягнення вашої цільової аудиторії там, де вони проводять найбільше часу.",
+    trafficSEMTitle: "Маркетинг у Пошукових Системах",
+    trafficSEMDesc: "Захоплюйте користувачів з високими намірами, які активно шукають ігровий та розважальний контент.",
+    trafficNativeTitle: "Нативна Реклама",
+    trafficNativeDesc: "Безшовно інтегруйте ваш контент у редакційні середовища для природного відкриття.",
+    trafficDisplayTitle: "Медійна та Програматична Реклама",
+    trafficDisplayDesc: "Автоматизована купівля рекламного інвентарю в мережах преміальних видавців.",
+    
+    // Traffic Methodology
+    trafficStep1Title: "Дослідження та Аналіз Аудиторії",
+    trafficStep1Desc: "Ми проводимо комплексне дослідження ринку для ідентифікації ваших ідеальних профілів клієнтів та їх поведінкових патернів онлайн.",
+    trafficStep2Title: "Розробка Багатоканальної Стратегії", 
+    trafficStep2Desc: "Ґрунтуючись на дослідницьких інсайтах, ми розробляємо індивідуальну стратегію залучення трафіку через множинні канали.",
+    trafficStep3Title: "Оптимізація та Масштабування Кампаній",
+    trafficStep3Desc: "Безперервний моніторинг та оптимізація кампаній для максимізації ROI та масштабування успішних ініціатив.",
+    trafficStep4Title: "Аналітика Продуктивності та Звітність",
+    trafficStep4Desc: "Детальна звітність та аналітика для відстеження продуктивності, вимірювання успіху та інформування майбутніх стратегій.",
 
     // Social Media Management
-    socialMediaTitle: "Управління Соціальними Мережами",
+    socialMediaTitle: "Соціальні Мережі, Які Стають Вірусними",
     socialMediaSubtitle: "Домінуйте в соціальних мережах з контентом, який перетворює підписників на гравців",
-    socialMediaDesc: "Перетворіть вашу соціальну присутність на машину залучення гравців з вірусним контентом та стратегічним побудовою спільноти.",
+    socialMediaDesc: "Трансформуйте вашу соціальну присутність у машину конверсії з контентом, який захоплює, залучає та приносить реальні бізнес-результати на всіх основних платформах.",
+    socialContentTypesTitle: "Контент, Який Ламає Інтернет",
+    socialContentTypesDesc: "Ми створюємо контент, який зупиняє скрол і який не просто отримує перегляди—він отримує результати. Кожен пост стратегічно розроблений для залучення вовлеченості та конверсій.",
+    socialEngagementTitle: "Вовлеченість, Яка Конвертує",
+    socialEngagementDesc: "Реальні метрики з реальних кампаній. Ми не просто будуємо підписників—ми будуємо спільноти, які приносять бізнес-результати.",
+    socialFeaturesTitle: "Повна Система Управління Соціальними Мережами",
+    socialFeaturesDesc: "Від стратегії до виконання, ми обробляємо кожен аспект вашої присутності в соціальних мережах з точністю та креативністю.",
+    socialViralTitle: "Готові Стати Вірусними?",
+    socialViralDesc: "Приєднуйтесь до брендів, які домінують у соціальних мережах та перетворюють підписників на клієнтів. Давайте побудуємо вашу вірусну соціальну присутність разом.",
+    
+    // Social Content Types
+    socialViralMomentsTitle: "Вірусні Ігрові Моменти",
+    socialViralMomentsDesc: "Захоплюйте та посилюйте ті епічні ігрові моменти, які діляться мільйони разів",
+    socialBehindScenesTitle: "Контент За Лаштунками",
+    socialBehindScenesDesc: "Покажіть людську сторону вашого бренду з ексклюзивним контентом за лаштунками",
+    socialUserGeneratedTitle: "Користувацький Контент",
+    socialUserGeneratedDesc: "Посилюйте голос вашої спільноти з автентичними кампаніями користувацького контенту",
+    socialLiveStreamingTitle: "Події Прямих Трансляцій",
+    socialLiveStreamingDesc: "Вовлеченість у реальному часі через живі турніри, Q&A та інтерактивні сесії",
+    
+    // Social Features
+    socialCalendarTitle: "Управління Календарем Контенту",
+    socialCalendarDesc: "Стратегічне планування та розклад на всіх платформах",
+    socialCommunityTitle: "Управління Спільнотою",
+    socialCommunityDesc: "24/7 вовлеченість та побудова відносин",
+    socialInfluencerTitle: "Партнерства з Інфлюенсерами",
+    socialInfluencerDesc: "Співпрацюйте з топовими ігровими інфлюенсерами",
+    socialCreationTitle: "Створення Контенту",
+    socialCreationDesc: "Професійне виробництво контенту та дизайн",
 
     // Media Buying
     mediaBuyingTitle: "Медіа-закупівлі та Маркетинг",
